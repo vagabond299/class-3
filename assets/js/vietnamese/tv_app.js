@@ -213,7 +213,42 @@
       <span class="tv3-folder-head"><span class="tv3-icon" aria-hidden="true">${x(icon)}</span><span class="tv3-folder-copy"><strong>${x(name)}</strong><small>${x(desc)}</small></span></span>
       <span class="tv3-folder-foot"><span>${x(foot)}</span><b>${locked?'🔒':'➜'}</b></span></button>`;
   }
-  const grid = (cards)=>`<div class="tv3-folder-grid">${cards.join('')}</div>`;
+  const grid = (cards,variant='')=>`<div class="tv3-folder-grid${variant?' tv3-'+variant:''}">${cards.join('')}</div>`;
+  // Display-only learning catalogue; all IDs and original JSON titles remain unchanged.
+  const DISCOVER_DESCS = Object.freeze({
+    1:'Phân biệt âm, vần khó và luyện viết hoa đúng.',2:'Nhận biết sự vật, từ ngữ và cách so sánh.',
+    3:'Nhận ra cách nhân hóa sự vật trong câu văn.',4:'Danh từ, động từ, tính từ và quan hệ nghĩa.',
+    5:'Mở rộng vốn từ theo gia đình, trường học và cuộc sống.',6:'Chọn và sử dụng dấu câu đúng ngữ cảnh.',
+    7:'Đặt câu và nhận biết các kiểu câu hỏi.',8:'Chọn lời nói, cách ứng xử phù hợp.',
+    9:'Đọc văn bản, tìm chi tiết và hiểu ý chính.',10:'Suy luận ngôn ngữ và sắp xếp đoạn văn.',
+    11:'Làm quen đơn từ và phiếu đọc sách.'
+  });
+  const SUB_ICONS = Object.freeze([
+    '🔤','✍️','📝','🗣️','🔎','📖','🧠','💡','🎯','🔠','🌱','📌','🧩','💬','🎨','📋'
+  ]);
+  function subDescription(topicId,sub){
+    const n=text(sub).toLocaleLowerCase('vi-VN');
+    if(n.includes('ch/tr')||n.includes('s/x')||n.includes('l/n'))return 'Nghe, phân biệt và chọn đúng âm đầu trong từ.';
+    if(n.includes('viết hoa')||n.includes('tên riêng'))return 'Nhận biết tên riêng và áp dụng quy tắc viết hoa.';
+    if(n.includes('chính tả')||n.includes('vần khó'))return 'Luyện chọn chữ và viết đúng các âm, vần dễ nhầm.';
+    if(n.includes('so sánh'))return 'Xác định sự vật, từ so sánh và hình ảnh trong câu.';
+    if(n.includes('nhân hóa'))return 'Tìm từ ngữ và nhận biết cách nhân hóa sự vật.';
+    if(n.includes('danh từ'))return 'Nhận biết từ gọi tên sự vật trong câu.';
+    if(n.includes('động từ'))return 'Nhận biết từ chỉ hoạt động hoặc trạng thái.';
+    if(n.includes('tính từ'))return 'Tìm từ chỉ đặc điểm, tính chất.';
+    if(n.includes('đồng nghĩa'))return 'Tìm những từ khác nhau nhưng gần nghĩa.';
+    if(n.includes('trái nghĩa'))return 'Nhận biết các cặp từ có nghĩa trái ngược.';
+    if(n.includes('chủ đề')||n.includes('vốn từ'))return 'Nhận biết và vận dụng từ ngữ theo chủ điểm.';
+    if(n.includes('dấu'))return 'Chọn và sử dụng dấu câu phù hợp với ý câu.';
+    if(n.includes('câu hỏi'))return 'Đọc ngữ cảnh và chọn câu trả lời phù hợp.';
+    if(n.includes('kiểu câu')||n.includes('đặt câu'))return 'Nhận biết cấu trúc và cách diễn đạt câu.';
+    if(n.includes('giao tiếp'))return 'Lựa chọn cách nói lịch sự trong tình huống.';
+    if(n.includes('đọc hiểu'))return 'Đọc văn bản và trả lời câu hỏi theo nội dung.';
+    if(n.includes('sắp xếp'))return 'Sắp xếp các câu thành đoạn văn mạch lạc.';
+    if(n.includes('iq')||n.includes('trạng nguyên'))return 'Suy luận và giải thử thách tư duy ngôn ngữ.';
+    if(n.includes('phiếu')||n.includes('đơn từ'))return 'Đọc, hiểu và hoàn thành văn bản thực tế.';
+    return DISCOVER_DESCS[Number(topicId)]||'Luyện tập kiến thức Tiếng Việt lớp 3.';
+  }
   function nav(index,length,prefix='question'){
     return `<div class="tv3-nav"><button data-action="${x(prefix)}-prev" ${index<=0?'disabled':''}>← ${prefix==='lesson'?'Trang trước':'Câu trước'}</button><span>${index+1}/${length}</span><button class="primary" data-action="${x(prefix)}-next" ${index>=length-1?'disabled':''}>${prefix==='lesson'?'Trang sau':'Câu sau'} →</button></div>`;
   }
@@ -255,7 +290,7 @@
     try {
       if(tab==='discover'){
         const topics=await getTopics();if(!still(request))return;
-        root.innerHTML=heading('Khám phá Tiếng Việt 3','11 chuyên đề kiến thức và thư viện truyện dân gian, cổ tích',false)+grid(topics.map((t,i)=>folder(`${t.id}. ${t.name}`,t.desc,TOPIC_ICONS[i]||'📚','topic',`data-topic="${Number(t.id)}"`,`${arr(t.qs).length} câu · ${new Set(arr(t.qs).map(q=>q.sub)).size} mục nhánh`,i)).concat(folder('12. Truyện dân gian & cổ tích','120 truyện Việt Nam · 120 truyện thế giới','📚','story-home','','240 truyện · 3 câu đọc hiểu/truyện',11)));
+        root.innerHTML=heading('Khám phá Tiếng Việt 3','11 chuyên đề kiến thức và thư viện truyện dân gian, cổ tích',false)+grid(topics.map((t,i)=>folder(`${t.id}. ${t.name}`,DISCOVER_DESCS[Number(t.id)]||t.desc,TOPIC_ICONS[i]||'📚','topic',`data-topic="${Number(t.id)}"`,`${arr(t.qs).length} câu · ${new Set(arr(t.qs).map(q=>q.sub)).size} mục nhánh`,i)).concat(folder('12. Truyện dân gian & cổ tích','Đọc truyện Việt Nam và thế giới, luyện đọc hiểu.','📚','story-home','','240 truyện · 3 câu đọc hiểu/truyện',11)),'discover-home');
       } else if(tab==='lessons')await lessonList(request);
       else if(tab==='exercises')await exerciseList(request);
       else if(tab==='review')await reviewList(request);
@@ -276,8 +311,8 @@
       root.innerHTML=heading(topic.name,topic.desc)+`<section class="tv3-note tv3-topic-note"><strong>💡 Cùng tìm hiểu</strong><p>${x(topic.l_content||topic.desc)}</p><button class="tv3-mini" data-action="read-topic">🔊 Nghe hướng dẫn</button></section>${illustration}`+
         grid(groups.map((g,i)=>{
           const size=topic.qs.filter(q=>text(q.sub)===g).length;
-          return folder(g,`Làm quen, nhận biết và luyện tập ${g.toLowerCase()}.`,TOPIC_ICONS[(i+Number(topic.id))%11],'topic-sub',`data-topic="${Number(topic.id)}" data-sub="${x(g)}"`,`${size} câu luyện tập`,i);
-        }));
+          return folder(`${i+1}. ${g}`,subDescription(topic.id,g),SUB_ICONS[(i+Number(topic.id)*3)%SUB_ICONS.length],'topic-sub',`data-topic="${Number(topic.id)}" data-sub="${x(g)}"`,`${size} câu luyện tập`,i);
+        }),'discover-sub');
     }catch(err){if(still(request))fail(err);}
   }
   async function openSubtopic(topicId,sub){
@@ -766,6 +801,16 @@
 #class3-vietnamese-runtime .tv3-folder-copy strong{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;color:var(--color);font-size:18px;font-weight:950;line-height:1.25}
 #class3-vietnamese-runtime .tv3-folder-copy small{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;color:#475467;font-size:15px;line-height:1.38;margin-top:6px;font-weight:750}
 #class3-vietnamese-runtime .tv3-folder-foot{display:flex;justify-content:space-between;align-items:center;gap:5px;border-top:1px solid rgba(124,58,237,.11);padding-top:7px;font-size:14px;font-weight:900;color:var(--color)}
+/* Explore: 12 topic cards in four columns; inner groups in three. */
+#class3-vietnamese-runtime .tv3-folder-grid.tv3-discover-home{grid-template-columns:repeat(4,minmax(0,1fr))}
+#class3-vietnamese-runtime .tv3-folder-grid.tv3-discover-sub{grid-template-columns:repeat(3,minmax(0,1fr))}
+#class3-vietnamese-runtime .tv3-folder-grid:is(.tv3-discover-home,.tv3-discover-sub) .tv3-folder{min-height:174px;gap:10px}
+#class3-vietnamese-runtime .tv3-folder-grid:is(.tv3-discover-home,.tv3-discover-sub) .tv3-folder-head{display:flex;flex-direction:row;align-items:flex-start;gap:10px}
+#class3-vietnamese-runtime .tv3-folder-grid:is(.tv3-discover-home,.tv3-discover-sub) .tv3-folder-copy strong{display:block;overflow:visible;line-height:1.27;font-size:17px;overflow-wrap:break-word}
+#class3-vietnamese-runtime .tv3-folder-grid:is(.tv3-discover-home,.tv3-discover-sub) .tv3-folder-copy small{display:block;overflow:visible;font-size:14px;line-height:1.4;margin-top:7px}
+#class3-vietnamese-runtime .tv3-folder-grid:is(.tv3-discover-home,.tv3-discover-sub) .tv3-icon{width:53px;height:53px;flex:0 0 53px;font-size:31px}
+@media(min-width:768px) and (max-width:1080px){#class3-vietnamese-runtime .tv3-folder-grid.tv3-discover-home{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(min-width:768px) and (max-width:820px){#class3-vietnamese-runtime .tv3-folder-grid.tv3-discover-sub{grid-template-columns:repeat(2,minmax(0,1fr))}}
 #class3-vietnamese-runtime .tv3-locked{background:#f8fafc!important;border-color:#cbd5e1!important;opacity:.82}
 #class3-vietnamese-runtime .tv3-locked .tv3-icon{filter:grayscale(.35)}
 #class3-vietnamese-runtime .tv3-switch,#class3-vietnamese-runtime .tv3-page-tabs,#class3-vietnamese-runtime .tv3-story-tools{display:flex;flex-wrap:wrap;gap:12px;margin:12px 0 16px}
@@ -829,6 +874,13 @@
 @keyframes tv3spin{to{transform:rotate(360deg)}}
 @media(max-width:767px){
  #class3-vietnamese-runtime .tv3-folder-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+ #class3-vietnamese-runtime .tv3-folder-grid.tv3-discover-home{grid-template-columns:repeat(2,minmax(0,1fr))}
+ #class3-vietnamese-runtime .tv3-folder-grid.tv3-discover-sub{grid-template-columns:1fr}
+ #class3-vietnamese-runtime .tv3-folder-grid:is(.tv3-discover-home,.tv3-discover-sub) .tv3-folder{min-height:155px}
+ #class3-vietnamese-runtime .tv3-folder-grid:is(.tv3-discover-home,.tv3-discover-sub) .tv3-folder-head{flex-direction:row;gap:8px}
+ #class3-vietnamese-runtime .tv3-folder-grid:is(.tv3-discover-home,.tv3-discover-sub) .tv3-icon{width:44px;height:44px;flex:0 0 44px;font-size:25px}
+ #class3-vietnamese-runtime .tv3-folder-grid:is(.tv3-discover-home,.tv3-discover-sub) .tv3-folder-copy strong{font-size:16px}
+ #class3-vietnamese-runtime .tv3-folder-grid:is(.tv3-discover-home,.tv3-discover-sub) .tv3-folder-copy small{font-size:13px}
  #class3-vietnamese-runtime .tv3-folder{padding:10px;min-height:148px;border-radius:16px}
  #class3-vietnamese-runtime .tv3-folder-head{flex-direction:column;gap:7px}
  #class3-vietnamese-runtime .tv3-icon{width:52px;height:52px;flex:0 0 52px;font-size:31px}
