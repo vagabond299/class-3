@@ -13612,5 +13612,4541 @@
     "h": "Trong túi không có màu xanh nên không thể rút được đồ vật màu xanh.",
     "tag": "TOAN3_C3",
     "w": null
+  },
+  {
+    "id": "Q_11_1_1",
+    "sub": "Dãy số và phát hiện quy luật",
+    "q": "Dãy số: 5, 7, 11, 17, … Số tiếp theo là số nào?",
+    "o": [
+      "29",
+      "22",
+      "25",
+      "30"
+    ],
+    "a": "25",
+    "h": "Hiệu giữa hai số liên tiếp tăng dần: +2, +4, +6, +8. Vì vậy 17 + 8 = 25.",
+    "w": null,
+    "tag": "TOAN3_C4",
+    "illustration": {
+      "kind": "emoji",
+      "emoji": "🔁",
+      "caption": "Biểu tượng minh họa chủ đề; không chứa dữ kiện của bài toán.",
+      "role": "topic_cover"
+    }
+  },
+  {
+    "id": "Q_11_1_2",
+    "sub": "Dãy số và phát hiện quy luật",
+    "q": "Dãy số: 7, 10, 16, 25, … Số tiếp theo là số nào?",
+    "o": [
+      "37",
+      "42",
+      "41",
+      "34"
+    ],
+    "a": "37",
+    "h": "Hiệu giữa hai số liên tiếp tăng dần: +3, +6, +9, +12. Vì vậy 25 + 12 = 37.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_1_3",
+    "sub": "Dãy số và phát hiện quy luật",
+    "q": "Dãy số: 9, 13, 21, 33, … Số tiếp theo là số nào?",
+    "o": [
+      "54",
+      "39",
+      "49",
+      "59"
+    ],
+    "a": "49",
+    "h": "Hiệu giữa hai số liên tiếp tăng dần: +4, +8, +12, +16. Vì vậy 33 + 16 = 49.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_1_4",
+    "sub": "Dãy số và phát hiện quy luật",
+    "q": "Dãy số: 11, 16, 26, 41, … Số tiếp theo là số nào?",
+    "o": [
+      "71",
+      "51",
+      "66",
+      "61"
+    ],
+    "a": "61",
+    "h": "Hiệu giữa hai số liên tiếp tăng dần: +5, +10, +15, +20. Vì vậy 41 + 20 = 61.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_1_5",
+    "sub": "Dãy số và phát hiện quy luật",
+    "q": "Dãy số: 13, 19, 31, 49, … Số tiếp theo là số nào?",
+    "o": [
+      "83",
+      "78",
+      "73",
+      "63"
+    ],
+    "a": "73",
+    "h": "Hiệu giữa hai số liên tiếp tăng dần: +6, +12, +18, +24. Vì vậy 49 + 24 = 73.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_1_6",
+    "sub": "Dãy số và phát hiện quy luật",
+    "q": "Tìm số kế tiếp trong dãy giảm: 190, 188, 184, 178, …",
+    "o": [
+      "190",
+      "180",
+      "170",
+      "150"
+    ],
+    "a": "170",
+    "h": "Các lần giảm lần lượt là 2, 4, 6, rồi 8. Số cần tìm là 178 − 8 = 170.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_1_7",
+    "sub": "Dãy số và phát hiện quy luật",
+    "q": "Tìm số kế tiếp trong dãy giảm: 225, 222, 216, 207, …",
+    "o": [
+      "195",
+      "205",
+      "175",
+      "215"
+    ],
+    "a": "195",
+    "h": "Các lần giảm lần lượt là 3, 6, 9, rồi 12. Số cần tìm là 207 − 12 = 195.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_1_8",
+    "sub": "Dãy số và phát hiện quy luật",
+    "q": "Tìm số kế tiếp trong dãy giảm: 260, 256, 248, 236, …",
+    "o": [
+      "220",
+      "200",
+      "240",
+      "230"
+    ],
+    "a": "220",
+    "h": "Các lần giảm lần lượt là 4, 8, 12, rồi 16. Số cần tìm là 236 − 16 = 220.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_1_9",
+    "sub": "Dãy số và phát hiện quy luật",
+    "q": "Tìm số kế tiếp trong dãy giảm: 295, 290, 280, 265, …",
+    "o": [
+      "225",
+      "245",
+      "265",
+      "255"
+    ],
+    "a": "245",
+    "h": "Các lần giảm lần lượt là 5, 10, 15, rồi 20. Số cần tìm là 265 − 20 = 245.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_1_10",
+    "sub": "Dãy số và phát hiện quy luật",
+    "q": "Tìm số kế tiếp trong dãy giảm: 330, 324, 312, 294, …",
+    "o": [
+      "270",
+      "280",
+      "290",
+      "250"
+    ],
+    "a": "270",
+    "h": "Các lần giảm lần lượt là 6, 12, 18, rồi 24. Số cần tìm là 294 − 24 = 270.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_1_11",
+    "sub": "Dãy số và phát hiện quy luật",
+    "q": "Dãy số 1, 3, 7, 15, … được tạo theo cùng một quy tắc. Số tiếp theo là:",
+    "o": [
+      "28",
+      "31",
+      "35",
+      "36"
+    ],
+    "a": "31",
+    "h": "Mỗi lần ta nhân số trước với 2 rồi cộng 1. Vì vậy 15 × 2 + 1 = 31.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_1_12",
+    "sub": "Dãy số và phát hiện quy luật",
+    "q": "Dãy số 2, 5, 11, 23, … được tạo theo cùng một quy tắc. Số tiếp theo là:",
+    "o": [
+      "37",
+      "57",
+      "52",
+      "47"
+    ],
+    "a": "47",
+    "h": "Mỗi lần ta nhân số trước với 2 rồi cộng 1. Vì vậy 23 × 2 + 1 = 47.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_1_13",
+    "sub": "Dãy số và phát hiện quy luật",
+    "q": "Dãy số 3, 7, 15, 31, … được tạo theo cùng một quy tắc. Số tiếp theo là:",
+    "o": [
+      "53",
+      "73",
+      "68",
+      "63"
+    ],
+    "a": "63",
+    "h": "Mỗi lần ta nhân số trước với 2 rồi cộng 1. Vì vậy 31 × 2 + 1 = 63.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_1_14",
+    "sub": "Dãy số và phát hiện quy luật",
+    "q": "Dãy số 4, 9, 19, 39, … được tạo theo cùng một quy tắc. Số tiếp theo là:",
+    "o": [
+      "69",
+      "89",
+      "84",
+      "79"
+    ],
+    "a": "79",
+    "h": "Mỗi lần ta nhân số trước với 2 rồi cộng 1. Vì vậy 39 × 2 + 1 = 79.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_1_15",
+    "sub": "Dãy số và phát hiện quy luật",
+    "q": "Dãy số 5, 11, 23, 47, … được tạo theo cùng một quy tắc. Số tiếp theo là:",
+    "o": [
+      "100",
+      "85",
+      "105",
+      "95"
+    ],
+    "a": "95",
+    "h": "Mỗi lần ta nhân số trước với 2 rồi cộng 1. Vì vậy 47 × 2 + 1 = 95.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_1_16",
+    "sub": "Dãy số và phát hiện quy luật",
+    "q": "Quan sát dãy 2, 3, 5, 8, 13, … Mỗi số từ số thứ ba là tổng của hai số liền trước. Số thứ sáu là:",
+    "o": [
+      "25",
+      "26",
+      "21",
+      "18"
+    ],
+    "a": "21",
+    "h": "Lấy hai số cuối 8 và 13 cộng với nhau: 8 + 13 = 21.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_1_17",
+    "sub": "Dãy số và phát hiện quy luật",
+    "q": "Quan sát dãy 3, 5, 8, 13, 21, … Mỗi số từ số thứ ba là tổng của hai số liền trước. Số thứ sáu là:",
+    "o": [
+      "38",
+      "39",
+      "31",
+      "34"
+    ],
+    "a": "34",
+    "h": "Lấy hai số cuối 13 và 21 cộng với nhau: 13 + 21 = 34.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_1_18",
+    "sub": "Dãy số và phát hiện quy luật",
+    "q": "Quan sát dãy 4, 7, 11, 18, 29, … Mỗi số từ số thứ ba là tổng của hai số liền trước. Số thứ sáu là:",
+    "o": [
+      "52",
+      "57",
+      "37",
+      "47"
+    ],
+    "a": "47",
+    "h": "Lấy hai số cuối 18 và 29 cộng với nhau: 18 + 29 = 47.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_1_19",
+    "sub": "Dãy số và phát hiện quy luật",
+    "q": "Quan sát dãy 5, 9, 14, 23, 37, … Mỗi số từ số thứ ba là tổng của hai số liền trước. Số thứ sáu là:",
+    "o": [
+      "65",
+      "50",
+      "70",
+      "60"
+    ],
+    "a": "60",
+    "h": "Lấy hai số cuối 23 và 37 cộng với nhau: 23 + 37 = 60.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_1_20",
+    "sub": "Dãy số và phát hiện quy luật",
+    "q": "Quan sát dãy 6, 11, 17, 28, 45, … Mỗi số từ số thứ ba là tổng của hai số liền trước. Số thứ sáu là:",
+    "o": [
+      "63",
+      "83",
+      "78",
+      "73"
+    ],
+    "a": "73",
+    "h": "Lấy hai số cuối 28 và 45 cộng với nhau: 28 + 45 = 73.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_1_21",
+    "sub": "Dãy số và phát hiện quy luật",
+    "q": "Dãy số 2, 5, 10, 13, … luân phiên “cộng 3” rồi “nhân 2”. Số tiếp theo là:",
+    "o": [
+      "31",
+      "30",
+      "26",
+      "23"
+    ],
+    "a": "26",
+    "h": "Các bước: 2 + 3 = 5; nhân 2 được 10; cộng 3 được 13. Bước kế tiếp nhân 2: 13 × 2 = 26.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_1_22",
+    "sub": "Dãy số và phát hiện quy luật",
+    "q": "Dãy số 3, 7, 14, 18, … luân phiên “cộng 4” rồi “nhân 2”. Số tiếp theo là:",
+    "o": [
+      "40",
+      "33",
+      "36",
+      "41"
+    ],
+    "a": "36",
+    "h": "Các bước: 3 + 4 = 7; nhân 2 được 14; cộng 4 được 18. Bước kế tiếp nhân 2: 18 × 2 = 36.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_1_23",
+    "sub": "Dãy số và phát hiện quy luật",
+    "q": "Dãy số 4, 9, 18, 23, … luân phiên “cộng 5” rồi “nhân 2”. Số tiếp theo là:",
+    "o": [
+      "46",
+      "51",
+      "56",
+      "36"
+    ],
+    "a": "46",
+    "h": "Các bước: 4 + 5 = 9; nhân 2 được 18; cộng 5 được 23. Bước kế tiếp nhân 2: 23 × 2 = 46.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_1_24",
+    "sub": "Dãy số và phát hiện quy luật",
+    "q": "Dãy số 5, 11, 22, 28, … luân phiên “cộng 6” rồi “nhân 2”. Số tiếp theo là:",
+    "o": [
+      "66",
+      "46",
+      "61",
+      "56"
+    ],
+    "a": "56",
+    "h": "Các bước: 5 + 6 = 11; nhân 2 được 22; cộng 6 được 28. Bước kế tiếp nhân 2: 28 × 2 = 56.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_1_25",
+    "sub": "Dãy số và phát hiện quy luật",
+    "q": "Dãy số 6, 13, 26, 33, … luân phiên “cộng 7” rồi “nhân 2”. Số tiếp theo là:",
+    "o": [
+      "71",
+      "56",
+      "66",
+      "76"
+    ],
+    "a": "66",
+    "h": "Các bước: 6 + 7 = 13; nhân 2 được 26; cộng 7 được 33. Bước kế tiếp nhân 2: 33 × 2 = 66.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_1_26",
+    "sub": "Dãy số và phát hiện quy luật",
+    "q": "Dãy số bắt đầu từ 12 rồi cứ thêm 4: 12, 16, 20, … Số hạng thứ 8 là:",
+    "o": [
+      "40",
+      "30",
+      "50",
+      "45"
+    ],
+    "a": "40",
+    "h": "Từ số thứ nhất đến số thứ 8 có 7 khoảng cách. Số cần tìm = 12 + 7 × 4 = 40.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_1_27",
+    "sub": "Dãy số và phát hiện quy luật",
+    "q": "Dãy số bắt đầu từ 19 rồi cứ thêm 7: 19, 26, 33, … Số hạng thứ 9 là:",
+    "o": [
+      "85",
+      "65",
+      "75",
+      "80"
+    ],
+    "a": "75",
+    "h": "Từ số thứ nhất đến số thứ 9 có 8 khoảng cách. Số cần tìm = 19 + 8 × 7 = 75.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_1_28",
+    "sub": "Dãy số và phát hiện quy luật",
+    "q": "Dãy số bắt đầu từ 26 rồi cứ thêm 10: 26, 36, 46, … Số hạng thứ 10 là:",
+    "o": [
+      "96",
+      "126",
+      "116",
+      "136"
+    ],
+    "a": "116",
+    "h": "Từ số thứ nhất đến số thứ 10 có 9 khoảng cách. Số cần tìm = 26 + 9 × 10 = 116.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_1_29",
+    "sub": "Dãy số và phát hiện quy luật",
+    "q": "Dãy số bắt đầu từ 33 rồi cứ thêm 13: 33, 46, 59, … Số hạng thứ 11 là:",
+    "o": [
+      "183",
+      "173",
+      "143",
+      "163"
+    ],
+    "a": "163",
+    "h": "Từ số thứ nhất đến số thứ 11 có 10 khoảng cách. Số cần tìm = 33 + 10 × 13 = 163.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_1_30",
+    "sub": "Dãy số và phát hiện quy luật",
+    "q": "Dãy số bắt đầu từ 40 rồi cứ thêm 16: 40, 56, 72, … Số hạng thứ 12 là:",
+    "o": [
+      "216",
+      "226",
+      "196",
+      "236"
+    ],
+    "a": "216",
+    "h": "Từ số thứ nhất đến số thứ 12 có 11 khoảng cách. Số cần tìm = 40 + 11 × 16 = 216.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_1_31",
+    "sub": "Dãy số và phát hiện quy luật",
+    "q": "Từ 3 đến 23 có dãy số tăng đều 2 đơn vị: 3, 5, 7, …, 23. Dãy có bao nhiêu số hạng?",
+    "o": [
+      "11 số",
+      "15 số",
+      "8 số",
+      "16 số"
+    ],
+    "a": "11 số",
+    "h": "Có (23 − 3) : 2 = 10 khoảng cách. Số số hạng = 10 + 1 = 11.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_1_32",
+    "sub": "Dãy số và phát hiện quy luật",
+    "q": "Từ 7 đến 43 có dãy số tăng đều 3 đơn vị: 7, 10, 13, …, 43. Dãy có bao nhiêu số hạng?",
+    "o": [
+      "10 số",
+      "17 số",
+      "13 số",
+      "18 số"
+    ],
+    "a": "13 số",
+    "h": "Có (43 − 7) : 3 = 12 khoảng cách. Số số hạng = 12 + 1 = 13.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_1_33",
+    "sub": "Dãy số và phát hiện quy luật",
+    "q": "Từ 11 đến 67 có dãy số tăng đều 4 đơn vị: 11, 15, 19, …, 67. Dãy có bao nhiêu số hạng?",
+    "o": [
+      "19 số",
+      "20 số",
+      "15 số",
+      "12 số"
+    ],
+    "a": "15 số",
+    "h": "Có (67 − 11) : 4 = 14 khoảng cách. Số số hạng = 14 + 1 = 15.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_1_34",
+    "sub": "Dãy số và phát hiện quy luật",
+    "q": "Từ 15 đến 95 có dãy số tăng đều 5 đơn vị: 15, 20, 25, …, 95. Dãy có bao nhiêu số hạng?",
+    "o": [
+      "22 số",
+      "21 số",
+      "14 số",
+      "17 số"
+    ],
+    "a": "17 số",
+    "h": "Có (95 − 15) : 5 = 16 khoảng cách. Số số hạng = 16 + 1 = 17.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_1_35",
+    "sub": "Dãy số và phát hiện quy luật",
+    "q": "Từ 19 đến 127 có dãy số tăng đều 6 đơn vị: 19, 25, 31, …, 127. Dãy có bao nhiêu số hạng?",
+    "o": [
+      "24 số",
+      "23 số",
+      "19 số",
+      "16 số"
+    ],
+    "a": "19 số",
+    "h": "Có (127 − 19) : 6 = 18 khoảng cách. Số số hạng = 18 + 1 = 19.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_1_36",
+    "sub": "Dãy số và phát hiện quy luật",
+    "q": "Dãy xen kẽ 1, 10, 3, 12, 5, 14, … Số đứng ngay sau 14 là:",
+    "o": [
+      "9",
+      "10",
+      "5",
+      "7"
+    ],
+    "a": "7",
+    "h": "Xét các vị trí 1, 3, 5: 1, 3, 5 (tăng 2). Vị trí 7 phải là 5 + 2 = 7.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_1_37",
+    "sub": "Dãy số và phát hiện quy luật",
+    "q": "Dãy xen kẽ 2, 12, 4, 14, 6, 16, … Số đứng ngay sau 16 là:",
+    "o": [
+      "10",
+      "11",
+      "8",
+      "6"
+    ],
+    "a": "8",
+    "h": "Xét các vị trí 1, 3, 5: 2, 4, 6 (tăng 2). Vị trí 7 phải là 6 + 2 = 8.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_1_38",
+    "sub": "Dãy số và phát hiện quy luật",
+    "q": "Dãy xen kẽ 3, 14, 5, 16, 7, 18, … Số đứng ngay sau 18 là:",
+    "o": [
+      "9",
+      "12",
+      "11",
+      "7"
+    ],
+    "a": "9",
+    "h": "Xét các vị trí 1, 3, 5: 3, 5, 7 (tăng 2). Vị trí 7 phải là 7 + 2 = 9.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_1_39",
+    "sub": "Dãy số và phát hiện quy luật",
+    "q": "Dãy xen kẽ 4, 16, 6, 18, 8, 20, … Số đứng ngay sau 20 là:",
+    "o": [
+      "14",
+      "7",
+      "15",
+      "10"
+    ],
+    "a": "10",
+    "h": "Xét các vị trí 1, 3, 5: 4, 6, 8 (tăng 2). Vị trí 7 phải là 8 + 2 = 10.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_1_40",
+    "sub": "Dãy số và phát hiện quy luật",
+    "q": "Dãy xen kẽ 5, 18, 7, 20, 9, 22, … Số đứng ngay sau 22 là:",
+    "o": [
+      "11",
+      "16",
+      "8",
+      "15"
+    ],
+    "a": "11",
+    "h": "Xét các vị trí 1, 3, 5: 5, 7, 9 (tăng 2). Vị trí 7 phải là 9 + 2 = 11.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_1_41",
+    "sub": "Dãy số và phát hiện quy luật",
+    "q": "Các lá cờ xếp theo thứ tự lặp lại: đỏ, xanh, vàng, đỏ, xanh, vàng, … Lá cờ thứ 20 màu gì?",
+    "o": [
+      "tím",
+      "đỏ",
+      "vàng",
+      "xanh"
+    ],
+    "a": "xanh",
+    "h": "Một nhóm có 3 màu. 20 chia 3 dư 2; lấy màu ở vị trí 2 trong nhóm là xanh.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_1_42",
+    "sub": "Dãy số và phát hiện quy luật",
+    "q": "Các lá cờ xếp theo thứ tự lặp lại: xanh, vàng, tím, xanh, vàng, tím, … Lá cờ thứ 23 màu gì?",
+    "o": [
+      "xanh",
+      "đỏ",
+      "tím",
+      "vàng"
+    ],
+    "a": "vàng",
+    "h": "Một nhóm có 3 màu. 23 chia 3 dư 2; lấy màu ở vị trí 2 trong nhóm là vàng.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_1_43",
+    "sub": "Dãy số và phát hiện quy luật",
+    "q": "Các lá cờ xếp theo thứ tự lặp lại: vàng, tím, cam, vàng, tím, cam, … Lá cờ thứ 26 màu gì?",
+    "o": [
+      "đỏ",
+      "xanh",
+      "vàng",
+      "tím"
+    ],
+    "a": "tím",
+    "h": "Một nhóm có 3 màu. 26 chia 3 dư 2; lấy màu ở vị trí 2 trong nhóm là tím.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_1_44",
+    "sub": "Dãy số và phát hiện quy luật",
+    "q": "Các lá cờ xếp theo thứ tự lặp lại: tím, đỏ, xanh, tím, đỏ, xanh, … Lá cờ thứ 29 màu gì?",
+    "o": [
+      "xanh",
+      "tím",
+      "vàng",
+      "đỏ"
+    ],
+    "a": "đỏ",
+    "h": "Một nhóm có 3 màu. 29 chia 3 dư 2; lấy màu ở vị trí 2 trong nhóm là đỏ.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_1_45",
+    "sub": "Dãy số và phát hiện quy luật",
+    "q": "Các lá cờ xếp theo thứ tự lặp lại: cam, đỏ, xanh, cam, đỏ, xanh, … Lá cờ thứ 32 màu gì?",
+    "o": [
+      "xanh",
+      "tím",
+      "đỏ",
+      "vàng"
+    ],
+    "a": "đỏ",
+    "h": "Một nhóm có 3 màu. 32 chia 3 dư 2; lấy màu ở vị trí 2 trong nhóm là đỏ.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_1_46",
+    "sub": "Dãy số và phát hiện quy luật",
+    "q": "Một dãy lặp lại nhóm gồm một chữ số 1 rồi 2 chữ số 0: 1, 0, 0, 1, 0, 0, …. Trong 31 số hạng đầu có bao nhiêu chữ số 1?",
+    "o": [
+      "11",
+      "16",
+      "8",
+      "15"
+    ],
+    "a": "11",
+    "h": "Mỗi nhóm có 3 vị trí và chỉ có một số 1. Trong 31 vị trí có 10 nhóm trọn vẹn và nhóm còn lại bắt đầu bằng 1, nên có 11 chữ số 1.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_1_47",
+    "sub": "Dãy số và phát hiện quy luật",
+    "q": "Một dãy lặp lại nhóm gồm một chữ số 1 rồi 3 chữ số 0: 1, 0, 0, 0, 1, 0, 0, 0, …. Trong 38 số hạng đầu có bao nhiêu chữ số 1?",
+    "o": [
+      "7",
+      "15",
+      "10",
+      "14"
+    ],
+    "a": "10",
+    "h": "Mỗi nhóm có 4 vị trí và chỉ có một số 1. Trong 38 vị trí có 9 nhóm trọn vẹn và nhóm còn lại bắt đầu bằng 1, nên có 10 chữ số 1.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_1_48",
+    "sub": "Dãy số và phát hiện quy luật",
+    "q": "Một dãy lặp lại nhóm gồm một chữ số 1 rồi 4 chữ số 0: 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, …. Trong 45 số hạng đầu có bao nhiêu chữ số 1?",
+    "o": [
+      "9",
+      "11",
+      "12",
+      "7"
+    ],
+    "a": "9",
+    "h": "Mỗi nhóm có 5 vị trí và chỉ có một số 1. Trong 45 vị trí có 9 nhóm trọn vẹn, nên có 9 chữ số 1.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_1_49",
+    "sub": "Dãy số và phát hiện quy luật",
+    "q": "Một dãy lặp lại nhóm gồm một chữ số 1 rồi 2 chữ số 0: 1, 0, 0, 1, 0, 0, …. Trong 52 số hạng đầu có bao nhiêu chữ số 1?",
+    "o": [
+      "22",
+      "18",
+      "15",
+      "23"
+    ],
+    "a": "18",
+    "h": "Mỗi nhóm có 3 vị trí và chỉ có một số 1. Trong 52 vị trí có 17 nhóm trọn vẹn và nhóm còn lại bắt đầu bằng 1, nên có 18 chữ số 1.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_1_50",
+    "sub": "Dãy số và phát hiện quy luật",
+    "q": "Một dãy lặp lại nhóm gồm một chữ số 1 rồi 3 chữ số 0: 1, 0, 0, 0, 1, 0, 0, 0, …. Trong 59 số hạng đầu có bao nhiêu chữ số 1?",
+    "o": [
+      "20",
+      "15",
+      "19",
+      "12"
+    ],
+    "a": "15",
+    "h": "Mỗi nhóm có 4 vị trí và chỉ có một số 1. Trong 59 vị trí có 14 nhóm trọn vẹn và nhóm còn lại bắt đầu bằng 1, nên có 15 chữ số 1.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_2_1",
+    "sub": "Tính nhanh và so sánh thông minh",
+    "q": "Tính nhanh: 120 + 37 + 880 = ?",
+    "o": [
+      "937",
+      "1 037",
+      "1 137",
+      "1 237"
+    ],
+    "a": "1 037",
+    "h": "Ghép 120 với 880 được 1 000; cộng thêm 37: 1 000 + 37 = 1 037.",
+    "w": null,
+    "tag": "TOAN3_C4",
+    "illustration": {
+      "kind": "emoji",
+      "emoji": "🧠",
+      "caption": "Biểu tượng minh họa chủ đề; không chứa dữ kiện của bài toán.",
+      "role": "topic_cover"
+    }
+  },
+  {
+    "id": "Q_11_2_2",
+    "sub": "Tính nhanh và so sánh thông minh",
+    "q": "Tính nhanh: 165 + 66 + 835 = ?",
+    "o": [
+      "1 166",
+      "1 066",
+      "966",
+      "1 266"
+    ],
+    "a": "1 066",
+    "h": "Ghép 165 với 835 được 1 000; cộng thêm 66: 1 000 + 66 = 1 066.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_2_3",
+    "sub": "Tính nhanh và so sánh thông minh",
+    "q": "Tính nhanh: 210 + 95 + 790 = ?",
+    "o": [
+      "995",
+      "1 195",
+      "1 095",
+      "1 295"
+    ],
+    "a": "1 095",
+    "h": "Ghép 210 với 790 được 1 000; cộng thêm 95: 1 000 + 95 = 1 095.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_2_4",
+    "sub": "Tính nhanh và so sánh thông minh",
+    "q": "Tính nhanh: 255 + 124 + 745 = ?",
+    "o": [
+      "1 024",
+      "1 124",
+      "1 324",
+      "1 224"
+    ],
+    "a": "1 124",
+    "h": "Ghép 255 với 745 được 1 000; cộng thêm 124: 1 000 + 124 = 1 124.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_2_5",
+    "sub": "Tính nhanh và so sánh thông minh",
+    "q": "Tính nhanh: 300 + 153 + 700 = ?",
+    "o": [
+      "1 353",
+      "1 253",
+      "1 153",
+      "1 053"
+    ],
+    "a": "1 153",
+    "h": "Ghép 300 với 700 được 1 000; cộng thêm 153: 1 000 + 153 = 1 153.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_2_6",
+    "sub": "Tính nhanh và so sánh thông minh",
+    "q": "Không cần đặt tính dài, hãy tính: 800 − 197 = ?",
+    "o": [
+      "623",
+      "583",
+      "613",
+      "603"
+    ],
+    "a": "603",
+    "h": "Trừ tròn 200 sẽ dễ hơn: 800 − 200 = 600. Vì đã trừ hơn 3 nên cộng lại 3: 600 + 3 = 603.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_2_7",
+    "sub": "Tính nhanh và so sánh thông minh",
+    "q": "Không cần đặt tính dài, hãy tính: 1 000 − 297 = ?",
+    "o": [
+      "713",
+      "683",
+      "723",
+      "703"
+    ],
+    "a": "703",
+    "h": "Trừ tròn 300 sẽ dễ hơn: 1 000 − 300 = 700. Vì đã trừ hơn 3 nên cộng lại 3: 700 + 3 = 703.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_2_8",
+    "sub": "Tính nhanh và so sánh thông minh",
+    "q": "Không cần đặt tính dài, hãy tính: 1 200 − 397 = ?",
+    "o": [
+      "803",
+      "823",
+      "783",
+      "813"
+    ],
+    "a": "803",
+    "h": "Trừ tròn 400 sẽ dễ hơn: 1 200 − 400 = 800. Vì đã trừ hơn 3 nên cộng lại 3: 800 + 3 = 803.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_2_9",
+    "sub": "Tính nhanh và so sánh thông minh",
+    "q": "Không cần đặt tính dài, hãy tính: 1 400 − 497 = ?",
+    "o": [
+      "883",
+      "913",
+      "903",
+      "923"
+    ],
+    "a": "903",
+    "h": "Trừ tròn 500 sẽ dễ hơn: 1 400 − 500 = 900. Vì đã trừ hơn 3 nên cộng lại 3: 900 + 3 = 903.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_2_10",
+    "sub": "Tính nhanh và so sánh thông minh",
+    "q": "Không cần đặt tính dài, hãy tính: 1 600 − 597 = ?",
+    "o": [
+      "903",
+      "1 103",
+      "1 003",
+      "1 203"
+    ],
+    "a": "1 003",
+    "h": "Trừ tròn 600 sẽ dễ hơn: 1 600 − 600 = 1 000. Vì đã trừ hơn 3 nên cộng lại 3: 1 000 + 3 = 1 003.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_2_11",
+    "sub": "Tính nhanh và so sánh thông minh",
+    "q": "Tính hợp lí: 199 + 305 + 201 = ?",
+    "o": [
+      "725",
+      "705",
+      "715",
+      "685"
+    ],
+    "a": "705",
+    "h": "Ghép 199 + 201 = 400 (số tròn trăm). Sau đó 400 + 305 = 705.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_2_12",
+    "sub": "Tính nhanh và so sánh thông minh",
+    "q": "Tính hợp lí: 299 + 385 + 301 = ?",
+    "o": [
+      "985",
+      "995",
+      "965",
+      "1 005"
+    ],
+    "a": "985",
+    "h": "Ghép 299 + 301 = 600 (số tròn trăm). Sau đó 600 + 385 = 985.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_2_13",
+    "sub": "Tính nhanh và so sánh thông minh",
+    "q": "Tính hợp lí: 399 + 465 + 401 = ?",
+    "o": [
+      "1 365",
+      "1 265",
+      "1 165",
+      "1 465"
+    ],
+    "a": "1 265",
+    "h": "Ghép 399 + 401 = 800 (số tròn trăm). Sau đó 800 + 465 = 1 265.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_2_14",
+    "sub": "Tính nhanh và so sánh thông minh",
+    "q": "Tính hợp lí: 499 + 545 + 501 = ?",
+    "o": [
+      "1 745",
+      "1 645",
+      "1 545",
+      "1 445"
+    ],
+    "a": "1 545",
+    "h": "Ghép 499 + 501 = 1 000 (số tròn trăm). Sau đó 1 000 + 545 = 1 545.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_2_15",
+    "sub": "Tính nhanh và so sánh thông minh",
+    "q": "Tính hợp lí: 599 + 625 + 601 = ?",
+    "o": [
+      "1 725",
+      "2 025",
+      "1 925",
+      "1 825"
+    ],
+    "a": "1 825",
+    "h": "Ghép 599 + 601 = 1 200 (số tròn trăm). Sau đó 1 200 + 625 = 1 825.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_2_16",
+    "sub": "Tính nhanh và so sánh thông minh",
+    "q": "Tính nhanh: 11 × 5 + 9 × 5 = ?",
+    "o": [
+      "100",
+      "80",
+      "120",
+      "110"
+    ],
+    "a": "100",
+    "h": "Hai tích có thừa số 5 chung. Gộp thành (11 + 9) × 5 = 20 × 5 = 100.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_2_17",
+    "sub": "Tính nhanh và so sánh thông minh",
+    "q": "Tính nhanh: 12 × 6 + 11 × 6 = ?",
+    "o": [
+      "138",
+      "158",
+      "148",
+      "118"
+    ],
+    "a": "138",
+    "h": "Hai tích có thừa số 6 chung. Gộp thành (12 + 11) × 6 = 23 × 6 = 138.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_2_18",
+    "sub": "Tính nhanh và so sánh thông minh",
+    "q": "Tính nhanh: 13 × 7 + 13 × 7 = ?",
+    "o": [
+      "192",
+      "162",
+      "202",
+      "182"
+    ],
+    "a": "182",
+    "h": "Hai tích có thừa số 7 chung. Gộp thành (13 + 13) × 7 = 26 × 7 = 182.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_2_19",
+    "sub": "Tính nhanh và so sánh thông minh",
+    "q": "Tính nhanh: 14 × 8 + 15 × 8 = ?",
+    "o": [
+      "252",
+      "212",
+      "232",
+      "242"
+    ],
+    "a": "232",
+    "h": "Hai tích có thừa số 8 chung. Gộp thành (14 + 15) × 8 = 29 × 8 = 232.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_2_20",
+    "sub": "Tính nhanh và so sánh thông minh",
+    "q": "Tính nhanh: 15 × 9 + 17 × 9 = ?",
+    "o": [
+      "288",
+      "308",
+      "268",
+      "298"
+    ],
+    "a": "288",
+    "h": "Hai tích có thừa số 9 chung. Gộp thành (15 + 17) × 9 = 32 × 9 = 288.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_2_21",
+    "sub": "Tính nhanh và so sánh thông minh",
+    "q": "Không tính hết, hãy so sánh A = (145 + 32) × 3 và B = 145 × 3 + 31 × 3.",
+    "o": [
+      "A < B",
+      "A = B",
+      "Không đủ dữ kiện",
+      "A > B"
+    ],
+    "a": "A > B",
+    "h": "A = 145 × 3 + 32 × 3. Hai biểu thức chỉ khác ở thừa số 32 và 31; vì 3 dương nên A > B.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_2_22",
+    "sub": "Tính nhanh và so sánh thông minh",
+    "q": "Không tính hết, hãy so sánh A = (208 + 43) × 4 và B = 208 × 4 + 43 × 4.",
+    "o": [
+      "Không đủ dữ kiện",
+      "A > B",
+      "A < B",
+      "A = B"
+    ],
+    "a": "A = B",
+    "h": "A = 208 × 4 + 43 × 4. Hai biểu thức chỉ khác ở thừa số 43 và 43; vì 4 dương nên A = B.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_2_23",
+    "sub": "Tính nhanh và so sánh thông minh",
+    "q": "Không tính hết, hãy so sánh A = (271 + 54) × 5 và B = 271 × 5 + 55 × 5.",
+    "o": [
+      "A > B",
+      "A < B",
+      "Không đủ dữ kiện",
+      "A = B"
+    ],
+    "a": "A < B",
+    "h": "A = 271 × 5 + 54 × 5. Hai biểu thức chỉ khác ở thừa số 54 và 55; vì 5 dương nên A < B.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_2_24",
+    "sub": "Tính nhanh và so sánh thông minh",
+    "q": "Không tính hết, hãy so sánh A = (334 + 65) × 6 và B = 334 × 6 + 64 × 6.",
+    "o": [
+      "A > B",
+      "A = B",
+      "Không đủ dữ kiện",
+      "A < B"
+    ],
+    "a": "A > B",
+    "h": "A = 334 × 6 + 65 × 6. Hai biểu thức chỉ khác ở thừa số 65 và 64; vì 6 dương nên A > B.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_2_25",
+    "sub": "Tính nhanh và so sánh thông minh",
+    "q": "Không tính hết, hãy so sánh A = (397 + 76) × 7 và B = 397 × 7 + 76 × 7.",
+    "o": [
+      "Không đủ dữ kiện",
+      "A > B",
+      "A = B",
+      "A < B"
+    ],
+    "a": "A = B",
+    "h": "A = 397 × 7 + 76 × 7. Hai biểu thức chỉ khác ở thừa số 76 và 76; vì 7 dương nên A = B.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_2_26",
+    "sub": "Tính nhanh và so sánh thông minh",
+    "q": "So sánh A = 6 × 10 và B = 7 × 9. Chọn nhận xét đúng.",
+    "o": [
+      "A > B",
+      "Không đủ dữ kiện",
+      "A = B",
+      "A < B"
+    ],
+    "a": "A < B",
+    "h": "A = 60, B = 63. Có thể nhẩm: B − A = 6 − 10 + 1 = 3. Vậy A < B.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_2_27",
+    "sub": "Tính nhanh và so sánh thông minh",
+    "q": "So sánh A = 8 × 7 và B = 9 × 6. Chọn nhận xét đúng.",
+    "o": [
+      "Không đủ dữ kiện",
+      "A < B",
+      "A > B",
+      "A = B"
+    ],
+    "a": "A > B",
+    "h": "A = 56, B = 54. Có thể nhẩm: B − A = 8 − 7 + 1 = -2. Vậy A > B.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_2_28",
+    "sub": "Tính nhanh và so sánh thông minh",
+    "q": "So sánh A = 10 × 11 và B = 11 × 10. Chọn nhận xét đúng.",
+    "o": [
+      "A < B",
+      "Không đủ dữ kiện",
+      "A > B",
+      "A = B"
+    ],
+    "a": "A = B",
+    "h": "A = 110, B = 110. Có thể nhẩm: B − A = 10 − 11 + 1 = 0. Vậy A = B.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_2_29",
+    "sub": "Tính nhanh và so sánh thông minh",
+    "q": "So sánh A = 12 × 12 và B = 13 × 11. Chọn nhận xét đúng.",
+    "o": [
+      "A = B",
+      "Không đủ dữ kiện",
+      "A > B",
+      "A < B"
+    ],
+    "a": "A > B",
+    "h": "A = 144, B = 143. Có thể nhẩm: B − A = 12 − 12 + 1 = -1. Vậy A > B.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_2_30",
+    "sub": "Tính nhanh và so sánh thông minh",
+    "q": "So sánh A = 14 × 9 và B = 15 × 8. Chọn nhận xét đúng.",
+    "o": [
+      "A < B",
+      "Không đủ dữ kiện",
+      "A = B",
+      "A > B"
+    ],
+    "a": "A > B",
+    "h": "A = 126, B = 120. Có thể nhẩm: B − A = 14 − 9 + 1 = -6. Vậy A > B.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_2_31",
+    "sub": "Tính nhanh và so sánh thông minh",
+    "q": "Nhẩm nhanh: 102 + 89 + 38 − 102 − 47 = ?",
+    "o": [
+      "90",
+      "70",
+      "85",
+      "80"
+    ],
+    "a": "80",
+    "h": "Cặp +102 và −102 triệt tiêu. Còn 89 + 38 − 47 = 80.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_2_32",
+    "sub": "Tính nhanh và so sánh thông minh",
+    "q": "Nhẩm nhanh: 202 + 179 + 42 − 202 − 52 = ?",
+    "o": [
+      "169",
+      "179",
+      "189",
+      "149"
+    ],
+    "a": "169",
+    "h": "Cặp +202 và −202 triệt tiêu. Còn 179 + 42 − 52 = 169.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_2_33",
+    "sub": "Tính nhanh và so sánh thông minh",
+    "q": "Nhẩm nhanh: 302 + 269 + 46 − 302 − 57 = ?",
+    "o": [
+      "268",
+      "278",
+      "258",
+      "238"
+    ],
+    "a": "258",
+    "h": "Cặp +302 và −302 triệt tiêu. Còn 269 + 46 − 57 = 258.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_2_34",
+    "sub": "Tính nhanh và so sánh thông minh",
+    "q": "Nhẩm nhanh: 402 + 359 + 50 − 402 − 62 = ?",
+    "o": [
+      "347",
+      "367",
+      "327",
+      "357"
+    ],
+    "a": "347",
+    "h": "Cặp +402 và −402 triệt tiêu. Còn 359 + 50 − 62 = 347.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_2_35",
+    "sub": "Tính nhanh và so sánh thông minh",
+    "q": "Nhẩm nhanh: 502 + 449 + 54 − 502 − 67 = ?",
+    "o": [
+      "456",
+      "416",
+      "436",
+      "446"
+    ],
+    "a": "436",
+    "h": "Cặp +502 và −502 triệt tiêu. Còn 449 + 54 − 67 = 436.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_2_36",
+    "sub": "Tính nhanh và so sánh thông minh",
+    "q": "Nhóm các số để tính nhanh: 38 + 62 + 74 + 26 = ?",
+    "o": [
+      "200",
+      "220",
+      "180",
+      "210"
+    ],
+    "a": "200",
+    "h": "Chia thành hai cặp: (38 + 62) + (74 + 26) = 100 + 100 = 200.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_2_37",
+    "sub": "Tính nhanh và so sánh thông minh",
+    "q": "Nhóm các số để tính nhanh: 57 + 75 + 90 + 49 = ?",
+    "o": [
+      "251",
+      "291",
+      "281",
+      "271"
+    ],
+    "a": "271",
+    "h": "Chia thành hai cặp: (57 + 75) + (90 + 49) = 132 + 139 = 271.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_2_38",
+    "sub": "Tính nhanh và so sánh thông minh",
+    "q": "Nhóm các số để tính nhanh: 76 + 88 + 106 + 72 = ?",
+    "o": [
+      "342",
+      "352",
+      "362",
+      "322"
+    ],
+    "a": "342",
+    "h": "Chia thành hai cặp: (76 + 88) + (106 + 72) = 164 + 178 = 342.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_2_39",
+    "sub": "Tính nhanh và so sánh thông minh",
+    "q": "Nhóm các số để tính nhanh: 95 + 101 + 122 + 95 = ?",
+    "o": [
+      "423",
+      "393",
+      "433",
+      "413"
+    ],
+    "a": "413",
+    "h": "Chia thành hai cặp: (95 + 101) + (122 + 95) = 196 + 217 = 413.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_2_40",
+    "sub": "Tính nhanh và so sánh thông minh",
+    "q": "Nhóm các số để tính nhanh: 114 + 114 + 138 + 118 = ?",
+    "o": [
+      "464",
+      "484",
+      "504",
+      "494"
+    ],
+    "a": "484",
+    "h": "Chia thành hai cặp: (114 + 114) + (138 + 118) = 228 + 256 = 484.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_2_41",
+    "sub": "Tính nhanh và so sánh thông minh",
+    "q": "Không cần nhân hai tích, tính: 10 × 4 − 9 × 4 = ?",
+    "o": [
+      "2",
+      "7",
+      "4",
+      "6"
+    ],
+    "a": "4",
+    "h": "Lấy hiệu các thừa số thứ nhất: (10 − 9) × 4 = 1 × 4 = 4.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_2_42",
+    "sub": "Tính nhanh và so sánh thông minh",
+    "q": "Không cần nhân hai tích, tính: 11 × 5 − 10 × 5 = ?",
+    "o": [
+      "7",
+      "8",
+      "3",
+      "5"
+    ],
+    "a": "5",
+    "h": "Lấy hiệu các thừa số thứ nhất: (11 − 10) × 5 = 1 × 5 = 5.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_2_43",
+    "sub": "Tính nhanh và so sánh thông minh",
+    "q": "Không cần nhân hai tích, tính: 12 × 6 − 11 × 6 = ?",
+    "o": [
+      "9",
+      "4",
+      "6",
+      "8"
+    ],
+    "a": "6",
+    "h": "Lấy hiệu các thừa số thứ nhất: (12 − 11) × 6 = 1 × 6 = 6.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_2_44",
+    "sub": "Tính nhanh và so sánh thông minh",
+    "q": "Không cần nhân hai tích, tính: 13 × 7 − 12 × 7 = ?",
+    "o": [
+      "9",
+      "5",
+      "7",
+      "10"
+    ],
+    "a": "7",
+    "h": "Lấy hiệu các thừa số thứ nhất: (13 − 12) × 7 = 1 × 7 = 7.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_2_45",
+    "sub": "Tính nhanh và so sánh thông minh",
+    "q": "Không cần nhân hai tích, tính: 14 × 8 − 13 × 8 = ?",
+    "o": [
+      "11",
+      "6",
+      "10",
+      "8"
+    ],
+    "a": "8",
+    "h": "Lấy hiệu các thừa số thứ nhất: (14 − 13) × 8 = 1 × 8 = 8.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_2_46",
+    "sub": "Tính nhanh và so sánh thông minh",
+    "q": "Tính nhanh: (20 + 10) × 5 − 5 × 5 = ?",
+    "o": [
+      "145",
+      "105",
+      "135",
+      "125"
+    ],
+    "a": "125",
+    "h": "Đưa cùng thừa số 5 ra ngoài: (20 + 10 − 5) × 5 = 25 × 5 = 125.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_2_47",
+    "sub": "Tính nhanh và so sánh thông minh",
+    "q": "Tính nhanh: (24 + 13) × 6 − 6 × 6 = ?",
+    "o": [
+      "206",
+      "186",
+      "196",
+      "166"
+    ],
+    "a": "186",
+    "h": "Đưa cùng thừa số 6 ra ngoài: (24 + 13 − 6) × 6 = 31 × 6 = 186.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_2_48",
+    "sub": "Tính nhanh và so sánh thông minh",
+    "q": "Tính nhanh: (28 + 16) × 7 − 7 × 7 = ?",
+    "o": [
+      "279",
+      "269",
+      "259",
+      "239"
+    ],
+    "a": "259",
+    "h": "Đưa cùng thừa số 7 ra ngoài: (28 + 16 − 7) × 7 = 37 × 7 = 259.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_2_49",
+    "sub": "Tính nhanh và so sánh thông minh",
+    "q": "Tính nhanh: (32 + 19) × 8 − 8 × 8 = ?",
+    "o": [
+      "344",
+      "354",
+      "364",
+      "324"
+    ],
+    "a": "344",
+    "h": "Đưa cùng thừa số 8 ra ngoài: (32 + 19 − 8) × 8 = 43 × 8 = 344.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_2_50",
+    "sub": "Tính nhanh và so sánh thông minh",
+    "q": "Tính nhanh: (36 + 22) × 9 − 9 × 9 = ?",
+    "o": [
+      "451",
+      "461",
+      "441",
+      "421"
+    ],
+    "a": "441",
+    "h": "Đưa cùng thừa số 9 ra ngoài: (36 + 22 − 9) × 9 = 49 × 9 = 441.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_3_1",
+    "sub": "Tìm số bí mật và khám phá chữ số",
+    "q": "Một số có bốn chữ số dạng 2□31. Tổng bốn chữ số bằng 8. Chữ số ở ô □ là:",
+    "o": [
+      "0",
+      "2",
+      "4",
+      "5"
+    ],
+    "a": "2",
+    "h": "Trừ tổng các chữ số đã biết: 8 − 2 − 3 − 1 = 2.",
+    "w": null,
+    "tag": "TOAN3_C1",
+    "illustration": {
+      "kind": "emoji",
+      "emoji": "🔢",
+      "caption": "Biểu tượng minh họa chủ đề; không chứa dữ kiện của bài toán.",
+      "role": "topic_cover"
+    }
+  },
+  {
+    "id": "Q_11_3_2",
+    "sub": "Tìm số bí mật và khám phá chữ số",
+    "q": "Một số có bốn chữ số dạng 3□42. Tổng bốn chữ số bằng 12. Chữ số ở ô □ là:",
+    "o": [
+      "3",
+      "5",
+      "6",
+      "1"
+    ],
+    "a": "3",
+    "h": "Trừ tổng các chữ số đã biết: 12 − 3 − 4 − 2 = 3.",
+    "w": null,
+    "tag": "TOAN3_C1"
+  },
+  {
+    "id": "Q_11_3_3",
+    "sub": "Tìm số bí mật và khám phá chữ số",
+    "q": "Một số có bốn chữ số dạng 4□53. Tổng bốn chữ số bằng 16. Chữ số ở ô □ là:",
+    "o": [
+      "7",
+      "2",
+      "4",
+      "6"
+    ],
+    "a": "4",
+    "h": "Trừ tổng các chữ số đã biết: 16 − 4 − 5 − 3 = 4.",
+    "w": null,
+    "tag": "TOAN3_C1"
+  },
+  {
+    "id": "Q_11_3_4",
+    "sub": "Tìm số bí mật và khám phá chữ số",
+    "q": "Một số có bốn chữ số dạng 5□61. Tổng bốn chữ số bằng 17. Chữ số ở ô □ là:",
+    "o": [
+      "5",
+      "8",
+      "7",
+      "3"
+    ],
+    "a": "5",
+    "h": "Trừ tổng các chữ số đã biết: 17 − 5 − 6 − 1 = 5.",
+    "w": null,
+    "tag": "TOAN3_C1"
+  },
+  {
+    "id": "Q_11_3_5",
+    "sub": "Tìm số bí mật và khám phá chữ số",
+    "q": "Một số có bốn chữ số dạng 6□32. Tổng bốn chữ số bằng 17. Chữ số ở ô □ là:",
+    "o": [
+      "9",
+      "8",
+      "6",
+      "4"
+    ],
+    "a": "6",
+    "h": "Trừ tổng các chữ số đã biết: 17 − 6 − 3 − 2 = 6.",
+    "w": null,
+    "tag": "TOAN3_C1"
+  },
+  {
+    "id": "Q_11_3_6",
+    "sub": "Tìm số bí mật và khám phá chữ số",
+    "q": "Cho số 1 136. Thay riêng chữ số hàng trăm 1 bằng 3, các chữ số khác giữ nguyên. Số mới lớn hơn số cũ bao nhiêu?",
+    "o": [
+      "200",
+      "210",
+      "220",
+      "180"
+    ],
+    "a": "200",
+    "h": "Hàng trăm tăng 3 − 1 = 2 trăm, tức 2 × 100 = 200.",
+    "w": null,
+    "tag": "TOAN3_C1"
+  },
+  {
+    "id": "Q_11_3_7",
+    "sub": "Tìm số bí mật và khám phá chữ số",
+    "q": "Cho số 2 236. Thay riêng chữ số hàng trăm 2 bằng 5, các chữ số khác giữ nguyên. Số mới lớn hơn số cũ bao nhiêu?",
+    "o": [
+      "310",
+      "280",
+      "320",
+      "300"
+    ],
+    "a": "300",
+    "h": "Hàng trăm tăng 5 − 2 = 3 trăm, tức 3 × 100 = 300.",
+    "w": null,
+    "tag": "TOAN3_C1"
+  },
+  {
+    "id": "Q_11_3_8",
+    "sub": "Tìm số bí mật và khám phá chữ số",
+    "q": "Cho số 3 336. Thay riêng chữ số hàng trăm 3 bằng 7, các chữ số khác giữ nguyên. Số mới lớn hơn số cũ bao nhiêu?",
+    "o": [
+      "420",
+      "400",
+      "410",
+      "380"
+    ],
+    "a": "400",
+    "h": "Hàng trăm tăng 7 − 3 = 4 trăm, tức 4 × 100 = 400.",
+    "w": null,
+    "tag": "TOAN3_C1"
+  },
+  {
+    "id": "Q_11_3_9",
+    "sub": "Tìm số bí mật và khám phá chữ số",
+    "q": "Cho số 4 136. Thay riêng chữ số hàng trăm 1 bằng 3, các chữ số khác giữ nguyên. Số mới lớn hơn số cũ bao nhiêu?",
+    "o": [
+      "180",
+      "220",
+      "200",
+      "210"
+    ],
+    "a": "200",
+    "h": "Hàng trăm tăng 3 − 1 = 2 trăm, tức 2 × 100 = 200.",
+    "w": null,
+    "tag": "TOAN3_C1"
+  },
+  {
+    "id": "Q_11_3_10",
+    "sub": "Tìm số bí mật và khám phá chữ số",
+    "q": "Cho số 5 236. Thay riêng chữ số hàng trăm 2 bằng 5, các chữ số khác giữ nguyên. Số mới lớn hơn số cũ bao nhiêu?",
+    "o": [
+      "320",
+      "280",
+      "310",
+      "300"
+    ],
+    "a": "300",
+    "h": "Hàng trăm tăng 5 − 2 = 3 trăm, tức 3 × 100 = 300.",
+    "w": null,
+    "tag": "TOAN3_C1"
+  },
+  {
+    "id": "Q_11_3_11",
+    "sub": "Tìm số bí mật và khám phá chữ số",
+    "q": "Trong số 3 420, đổi chỗ chữ số hàng chục và hàng đơn vị. Số ban đầu lớn hơn số mới bao nhiêu?",
+    "o": [
+      "23",
+      "18",
+      "22",
+      "15"
+    ],
+    "a": "18",
+    "h": "Hiệu do hai chữ số đổi chỗ là 9 × (2 − 0) = 18.",
+    "w": null,
+    "tag": "TOAN3_C1"
+  },
+  {
+    "id": "Q_11_3_12",
+    "sub": "Tìm số bí mật và khám phá chữ số",
+    "q": "Trong số 4 431, đổi chỗ chữ số hàng chục và hàng đơn vị. Số ban đầu lớn hơn số mới bao nhiêu?",
+    "o": [
+      "15",
+      "18",
+      "22",
+      "23"
+    ],
+    "a": "18",
+    "h": "Hiệu do hai chữ số đổi chỗ là 9 × (3 − 1) = 18.",
+    "w": null,
+    "tag": "TOAN3_C1"
+  },
+  {
+    "id": "Q_11_3_13",
+    "sub": "Tìm số bí mật và khám phá chữ số",
+    "q": "Trong số 5 442, đổi chỗ chữ số hàng chục và hàng đơn vị. Số ban đầu lớn hơn số mới bao nhiêu?",
+    "o": [
+      "15",
+      "18",
+      "22",
+      "23"
+    ],
+    "a": "18",
+    "h": "Hiệu do hai chữ số đổi chỗ là 9 × (4 − 2) = 18.",
+    "w": null,
+    "tag": "TOAN3_C1"
+  },
+  {
+    "id": "Q_11_3_14",
+    "sub": "Tìm số bí mật và khám phá chữ số",
+    "q": "Trong số 6 450, đổi chỗ chữ số hàng chục và hàng đơn vị. Số ban đầu lớn hơn số mới bao nhiêu?",
+    "o": [
+      "55",
+      "35",
+      "45",
+      "50"
+    ],
+    "a": "45",
+    "h": "Hiệu do hai chữ số đổi chỗ là 9 × (5 − 0) = 45.",
+    "w": null,
+    "tag": "TOAN3_C1"
+  },
+  {
+    "id": "Q_11_3_15",
+    "sub": "Tìm số bí mật và khám phá chữ số",
+    "q": "Trong số 7 461, đổi chỗ chữ số hàng chục và hàng đơn vị. Số ban đầu lớn hơn số mới bao nhiêu?",
+    "o": [
+      "50",
+      "55",
+      "45",
+      "35"
+    ],
+    "a": "45",
+    "h": "Hiệu do hai chữ số đổi chỗ là 9 × (6 − 1) = 45.",
+    "w": null,
+    "tag": "TOAN3_C1"
+  },
+  {
+    "id": "Q_11_3_16",
+    "sub": "Tìm số bí mật và khám phá chữ số",
+    "q": "Một số có hai chữ số, chữ số hàng chục là 4, hàng đơn vị là 1. Tổng số đó và số viết ngược thứ tự các chữ số là bao nhiêu?",
+    "o": [
+      "45",
+      "65",
+      "60",
+      "55"
+    ],
+    "a": "55",
+    "h": "Số ban đầu là 41, số đảo là 14. Tổng là 41 + 14 = 55.",
+    "w": null,
+    "tag": "TOAN3_C1"
+  },
+  {
+    "id": "Q_11_3_17",
+    "sub": "Tìm số bí mật và khám phá chữ số",
+    "q": "Một số có hai chữ số, chữ số hàng chục là 5, hàng đơn vị là 2. Tổng số đó và số viết ngược thứ tự các chữ số là bao nhiêu?",
+    "o": [
+      "67",
+      "87",
+      "77",
+      "82"
+    ],
+    "a": "77",
+    "h": "Số ban đầu là 52, số đảo là 25. Tổng là 52 + 25 = 77.",
+    "w": null,
+    "tag": "TOAN3_C1"
+  },
+  {
+    "id": "Q_11_3_18",
+    "sub": "Tìm số bí mật và khám phá chữ số",
+    "q": "Một số có hai chữ số, chữ số hàng chục là 6, hàng đơn vị là 3. Tổng số đó và số viết ngược thứ tự các chữ số là bao nhiêu?",
+    "o": [
+      "99",
+      "89",
+      "109",
+      "104"
+    ],
+    "a": "99",
+    "h": "Số ban đầu là 63, số đảo là 36. Tổng là 63 + 36 = 99.",
+    "w": null,
+    "tag": "TOAN3_C1"
+  },
+  {
+    "id": "Q_11_3_19",
+    "sub": "Tìm số bí mật và khám phá chữ số",
+    "q": "Một số có hai chữ số, chữ số hàng chục là 7, hàng đơn vị là 1. Tổng số đó và số viết ngược thứ tự các chữ số là bao nhiêu?",
+    "o": [
+      "98",
+      "88",
+      "78",
+      "93"
+    ],
+    "a": "88",
+    "h": "Số ban đầu là 71, số đảo là 17. Tổng là 71 + 17 = 88.",
+    "w": null,
+    "tag": "TOAN3_C1"
+  },
+  {
+    "id": "Q_11_3_20",
+    "sub": "Tìm số bí mật và khám phá chữ số",
+    "q": "Một số có hai chữ số, chữ số hàng chục là 8, hàng đơn vị là 2. Tổng số đó và số viết ngược thứ tự các chữ số là bao nhiêu?",
+    "o": [
+      "120",
+      "90",
+      "130",
+      "110"
+    ],
+    "a": "110",
+    "h": "Số ban đầu là 82, số đảo là 28. Tổng là 82 + 28 = 110.",
+    "w": null,
+    "tag": "TOAN3_C1"
+  },
+  {
+    "id": "Q_11_3_21",
+    "sub": "Tìm số bí mật và khám phá chữ số",
+    "q": "Số có ba chữ số, chữ số hàng trăm gấp 2 lần hàng đơn vị, hàng chục hơn hàng đơn vị 1 và tổng ba chữ số bằng 5. Số đó là:",
+    "o": [
+      "241",
+      "221",
+      "201",
+      "231"
+    ],
+    "a": "221",
+    "h": "Gọi hàng đơn vị là một phần thì hàng trăm là 2 phần, hàng chục là 1 phần thêm 1. Suy ra (5 − 1) : 4 = 1. Ba chữ số lần lượt là 2, 2, 1 → 221.",
+    "w": null,
+    "tag": "TOAN3_C1"
+  },
+  {
+    "id": "Q_11_3_22",
+    "sub": "Tìm số bí mật và khám phá chữ số",
+    "q": "Số có ba chữ số, chữ số hàng trăm gấp 2 lần hàng đơn vị, hàng chục hơn hàng đơn vị 1 và tổng ba chữ số bằng 9. Số đó là:",
+    "o": [
+      "442",
+      "452",
+      "412",
+      "432"
+    ],
+    "a": "432",
+    "h": "Gọi hàng đơn vị là một phần thì hàng trăm là 2 phần, hàng chục là 1 phần thêm 1. Suy ra (9 − 1) : 4 = 2. Ba chữ số lần lượt là 4, 3, 2 → 432.",
+    "w": null,
+    "tag": "TOAN3_C1"
+  },
+  {
+    "id": "Q_11_3_23",
+    "sub": "Tìm số bí mật và khám phá chữ số",
+    "q": "Số có ba chữ số, chữ số hàng trăm gấp 2 lần hàng đơn vị, hàng chục hơn hàng đơn vị 1 và tổng ba chữ số bằng 13. Số đó là:",
+    "o": [
+      "643",
+      "663",
+      "653",
+      "623"
+    ],
+    "a": "643",
+    "h": "Gọi hàng đơn vị là một phần thì hàng trăm là 2 phần, hàng chục là 1 phần thêm 1. Suy ra (13 − 1) : 4 = 3. Ba chữ số lần lượt là 6, 4, 3 → 643.",
+    "w": null,
+    "tag": "TOAN3_C1"
+  },
+  {
+    "id": "Q_11_3_24",
+    "sub": "Tìm số bí mật và khám phá chữ số",
+    "q": "Số có ba chữ số, chữ số hàng trăm gấp 2 lần hàng đơn vị, hàng chục hơn hàng đơn vị 1 và tổng ba chữ số bằng 17. Số đó là:",
+    "o": [
+      "854",
+      "834",
+      "874",
+      "864"
+    ],
+    "a": "854",
+    "h": "Gọi hàng đơn vị là một phần thì hàng trăm là 2 phần, hàng chục là 1 phần thêm 1. Suy ra (17 − 1) : 4 = 4. Ba chữ số lần lượt là 8, 5, 4 → 854.",
+    "w": null,
+    "tag": "TOAN3_C1"
+  },
+  {
+    "id": "Q_11_3_25",
+    "sub": "Tìm số bí mật và khám phá chữ số",
+    "q": "Số có ba chữ số, chữ số hàng trăm gấp 3 lần hàng đơn vị, hàng chục hơn hàng đơn vị 1 và tổng ba chữ số bằng 11. Số đó là:",
+    "o": [
+      "632",
+      "612",
+      "652",
+      "642"
+    ],
+    "a": "632",
+    "h": "Gọi hàng đơn vị là một phần thì hàng trăm là 3 phần, hàng chục là 1 phần thêm 1. Suy ra (11 − 1) : 5 = 2. Ba chữ số lần lượt là 6, 3, 2 → 632.",
+    "w": null,
+    "tag": "TOAN3_C1"
+  },
+  {
+    "id": "Q_11_3_26",
+    "sub": "Tìm số bí mật và khám phá chữ số",
+    "q": "Viết thêm chữ số 0 vào bên phải số 24. Số mới hơn số cũ bao nhiêu đơn vị?",
+    "o": [
+      "236",
+      "226",
+      "216",
+      "196"
+    ],
+    "a": "216",
+    "h": "Viết thêm 0 bên phải làm số gấp 10 lần: 24 × 10 = 240. Hiệu là 240 − 24 = 216.",
+    "w": null,
+    "tag": "TOAN3_C1"
+  },
+  {
+    "id": "Q_11_3_27",
+    "sub": "Tìm số bí mật và khám phá chữ số",
+    "q": "Viết thêm chữ số 0 vào bên phải số 37. Số mới hơn số cũ bao nhiêu đơn vị?",
+    "o": [
+      "343",
+      "313",
+      "333",
+      "353"
+    ],
+    "a": "333",
+    "h": "Viết thêm 0 bên phải làm số gấp 10 lần: 37 × 10 = 370. Hiệu là 370 − 37 = 333.",
+    "w": null,
+    "tag": "TOAN3_C1"
+  },
+  {
+    "id": "Q_11_3_28",
+    "sub": "Tìm số bí mật và khám phá chữ số",
+    "q": "Viết thêm chữ số 0 vào bên phải số 50. Số mới hơn số cũ bao nhiêu đơn vị?",
+    "o": [
+      "470",
+      "430",
+      "450",
+      "460"
+    ],
+    "a": "450",
+    "h": "Viết thêm 0 bên phải làm số gấp 10 lần: 50 × 10 = 500. Hiệu là 500 − 50 = 450.",
+    "w": null,
+    "tag": "TOAN3_C1"
+  },
+  {
+    "id": "Q_11_3_29",
+    "sub": "Tìm số bí mật và khám phá chữ số",
+    "q": "Viết thêm chữ số 0 vào bên phải số 63. Số mới hơn số cũ bao nhiêu đơn vị?",
+    "o": [
+      "577",
+      "547",
+      "587",
+      "567"
+    ],
+    "a": "567",
+    "h": "Viết thêm 0 bên phải làm số gấp 10 lần: 63 × 10 = 630. Hiệu là 630 − 63 = 567.",
+    "w": null,
+    "tag": "TOAN3_C1"
+  },
+  {
+    "id": "Q_11_3_30",
+    "sub": "Tìm số bí mật và khám phá chữ số",
+    "q": "Viết thêm chữ số 0 vào bên phải số 76. Số mới hơn số cũ bao nhiêu đơn vị?",
+    "o": [
+      "664",
+      "684",
+      "694",
+      "704"
+    ],
+    "a": "684",
+    "h": "Viết thêm 0 bên phải làm số gấp 10 lần: 76 × 10 = 760. Hiệu là 760 − 76 = 684.",
+    "w": null,
+    "tag": "TOAN3_C1"
+  },
+  {
+    "id": "Q_11_3_31",
+    "sub": "Tìm số bí mật và khám phá chữ số",
+    "q": "Dùng mỗi chữ số trong các chữ số 1, 7, 4, 0 đúng một lần. Số có bốn chữ số lớn nhất lập được là:",
+    "o": [
+      "7 410",
+      "7 510",
+      "7 610",
+      "7 310"
+    ],
+    "a": "7 410",
+    "h": "Để lớn nhất, xếp các chữ số giảm dần theo giá trị: 7 – 4 – 1 – 0. Vậy được 7 410.",
+    "w": null,
+    "tag": "TOAN3_C1"
+  },
+  {
+    "id": "Q_11_3_32",
+    "sub": "Tìm số bí mật và khám phá chữ số",
+    "q": "Dùng mỗi chữ số trong các chữ số 9, 2, 0, 5 đúng một lần. Số có bốn chữ số lớn nhất lập được là:",
+    "o": [
+      "9 720",
+      "9 620",
+      "9 420",
+      "9 520"
+    ],
+    "a": "9 520",
+    "h": "Để lớn nhất, xếp các chữ số giảm dần theo giá trị: 9 – 5 – 2 – 0. Vậy được 9 520.",
+    "w": null,
+    "tag": "TOAN3_C1"
+  },
+  {
+    "id": "Q_11_3_33",
+    "sub": "Tìm số bí mật và khám phá chữ số",
+    "q": "Dùng mỗi chữ số trong các chữ số 3, 8, 1, 6 đúng một lần. Số có bốn chữ số lớn nhất lập được là:",
+    "o": [
+      "8 631",
+      "8 531",
+      "8 831",
+      "8 731"
+    ],
+    "a": "8 631",
+    "h": "Để lớn nhất, xếp các chữ số giảm dần theo giá trị: 8 – 6 – 3 – 1. Vậy được 8 631.",
+    "w": null,
+    "tag": "TOAN3_C1"
+  },
+  {
+    "id": "Q_11_3_34",
+    "sub": "Tìm số bí mật và khám phá chữ số",
+    "q": "Dùng mỗi chữ số trong các chữ số 2, 6, 4, 9 đúng một lần. Số có bốn chữ số lớn nhất lập được là:",
+    "o": [
+      "9 642",
+      "9 742",
+      "9 542",
+      "9 842"
+    ],
+    "a": "9 642",
+    "h": "Để lớn nhất, xếp các chữ số giảm dần theo giá trị: 9 – 6 – 4 – 2. Vậy được 9 642.",
+    "w": null,
+    "tag": "TOAN3_C1"
+  },
+  {
+    "id": "Q_11_3_35",
+    "sub": "Tìm số bí mật và khám phá chữ số",
+    "q": "Dùng mỗi chữ số trong các chữ số 0, 8, 7, 3 đúng một lần. Số có bốn chữ số lớn nhất lập được là:",
+    "o": [
+      "8 630",
+      "8 930",
+      "8 830",
+      "8 730"
+    ],
+    "a": "8 730",
+    "h": "Để lớn nhất, xếp các chữ số giảm dần theo giá trị: 8 – 7 – 3 – 0. Vậy được 8 730.",
+    "w": null,
+    "tag": "TOAN3_C1"
+  },
+  {
+    "id": "Q_11_3_36",
+    "sub": "Tìm số bí mật và khám phá chữ số",
+    "q": "Từ bốn chữ số 0, 4, 6, 1, hãy lập số có bốn chữ số nhỏ nhất mà không lặp chữ số.",
+    "o": [
+      "1 246",
+      "1 146",
+      "946",
+      "1 046"
+    ],
+    "a": "1 046",
+    "h": "Hàng nghìn phải khác 0 nên chọn số khác 0 nhỏ nhất là 1; tiếp theo đặt 0 rồi các chữ số còn lại theo thứ tự tăng: 1 046.",
+    "w": null,
+    "tag": "TOAN3_C1"
+  },
+  {
+    "id": "Q_11_3_37",
+    "sub": "Tìm số bí mật và khám phá chữ số",
+    "q": "Từ bốn chữ số 0, 8, 3, 2, hãy lập số có bốn chữ số nhỏ nhất mà không lặp chữ số.",
+    "o": [
+      "2 238",
+      "2 038",
+      "2 138",
+      "1 938"
+    ],
+    "a": "2 038",
+    "h": "Hàng nghìn phải khác 0 nên chọn số khác 0 nhỏ nhất là 2; tiếp theo đặt 0 rồi các chữ số còn lại theo thứ tự tăng: 2 038.",
+    "w": null,
+    "tag": "TOAN3_C1"
+  },
+  {
+    "id": "Q_11_3_38",
+    "sub": "Tìm số bí mật và khám phá chữ số",
+    "q": "Từ bốn chữ số 0, 7, 5, 1, hãy lập số có bốn chữ số nhỏ nhất mà không lặp chữ số.",
+    "o": [
+      "1 057",
+      "1 157",
+      "957",
+      "1 257"
+    ],
+    "a": "1 057",
+    "h": "Hàng nghìn phải khác 0 nên chọn số khác 0 nhỏ nhất là 1; tiếp theo đặt 0 rồi các chữ số còn lại theo thứ tự tăng: 1 057.",
+    "w": null,
+    "tag": "TOAN3_C1"
+  },
+  {
+    "id": "Q_11_3_39",
+    "sub": "Tìm số bí mật và khám phá chữ số",
+    "q": "Từ bốn chữ số 0, 9, 4, 2, hãy lập số có bốn chữ số nhỏ nhất mà không lặp chữ số.",
+    "o": [
+      "2 249",
+      "2 049",
+      "2 149",
+      "1 949"
+    ],
+    "a": "2 049",
+    "h": "Hàng nghìn phải khác 0 nên chọn số khác 0 nhỏ nhất là 2; tiếp theo đặt 0 rồi các chữ số còn lại theo thứ tự tăng: 2 049.",
+    "w": null,
+    "tag": "TOAN3_C1"
+  },
+  {
+    "id": "Q_11_3_40",
+    "sub": "Tìm số bí mật và khám phá chữ số",
+    "q": "Từ bốn chữ số 0, 6, 8, 3, hãy lập số có bốn chữ số nhỏ nhất mà không lặp chữ số.",
+    "o": [
+      "3 068",
+      "2 968",
+      "3 168",
+      "3 268"
+    ],
+    "a": "3 068",
+    "h": "Hàng nghìn phải khác 0 nên chọn số khác 0 nhỏ nhất là 3; tiếp theo đặt 0 rồi các chữ số còn lại theo thứ tự tăng: 3 068.",
+    "w": null,
+    "tag": "TOAN3_C1"
+  },
+  {
+    "id": "Q_11_3_41",
+    "sub": "Tìm số bí mật và khám phá chữ số",
+    "q": "Dùng ba chữ số 1, 2, 7 để viết các số có ba chữ số khác nhau (mỗi chữ số chỉ dùng một lần). Số lớn thứ hai là:",
+    "o": [
+      "722",
+      "692",
+      "712",
+      "732"
+    ],
+    "a": "712",
+    "h": "Số lớn nhất là 721. Đổi chỗ hai chữ số sau cho nhau ta được số lớn thứ hai: 712.",
+    "w": null,
+    "tag": "TOAN3_C1"
+  },
+  {
+    "id": "Q_11_3_42",
+    "sub": "Tìm số bí mật và khám phá chữ số",
+    "q": "Dùng ba chữ số 2, 4, 9 để viết các số có ba chữ số khác nhau (mỗi chữ số chỉ dùng một lần). Số lớn thứ hai là:",
+    "o": [
+      "944",
+      "904",
+      "934",
+      "924"
+    ],
+    "a": "924",
+    "h": "Số lớn nhất là 942. Đổi chỗ hai chữ số sau cho nhau ta được số lớn thứ hai: 924.",
+    "w": null,
+    "tag": "TOAN3_C1"
+  },
+  {
+    "id": "Q_11_3_43",
+    "sub": "Tìm số bí mật và khám phá chữ số",
+    "q": "Dùng ba chữ số 3, 6, 8 để viết các số có ba chữ số khác nhau (mỗi chữ số chỉ dùng một lần). Số lớn thứ hai là:",
+    "o": [
+      "816",
+      "846",
+      "856",
+      "836"
+    ],
+    "a": "836",
+    "h": "Số lớn nhất là 863. Đổi chỗ hai chữ số sau cho nhau ta được số lớn thứ hai: 836.",
+    "w": null,
+    "tag": "TOAN3_C1"
+  },
+  {
+    "id": "Q_11_3_44",
+    "sub": "Tìm số bí mật và khám phá chữ số",
+    "q": "Dùng ba chữ số 1, 5, 8 để viết các số có ba chữ số khác nhau (mỗi chữ số chỉ dùng một lần). Số lớn thứ hai là:",
+    "o": [
+      "795",
+      "815",
+      "835",
+      "825"
+    ],
+    "a": "815",
+    "h": "Số lớn nhất là 851. Đổi chỗ hai chữ số sau cho nhau ta được số lớn thứ hai: 815.",
+    "w": null,
+    "tag": "TOAN3_C1"
+  },
+  {
+    "id": "Q_11_3_45",
+    "sub": "Tìm số bí mật và khám phá chữ số",
+    "q": "Dùng ba chữ số 3, 4, 7 để viết các số có ba chữ số khác nhau (mỗi chữ số chỉ dùng một lần). Số lớn thứ hai là:",
+    "o": [
+      "734",
+      "744",
+      "754",
+      "714"
+    ],
+    "a": "734",
+    "h": "Số lớn nhất là 743. Đổi chỗ hai chữ số sau cho nhau ta được số lớn thứ hai: 734.",
+    "w": null,
+    "tag": "TOAN3_C1"
+  },
+  {
+    "id": "Q_11_3_46",
+    "sub": "Tìm số bí mật và khám phá chữ số",
+    "q": "Số 2 105 được đổi chỗ chữ số hàng trăm với chữ số hàng chục. Số mới là số nào?",
+    "o": [
+      "2 215",
+      "1 915",
+      "2 115",
+      "2 015"
+    ],
+    "a": "2 015",
+    "h": "Giữ nguyên hàng nghìn 2 và hàng đơn vị 5; đổi vị trí 1 và 0 ở giữa, ta được 2 015.",
+    "w": null,
+    "tag": "TOAN3_C1"
+  },
+  {
+    "id": "Q_11_3_47",
+    "sub": "Tìm số bí mật và khám phá chữ số",
+    "q": "Số 3 215 được đổi chỗ chữ số hàng trăm với chữ số hàng chục. Số mới là số nào?",
+    "o": [
+      "3 325",
+      "3 025",
+      "3 125",
+      "3 225"
+    ],
+    "a": "3 125",
+    "h": "Giữ nguyên hàng nghìn 3 và hàng đơn vị 5; đổi vị trí 2 và 1 ở giữa, ta được 3 125.",
+    "w": null,
+    "tag": "TOAN3_C1"
+  },
+  {
+    "id": "Q_11_3_48",
+    "sub": "Tìm số bí mật và khám phá chữ số",
+    "q": "Số 4 325 được đổi chỗ chữ số hàng trăm với chữ số hàng chục. Số mới là số nào?",
+    "o": [
+      "4 335",
+      "4 135",
+      "4 435",
+      "4 235"
+    ],
+    "a": "4 235",
+    "h": "Giữ nguyên hàng nghìn 4 và hàng đơn vị 5; đổi vị trí 3 và 2 ở giữa, ta được 4 235.",
+    "w": null,
+    "tag": "TOAN3_C1"
+  },
+  {
+    "id": "Q_11_3_49",
+    "sub": "Tìm số bí mật và khám phá chữ số",
+    "q": "Số 5 435 được đổi chỗ chữ số hàng trăm với chữ số hàng chục. Số mới là số nào?",
+    "o": [
+      "5 545",
+      "5 345",
+      "5 445",
+      "5 245"
+    ],
+    "a": "5 345",
+    "h": "Giữ nguyên hàng nghìn 5 và hàng đơn vị 5; đổi vị trí 4 và 3 ở giữa, ta được 5 345.",
+    "w": null,
+    "tag": "TOAN3_C1"
+  },
+  {
+    "id": "Q_11_3_50",
+    "sub": "Tìm số bí mật và khám phá chữ số",
+    "q": "Số 6 505 được đổi chỗ chữ số hàng trăm với chữ số hàng chục. Số mới là số nào?",
+    "o": [
+      "6 255",
+      "6 055",
+      "5 955",
+      "6 155"
+    ],
+    "a": "6 055",
+    "h": "Giữ nguyên hàng nghìn 6 và hàng đơn vị 5; đổi vị trí 5 và 0 ở giữa, ta được 6 055.",
+    "w": null,
+    "tag": "TOAN3_C1"
+  },
+  {
+    "id": "Q_11_4_1",
+    "sub": "Suy luận ngược và tìm số chưa biết",
+    "q": "Tìm x: (x + 7) × 3 = 57.",
+    "o": [
+      "16",
+      "17",
+      "12",
+      "9"
+    ],
+    "a": "12",
+    "h": "Giải ngược: x + 7 = 57 : 3 = 19. Vậy x = 19 − 7 = 12.",
+    "w": null,
+    "tag": "TOAN3_C4",
+    "illustration": {
+      "kind": "emoji",
+      "emoji": "🔍",
+      "caption": "Biểu tượng minh họa chủ đề; không chứa dữ kiện của bài toán.",
+      "role": "topic_cover"
+    }
+  },
+  {
+    "id": "Q_11_4_2",
+    "sub": "Suy luận ngược và tìm số chưa biết",
+    "q": "Tìm x: (x + 8) × 4 = 96.",
+    "o": [
+      "21",
+      "20",
+      "13",
+      "16"
+    ],
+    "a": "16",
+    "h": "Giải ngược: x + 8 = 96 : 4 = 24. Vậy x = 24 − 8 = 16.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_4_3",
+    "sub": "Suy luận ngược và tìm số chưa biết",
+    "q": "Tìm x: (x + 9) × 5 = 145.",
+    "o": [
+      "20",
+      "25",
+      "24",
+      "17"
+    ],
+    "a": "20",
+    "h": "Giải ngược: x + 9 = 145 : 5 = 29. Vậy x = 29 − 9 = 20.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_4_4",
+    "sub": "Suy luận ngược và tìm số chưa biết",
+    "q": "Tìm x: (x + 10) × 6 = 204.",
+    "o": [
+      "21",
+      "24",
+      "28",
+      "29"
+    ],
+    "a": "24",
+    "h": "Giải ngược: x + 10 = 204 : 6 = 34. Vậy x = 34 − 10 = 24.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_4_5",
+    "sub": "Suy luận ngược và tìm số chưa biết",
+    "q": "Tìm x: (x + 11) × 7 = 273.",
+    "o": [
+      "32",
+      "25",
+      "28",
+      "33"
+    ],
+    "a": "28",
+    "h": "Giải ngược: x + 11 = 273 : 7 = 39. Vậy x = 39 − 11 = 28.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_4_6",
+    "sub": "Suy luận ngược và tìm số chưa biết",
+    "q": "Tìm x: (x − 5) × 3 = 69.",
+    "o": [
+      "28",
+      "32",
+      "25",
+      "33"
+    ],
+    "a": "28",
+    "h": "Lấy 69 : 3 = 23 để tìm x − 5; cộng lại 5 được x = 28.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_4_7",
+    "sub": "Suy luận ngược và tìm số chưa biết",
+    "q": "Tìm x: (x − 6) × 4 = 112.",
+    "o": [
+      "31",
+      "39",
+      "34",
+      "38"
+    ],
+    "a": "34",
+    "h": "Lấy 112 : 4 = 28 để tìm x − 6; cộng lại 6 được x = 34.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_4_8",
+    "sub": "Suy luận ngược và tìm số chưa biết",
+    "q": "Tìm x: (x − 7) × 5 = 165.",
+    "o": [
+      "40",
+      "30",
+      "50",
+      "45"
+    ],
+    "a": "40",
+    "h": "Lấy 165 : 5 = 33 để tìm x − 7; cộng lại 7 được x = 40.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_4_9",
+    "sub": "Suy luận ngược và tìm số chưa biết",
+    "q": "Tìm x: (x − 8) × 6 = 228.",
+    "o": [
+      "56",
+      "36",
+      "46",
+      "51"
+    ],
+    "a": "46",
+    "h": "Lấy 228 : 6 = 38 để tìm x − 8; cộng lại 8 được x = 46.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_4_10",
+    "sub": "Suy luận ngược và tìm số chưa biết",
+    "q": "Tìm x: (x − 9) × 7 = 301.",
+    "o": [
+      "52",
+      "62",
+      "57",
+      "42"
+    ],
+    "a": "52",
+    "h": "Lấy 301 : 7 = 43 để tìm x − 9; cộng lại 9 được x = 52.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_4_11",
+    "sub": "Suy luận ngược và tìm số chưa biết",
+    "q": "Tìm x: x × 3 + 11 = 50.",
+    "o": [
+      "17",
+      "10",
+      "18",
+      "13"
+    ],
+    "a": "13",
+    "h": "Bớt 11: x × 3 = 50 − 11 = 39; chia 3 được x = 13.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_4_12",
+    "sub": "Suy luận ngược và tìm số chưa biết",
+    "q": "Tìm x: x × 4 + 13 = 77.",
+    "o": [
+      "21",
+      "20",
+      "13",
+      "16"
+    ],
+    "a": "16",
+    "h": "Bớt 13: x × 4 = 77 − 13 = 64; chia 4 được x = 16.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_4_13",
+    "sub": "Suy luận ngược và tìm số chưa biết",
+    "q": "Tìm x: x × 5 + 15 = 110.",
+    "o": [
+      "23",
+      "19",
+      "16",
+      "24"
+    ],
+    "a": "19",
+    "h": "Bớt 15: x × 5 = 110 − 15 = 95; chia 5 được x = 19.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_4_14",
+    "sub": "Suy luận ngược và tìm số chưa biết",
+    "q": "Tìm x: x × 6 + 17 = 149.",
+    "o": [
+      "22",
+      "19",
+      "26",
+      "27"
+    ],
+    "a": "22",
+    "h": "Bớt 17: x × 6 = 149 − 17 = 132; chia 6 được x = 22.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_4_15",
+    "sub": "Suy luận ngược và tìm số chưa biết",
+    "q": "Tìm x: x × 7 + 19 = 194.",
+    "o": [
+      "25",
+      "22",
+      "30",
+      "29"
+    ],
+    "a": "25",
+    "h": "Bớt 19: x × 7 = 194 − 19 = 175; chia 7 được x = 25.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_4_16",
+    "sub": "Suy luận ngược và tìm số chưa biết",
+    "q": "Tìm x: x : 4 + 8 = 20.",
+    "o": [
+      "53",
+      "48",
+      "38",
+      "58"
+    ],
+    "a": "48",
+    "h": "Có x : 4 = 20 − 8 = 12; nhân lại với 4: x = 48.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_4_17",
+    "sub": "Suy luận ngược và tìm số chưa biết",
+    "q": "Tìm x: x : 5 + 9 = 24.",
+    "o": [
+      "65",
+      "80",
+      "85",
+      "75"
+    ],
+    "a": "75",
+    "h": "Có x : 5 = 24 − 9 = 15; nhân lại với 5: x = 75.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_4_18",
+    "sub": "Suy luận ngược và tìm số chưa biết",
+    "q": "Tìm x: x : 6 + 10 = 28.",
+    "o": [
+      "118",
+      "108",
+      "128",
+      "88"
+    ],
+    "a": "108",
+    "h": "Có x : 6 = 28 − 10 = 18; nhân lại với 6: x = 108.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_4_19",
+    "sub": "Suy luận ngược và tìm số chưa biết",
+    "q": "Tìm x: x : 7 + 11 = 32.",
+    "o": [
+      "157",
+      "147",
+      "167",
+      "127"
+    ],
+    "a": "147",
+    "h": "Có x : 7 = 32 − 11 = 21; nhân lại với 7: x = 147.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_4_20",
+    "sub": "Suy luận ngược và tìm số chưa biết",
+    "q": "Tìm x: x : 8 + 12 = 36.",
+    "o": [
+      "202",
+      "212",
+      "172",
+      "192"
+    ],
+    "a": "192",
+    "h": "Có x : 8 = 36 − 12 = 24; nhân lại với 8: x = 192.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_4_21",
+    "sub": "Suy luận ngược và tìm số chưa biết",
+    "q": "Tìm x: 85 − x × 3 = 37.",
+    "o": [
+      "20",
+      "16",
+      "13",
+      "21"
+    ],
+    "a": "16",
+    "h": "Tích x × 3 = 85 − 37 = 48. Do đó x = 48 : 3 = 16.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_4_22",
+    "sub": "Suy luận ngược và tìm số chưa biết",
+    "q": "Tìm x: 112 − x × 4 = 40.",
+    "o": [
+      "18",
+      "23",
+      "15",
+      "22"
+    ],
+    "a": "18",
+    "h": "Tích x × 4 = 112 − 40 = 72. Do đó x = 72 : 4 = 18.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_4_23",
+    "sub": "Suy luận ngược và tìm số chưa biết",
+    "q": "Tìm x: 143 − x × 5 = 43.",
+    "o": [
+      "25",
+      "17",
+      "24",
+      "20"
+    ],
+    "a": "20",
+    "h": "Tích x × 5 = 143 − 43 = 100. Do đó x = 100 : 5 = 20.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_4_24",
+    "sub": "Suy luận ngược và tìm số chưa biết",
+    "q": "Tìm x: 178 − x × 6 = 46.",
+    "o": [
+      "26",
+      "22",
+      "19",
+      "27"
+    ],
+    "a": "22",
+    "h": "Tích x × 6 = 178 − 46 = 132. Do đó x = 132 : 6 = 22.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_4_25",
+    "sub": "Suy luận ngược và tìm số chưa biết",
+    "q": "Tìm x: 217 − x × 7 = 49.",
+    "o": [
+      "29",
+      "21",
+      "24",
+      "28"
+    ],
+    "a": "24",
+    "h": "Tích x × 7 = 217 − 49 = 168. Do đó x = 168 : 7 = 24.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_4_26",
+    "sub": "Suy luận ngược và tìm số chưa biết",
+    "q": "Nghĩ một số, thêm 13 rồi gấp lên 2 lần thì được 62. Số lúc đầu là bao nhiêu?",
+    "o": [
+      "22",
+      "23",
+      "15",
+      "18"
+    ],
+    "a": "18",
+    "h": "Đi ngược lại: 62 : 2 = 31; rồi 31 − 13 = 18.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_4_27",
+    "sub": "Suy luận ngược và tìm số chưa biết",
+    "q": "Nghĩ một số, thêm 14 rồi gấp lên 3 lần thì được 111. Số lúc đầu là bao nhiêu?",
+    "o": [
+      "23",
+      "20",
+      "28",
+      "27"
+    ],
+    "a": "23",
+    "h": "Đi ngược lại: 111 : 3 = 37; rồi 37 − 14 = 23.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_4_28",
+    "sub": "Suy luận ngược và tìm số chưa biết",
+    "q": "Nghĩ một số, thêm 15 rồi gấp lên 4 lần thì được 172. Số lúc đầu là bao nhiêu?",
+    "o": [
+      "33",
+      "25",
+      "28",
+      "32"
+    ],
+    "a": "28",
+    "h": "Đi ngược lại: 172 : 4 = 43; rồi 43 − 15 = 28.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_4_29",
+    "sub": "Suy luận ngược và tìm số chưa biết",
+    "q": "Nghĩ một số, thêm 16 rồi gấp lên 2 lần thì được 98. Số lúc đầu là bao nhiêu?",
+    "o": [
+      "38",
+      "33",
+      "30",
+      "37"
+    ],
+    "a": "33",
+    "h": "Đi ngược lại: 98 : 2 = 49; rồi 49 − 16 = 33.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_4_30",
+    "sub": "Suy luận ngược và tìm số chưa biết",
+    "q": "Nghĩ một số, thêm 17 rồi gấp lên 3 lần thì được 165. Số lúc đầu là bao nhiêu?",
+    "o": [
+      "42",
+      "38",
+      "35",
+      "43"
+    ],
+    "a": "38",
+    "h": "Đi ngược lại: 165 : 3 = 55; rồi 55 − 17 = 38.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_4_31",
+    "sub": "Suy luận ngược và tìm số chưa biết",
+    "q": "Một số được nhân 3 rồi bớt 7 thì còn 50. Tìm số ban đầu.",
+    "o": [
+      "24",
+      "16",
+      "19",
+      "23"
+    ],
+    "a": "19",
+    "h": "Đầu tiên hoàn lại 7: 50 + 7 = 57. Sau đó chia 3: 57 : 3 = 19.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_4_32",
+    "sub": "Suy luận ngược và tìm số chưa biết",
+    "q": "Một số được nhân 4 rồi bớt 8 thì còn 84. Tìm số ban đầu.",
+    "o": [
+      "27",
+      "20",
+      "28",
+      "23"
+    ],
+    "a": "23",
+    "h": "Đầu tiên hoàn lại 8: 84 + 8 = 92. Sau đó chia 4: 92 : 4 = 23.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_4_33",
+    "sub": "Suy luận ngược và tìm số chưa biết",
+    "q": "Một số được nhân 5 rồi bớt 9 thì còn 126. Tìm số ban đầu.",
+    "o": [
+      "32",
+      "27",
+      "31",
+      "24"
+    ],
+    "a": "27",
+    "h": "Đầu tiên hoàn lại 9: 126 + 9 = 135. Sau đó chia 5: 135 : 5 = 27.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_4_34",
+    "sub": "Suy luận ngược và tìm số chưa biết",
+    "q": "Một số được nhân 3 rồi bớt 10 thì còn 83. Tìm số ban đầu.",
+    "o": [
+      "35",
+      "31",
+      "36",
+      "28"
+    ],
+    "a": "31",
+    "h": "Đầu tiên hoàn lại 10: 83 + 10 = 93. Sau đó chia 3: 93 : 3 = 31.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_4_35",
+    "sub": "Suy luận ngược và tìm số chưa biết",
+    "q": "Một số được nhân 4 rồi bớt 11 thì còn 129. Tìm số ban đầu.",
+    "o": [
+      "39",
+      "35",
+      "32",
+      "40"
+    ],
+    "a": "35",
+    "h": "Đầu tiên hoàn lại 11: 129 + 11 = 140. Sau đó chia 4: 140 : 4 = 35.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_4_36",
+    "sub": "Suy luận ngược và tìm số chưa biết",
+    "q": "Tổng hai số là 40, số lớn hơn số bé 12 đơn vị. Số bé là bao nhiêu?",
+    "o": [
+      "14",
+      "19",
+      "18",
+      "11"
+    ],
+    "a": "14",
+    "h": "Bớt phần hơn 12 khỏi tổng thì còn hai phần bằng nhau. Số bé = (40 − 12) : 2 = 14.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_4_37",
+    "sub": "Suy luận ngược và tìm số chưa biết",
+    "q": "Tổng hai số là 54, số lớn hơn số bé 16 đơn vị. Số bé là bao nhiêu?",
+    "o": [
+      "16",
+      "23",
+      "19",
+      "24"
+    ],
+    "a": "19",
+    "h": "Bớt phần hơn 16 khỏi tổng thì còn hai phần bằng nhau. Số bé = (54 − 16) : 2 = 19.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_4_38",
+    "sub": "Suy luận ngược và tìm số chưa biết",
+    "q": "Tổng hai số là 68, số lớn hơn số bé 20 đơn vị. Số bé là bao nhiêu?",
+    "o": [
+      "24",
+      "28",
+      "21",
+      "29"
+    ],
+    "a": "24",
+    "h": "Bớt phần hơn 20 khỏi tổng thì còn hai phần bằng nhau. Số bé = (68 − 20) : 2 = 24.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_4_39",
+    "sub": "Suy luận ngược và tìm số chưa biết",
+    "q": "Tổng hai số là 82, số lớn hơn số bé 24 đơn vị. Số bé là bao nhiêu?",
+    "o": [
+      "26",
+      "33",
+      "34",
+      "29"
+    ],
+    "a": "29",
+    "h": "Bớt phần hơn 24 khỏi tổng thì còn hai phần bằng nhau. Số bé = (82 − 24) : 2 = 29.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_4_40",
+    "sub": "Suy luận ngược và tìm số chưa biết",
+    "q": "Tổng hai số là 96, số lớn hơn số bé 28 đơn vị. Số bé là bao nhiêu?",
+    "o": [
+      "31",
+      "34",
+      "38",
+      "39"
+    ],
+    "a": "34",
+    "h": "Bớt phần hơn 28 khỏi tổng thì còn hai phần bằng nhau. Số bé = (96 − 28) : 2 = 34.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_4_41",
+    "sub": "Suy luận ngược và tìm số chưa biết",
+    "q": "Tổng của ba số tự nhiên liên tiếp là 69. Số đứng giữa là số nào?",
+    "o": [
+      "28",
+      "23",
+      "27",
+      "20"
+    ],
+    "a": "23",
+    "h": "Ba số liên tiếp có số giữa đúng bằng trung bình của cả ba: 69 : 3 = 23. Hai số còn lại là 22 và 24.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_4_42",
+    "sub": "Suy luận ngược và tìm số chưa biết",
+    "q": "Tổng của ba số tự nhiên liên tiếp là 87. Số đứng giữa là số nào?",
+    "o": [
+      "34",
+      "26",
+      "33",
+      "29"
+    ],
+    "a": "29",
+    "h": "Ba số liên tiếp có số giữa đúng bằng trung bình của cả ba: 87 : 3 = 29. Hai số còn lại là 28 và 30.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_4_43",
+    "sub": "Suy luận ngược và tìm số chưa biết",
+    "q": "Tổng của ba số tự nhiên liên tiếp là 105. Số đứng giữa là số nào?",
+    "o": [
+      "35",
+      "39",
+      "40",
+      "32"
+    ],
+    "a": "35",
+    "h": "Ba số liên tiếp có số giữa đúng bằng trung bình của cả ba: 105 : 3 = 35. Hai số còn lại là 34 và 36.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_4_44",
+    "sub": "Suy luận ngược và tìm số chưa biết",
+    "q": "Tổng của ba số tự nhiên liên tiếp là 123. Số đứng giữa là số nào?",
+    "o": [
+      "31",
+      "51",
+      "46",
+      "41"
+    ],
+    "a": "41",
+    "h": "Ba số liên tiếp có số giữa đúng bằng trung bình của cả ba: 123 : 3 = 41. Hai số còn lại là 40 và 42.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_4_45",
+    "sub": "Suy luận ngược và tìm số chưa biết",
+    "q": "Tổng của ba số tự nhiên liên tiếp là 141. Số đứng giữa là số nào?",
+    "o": [
+      "57",
+      "47",
+      "52",
+      "37"
+    ],
+    "a": "47",
+    "h": "Ba số liên tiếp có số giữa đúng bằng trung bình của cả ba: 141 : 3 = 47. Hai số còn lại là 46 và 48.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_4_46",
+    "sub": "Suy luận ngược và tìm số chưa biết",
+    "q": "Một số và số gấp 2 lần số đó có tổng bằng 39. Tìm số bé.",
+    "o": [
+      "18",
+      "10",
+      "17",
+      "13"
+    ],
+    "a": "13",
+    "h": "Cả hai số có 3 phần bằng nhau. Mỗi phần = 39 : 3 = 13, chính là số bé.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_4_47",
+    "sub": "Suy luận ngược và tìm số chưa biết",
+    "q": "Một số và số gấp 3 lần số đó có tổng bằng 80. Tìm số bé.",
+    "o": [
+      "25",
+      "17",
+      "20",
+      "24"
+    ],
+    "a": "20",
+    "h": "Cả hai số có 4 phần bằng nhau. Mỗi phần = 80 : 4 = 20, chính là số bé.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_4_48",
+    "sub": "Suy luận ngược và tìm số chưa biết",
+    "q": "Một số và số gấp 4 lần số đó có tổng bằng 135. Tìm số bé.",
+    "o": [
+      "24",
+      "27",
+      "31",
+      "32"
+    ],
+    "a": "27",
+    "h": "Cả hai số có 5 phần bằng nhau. Mỗi phần = 135 : 5 = 27, chính là số bé.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_4_49",
+    "sub": "Suy luận ngược và tìm số chưa biết",
+    "q": "Một số và số gấp 2 lần số đó có tổng bằng 102. Tìm số bé.",
+    "o": [
+      "31",
+      "39",
+      "38",
+      "34"
+    ],
+    "a": "34",
+    "h": "Cả hai số có 3 phần bằng nhau. Mỗi phần = 102 : 3 = 34, chính là số bé.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_4_50",
+    "sub": "Suy luận ngược và tìm số chưa biết",
+    "q": "Một số và số gấp 3 lần số đó có tổng bằng 164. Tìm số bé.",
+    "o": [
+      "46",
+      "31",
+      "41",
+      "51"
+    ],
+    "a": "41",
+    "h": "Cả hai số có 4 phần bằng nhau. Mỗi phần = 164 : 4 = 41, chính là số bé.",
+    "w": null,
+    "tag": "TOAN3_C4"
+  },
+  {
+    "id": "Q_11_5_1",
+    "sub": "Bài toán nhiều bước và lập luận logic",
+    "q": "Giá sách A nhiều hơn giá sách B 27 quyển. Chuyển 6 quyển từ A sang B. Lúc này A còn nhiều hơn B bao nhiêu quyển?",
+    "o": [
+      "19 quyển",
+      "20 quyển",
+      "12 quyển",
+      "15 quyển"
+    ],
+    "a": "15 quyển",
+    "h": "A giảm 6, B tăng 6 nên khoảng cách giảm 6 + 6 = 12. Còn 27 − 12 = 15 quyển.",
+    "w": null,
+    "tag": "TOAN3_C5",
+    "illustration": {
+      "kind": "emoji",
+      "emoji": "🧩",
+      "caption": "Biểu tượng minh họa chủ đề; không chứa dữ kiện của bài toán.",
+      "role": "topic_cover"
+    }
+  },
+  {
+    "id": "Q_11_5_2",
+    "sub": "Bài toán nhiều bước và lập luận logic",
+    "q": "Giá sách A nhiều hơn giá sách B 36 quyển. Chuyển 8 quyển từ A sang B. Lúc này A còn nhiều hơn B bao nhiêu quyển?",
+    "o": [
+      "17 quyển",
+      "25 quyển",
+      "20 quyển",
+      "24 quyển"
+    ],
+    "a": "20 quyển",
+    "h": "A giảm 8, B tăng 8 nên khoảng cách giảm 8 + 8 = 16. Còn 36 − 16 = 20 quyển.",
+    "w": null,
+    "tag": "TOAN3_C5"
+  },
+  {
+    "id": "Q_11_5_3",
+    "sub": "Bài toán nhiều bước và lập luận logic",
+    "q": "Giá sách A nhiều hơn giá sách B 45 quyển. Chuyển 10 quyển từ A sang B. Lúc này A còn nhiều hơn B bao nhiêu quyển?",
+    "o": [
+      "22 quyển",
+      "25 quyển",
+      "29 quyển",
+      "30 quyển"
+    ],
+    "a": "25 quyển",
+    "h": "A giảm 10, B tăng 10 nên khoảng cách giảm 10 + 10 = 20. Còn 45 − 20 = 25 quyển.",
+    "w": null,
+    "tag": "TOAN3_C5"
+  },
+  {
+    "id": "Q_11_5_4",
+    "sub": "Bài toán nhiều bước và lập luận logic",
+    "q": "Giá sách A nhiều hơn giá sách B 54 quyển. Chuyển 12 quyển từ A sang B. Lúc này A còn nhiều hơn B bao nhiêu quyển?",
+    "o": [
+      "27 quyển",
+      "35 quyển",
+      "30 quyển",
+      "34 quyển"
+    ],
+    "a": "30 quyển",
+    "h": "A giảm 12, B tăng 12 nên khoảng cách giảm 12 + 12 = 24. Còn 54 − 24 = 30 quyển.",
+    "w": null,
+    "tag": "TOAN3_C5"
+  },
+  {
+    "id": "Q_11_5_5",
+    "sub": "Bài toán nhiều bước và lập luận logic",
+    "q": "Giá sách A nhiều hơn giá sách B 63 quyển. Chuyển 14 quyển từ A sang B. Lúc này A còn nhiều hơn B bao nhiêu quyển?",
+    "o": [
+      "39 quyển",
+      "32 quyển",
+      "35 quyển",
+      "40 quyển"
+    ],
+    "a": "35 quyển",
+    "h": "A giảm 14, B tăng 14 nên khoảng cách giảm 14 + 14 = 28. Còn 63 − 28 = 35 quyển.",
+    "w": null,
+    "tag": "TOAN3_C5"
+  },
+  {
+    "id": "Q_11_5_6",
+    "sub": "Bài toán nhiều bước và lập luận logic",
+    "q": "Giỏ A có 48 quả cam, giỏ B có 32 quả cam. Chuyển ít nhất bao nhiêu quả từ A sang B để hai giỏ bằng nhau?",
+    "o": [
+      "10 quả",
+      "8 quả",
+      "6 quả",
+      "11 quả"
+    ],
+    "a": "8 quả",
+    "h": "Chênh lệch là 48 − 32 = 16. Mỗi quả chuyển từ A sang B giảm chênh lệch 2 quả, nên chuyển 16 : 2 = 8 quả.",
+    "w": null,
+    "tag": "TOAN3_C5"
+  },
+  {
+    "id": "Q_11_5_7",
+    "sub": "Bài toán nhiều bước và lập luận logic",
+    "q": "Giỏ A có 55 quả cam, giỏ B có 35 quả cam. Chuyển ít nhất bao nhiêu quả từ A sang B để hai giỏ bằng nhau?",
+    "o": [
+      "14 quả",
+      "10 quả",
+      "7 quả",
+      "15 quả"
+    ],
+    "a": "10 quả",
+    "h": "Chênh lệch là 55 − 35 = 20. Mỗi quả chuyển từ A sang B giảm chênh lệch 2 quả, nên chuyển 20 : 2 = 10 quả.",
+    "w": null,
+    "tag": "TOAN3_C5"
+  },
+  {
+    "id": "Q_11_5_8",
+    "sub": "Bài toán nhiều bước và lập luận logic",
+    "q": "Giỏ A có 62 quả cam, giỏ B có 38 quả cam. Chuyển ít nhất bao nhiêu quả từ A sang B để hai giỏ bằng nhau?",
+    "o": [
+      "9 quả",
+      "17 quả",
+      "16 quả",
+      "12 quả"
+    ],
+    "a": "12 quả",
+    "h": "Chênh lệch là 62 − 38 = 24. Mỗi quả chuyển từ A sang B giảm chênh lệch 2 quả, nên chuyển 24 : 2 = 12 quả.",
+    "w": null,
+    "tag": "TOAN3_C5"
+  },
+  {
+    "id": "Q_11_5_9",
+    "sub": "Bài toán nhiều bước và lập luận logic",
+    "q": "Giỏ A có 69 quả cam, giỏ B có 41 quả cam. Chuyển ít nhất bao nhiêu quả từ A sang B để hai giỏ bằng nhau?",
+    "o": [
+      "18 quả",
+      "11 quả",
+      "14 quả",
+      "19 quả"
+    ],
+    "a": "14 quả",
+    "h": "Chênh lệch là 69 − 41 = 28. Mỗi quả chuyển từ A sang B giảm chênh lệch 2 quả, nên chuyển 28 : 2 = 14 quả.",
+    "w": null,
+    "tag": "TOAN3_C5"
+  },
+  {
+    "id": "Q_11_5_10",
+    "sub": "Bài toán nhiều bước và lập luận logic",
+    "q": "Giỏ A có 76 quả cam, giỏ B có 44 quả cam. Chuyển ít nhất bao nhiêu quả từ A sang B để hai giỏ bằng nhau?",
+    "o": [
+      "20 quả",
+      "21 quả",
+      "13 quả",
+      "16 quả"
+    ],
+    "a": "16 quả",
+    "h": "Chênh lệch là 76 − 44 = 32. Mỗi quả chuyển từ A sang B giảm chênh lệch 2 quả, nên chuyển 32 : 2 = 16 quả.",
+    "w": null,
+    "tag": "TOAN3_C5"
+  },
+  {
+    "id": "Q_11_5_11",
+    "sub": "Bài toán nhiều bước và lập luận logic",
+    "q": "Hiện nay bé 7 tuổi, mẹ gấp 4 lần tuổi bé. Sau 3 năm nữa, mẹ hơn bé bao nhiêu tuổi?",
+    "o": [
+      "18 tuổi",
+      "21 tuổi",
+      "26 tuổi",
+      "25 tuổi"
+    ],
+    "a": "21 tuổi",
+    "h": "Hiện nay mẹ 7 × 4 = 28 tuổi. Hiệu tuổi mẹ và bé luôn không đổi, nên sau 3 năm vẫn hơn 28 − 7 = 21 tuổi.",
+    "w": null,
+    "tag": "TOAN3_C5"
+  },
+  {
+    "id": "Q_11_5_12",
+    "sub": "Bài toán nhiều bước và lập luận logic",
+    "q": "Hiện nay bé 8 tuổi, mẹ gấp 5 lần tuổi bé. Sau 4 năm nữa, mẹ hơn bé bao nhiêu tuổi?",
+    "o": [
+      "37 tuổi",
+      "36 tuổi",
+      "32 tuổi",
+      "29 tuổi"
+    ],
+    "a": "32 tuổi",
+    "h": "Hiện nay mẹ 8 × 5 = 40 tuổi. Hiệu tuổi mẹ và bé luôn không đổi, nên sau 4 năm vẫn hơn 40 − 8 = 32 tuổi.",
+    "w": null,
+    "tag": "TOAN3_C5"
+  },
+  {
+    "id": "Q_11_5_13",
+    "sub": "Bài toán nhiều bước và lập luận logic",
+    "q": "Hiện nay bé 9 tuổi, mẹ gấp 4 lần tuổi bé. Sau 5 năm nữa, mẹ hơn bé bao nhiêu tuổi?",
+    "o": [
+      "31 tuổi",
+      "27 tuổi",
+      "32 tuổi",
+      "24 tuổi"
+    ],
+    "a": "27 tuổi",
+    "h": "Hiện nay mẹ 9 × 4 = 36 tuổi. Hiệu tuổi mẹ và bé luôn không đổi, nên sau 5 năm vẫn hơn 36 − 9 = 27 tuổi.",
+    "w": null,
+    "tag": "TOAN3_C5"
+  },
+  {
+    "id": "Q_11_5_14",
+    "sub": "Bài toán nhiều bước và lập luận logic",
+    "q": "Hiện nay bé 10 tuổi, mẹ gấp 5 lần tuổi bé. Sau 6 năm nữa, mẹ hơn bé bao nhiêu tuổi?",
+    "o": [
+      "40 tuổi",
+      "45 tuổi",
+      "50 tuổi",
+      "30 tuổi"
+    ],
+    "a": "40 tuổi",
+    "h": "Hiện nay mẹ 10 × 5 = 50 tuổi. Hiệu tuổi mẹ và bé luôn không đổi, nên sau 6 năm vẫn hơn 50 − 10 = 40 tuổi.",
+    "w": null,
+    "tag": "TOAN3_C5"
+  },
+  {
+    "id": "Q_11_5_15",
+    "sub": "Bài toán nhiều bước và lập luận logic",
+    "q": "Hiện nay bé 11 tuổi, mẹ gấp 4 lần tuổi bé. Sau 7 năm nữa, mẹ hơn bé bao nhiêu tuổi?",
+    "o": [
+      "30 tuổi",
+      "38 tuổi",
+      "33 tuổi",
+      "37 tuổi"
+    ],
+    "a": "33 tuổi",
+    "h": "Hiện nay mẹ 11 × 4 = 44 tuổi. Hiệu tuổi mẹ và bé luôn không đổi, nên sau 7 năm vẫn hơn 44 − 11 = 33 tuổi.",
+    "w": null,
+    "tag": "TOAN3_C5"
+  },
+  {
+    "id": "Q_11_5_16",
+    "sub": "Bài toán nhiều bước và lập luận logic",
+    "q": "Tuổi mẹ gấp 3 lần tuổi con và mẹ hơn con 14 tuổi. Con hiện nay bao nhiêu tuổi?",
+    "o": [
+      "5 tuổi",
+      "10 tuổi",
+      "9 tuổi",
+      "7 tuổi"
+    ],
+    "a": "7 tuổi",
+    "h": "Mẹ có 3 phần tuổi, con có 1 phần; hiệu 14 là 2 phần. Tuổi con = 14 : 2 = 7.",
+    "w": null,
+    "tag": "TOAN3_C5"
+  },
+  {
+    "id": "Q_11_5_17",
+    "sub": "Bài toán nhiều bước và lập luận logic",
+    "q": "Tuổi mẹ gấp 4 lần tuổi con và mẹ hơn con 24 tuổi. Con hiện nay bao nhiêu tuổi?",
+    "o": [
+      "8 tuổi",
+      "10 tuổi",
+      "6 tuổi",
+      "11 tuổi"
+    ],
+    "a": "8 tuổi",
+    "h": "Mẹ có 4 phần tuổi, con có 1 phần; hiệu 24 là 3 phần. Tuổi con = 24 : 3 = 8.",
+    "w": null,
+    "tag": "TOAN3_C5"
+  },
+  {
+    "id": "Q_11_5_18",
+    "sub": "Bài toán nhiều bước và lập luận logic",
+    "q": "Tuổi mẹ gấp 5 lần tuổi con và mẹ hơn con 36 tuổi. Con hiện nay bao nhiêu tuổi?",
+    "o": [
+      "12 tuổi",
+      "9 tuổi",
+      "11 tuổi",
+      "7 tuổi"
+    ],
+    "a": "9 tuổi",
+    "h": "Mẹ có 5 phần tuổi, con có 1 phần; hiệu 36 là 4 phần. Tuổi con = 36 : 4 = 9.",
+    "w": null,
+    "tag": "TOAN3_C5"
+  },
+  {
+    "id": "Q_11_5_19",
+    "sub": "Bài toán nhiều bước và lập luận logic",
+    "q": "Tuổi mẹ gấp 3 lần tuổi con và mẹ hơn con 20 tuổi. Con hiện nay bao nhiêu tuổi?",
+    "o": [
+      "10 tuổi",
+      "14 tuổi",
+      "7 tuổi",
+      "15 tuổi"
+    ],
+    "a": "10 tuổi",
+    "h": "Mẹ có 3 phần tuổi, con có 1 phần; hiệu 20 là 2 phần. Tuổi con = 20 : 2 = 10.",
+    "w": null,
+    "tag": "TOAN3_C5"
+  },
+  {
+    "id": "Q_11_5_20",
+    "sub": "Bài toán nhiều bước và lập luận logic",
+    "q": "Tuổi mẹ gấp 4 lần tuổi con và mẹ hơn con 33 tuổi. Con hiện nay bao nhiêu tuổi?",
+    "o": [
+      "8 tuổi",
+      "15 tuổi",
+      "16 tuổi",
+      "11 tuổi"
+    ],
+    "a": "11 tuổi",
+    "h": "Mẹ có 4 phần tuổi, con có 1 phần; hiệu 33 là 3 phần. Tuổi con = 33 : 3 = 11.",
+    "w": null,
+    "tag": "TOAN3_C5"
+  },
+  {
+    "id": "Q_11_5_21",
+    "sub": "Bài toán nhiều bước và lập luận logic",
+    "q": "Trong lớp có 16 bạn thích cờ vua, 14 bạn thích bóng đá, trong đó 4 bạn thích cả hai. Biết mỗi bạn thích ít nhất một môn, lớp có bao nhiêu bạn?",
+    "o": [
+      "26 bạn",
+      "31 bạn",
+      "30 bạn",
+      "23 bạn"
+    ],
+    "a": "26 bạn",
+    "h": "Cộng hai nhóm 16 + 14 đã đếm các bạn thích cả hai hai lần. Trừ bớt 4: 16 + 14 − 4 = 26 bạn.",
+    "w": null,
+    "tag": "TOAN3_C5"
+  },
+  {
+    "id": "Q_11_5_22",
+    "sub": "Bài toán nhiều bước và lập luận logic",
+    "q": "Trong lớp có 19 bạn thích cờ vua, 16 bạn thích bóng đá, trong đó 5 bạn thích cả hai. Biết mỗi bạn thích ít nhất một môn, lớp có bao nhiêu bạn?",
+    "o": [
+      "27 bạn",
+      "35 bạn",
+      "34 bạn",
+      "30 bạn"
+    ],
+    "a": "30 bạn",
+    "h": "Cộng hai nhóm 19 + 16 đã đếm các bạn thích cả hai hai lần. Trừ bớt 5: 19 + 16 − 5 = 30 bạn.",
+    "w": null,
+    "tag": "TOAN3_C5"
+  },
+  {
+    "id": "Q_11_5_23",
+    "sub": "Bài toán nhiều bước và lập luận logic",
+    "q": "Trong lớp có 22 bạn thích cờ vua, 18 bạn thích bóng đá, trong đó 6 bạn thích cả hai. Biết mỗi bạn thích ít nhất một môn, lớp có bao nhiêu bạn?",
+    "o": [
+      "39 bạn",
+      "38 bạn",
+      "34 bạn",
+      "31 bạn"
+    ],
+    "a": "34 bạn",
+    "h": "Cộng hai nhóm 22 + 18 đã đếm các bạn thích cả hai hai lần. Trừ bớt 6: 22 + 18 − 6 = 34 bạn.",
+    "w": null,
+    "tag": "TOAN3_C5"
+  },
+  {
+    "id": "Q_11_5_24",
+    "sub": "Bài toán nhiều bước và lập luận logic",
+    "q": "Trong lớp có 25 bạn thích cờ vua, 20 bạn thích bóng đá, trong đó 7 bạn thích cả hai. Biết mỗi bạn thích ít nhất một môn, lớp có bao nhiêu bạn?",
+    "o": [
+      "43 bạn",
+      "42 bạn",
+      "35 bạn",
+      "38 bạn"
+    ],
+    "a": "38 bạn",
+    "h": "Cộng hai nhóm 25 + 20 đã đếm các bạn thích cả hai hai lần. Trừ bớt 7: 25 + 20 − 7 = 38 bạn.",
+    "w": null,
+    "tag": "TOAN3_C5"
+  },
+  {
+    "id": "Q_11_5_25",
+    "sub": "Bài toán nhiều bước và lập luận logic",
+    "q": "Trong lớp có 28 bạn thích cờ vua, 22 bạn thích bóng đá, trong đó 8 bạn thích cả hai. Biết mỗi bạn thích ít nhất một môn, lớp có bao nhiêu bạn?",
+    "o": [
+      "32 bạn",
+      "52 bạn",
+      "42 bạn",
+      "47 bạn"
+    ],
+    "a": "42 bạn",
+    "h": "Cộng hai nhóm 28 + 22 đã đếm các bạn thích cả hai hai lần. Trừ bớt 8: 28 + 22 − 8 = 42 bạn.",
+    "w": null,
+    "tag": "TOAN3_C5"
+  },
+  {
+    "id": "Q_11_5_26",
+    "sub": "Bài toán nhiều bước và lập luận logic",
+    "q": "Đoàn tham quan có 77 người, mỗi xe chở tối đa 25 người. Cần ít nhất bao nhiêu xe để chở hết đoàn?",
+    "o": [
+      "2 xe",
+      "4 xe",
+      "6 xe",
+      "7 xe"
+    ],
+    "a": "4 xe",
+    "h": "77 : 25 = 3 xe đầy và dư 2 người. Những người còn lại vẫn cần một xe, vậy cần 3 + 1 = 4 xe.",
+    "w": null,
+    "tag": "TOAN3_C5"
+  },
+  {
+    "id": "Q_11_5_27",
+    "sub": "Bài toán nhiều bước và lập luận logic",
+    "q": "Đoàn tham quan có 123 người, mỗi xe chở tối đa 30 người. Cần ít nhất bao nhiêu xe để chở hết đoàn?",
+    "o": [
+      "5 xe",
+      "3 xe",
+      "7 xe",
+      "8 xe"
+    ],
+    "a": "5 xe",
+    "h": "123 : 30 = 4 xe đầy và dư 3 người. Những người còn lại vẫn cần một xe, vậy cần 4 + 1 = 5 xe.",
+    "w": null,
+    "tag": "TOAN3_C5"
+  },
+  {
+    "id": "Q_11_5_28",
+    "sub": "Bài toán nhiều bước và lập luận logic",
+    "q": "Đoàn tham quan có 179 người, mỗi xe chở tối đa 35 người. Cần ít nhất bao nhiêu xe để chở hết đoàn?",
+    "o": [
+      "9 xe",
+      "8 xe",
+      "6 xe",
+      "4 xe"
+    ],
+    "a": "6 xe",
+    "h": "179 : 35 = 5 xe đầy và dư 4 người. Những người còn lại vẫn cần một xe, vậy cần 5 + 1 = 6 xe.",
+    "w": null,
+    "tag": "TOAN3_C5"
+  },
+  {
+    "id": "Q_11_5_29",
+    "sub": "Bài toán nhiều bước và lập luận logic",
+    "q": "Đoàn tham quan có 245 người, mỗi xe chở tối đa 40 người. Cần ít nhất bao nhiêu xe để chở hết đoàn?",
+    "o": [
+      "10 xe",
+      "5 xe",
+      "9 xe",
+      "7 xe"
+    ],
+    "a": "7 xe",
+    "h": "245 : 40 = 6 xe đầy và dư 5 người. Những người còn lại vẫn cần một xe, vậy cần 6 + 1 = 7 xe.",
+    "w": null,
+    "tag": "TOAN3_C5"
+  },
+  {
+    "id": "Q_11_5_30",
+    "sub": "Bài toán nhiều bước và lập luận logic",
+    "q": "Đoàn tham quan có 321 người, mỗi xe chở tối đa 45 người. Cần ít nhất bao nhiêu xe để chở hết đoàn?",
+    "o": [
+      "6 xe",
+      "11 xe",
+      "10 xe",
+      "8 xe"
+    ],
+    "a": "8 xe",
+    "h": "321 : 45 = 7 xe đầy và dư 6 người. Những người còn lại vẫn cần một xe, vậy cần 7 + 1 = 8 xe.",
+    "w": null,
+    "tag": "TOAN3_C5"
+  },
+  {
+    "id": "Q_11_5_31",
+    "sub": "Bài toán nhiều bước và lập luận logic",
+    "q": "Có 24 chiếc bút xếp đều trong 4 hộp. Cô mang đi 1 hộp nguyên vẹn. Còn lại bao nhiêu chiếc bút?",
+    "o": [
+      "18 chiếc",
+      "23 chiếc",
+      "15 chiếc",
+      "22 chiếc"
+    ],
+    "a": "18 chiếc",
+    "h": "Mỗi hộp có 24 : 4 = 6 bút. Còn 4 − 1 = 3 hộp nên còn 3 × 6 = 18 chiếc.",
+    "w": null,
+    "tag": "TOAN3_C5"
+  },
+  {
+    "id": "Q_11_5_32",
+    "sub": "Bài toán nhiều bước và lập luận logic",
+    "q": "Có 35 chiếc bút xếp đều trong 5 hộp. Cô mang đi 2 hộp nguyên vẹn. Còn lại bao nhiêu chiếc bút?",
+    "o": [
+      "25 chiếc",
+      "18 chiếc",
+      "26 chiếc",
+      "21 chiếc"
+    ],
+    "a": "21 chiếc",
+    "h": "Mỗi hộp có 35 : 5 = 7 bút. Còn 5 − 2 = 3 hộp nên còn 3 × 7 = 21 chiếc.",
+    "w": null,
+    "tag": "TOAN3_C5"
+  },
+  {
+    "id": "Q_11_5_33",
+    "sub": "Bài toán nhiều bước và lập luận logic",
+    "q": "Có 48 chiếc bút xếp đều trong 6 hộp. Cô mang đi 3 hộp nguyên vẹn. Còn lại bao nhiêu chiếc bút?",
+    "o": [
+      "21 chiếc",
+      "24 chiếc",
+      "29 chiếc",
+      "28 chiếc"
+    ],
+    "a": "24 chiếc",
+    "h": "Mỗi hộp có 48 : 6 = 8 bút. Còn 6 − 3 = 3 hộp nên còn 3 × 8 = 24 chiếc.",
+    "w": null,
+    "tag": "TOAN3_C5"
+  },
+  {
+    "id": "Q_11_5_34",
+    "sub": "Bài toán nhiều bước và lập luận logic",
+    "q": "Có 63 chiếc bút xếp đều trong 7 hộp. Cô mang đi 4 hộp nguyên vẹn. Còn lại bao nhiêu chiếc bút?",
+    "o": [
+      "27 chiếc",
+      "32 chiếc",
+      "24 chiếc",
+      "31 chiếc"
+    ],
+    "a": "27 chiếc",
+    "h": "Mỗi hộp có 63 : 7 = 9 bút. Còn 7 − 4 = 3 hộp nên còn 3 × 9 = 27 chiếc.",
+    "w": null,
+    "tag": "TOAN3_C5"
+  },
+  {
+    "id": "Q_11_5_35",
+    "sub": "Bài toán nhiều bước và lập luận logic",
+    "q": "Có 80 chiếc bút xếp đều trong 8 hộp. Cô mang đi 5 hộp nguyên vẹn. Còn lại bao nhiêu chiếc bút?",
+    "o": [
+      "35 chiếc",
+      "30 chiếc",
+      "27 chiếc",
+      "34 chiếc"
+    ],
+    "a": "30 chiếc",
+    "h": "Mỗi hộp có 80 : 8 = 10 bút. Còn 8 − 5 = 3 hộp nên còn 3 × 10 = 30 chiếc.",
+    "w": null,
+    "tag": "TOAN3_C5"
+  },
+  {
+    "id": "Q_11_5_36",
+    "sub": "Bài toán nhiều bước và lập luận logic",
+    "q": "Mai mua 2 quyển vở giá 3 500 đồng/quyển và 3 bút chì giá 2 500 đồng/chiếc. Mai trả 30 000 đồng. Mai được thối lại bao nhiêu tiền?",
+    "o": [
+      "16 500 đồng",
+      "16 000 đồng",
+      "15 500 đồng",
+      "14 500 đồng"
+    ],
+    "a": "15 500 đồng",
+    "h": "Tiền vở: 2 × 3 500 = 7 000 đồng. Tiền bút: 3 × 2 500 = 7 500 đồng. Tiền trả lại: 30 000 − 14 500 = 15 500 đồng.",
+    "w": null,
+    "tag": "TOAN3_C5"
+  },
+  {
+    "id": "Q_11_5_37",
+    "sub": "Bài toán nhiều bước và lập luận logic",
+    "q": "Mai mua 3 quyển vở giá 4 000 đồng/quyển và 4 bút chì giá 3 000 đồng/chiếc. Mai trả 40 000 đồng. Mai được thối lại bao nhiêu tiền?",
+    "o": [
+      "16 500 đồng",
+      "15 000 đồng",
+      "16 000 đồng",
+      "17 000 đồng"
+    ],
+    "a": "16 000 đồng",
+    "h": "Tiền vở: 3 × 4 000 = 12 000 đồng. Tiền bút: 4 × 3 000 = 12 000 đồng. Tiền trả lại: 40 000 − 24 000 = 16 000 đồng.",
+    "w": null,
+    "tag": "TOAN3_C5"
+  },
+  {
+    "id": "Q_11_5_38",
+    "sub": "Bài toán nhiều bước và lập luận logic",
+    "q": "Mai mua 4 quyển vở giá 4 500 đồng/quyển và 3 bút chì giá 3 500 đồng/chiếc. Mai trả 40 000 đồng. Mai được thối lại bao nhiêu tiền?",
+    "o": [
+      "12 500 đồng",
+      "12 000 đồng",
+      "11 500 đồng",
+      "10 500 đồng"
+    ],
+    "a": "11 500 đồng",
+    "h": "Tiền vở: 4 × 4 500 = 18 000 đồng. Tiền bút: 3 × 3 500 = 10 500 đồng. Tiền trả lại: 40 000 − 28 500 = 11 500 đồng.",
+    "w": null,
+    "tag": "TOAN3_C5"
+  },
+  {
+    "id": "Q_11_5_39",
+    "sub": "Bài toán nhiều bước và lập luận logic",
+    "q": "Mai mua 5 quyển vở giá 5 000 đồng/quyển và 4 bút chì giá 4 000 đồng/chiếc. Mai trả 60 000 đồng. Mai được thối lại bao nhiêu tiền?",
+    "o": [
+      "19 000 đồng",
+      "20 000 đồng",
+      "18 000 đồng",
+      "19 500 đồng"
+    ],
+    "a": "19 000 đồng",
+    "h": "Tiền vở: 5 × 5 000 = 25 000 đồng. Tiền bút: 4 × 4 000 = 16 000 đồng. Tiền trả lại: 60 000 − 41 000 = 19 000 đồng.",
+    "w": null,
+    "tag": "TOAN3_C5"
+  },
+  {
+    "id": "Q_11_5_40",
+    "sub": "Bài toán nhiều bước và lập luận logic",
+    "q": "Mai mua 6 quyển vở giá 5 500 đồng/quyển và 3 bút chì giá 4 500 đồng/chiếc. Mai trả 60 000 đồng. Mai được thối lại bao nhiêu tiền?",
+    "o": [
+      "12 500 đồng",
+      "14 500 đồng",
+      "14 000 đồng",
+      "13 500 đồng"
+    ],
+    "a": "13 500 đồng",
+    "h": "Tiền vở: 6 × 5 500 = 33 000 đồng. Tiền bút: 3 × 4 500 = 13 500 đồng. Tiền trả lại: 60 000 − 46 500 = 13 500 đồng.",
+    "w": null,
+    "tag": "TOAN3_C5"
+  },
+  {
+    "id": "Q_11_5_41",
+    "sub": "Bài toán nhiều bước và lập luận logic",
+    "q": "An cho Bình 4 nhãn vở, rồi Bình cho Chi 3 nhãn vở. Sau đó cả ba bạn đều có 11 nhãn vở. Lúc đầu An có bao nhiêu nhãn vở?",
+    "o": [
+      "12 nhãn vở",
+      "19 nhãn vở",
+      "20 nhãn vở",
+      "15 nhãn vở"
+    ],
+    "a": "15 nhãn vở",
+    "h": "Đi ngược từ trạng thái cuối: ban đầu An có 11 + 4 = 15; Bình có 11 − 4 + 3 = 10; Chi có 11 − 3 = 8. Vậy An có 15 nhãn vở.",
+    "w": null,
+    "tag": "TOAN3_C5"
+  },
+  {
+    "id": "Q_11_5_42",
+    "sub": "Bài toán nhiều bước và lập luận logic",
+    "q": "An cho Bình 5 nhãn vở, rồi Bình cho Chi 4 nhãn vở. Sau đó cả ba bạn đều có 14 nhãn vở. Lúc đầu Bình có bao nhiêu nhãn vở?",
+    "o": [
+      "13 nhãn vở",
+      "18 nhãn vở",
+      "10 nhãn vở",
+      "17 nhãn vở"
+    ],
+    "a": "13 nhãn vở",
+    "h": "Đi ngược từ trạng thái cuối: ban đầu An có 14 + 5 = 19; Bình có 14 − 5 + 4 = 13; Chi có 14 − 4 = 10. Vậy Bình có 13 nhãn vở.",
+    "w": null,
+    "tag": "TOAN3_C5"
+  },
+  {
+    "id": "Q_11_5_43",
+    "sub": "Bài toán nhiều bước và lập luận logic",
+    "q": "An cho Bình 6 nhãn vở, rồi Bình cho Chi 5 nhãn vở. Sau đó cả ba bạn đều có 17 nhãn vở. Lúc đầu Chi có bao nhiêu nhãn vở?",
+    "o": [
+      "17 nhãn vở",
+      "12 nhãn vở",
+      "16 nhãn vở",
+      "9 nhãn vở"
+    ],
+    "a": "12 nhãn vở",
+    "h": "Đi ngược từ trạng thái cuối: ban đầu An có 17 + 6 = 23; Bình có 17 − 6 + 5 = 16; Chi có 17 − 5 = 12. Vậy Chi có 12 nhãn vở.",
+    "w": null,
+    "tag": "TOAN3_C5"
+  },
+  {
+    "id": "Q_11_5_44",
+    "sub": "Bài toán nhiều bước và lập luận logic",
+    "q": "An cho Bình 7 nhãn vở, rồi Bình cho Chi 6 nhãn vở. Sau đó cả ba bạn đều có 20 nhãn vở. Lúc đầu An có bao nhiêu nhãn vở?",
+    "o": [
+      "32 nhãn vở",
+      "24 nhãn vở",
+      "27 nhãn vở",
+      "31 nhãn vở"
+    ],
+    "a": "27 nhãn vở",
+    "h": "Đi ngược từ trạng thái cuối: ban đầu An có 20 + 7 = 27; Bình có 20 − 7 + 6 = 19; Chi có 20 − 6 = 14. Vậy An có 27 nhãn vở.",
+    "w": null,
+    "tag": "TOAN3_C5"
+  },
+  {
+    "id": "Q_11_5_45",
+    "sub": "Bài toán nhiều bước và lập luận logic",
+    "q": "An cho Bình 8 nhãn vở, rồi Bình cho Chi 7 nhãn vở. Sau đó cả ba bạn đều có 23 nhãn vở. Lúc đầu Bình có bao nhiêu nhãn vở?",
+    "o": [
+      "26 nhãn vở",
+      "19 nhãn vở",
+      "22 nhãn vở",
+      "27 nhãn vở"
+    ],
+    "a": "22 nhãn vở",
+    "h": "Đi ngược từ trạng thái cuối: ban đầu An có 23 + 8 = 31; Bình có 23 − 8 + 7 = 22; Chi có 23 − 7 = 16. Vậy Bình có 22 nhãn vở.",
+    "w": null,
+    "tag": "TOAN3_C5"
+  },
+  {
+    "id": "Q_11_5_46",
+    "sub": "Bài toán nhiều bước và lập luận logic",
+    "q": "Một lớp chuẩn bị 3 hộp bánh, mỗi hộp 12 chiếc. Cô phát cho 5 bạn, mỗi bạn 3 chiếc. Còn lại bao nhiêu chiếc bánh?",
+    "o": [
+      "25 chiếc",
+      "26 chiếc",
+      "18 chiếc",
+      "21 chiếc"
+    ],
+    "a": "21 chiếc",
+    "h": "Ban đầu có 3 × 12 = 36 bánh. Đã phát 5 × 3 = 15 bánh. Còn 36 − 15 = 21 chiếc.",
+    "w": null,
+    "tag": "TOAN3_C5"
+  },
+  {
+    "id": "Q_11_5_47",
+    "sub": "Bài toán nhiều bước và lập luận logic",
+    "q": "Một lớp chuẩn bị 4 hộp bánh, mỗi hộp 14 chiếc. Cô phát cho 6 bạn, mỗi bạn 4 chiếc. Còn lại bao nhiêu chiếc bánh?",
+    "o": [
+      "36 chiếc",
+      "37 chiếc",
+      "32 chiếc",
+      "29 chiếc"
+    ],
+    "a": "32 chiếc",
+    "h": "Ban đầu có 4 × 14 = 56 bánh. Đã phát 6 × 4 = 24 bánh. Còn 56 − 24 = 32 chiếc.",
+    "w": null,
+    "tag": "TOAN3_C5"
+  },
+  {
+    "id": "Q_11_5_48",
+    "sub": "Bài toán nhiều bước và lập luận logic",
+    "q": "Một lớp chuẩn bị 5 hộp bánh, mỗi hộp 16 chiếc. Cô phát cho 7 bạn, mỗi bạn 5 chiếc. Còn lại bao nhiêu chiếc bánh?",
+    "o": [
+      "50 chiếc",
+      "55 chiếc",
+      "35 chiếc",
+      "45 chiếc"
+    ],
+    "a": "45 chiếc",
+    "h": "Ban đầu có 5 × 16 = 80 bánh. Đã phát 7 × 5 = 35 bánh. Còn 80 − 35 = 45 chiếc.",
+    "w": null,
+    "tag": "TOAN3_C5"
+  },
+  {
+    "id": "Q_11_5_49",
+    "sub": "Bài toán nhiều bước và lập luận logic",
+    "q": "Một lớp chuẩn bị 6 hộp bánh, mỗi hộp 18 chiếc. Cô phát cho 8 bạn, mỗi bạn 6 chiếc. Còn lại bao nhiêu chiếc bánh?",
+    "o": [
+      "60 chiếc",
+      "70 chiếc",
+      "50 chiếc",
+      "65 chiếc"
+    ],
+    "a": "60 chiếc",
+    "h": "Ban đầu có 6 × 18 = 108 bánh. Đã phát 8 × 6 = 48 bánh. Còn 108 − 48 = 60 chiếc.",
+    "w": null,
+    "tag": "TOAN3_C5"
+  },
+  {
+    "id": "Q_11_5_50",
+    "sub": "Bài toán nhiều bước và lập luận logic",
+    "q": "Một lớp chuẩn bị 7 hộp bánh, mỗi hộp 20 chiếc. Cô phát cho 9 bạn, mỗi bạn 7 chiếc. Còn lại bao nhiêu chiếc bánh?",
+    "o": [
+      "67 chiếc",
+      "77 chiếc",
+      "87 chiếc",
+      "82 chiếc"
+    ],
+    "a": "77 chiếc",
+    "h": "Ban đầu có 7 × 20 = 140 bánh. Đã phát 9 × 7 = 63 bánh. Còn 140 − 63 = 77 chiếc.",
+    "w": null,
+    "tag": "TOAN3_C5"
+  },
+  {
+    "id": "Q_11_6_1",
+    "sub": "Hình học, chu vi và diện tích nâng cao",
+    "q": "Một hình chữ nhật rộng 6 cm, chiều dài hơn chiều rộng 4 cm. Chu vi hình chữ nhật là bao nhiêu?",
+    "o": [
+      "37 cm",
+      "36 cm",
+      "29 cm",
+      "32 cm"
+    ],
+    "a": "32 cm",
+    "h": "Chiều dài = 6 + 4 = 10 cm. Chu vi = (6 + 10) × 2 = 32 cm.",
+    "w": null,
+    "tag": "TOAN3_C6",
+    "illustration": {
+      "kind": "emoji",
+      "emoji": "📐",
+      "caption": "Biểu tượng minh họa chủ đề; không chứa dữ kiện của bài toán.",
+      "role": "topic_cover"
+    }
+  },
+  {
+    "id": "Q_11_6_2",
+    "sub": "Hình học, chu vi và diện tích nâng cao",
+    "q": "Một hình chữ nhật rộng 8 cm, chiều dài hơn chiều rộng 7 cm. Chu vi hình chữ nhật là bao nhiêu?",
+    "o": [
+      "51 cm",
+      "46 cm",
+      "56 cm",
+      "36 cm"
+    ],
+    "a": "46 cm",
+    "h": "Chiều dài = 8 + 7 = 15 cm. Chu vi = (8 + 15) × 2 = 46 cm.",
+    "w": null,
+    "tag": "TOAN3_C6"
+  },
+  {
+    "id": "Q_11_6_3",
+    "sub": "Hình học, chu vi và diện tích nâng cao",
+    "q": "Một hình chữ nhật rộng 10 cm, chiều dài hơn chiều rộng 10 cm. Chu vi hình chữ nhật là bao nhiêu?",
+    "o": [
+      "65 cm",
+      "70 cm",
+      "50 cm",
+      "60 cm"
+    ],
+    "a": "60 cm",
+    "h": "Chiều dài = 10 + 10 = 20 cm. Chu vi = (10 + 20) × 2 = 60 cm.",
+    "w": null,
+    "tag": "TOAN3_C6"
+  },
+  {
+    "id": "Q_11_6_4",
+    "sub": "Hình học, chu vi và diện tích nâng cao",
+    "q": "Một hình chữ nhật rộng 12 cm, chiều dài hơn chiều rộng 13 cm. Chu vi hình chữ nhật là bao nhiêu?",
+    "o": [
+      "79 cm",
+      "84 cm",
+      "64 cm",
+      "74 cm"
+    ],
+    "a": "74 cm",
+    "h": "Chiều dài = 12 + 13 = 25 cm. Chu vi = (12 + 25) × 2 = 74 cm.",
+    "w": null,
+    "tag": "TOAN3_C6"
+  },
+  {
+    "id": "Q_11_6_5",
+    "sub": "Hình học, chu vi và diện tích nâng cao",
+    "q": "Một hình chữ nhật rộng 14 cm, chiều dài hơn chiều rộng 16 cm. Chu vi hình chữ nhật là bao nhiêu?",
+    "o": [
+      "88 cm",
+      "78 cm",
+      "93 cm",
+      "98 cm"
+    ],
+    "a": "88 cm",
+    "h": "Chiều dài = 14 + 16 = 30 cm. Chu vi = (14 + 30) × 2 = 88 cm.",
+    "w": null,
+    "tag": "TOAN3_C6"
+  },
+  {
+    "id": "Q_11_6_6",
+    "sub": "Hình học, chu vi và diện tích nâng cao",
+    "q": "Một hình chữ nhật có chu vi 50 cm và chiều rộng 7 cm. Chiều dài là bao nhiêu?",
+    "o": [
+      "23 cm",
+      "18 cm",
+      "15 cm",
+      "22 cm"
+    ],
+    "a": "18 cm",
+    "h": "Nửa chu vi = 50 : 2 = 25 cm. Chiều dài = 25 − 7 = 18 cm.",
+    "w": null,
+    "tag": "TOAN3_C6"
+  },
+  {
+    "id": "Q_11_6_7",
+    "sub": "Hình học, chu vi và diện tích nâng cao",
+    "q": "Một hình chữ nhật có chu vi 58 cm và chiều rộng 8 cm. Chiều dài là bao nhiêu?",
+    "o": [
+      "21 cm",
+      "26 cm",
+      "18 cm",
+      "25 cm"
+    ],
+    "a": "21 cm",
+    "h": "Nửa chu vi = 58 : 2 = 29 cm. Chiều dài = 29 − 8 = 21 cm.",
+    "w": null,
+    "tag": "TOAN3_C6"
+  },
+  {
+    "id": "Q_11_6_8",
+    "sub": "Hình học, chu vi và diện tích nâng cao",
+    "q": "Một hình chữ nhật có chu vi 66 cm và chiều rộng 9 cm. Chiều dài là bao nhiêu?",
+    "o": [
+      "29 cm",
+      "24 cm",
+      "28 cm",
+      "21 cm"
+    ],
+    "a": "24 cm",
+    "h": "Nửa chu vi = 66 : 2 = 33 cm. Chiều dài = 33 − 9 = 24 cm.",
+    "w": null,
+    "tag": "TOAN3_C6"
+  },
+  {
+    "id": "Q_11_6_9",
+    "sub": "Hình học, chu vi và diện tích nâng cao",
+    "q": "Một hình chữ nhật có chu vi 74 cm và chiều rộng 10 cm. Chiều dài là bao nhiêu?",
+    "o": [
+      "24 cm",
+      "27 cm",
+      "32 cm",
+      "31 cm"
+    ],
+    "a": "27 cm",
+    "h": "Nửa chu vi = 74 : 2 = 37 cm. Chiều dài = 37 − 10 = 27 cm.",
+    "w": null,
+    "tag": "TOAN3_C6"
+  },
+  {
+    "id": "Q_11_6_10",
+    "sub": "Hình học, chu vi và diện tích nâng cao",
+    "q": "Một hình chữ nhật có chu vi 82 cm và chiều rộng 11 cm. Chiều dài là bao nhiêu?",
+    "o": [
+      "35 cm",
+      "34 cm",
+      "27 cm",
+      "30 cm"
+    ],
+    "a": "30 cm",
+    "h": "Nửa chu vi = 82 : 2 = 41 cm. Chiều dài = 41 − 11 = 30 cm.",
+    "w": null,
+    "tag": "TOAN3_C6"
+  },
+  {
+    "id": "Q_11_6_11",
+    "sub": "Hình học, chu vi và diện tích nâng cao",
+    "q": "Một hình chữ nhật dài 14 cm, rộng 8 cm. Nếu chỉ tăng chiều dài thêm 3 cm thì chu vi tăng bao nhiêu?",
+    "o": [
+      "8 cm",
+      "6 cm",
+      "9 cm",
+      "4 cm"
+    ],
+    "a": "6 cm",
+    "h": "Chiều dài xuất hiện hai lần trong chu vi, nên khi tăng 3 cm, chu vi tăng 3 × 2 = 6 cm.",
+    "w": null,
+    "tag": "TOAN3_C6"
+  },
+  {
+    "id": "Q_11_6_12",
+    "sub": "Hình học, chu vi và diện tích nâng cao",
+    "q": "Một hình chữ nhật dài 16 cm, rộng 9 cm. Nếu chỉ tăng chiều dài thêm 4 cm thì chu vi tăng bao nhiêu?",
+    "o": [
+      "6 cm",
+      "11 cm",
+      "8 cm",
+      "10 cm"
+    ],
+    "a": "8 cm",
+    "h": "Chiều dài xuất hiện hai lần trong chu vi, nên khi tăng 4 cm, chu vi tăng 4 × 2 = 8 cm.",
+    "w": null,
+    "tag": "TOAN3_C6"
+  },
+  {
+    "id": "Q_11_6_13",
+    "sub": "Hình học, chu vi và diện tích nâng cao",
+    "q": "Một hình chữ nhật dài 18 cm, rộng 10 cm. Nếu chỉ tăng chiều dài thêm 5 cm thì chu vi tăng bao nhiêu?",
+    "o": [
+      "7 cm",
+      "15 cm",
+      "10 cm",
+      "14 cm"
+    ],
+    "a": "10 cm",
+    "h": "Chiều dài xuất hiện hai lần trong chu vi, nên khi tăng 5 cm, chu vi tăng 5 × 2 = 10 cm.",
+    "w": null,
+    "tag": "TOAN3_C6"
+  },
+  {
+    "id": "Q_11_6_14",
+    "sub": "Hình học, chu vi và diện tích nâng cao",
+    "q": "Một hình chữ nhật dài 20 cm, rộng 11 cm. Nếu chỉ tăng chiều dài thêm 6 cm thì chu vi tăng bao nhiêu?",
+    "o": [
+      "9 cm",
+      "16 cm",
+      "17 cm",
+      "12 cm"
+    ],
+    "a": "12 cm",
+    "h": "Chiều dài xuất hiện hai lần trong chu vi, nên khi tăng 6 cm, chu vi tăng 6 × 2 = 12 cm.",
+    "w": null,
+    "tag": "TOAN3_C6"
+  },
+  {
+    "id": "Q_11_6_15",
+    "sub": "Hình học, chu vi và diện tích nâng cao",
+    "q": "Một hình chữ nhật dài 22 cm, rộng 12 cm. Nếu chỉ tăng chiều dài thêm 7 cm thì chu vi tăng bao nhiêu?",
+    "o": [
+      "19 cm",
+      "11 cm",
+      "14 cm",
+      "18 cm"
+    ],
+    "a": "14 cm",
+    "h": "Chiều dài xuất hiện hai lần trong chu vi, nên khi tăng 7 cm, chu vi tăng 7 × 2 = 14 cm.",
+    "w": null,
+    "tag": "TOAN3_C6"
+  },
+  {
+    "id": "Q_11_6_16",
+    "sub": "Hình học, chu vi và diện tích nâng cao",
+    "q": "Hình vuông có chu vi 20 cm. Diện tích hình vuông đó là bao nhiêu?",
+    "o": [
+      "25 cm²",
+      "29 cm²",
+      "30 cm²",
+      "22 cm²"
+    ],
+    "a": "25 cm²",
+    "h": "Cạnh hình vuông = 20 : 4 = 5 cm. Diện tích = 5 × 5 = 25 cm².",
+    "w": null,
+    "tag": "TOAN3_C6"
+  },
+  {
+    "id": "Q_11_6_17",
+    "sub": "Hình học, chu vi và diện tích nâng cao",
+    "q": "Hình vuông có chu vi 28 cm. Diện tích hình vuông đó là bao nhiêu?",
+    "o": [
+      "59 cm²",
+      "39 cm²",
+      "49 cm²",
+      "54 cm²"
+    ],
+    "a": "49 cm²",
+    "h": "Cạnh hình vuông = 28 : 4 = 7 cm. Diện tích = 7 × 7 = 49 cm².",
+    "w": null,
+    "tag": "TOAN3_C6"
+  },
+  {
+    "id": "Q_11_6_18",
+    "sub": "Hình học, chu vi và diện tích nâng cao",
+    "q": "Hình vuông có chu vi 36 cm. Diện tích hình vuông đó là bao nhiêu?",
+    "o": [
+      "81 cm²",
+      "91 cm²",
+      "86 cm²",
+      "71 cm²"
+    ],
+    "a": "81 cm²",
+    "h": "Cạnh hình vuông = 36 : 4 = 9 cm. Diện tích = 9 × 9 = 81 cm².",
+    "w": null,
+    "tag": "TOAN3_C6"
+  },
+  {
+    "id": "Q_11_6_19",
+    "sub": "Hình học, chu vi và diện tích nâng cao",
+    "q": "Hình vuông có chu vi 44 cm. Diện tích hình vuông đó là bao nhiêu?",
+    "o": [
+      "121 cm²",
+      "131 cm²",
+      "141 cm²",
+      "101 cm²"
+    ],
+    "a": "121 cm²",
+    "h": "Cạnh hình vuông = 44 : 4 = 11 cm. Diện tích = 11 × 11 = 121 cm².",
+    "w": null,
+    "tag": "TOAN3_C6"
+  },
+  {
+    "id": "Q_11_6_20",
+    "sub": "Hình học, chu vi và diện tích nâng cao",
+    "q": "Hình vuông có chu vi 52 cm. Diện tích hình vuông đó là bao nhiêu?",
+    "o": [
+      "149 cm²",
+      "189 cm²",
+      "179 cm²",
+      "169 cm²"
+    ],
+    "a": "169 cm²",
+    "h": "Cạnh hình vuông = 52 : 4 = 13 cm. Diện tích = 13 × 13 = 169 cm².",
+    "w": null,
+    "tag": "TOAN3_C6"
+  },
+  {
+    "id": "Q_11_6_21",
+    "sub": "Hình học, chu vi và diện tích nâng cao",
+    "q": "Một khu vườn hình vuông có cạnh 6 m. Người ta mở rộng khu vườn để mỗi cạnh tăng thêm 2 m. Diện tích khu vườn tăng bao nhiêu mét vuông?",
+    "o": [
+      "28 m²",
+      "34 m²",
+      "30 m²",
+      "26 m²"
+    ],
+    "a": "28 m²",
+    "h": "Diện tích ban đầu: 6 × 6 = 36 m². Cạnh mới: 6 + 2 = 8 m, diện tích mới: 8 × 8 = 64 m². Tăng 64 − 36 = 28 m².",
+    "w": null,
+    "tag": "TOAN3_C6"
+  },
+  {
+    "id": "Q_11_6_22",
+    "sub": "Hình học, chu vi và diện tích nâng cao",
+    "q": "Một khu vườn hình vuông có cạnh 9 m. Người ta mở rộng khu vườn để mỗi cạnh tăng thêm 3 m. Diện tích khu vườn tăng bao nhiêu mét vuông?",
+    "o": [
+      "72 m²",
+      "63 m²",
+      "60 m²",
+      "66 m²"
+    ],
+    "a": "63 m²",
+    "h": "Diện tích ban đầu: 9 × 9 = 81 m². Cạnh mới: 9 + 3 = 12 m, diện tích mới: 12 × 12 = 144 m². Tăng 144 − 81 = 63 m².",
+    "w": null,
+    "tag": "TOAN3_C6"
+  },
+  {
+    "id": "Q_11_6_23",
+    "sub": "Hình học, chu vi và diện tích nâng cao",
+    "q": "Một khu vườn hình vuông có cạnh 12 m. Người ta mở rộng khu vườn để mỗi cạnh tăng thêm 4 m. Diện tích khu vườn tăng bao nhiêu mét vuông?",
+    "o": [
+      "108 m²",
+      "116 m²",
+      "112 m²",
+      "124 m²"
+    ],
+    "a": "112 m²",
+    "h": "Diện tích ban đầu: 12 × 12 = 144 m². Cạnh mới: 12 + 4 = 16 m, diện tích mới: 16 × 16 = 256 m². Tăng 256 − 144 = 112 m².",
+    "w": null,
+    "tag": "TOAN3_C6"
+  },
+  {
+    "id": "Q_11_6_24",
+    "sub": "Hình học, chu vi và diện tích nâng cao",
+    "q": "Một khu vườn hình vuông có cạnh 15 m. Người ta mở rộng khu vườn để mỗi cạnh tăng thêm 2 m. Diện tích khu vườn tăng bao nhiêu mét vuông?",
+    "o": [
+      "64 m²",
+      "79 m²",
+      "62 m²",
+      "66 m²"
+    ],
+    "a": "64 m²",
+    "h": "Diện tích ban đầu: 15 × 15 = 225 m². Cạnh mới: 15 + 2 = 17 m, diện tích mới: 17 × 17 = 289 m². Tăng 289 − 225 = 64 m².",
+    "w": null,
+    "tag": "TOAN3_C6"
+  },
+  {
+    "id": "Q_11_6_25",
+    "sub": "Hình học, chu vi và diện tích nâng cao",
+    "q": "Một khu vườn hình vuông có cạnh 18 m. Người ta mở rộng khu vườn để mỗi cạnh tăng thêm 3 m. Diện tích khu vườn tăng bao nhiêu mét vuông?",
+    "o": [
+      "114 m²",
+      "120 m²",
+      "135 m²",
+      "117 m²"
+    ],
+    "a": "117 m²",
+    "h": "Diện tích ban đầu: 18 × 18 = 324 m². Cạnh mới: 18 + 3 = 21 m, diện tích mới: 21 × 21 = 441 m². Tăng 441 − 324 = 117 m².",
+    "w": null,
+    "tag": "TOAN3_C6"
+  },
+  {
+    "id": "Q_11_6_26",
+    "sub": "Hình học, chu vi và diện tích nâng cao",
+    "q": "Một tấm bìa hình chữ nhật có diện tích 48 cm² và chiều rộng 4 cm. Chiều dài tấm bìa bằng bao nhiêu?",
+    "o": [
+      "9 cm",
+      "17 cm",
+      "16 cm",
+      "12 cm"
+    ],
+    "a": "12 cm",
+    "h": "Diện tích = dài × rộng, nên dài = 48 : 4 = 12 cm.",
+    "w": null,
+    "tag": "TOAN3_C6"
+  },
+  {
+    "id": "Q_11_6_27",
+    "sub": "Hình học, chu vi và diện tích nâng cao",
+    "q": "Một tấm bìa hình chữ nhật có diện tích 70 cm² và chiều rộng 5 cm. Chiều dài tấm bìa bằng bao nhiêu?",
+    "o": [
+      "18 cm",
+      "14 cm",
+      "11 cm",
+      "19 cm"
+    ],
+    "a": "14 cm",
+    "h": "Diện tích = dài × rộng, nên dài = 70 : 5 = 14 cm.",
+    "w": null,
+    "tag": "TOAN3_C6"
+  },
+  {
+    "id": "Q_11_6_28",
+    "sub": "Hình học, chu vi và diện tích nâng cao",
+    "q": "Một tấm bìa hình chữ nhật có diện tích 96 cm² và chiều rộng 6 cm. Chiều dài tấm bìa bằng bao nhiêu?",
+    "o": [
+      "16 cm",
+      "13 cm",
+      "20 cm",
+      "21 cm"
+    ],
+    "a": "16 cm",
+    "h": "Diện tích = dài × rộng, nên dài = 96 : 6 = 16 cm.",
+    "w": null,
+    "tag": "TOAN3_C6"
+  },
+  {
+    "id": "Q_11_6_29",
+    "sub": "Hình học, chu vi và diện tích nâng cao",
+    "q": "Một tấm bìa hình chữ nhật có diện tích 126 cm² và chiều rộng 7 cm. Chiều dài tấm bìa bằng bao nhiêu?",
+    "o": [
+      "15 cm",
+      "18 cm",
+      "22 cm",
+      "23 cm"
+    ],
+    "a": "18 cm",
+    "h": "Diện tích = dài × rộng, nên dài = 126 : 7 = 18 cm.",
+    "w": null,
+    "tag": "TOAN3_C6"
+  },
+  {
+    "id": "Q_11_6_30",
+    "sub": "Hình học, chu vi và diện tích nâng cao",
+    "q": "Một tấm bìa hình chữ nhật có diện tích 160 cm² và chiều rộng 8 cm. Chiều dài tấm bìa bằng bao nhiêu?",
+    "o": [
+      "17 cm",
+      "20 cm",
+      "25 cm",
+      "24 cm"
+    ],
+    "a": "20 cm",
+    "h": "Diện tích = dài × rộng, nên dài = 160 : 8 = 20 cm.",
+    "w": null,
+    "tag": "TOAN3_C6"
+  },
+  {
+    "id": "Q_11_6_31",
+    "sub": "Hình học, chu vi và diện tích nâng cao",
+    "q": "Khu vườn hình chữ nhật dài 20 m, rộng 12 m. Làm hàng rào xung quanh nhưng chừa 2 cổng, mỗi cổng rộng 2 m. Cần bao nhiêu mét hàng rào?",
+    "o": [
+      "50 m",
+      "70 m",
+      "60 m",
+      "65 m"
+    ],
+    "a": "60 m",
+    "h": "Chu vi khu vườn = (20 + 12) × 2 = 64 m. Trừ hai lối cổng: 64 − 2 × 2 = 60 m.",
+    "w": null,
+    "tag": "TOAN3_C6"
+  },
+  {
+    "id": "Q_11_6_32",
+    "sub": "Hình học, chu vi và diện tích nâng cao",
+    "q": "Khu vườn hình chữ nhật dài 25 m, rộng 15 m. Làm hàng rào xung quanh nhưng chừa 2 cổng, mỗi cổng rộng 3 m. Cần bao nhiêu mét hàng rào?",
+    "o": [
+      "64 m",
+      "79 m",
+      "74 m",
+      "84 m"
+    ],
+    "a": "74 m",
+    "h": "Chu vi khu vườn = (25 + 15) × 2 = 80 m. Trừ hai lối cổng: 80 − 2 × 3 = 74 m.",
+    "w": null,
+    "tag": "TOAN3_C6"
+  },
+  {
+    "id": "Q_11_6_33",
+    "sub": "Hình học, chu vi và diện tích nâng cao",
+    "q": "Khu vườn hình chữ nhật dài 30 m, rộng 18 m. Làm hàng rào xung quanh nhưng chừa 2 cổng, mỗi cổng rộng 4 m. Cần bao nhiêu mét hàng rào?",
+    "o": [
+      "98 m",
+      "78 m",
+      "88 m",
+      "93 m"
+    ],
+    "a": "88 m",
+    "h": "Chu vi khu vườn = (30 + 18) × 2 = 96 m. Trừ hai lối cổng: 96 − 2 × 4 = 88 m.",
+    "w": null,
+    "tag": "TOAN3_C6"
+  },
+  {
+    "id": "Q_11_6_34",
+    "sub": "Hình học, chu vi và diện tích nâng cao",
+    "q": "Khu vườn hình chữ nhật dài 35 m, rộng 21 m. Làm hàng rào xung quanh nhưng chừa 2 cổng, mỗi cổng rộng 5 m. Cần bao nhiêu mét hàng rào?",
+    "o": [
+      "82 m",
+      "102 m",
+      "122 m",
+      "112 m"
+    ],
+    "a": "102 m",
+    "h": "Chu vi khu vườn = (35 + 21) × 2 = 112 m. Trừ hai lối cổng: 112 − 2 × 5 = 102 m.",
+    "w": null,
+    "tag": "TOAN3_C6"
+  },
+  {
+    "id": "Q_11_6_35",
+    "sub": "Hình học, chu vi và diện tích nâng cao",
+    "q": "Khu vườn hình chữ nhật dài 40 m, rộng 24 m. Làm hàng rào xung quanh nhưng chừa 2 cổng, mỗi cổng rộng 6 m. Cần bao nhiêu mét hàng rào?",
+    "o": [
+      "96 m",
+      "136 m",
+      "126 m",
+      "116 m"
+    ],
+    "a": "116 m",
+    "h": "Chu vi khu vườn = (40 + 24) × 2 = 128 m. Trừ hai lối cổng: 128 − 2 × 6 = 116 m.",
+    "w": null,
+    "tag": "TOAN3_C6"
+  },
+  {
+    "id": "Q_11_6_36",
+    "sub": "Hình học, chu vi và diện tích nâng cao",
+    "q": "Mảnh đất hình chữ nhật dài 12 m, rộng 6 m. Chia thành 3 phần có diện tích bằng nhau. Mỗi phần có diện tích bao nhiêu mét vuông?",
+    "o": [
+      "21 m²",
+      "28 m²",
+      "29 m²",
+      "24 m²"
+    ],
+    "a": "24 m²",
+    "h": "Diện tích cả mảnh đất = 12 × 6 = 72 m². Chia đều 3 phần được 72 : 3 = 24 m².",
+    "w": null,
+    "tag": "TOAN3_C6"
+  },
+  {
+    "id": "Q_11_6_37",
+    "sub": "Hình học, chu vi và diện tích nâng cao",
+    "q": "Mảnh đất hình chữ nhật dài 20 m, rộng 7 m. Chia thành 4 phần có diện tích bằng nhau. Mỗi phần có diện tích bao nhiêu mét vuông?",
+    "o": [
+      "35 m²",
+      "39 m²",
+      "32 m²",
+      "40 m²"
+    ],
+    "a": "35 m²",
+    "h": "Diện tích cả mảnh đất = 20 × 7 = 140 m². Chia đều 4 phần được 140 : 4 = 35 m².",
+    "w": null,
+    "tag": "TOAN3_C6"
+  },
+  {
+    "id": "Q_11_6_38",
+    "sub": "Hình học, chu vi và diện tích nâng cao",
+    "q": "Mảnh đất hình chữ nhật dài 18 m, rộng 8 m. Chia thành 3 phần có diện tích bằng nhau. Mỗi phần có diện tích bao nhiêu mét vuông?",
+    "o": [
+      "38 m²",
+      "53 m²",
+      "48 m²",
+      "58 m²"
+    ],
+    "a": "48 m²",
+    "h": "Diện tích cả mảnh đất = 18 × 8 = 144 m². Chia đều 3 phần được 144 : 3 = 48 m².",
+    "w": null,
+    "tag": "TOAN3_C6"
+  },
+  {
+    "id": "Q_11_6_39",
+    "sub": "Hình học, chu vi và diện tích nâng cao",
+    "q": "Mảnh đất hình chữ nhật dài 28 m, rộng 9 m. Chia thành 4 phần có diện tích bằng nhau. Mỗi phần có diện tích bao nhiêu mét vuông?",
+    "o": [
+      "63 m²",
+      "68 m²",
+      "53 m²",
+      "73 m²"
+    ],
+    "a": "63 m²",
+    "h": "Diện tích cả mảnh đất = 28 × 9 = 252 m². Chia đều 4 phần được 252 : 4 = 63 m².",
+    "w": null,
+    "tag": "TOAN3_C6"
+  },
+  {
+    "id": "Q_11_6_40",
+    "sub": "Hình học, chu vi và diện tích nâng cao",
+    "q": "Mảnh đất hình chữ nhật dài 24 m, rộng 10 m. Chia thành 3 phần có diện tích bằng nhau. Mỗi phần có diện tích bao nhiêu mét vuông?",
+    "o": [
+      "80 m²",
+      "70 m²",
+      "85 m²",
+      "90 m²"
+    ],
+    "a": "80 m²",
+    "h": "Diện tích cả mảnh đất = 24 × 10 = 240 m². Chia đều 3 phần được 240 : 3 = 80 m².",
+    "w": null,
+    "tag": "TOAN3_C6"
+  },
+  {
+    "id": "Q_11_6_41",
+    "sub": "Hình học, chu vi và diện tích nâng cao",
+    "q": "Ghép hai hình vuông cạnh 4 cm sát nhau theo một cạnh để thành một hình chữ nhật. Chu vi hình chữ nhật mới là bao nhiêu?",
+    "o": [
+      "24 cm",
+      "28 cm",
+      "29 cm",
+      "21 cm"
+    ],
+    "a": "24 cm",
+    "h": "Hình sau ghép dài 4 × 2 = 8 cm, rộng 4 cm. Chu vi = (8 + 4) × 2 = 24 cm. Không cộng hai chu vi vì cạnh ghép nằm bên trong.",
+    "w": null,
+    "tag": "TOAN3_C6"
+  },
+  {
+    "id": "Q_11_6_42",
+    "sub": "Hình học, chu vi và diện tích nâng cao",
+    "q": "Ghép hai hình vuông cạnh 6 cm sát nhau theo một cạnh để thành một hình chữ nhật. Chu vi hình chữ nhật mới là bao nhiêu?",
+    "o": [
+      "41 cm",
+      "36 cm",
+      "40 cm",
+      "33 cm"
+    ],
+    "a": "36 cm",
+    "h": "Hình sau ghép dài 6 × 2 = 12 cm, rộng 6 cm. Chu vi = (12 + 6) × 2 = 36 cm. Không cộng hai chu vi vì cạnh ghép nằm bên trong.",
+    "w": null,
+    "tag": "TOAN3_C6"
+  },
+  {
+    "id": "Q_11_6_43",
+    "sub": "Hình học, chu vi và diện tích nâng cao",
+    "q": "Ghép hai hình vuông cạnh 8 cm sát nhau theo một cạnh để thành một hình chữ nhật. Chu vi hình chữ nhật mới là bao nhiêu?",
+    "o": [
+      "38 cm",
+      "48 cm",
+      "53 cm",
+      "58 cm"
+    ],
+    "a": "48 cm",
+    "h": "Hình sau ghép dài 8 × 2 = 16 cm, rộng 8 cm. Chu vi = (16 + 8) × 2 = 48 cm. Không cộng hai chu vi vì cạnh ghép nằm bên trong.",
+    "w": null,
+    "tag": "TOAN3_C6"
+  },
+  {
+    "id": "Q_11_6_44",
+    "sub": "Hình học, chu vi và diện tích nâng cao",
+    "q": "Ghép hai hình vuông cạnh 10 cm sát nhau theo một cạnh để thành một hình chữ nhật. Chu vi hình chữ nhật mới là bao nhiêu?",
+    "o": [
+      "50 cm",
+      "60 cm",
+      "70 cm",
+      "65 cm"
+    ],
+    "a": "60 cm",
+    "h": "Hình sau ghép dài 10 × 2 = 20 cm, rộng 10 cm. Chu vi = (20 + 10) × 2 = 60 cm. Không cộng hai chu vi vì cạnh ghép nằm bên trong.",
+    "w": null,
+    "tag": "TOAN3_C6"
+  },
+  {
+    "id": "Q_11_6_45",
+    "sub": "Hình học, chu vi và diện tích nâng cao",
+    "q": "Ghép hai hình vuông cạnh 12 cm sát nhau theo một cạnh để thành một hình chữ nhật. Chu vi hình chữ nhật mới là bao nhiêu?",
+    "o": [
+      "62 cm",
+      "77 cm",
+      "72 cm",
+      "82 cm"
+    ],
+    "a": "72 cm",
+    "h": "Hình sau ghép dài 12 × 2 = 24 cm, rộng 12 cm. Chu vi = (24 + 12) × 2 = 72 cm. Không cộng hai chu vi vì cạnh ghép nằm bên trong.",
+    "w": null,
+    "tag": "TOAN3_C6"
+  },
+  {
+    "id": "Q_11_6_46",
+    "sub": "Hình học, chu vi và diện tích nâng cao",
+    "q": "Một hình chữ nhật dài 25 cm, rộng 2 dm. Chu vi hình chữ nhật bằng bao nhiêu xăng-ti-mét?",
+    "o": [
+      "90 cm",
+      "100 cm",
+      "80 cm",
+      "95 cm"
+    ],
+    "a": "90 cm",
+    "h": "Đổi cùng đơn vị: 2 dm = 20 cm. Chu vi = (25 + 20) × 2 = 90 cm.",
+    "w": null,
+    "tag": "TOAN3_C6"
+  },
+  {
+    "id": "Q_11_6_47",
+    "sub": "Hình học, chu vi và diện tích nâng cao",
+    "q": "Một hình chữ nhật dài 36 cm, rộng 3 dm. Chu vi hình chữ nhật bằng bao nhiêu xăng-ti-mét?",
+    "o": [
+      "112 cm",
+      "152 cm",
+      "132 cm",
+      "142 cm"
+    ],
+    "a": "132 cm",
+    "h": "Đổi cùng đơn vị: 3 dm = 30 cm. Chu vi = (36 + 30) × 2 = 132 cm.",
+    "w": null,
+    "tag": "TOAN3_C6"
+  },
+  {
+    "id": "Q_11_6_48",
+    "sub": "Hình học, chu vi và diện tích nâng cao",
+    "q": "Một hình chữ nhật dài 47 cm, rộng 4 dm. Chu vi hình chữ nhật bằng bao nhiêu xăng-ti-mét?",
+    "o": [
+      "184 cm",
+      "174 cm",
+      "154 cm",
+      "194 cm"
+    ],
+    "a": "174 cm",
+    "h": "Đổi cùng đơn vị: 4 dm = 40 cm. Chu vi = (47 + 40) × 2 = 174 cm.",
+    "w": null,
+    "tag": "TOAN3_C6"
+  },
+  {
+    "id": "Q_11_6_49",
+    "sub": "Hình học, chu vi và diện tích nâng cao",
+    "q": "Một hình chữ nhật dài 58 cm, rộng 5 dm. Chu vi hình chữ nhật bằng bao nhiêu xăng-ti-mét?",
+    "o": [
+      "236 cm",
+      "226 cm",
+      "196 cm",
+      "216 cm"
+    ],
+    "a": "216 cm",
+    "h": "Đổi cùng đơn vị: 5 dm = 50 cm. Chu vi = (58 + 50) × 2 = 216 cm.",
+    "w": null,
+    "tag": "TOAN3_C6"
+  },
+  {
+    "id": "Q_11_6_50",
+    "sub": "Hình học, chu vi và diện tích nâng cao",
+    "q": "Một hình chữ nhật dài 69 cm, rộng 6 dm. Chu vi hình chữ nhật bằng bao nhiêu xăng-ti-mét?",
+    "o": [
+      "238 cm",
+      "278 cm",
+      "268 cm",
+      "258 cm"
+    ],
+    "a": "258 cm",
+    "h": "Đổi cùng đơn vị: 6 dm = 60 cm. Chu vi = (69 + 60) × 2 = 258 cm.",
+    "w": null,
+    "tag": "TOAN3_C6"
   }
 ]
