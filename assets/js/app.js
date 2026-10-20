@@ -40,8 +40,8 @@
   // Module học theo môn: chỉ nạp khi người dùng thực sự mở môn đó.
   // Tiếng Anh 3 dùng module trực tiếp như Tiếng Việt 3, tách biệt account/backend cũ.
   const SUBJECT_MODULE_SCRIPTS = Object.freeze({
-    math: "assets/js/math/toan_app.js?v=class3-math-20261014-1",
-    vietnamese: "assets/js/vietnamese/tv_app.js?v=class3-tv-20261014-1",
+    math: "assets/js/math/toan_app.js?v=class3-math-nav-20261020-1",
+    vietnamese: "assets/js/vietnamese/tv_app.js?v=class3-tv-nav-20261020-1",
     english: "assets/js/english/ta_app.js?v=class3-ta-20261014-1"
   });
   // Games/Tools/AI Lab ngoài Trang chủ: mỗi module con là một file JS độc lập và chỉ tải khi mở.
@@ -1143,11 +1143,11 @@
         return showPremiumLearningGate(featureName);
       },
       hooks: {
-        // Only the English 3 module currently publishes structured breadcrumb levels.
-        supportsStructuredDetail: state.subjectId === "english",
+        // The shared shell renders nested learning breadcrumbs for all three subjects.
+        supportsStructuredDetail: ["math", "vietnamese", "english"].includes(state.subjectId),
         setDetail(detail) {
           const tabLabel = (SUBJECT_TABS.find((t) => t.id === state.subjectTab) || SUBJECT_TABS[0]).label;
-          const isStructured = state.subjectId === "english" && detail && typeof detail === "object";
+          const isStructured = ["math", "vietnamese", "english"].includes(state.subjectId) && detail && typeof detail === "object";
           const items = isStructured && Array.isArray(detail.items)
             ? detail.items.slice(0, 5).map((item) => ({
                 title: String(item && item.title || "").trim(),
@@ -1812,7 +1812,7 @@
           el.subPill.appendChild(node);
         });
       } else {
-        // Backward compatibility for Math/Vietnamese and legacy string details.
+        // Backward compatibility for plain-text detail labels on all subjects.
         el.subPill.textContent = `🌸 ${state.detail.title}`;
       }
       return;
