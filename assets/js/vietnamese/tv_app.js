@@ -49,6 +49,10 @@
   let selectedSemester = 1, selectedExerciseSemester = 1, selectedReviewSemester = 1;
   let lessonIndex = 0, lessonAnswers = {}, readingMode = 'read';
   let activeStory = null, storySection = 'vietnam', storyCategory = '', storyAnswers = {};
+  // Navigation labels derive only from the current public learning content.
+  const discoverTopicNames = new Map(), discoverSubNumbers = new Map();
+  const storyRootLabel = '12. Truyện dân gian & cổ tích';
+  let storyRegionLabel = '', storyCategoryLabel = '';
   let gameInstance = null, gameLoader = null;
   let activeAudio = null, speechNonce = 0, examTicker = null;
   let audioWaitResolve = null, synthWaitResolve = null;
@@ -64,7 +68,13 @@
   const premium = () => logged() && ['vip','trial','admin'].includes(text(ctx?.accessType).toLowerCase());
   const toast = (msg) => ctx?.hooks?.showToast?.(text(msg));
   const notify = (msg) => ctx?.hooks?.showDialog?.({title:'Tiếng Việt 3',message:text(msg),icon:'🐝'});
-  const setDetail = (title) => ctx?.hooks?.setDetail?.(text(title));
+  const setDetail = (detail) => {
+    const hooks = ctx?.hooks;
+    if (typeof hooks?.setDetail !== 'function') return;
+    if (detail && typeof detail === 'object') {
+      hooks.setDetail(hooks.supportsStructuredDetail === true ? detail : text(detail.title));
+    } else hooks.setDetail(text(detail));
+  };
   const clearDetail = () => ctx?.hooks?.clearDetail?.();
   function premiumGate(name) {if(premium())return true;ctx?.requestPremiumAccess?.(name || 'nội dung Tiếng Việt 3');return false;}
   const currentSemester = (num) => Number(num)===2 ? 'hk2' : 'hk1';
@@ -156,7 +166,44 @@
   function stopClock(){if(examTicker){clearInterval(examTicker);examTicker=null;}}
   function stopGame(){if(gameInstance){try{gameInstance.destroy();}catch(_){}gameInstance=null;}}
   function clearView(){stopSpeech();stopClock();stopGame();quiz=null;ctx?.hooks?.setScore?.(0,0);}
-  function setCurrent(tab,view,extras={}) {current={tab,view,...extras};if(view==='hub')clearDetail();else setDetail(extras.title||TAB_NAMES[tab]||'Tiếng Việt 3');}
+  function setCurrent(tab,view,extras={}) {
+    current={tab,view,...extras};
+    if(view==='hub'){clearDetail();return;}
+    if(tab!=='discover'){setDetail(extras.title||TAB_NAMES[tab]||'Tiếng Việt 3');return;}
+
+    // The shell displays separate, clickable levels. Every Explore path starts here.
+    const items=[{title:'Khám phá',action:()=>{void hub('discover');}}];
+    const topicId=Number(current.topicId);
+    if(Number.isInteger(topicId)&&topicId>=1&&topicId<=11){
+      const topicName=discoverTopicNames.get(topicId)||text(extras.topicTitle||extras.title);
+      items.push({title:`${topicId}. ${topicName}`,
+        action:view==='topic'?null:()=>{void showTopic(topicId);}});
+      if(view==='quiz'||view==='result'){
+        const subName=text(extras.subTitle||extras.title).trim();
+        if(subName){
+          const localNo=discoverSubNumbers.get(topicId)?.get(subName);
+          items.push({title:`${localNo ? localNo+'. ' : ''}${subName}`,
+            action:view==='result'?()=>{void openSubtopic(topicId,subName);}:null});
+        }
+      }
+    }else if(['stories-home','stories-region','stories-category','story'].includes(view)){
+      items.push({title:storyRootLabel,
+        action:view==='stories-home'?null:()=>{void storyHome();}});
+      if(view!=='stories-home'){
+        const region=storySection;
+        const regionName=storyRegionLabel||(region==='vietnam'?'Truyện dân gian Việt Nam':'Truyện cổ tích thế giới');
+        items.push({title:regionName,
+          action:view==='stories-region'?null:()=>{void storyRegion(region);}});
+        if(view==='stories-category'||view==='story'){
+          const category=storyCategory;
+          items.push({title:storyCategoryLabel||text(extras.title),
+            action:view==='stories-category'?null:()=>{void storyCategoryView(category);}});
+          if(view==='story')items.push({title:text(extras.title)});
+        }
+      }
+    }else{setDetail(extras.title||TAB_NAMES[tab]);return;}
+    setDetail({title:items.map(item=>item.title).join(' › '),items});
+  }
   function still(requestNonce){return live && nonce===requestNonce && root?.isConnected;}
   function loading(){if(root)root.innerHTML='<div class="tv3-loading"><span class="tv3-spinner"></span>Đang tải học liệu Tiếng Việt 3…</div>';}
   function fail(err){if(root)root.innerHTML=`<div class="tv3-empty"><strong>Chưa mở được nội dung.</strong><span>${x(err?.message||'Anh/chị thử lại sau nhé.')}</span><button class="tv3-mini" data-action="hub">Về danh sách</button></div>`;}
@@ -192,7 +239,17 @@
       .finally(()=>{learningInFlight=null;if(learningQueue.length>=10)void flushLearning();});
     return learningInFlight;
   }
-  async function getTopics(){const [a,b]=await Promise.all([load('discover1'),load('discover2')]);return arr(a.topics).concat(arr(b.topics)).sort((p,q)=>Number(p.id)-Number(q.id));}
+  async function getTopics(){
+    const [a,b]=await Promise.all([load('discover1'),load('discover2')]);
+    const topics=arr(a.topics).concat(arr(b.topics)).sort((p,q)=>Number(p.id)-Number(q.id));
+    for(const topic of topics){
+      const id=Number(topic.id);
+      discoverTopicNames.set(id,text(topic.name));
+      const subs=[...new Set(arr(topic.qs).map(q=>text(q.sub)))];
+      discoverSubNumbers.set(id,new Map(subs.map((name,index)=>[name,index+1])));
+    }
+    return topics;
+  }
   async function hub(tab='discover'){
     const request=++nonce;clearView();setCurrent(tab,'hub');loading();
     try {
@@ -458,7 +515,7 @@
   function endPractice(){
     if(!quiz||quiz.mode!=='practice')return;
     const q=quiz,correct=q.questions.reduce((n,item)=>n+(q.answers[item.id]===item.answer?1:0),0);
-    quiz=null;stopClock();setCurrent(q.tab,'result',{title:'Kết quả luyện tập',topicId:q.topicId||0});
+    quiz=null;stopClock();setCurrent(q.tab,'result',{title:'Kết quả luyện tập',topicId:q.topicId||0,subTitle:q.title});
     root.innerHTML=heading('Kết quả luyện tập',q.title)+`<section class="tv3-result"><div class="tv3-medal">${correct>=q.questions.length*.8?'🏆':'🌱'}</div>`+
       `<h3>${correct}/${q.questions.length} câu đúng</h3><p>Hãy tiếp tục luyện tập để hiểu bài. Kết quả này không mở khóa Bài tập chính thức.</p>`+
       `<button class="tv3-submit" data-action="hub">Quay lại chuyên mục</button></section>`;
@@ -509,7 +566,7 @@
     const request=++nonce;stopSpeech();loading();
     try{
       const data=await load('stories');if(!still(request))return;
-      storySection=region;const section=data[region];
+      storySection=region;const section=data[region];storyRegionLabel=text(section?.meta?.title||(region==='vietnam'?'Truyện dân gian Việt Nam':'Truyện cổ tích thế giới'));
       setCurrent('discover','stories-region',{region,title:section?.meta?.title||'Thư viện truyện'});
       root.innerHTML=heading(section?.meta?.title||'Truyện cổ tích',`${arr(section?.stories).length} truyện · Chọn nhóm truyện`)+
         grid(arr(section?.categories).map((g,i)=>folder(g.name,g.description||'',i%2?'📜':'📚','story-category',`data-category="${x(g.id)}"`,`${g.story_count||arr(g.story_ids).length} truyện`,i)));
@@ -521,7 +578,7 @@
       const d=await load('stories'),section=d[storySection];if(!still(request))return;
       const c=arr(section?.categories).find(g=>g.id===category);
       if(!c)throw new Error('Không tìm thấy nhóm truyện.');
-      storyCategory=category;
+      storyCategory=category;storyCategoryLabel=text(c.name);
       const stories=arr(section?.stories).filter(s=>s.category_id===category);
       setCurrent('discover','stories-category',{title:c.name,region:storySection,category});
       root.innerHTML=heading(c.name,`${stories.length} truyện · bấm để nghe hoặc đọc`)+
