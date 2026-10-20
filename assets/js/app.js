@@ -716,9 +716,14 @@
       }
       #sub-pill.home-sub-breadcrumbs .home-breadcrumb-tab{
         flex:0 0 auto;height:38px;max-width:min(430px,42vw);padding:0 16px;border-radius:13px;
-        display:inline-flex;align-items:center;justify-content:center;overflow:hidden;text-overflow:ellipsis;
-        white-space:nowrap;font-size:16px;font-weight:900;line-height:1;box-shadow:0 2px 7px rgba(76,29,149,.08);
+        display:block;box-sizing:border-box;text-align:left;overflow:hidden;text-overflow:ellipsis;
+        white-space:nowrap;font-size:16px;font-weight:900;line-height:35px;box-shadow:0 2px 7px rgba(76,29,149,.08);
         cursor:default;font-family:inherit;
+      }
+      /* The final breadcrumb gets the unused banner width for long learning titles.
+         A single-line block ensures any ellipsis is at the END, never at the start. */
+      #sub-pill.home-sub-breadcrumbs .home-breadcrumb-tab:last-child{
+        max-width:min(660px,66vw);
       }
       #sub-pill.home-sub-breadcrumbs button.home-breadcrumb-tab{
         cursor:pointer;transition:background .16s,border-color .16s,box-shadow .16s,transform .16s;
@@ -740,7 +745,8 @@
       }
       @media(max-width:767px){
         #sub-pill.home-sub-breadcrumbs{max-width:calc(100% - .35rem)!important;gap:.22rem!important}
-        #sub-pill.home-sub-breadcrumbs .home-breadcrumb-tab{height:32px;max-width:68vw;padding:0 11px;font-size:16px;border-radius:11px}
+        #sub-pill.home-sub-breadcrumbs .home-breadcrumb-tab{height:32px;max-width:68vw;padding:0 11px;font-size:16px;line-height:29px;border-radius:11px}
+        #sub-pill.home-sub-breadcrumbs .home-breadcrumb-tab:last-child{max-width:68vw}
         #sub-pill.home-sub-breadcrumbs .home-breadcrumb-sep{font-size:16px}
       }
     `;
