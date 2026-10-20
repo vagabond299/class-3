@@ -29,6 +29,64 @@
     ['Toán nâng cao','🌟','Suy luận, tìm quy luật và giải toán sáng tạo'],
     ['Math Lab – Toán tư duy Mỹ','✨','Mô hình, khám phá và nhiều cách giải']
   ];
+  // Compact Explore-card labels. Keep the original TOPICS/JSON titles as source data.
+  const TOPIC_HOME_TITLES = Object.freeze([
+    'Số học', 'Phép cộng và trừ', 'Phép nhân và chia', 'Hình học',
+    'Đơn vị đo & thời gian', 'Biểu thức & quy luật', 'Tìm số chưa biết',
+    'Phần mấy & gấp, giảm', 'Toán có lời văn', 'Hình học & dữ liệu',
+    'Toán nâng cao', 'Math Lab – Tư duy Mỹ'
+  ]);
+  // Each subtopic has a concise card title, a relevant icon and a factual description.
+  // This is UI-only: the original JSON, question IDs, answers and learning scopes do not change.
+  const DISCOVER_SUB_UI = Object.freeze({
+    '1.1': ['Đọc, viết và cấu tạo số','🔢','Số đến 100.000, giá trị từng hàng'],
+    '1.2': ['So sánh, sắp xếp số','⚖️','Lớn hơn, bé hơn, xếp số theo thứ tự'],
+    '1.3': ['Làm tròn số','🎯','Làm tròn chục, trăm, nghìn, chục nghìn'],
+    '1.4': ['Chữ số La Mã','🏛️','Nhận biết, đọc và viết số I đến XX'],
+    '2.1': ['Cộng, trừ đến 10.000','➕','Đặt tính, cộng trừ có nhớ theo hàng'],
+    '2.2': ['Cộng, trừ đến 100.000','💯','Tính nhẩm với số có nhiều chữ số'],
+    '2.3': ['Tính nhẩm cộng, trừ','⚡','Số tròn chục, trăm, nghìn; tìm x'],
+    '3.1': ['Nhân với số 1 chữ số','✖️','Nhân lần lượt theo hàng, nhớ khi cần'],
+    '3.2': ['Chia cho số 1 chữ số','➗','Chia nhiều chữ số, tìm thương đúng'],
+    '3.3': ['Nhân, chia nhẩm','🧠','Tính nhanh với số tròn chục, trăm, nghìn'],
+    '4.1': ['Trung điểm đoạn thẳng','📍','Nhận biết và tính nửa đoạn thẳng'],
+    '4.2': ['Tâm, bán kính, đường kính','⭕','Nhận biết các yếu tố của hình tròn'],
+    '4.3': ['Góc vuông và góc khác','📐','Nhận dạng góc, đếm số góc vuông'],
+    '4.4': ['Khối lập phương, hộp chữ nhật','🧊','Đếm mặt, cạnh và đỉnh của khối'],
+    '5.1': ['Độ dài và mi-li-mét','📏','Đổi mm, cm và tính độ dài'],
+    '5.2': ['Gam, mi-li-lít và tiền','⚖️','Đo khối lượng, dung tích, đổi đơn vị'],
+    '5.3': ['Nhiệt kế và nhiệt độ','🌡️','Đọc nhiệt kế và viết nhiệt độ °C'],
+    '5.4': ['Đồng hồ và lịch','🕒','Xem giờ, phút; đọc lịch tháng, năm'],
+    '6.1': ['Biểu thức không ngoặc','🧮','Nhân, chia trước; cộng, trừ sau'],
+    '6.2': ['Biểu thức có ngoặc','🔣','Tính trong ngoặc trước khi tính tiếp'],
+    '6.3': ['Quy luật dãy số','🔁','Nhận bước nhảy, điền số còn thiếu'],
+    '7.1': ['Tìm x trong cộng, trừ','❔','Tìm số hạng, số bị trừ, số trừ'],
+    '7.2': ['Tìm x trong nhân, chia','🧩','Tìm thừa số và số bị chia'],
+    '7.3': ['Tìm x qua hai bước','🔐','Làm ngược từng bước để tìm x'],
+    '8.1': ['Một phần mấy','🍕','Chia hình, chia số thành phần bằng nhau'],
+    '8.2': ['Gấp lên, giảm đi','🚀','Nhân hoặc chia để gấp, giảm nhiều lần'],
+    '8.3': ['So sánh gấp mấy lần','🔍','Dùng phép chia để so sánh hai số'],
+    '8.4': ['Tìm một phần của số','🍰','Tìm một phần bằng nhau của số lượng'],
+    '9.1': ['Toán hai bước tính','📝','Đọc dữ kiện, lập hai phép tính'],
+    '9.2': ['Rút về đơn vị','🪜','Tìm một phần trước rồi tính tiếp'],
+    '9.3': ['Toán mua bán','🛒','Tính tiền mua hàng và tiền trả lại'],
+    '10.1': ['Tính chu vi hình','📐','Cộng các cạnh của hình thường gặp'],
+    '10.2': ['Diện tích qua ô vuông','🟦','Đếm ô vuông đơn vị để tính diện tích'],
+    '10.3': ['Diện tích vuông, chữ nhật','📏','Vận dụng công thức diện tích'],
+    '10.4': ['Kiểm đếm, bảng số liệu','📊','Đọc vạch kiểm đếm và số lượng'],
+    '10.5': ['Khả năng xảy ra','🎲','Chắc chắn, có thể hoặc không thể'],
+    '11.1': ['Dãy số và quy luật','🔄','Tìm bước tăng, giảm và số tiếp theo'],
+    '11.2': ['Tính nhanh và so sánh','⚡','Ghép số, bù trừ để tính thuận tiện'],
+    '11.3': ['Tìm chữ số bí mật','🕵️','Dựa vào điều kiện tìm chữ số ẩn'],
+    '11.4': ['Suy luận ngược, tìm x','🧠','Lần ngược từng phép tính để tìm x'],
+    '11.5': ['Toán nhiều bước, logic','🧩','Phân tích dữ kiện và lập luận'],
+    '11.6': ['Hình học nâng cao','📐','Kết hợp nhiều bước tính hình học']
+  });
+  const LAB_HOME_ICONS = Object.freeze(['🔢','🧮','📦','🔍','🍕','⏰','📐','📊','🧠']);
+  function discoverSubUi(topic,sub,sourceTitle) {
+    const label=DISCOVER_SUB_UI[`${topic}.${sub}`];
+    return {title:label?.[0]||sourceTitle,icon:label?.[1]||TOPICS[topic-1]?.[1]||'🧩',desc:label?.[2]||''};
+  }
   const GAMES = [
     ['sudoku','Sudoku trí tuệ','🔢','9 cấp độ từ 4×4 đến 9×9','startSudokuGame','stopSudokuGame'],
     ['number-hunt','Săn số 100 000','🎯','Tìm và chạm số phù hợp','startNumberHuntGame','stopNumberHuntGame'],
@@ -101,7 +159,8 @@
     catch(_){return null;}
   }
   async function imageHtml(illustration) {
-    if (!illustration || typeof illustration!=='object') return '';
+    // Topic-cover graphics are decorative, not question data. Ignore old cached JSON too.
+    if (!illustration || typeof illustration!=='object' || illustration.role==='topic_cover') return '';
     if (illustration.kind === 'emoji') return `<div class="m3-scene-emoji" aria-hidden="true">${e(illustration.emoji)}</div><p class="m3-caption">${e(illustration.caption||'')}</p>`;
     const id=str(illustration.imageId || illustration.image_id);
     if (!id || illustration.kind !== 'catalog_image') return '';
@@ -195,13 +254,22 @@
       <span class="m3-folder-foot"><span>${e(foot)}</span><span>${locked?'🔒':'➜'}</span></span></button>`;
   }
   function list(items, extraClass='') {return `<div class="m3-folder-grid${extraClass?' '+extraClass:''}">${items.join('')}</div>`;}
+  function discoverHomeCard(topic,index) {
+    const title=TOPIC_HOME_TITLES[index]||topic[0],count=index===11?'9 Lab · 88 hành trình':'50 câu / mục nhỏ';
+    const action=index===11?'lab-home':'discover-topic';
+    return `<button type="button" class="m3-folder m3-discover-topic-card" data-action="${action}" data-topic="${index+1}">
+      <span class="m3-folder-head"><span class="m3-folder-icon" aria-hidden="true">${e(topic[1])}</span>
+        <span class="m3-folder-copy"><strong>${index+1}. ${e(title)}</strong></span></span>
+      <span class="m3-topic-description">${e(topic[2])}</span>
+      <span class="m3-folder-foot"><span>${e(count)}</span><span aria-hidden="true">➜</span></span></button>`;
+  }
   function roleLabel() {return ctx?.accessType==='admin'?'Admin':ctx?.accessType==='vip'?'VIP':ctx?.accessType==='trial'?'Trial':'Regular / Khách';}
   async function showHub(tab) {
     const nonce=++renderNonce;cleanView();setPage(tab,'hub');loading();
     try {
       let html='', title=LABELS[tab]||'Toán 3', subtitle='Lớp 3 · Kết nối tri thức với cuộc sống';
       if(tab==='discover'){
-        html=list(TOPICS.map((x,i)=>folder(`${i+1}. ${x[0]}`,x[2],x[1],i===11?'lab-home':'discover-topic',`data-topic="${i+1}"`,i===11?'9 Lab · 88 hành trình':'50 câu / mục nhỏ')));
+        html=list(TOPICS.map((x,i)=>discoverHomeCard(x,i)),'m3-discover-home-grid');
       } else if(tab==='lessons'){
         const d=await load('lessons');if(!validLive(nonce))return;
         html=`<div class="m3-semesters"><button class="m3-sem ${chosenSemester===2?'':'active'}" data-action="semester" data-sem="1">Học kỳ 1</button><button class="m3-sem ${chosenSemester===2?'active':''}" data-action="semester" data-sem="2">Học kỳ 2</button></div>`;
@@ -238,18 +306,22 @@
     try {
       const d=topic<=5?await load('discover1'):await load('discover2');if(!validLive(nonce))return;
       const grouped=new Map();arr(d).forEach(q=>{const parts=/^Q_(\d+)_(\d+)_/.exec(str(q.id));if(n(parts?.[1])!==topic)return;const id=parts[2];if(!grouped.has(id))grouped.set(id,{id,name:q.sub,items:[]});grouped.get(id).items.push(q);});
-      root.innerHTML=head(`${topic}. ${TOPICS[topic-1][0]}`,'Chọn mục nhỏ để học và trả lời từng câu')+list([...grouped.values()].map((item,i)=>folder(`${item.id}. ${item.name}`,`${item.items.length} câu hỏi`,'📚','discover-sub',`data-topic="${topic}" data-sub="${e(item.id)}"`,'Bắt đầu')),'m3-discover-sub-grid');
+      root.innerHTML=head(`${topic}. ${TOPICS[topic-1][0]}`,'Chọn mục nhỏ để học và trả lời từng câu')+list([...grouped.values()].map(item=>{
+        const ui=discoverSubUi(topic,item.id,item.name);
+        return folder(`${item.id}. ${ui.title}`,ui.desc||`${item.items.length} câu hỏi`,ui.icon,'discover-sub',`data-topic="${topic}" data-sub="${e(item.id)}"`,`${item.items.length} câu hỏi`);
+      }),'m3-discover-sub-grid');
     } catch(err){if(validLive(nonce))errorView(err);}
   }
   async function showDiscoverSub(topic,sub) {
     const d=topic<=5?await load('discover1'):await load('discover2');
     const source=arr(d).filter(q=>{const p=/^Q_(\d+)_(\d+)_/.exec(str(q.id));return n(p?.[1])===topic&&str(p?.[2])===str(sub);});
     if(!source.length) return dialog('Chưa có câu hỏi cho mục này.');
-    startLocalQuiz('discover',source,`${sub}. ${source[0].sub}`,{topic,sub});
+    const ui=discoverSubUi(topic,sub,source[0].sub);
+    startLocalQuiz('discover',source,`${sub}. ${ui.title}`,{topic,sub});
   }
   function makeQuestion(q,source='generic') {
     if(source==='exam') return {id:str(q.question_id),q:q.question_text,o:q.options,a:q.answer,h:q.hint,skill:q.competency||q.skill_tag,score:n(q.score)};
-    return {id:str(q.id),q:q.q,o:q.o,a:q.a,h:q.h,skill:q.competency||q.skill_tag,illustration:q.illustration};
+    return {id:str(q.id),q:q.q,o:q.o,a:q.a,h:q.h,skill:q.competency||q.skill_tag,illustration:q.illustration?.role==='topic_cover'?null:q.illustration};
   }
   function startLocalQuiz(tab,source,title,extra={}) {
     cleanView();setPage(tab,'quiz',{title,...extra});
@@ -298,9 +370,10 @@
     const q=quiz.questions[quiz.at],pos=quiz.at,len=quiz.questions.length;
     const chosen=quiz.answers.get(q.id),reveal=quiz.mode==='local' && quiz.revealed.has(q.id);
     const options=arr(q.o),clock=quiz.totalSeconds?'<span class="m3-clock" data-quiz-clock>40:00</span>':'';
+    const illustration=q.illustration?.role==='topic_cover'?null:q.illustration;
     let html=head(quiz.title,(quiz.kind==='baithi'?'Chế độ thi: không hiển thị đáp án trước khi nộp.':quiz.mode==='official'?'Kết quả sẽ được máy chủ kiểm tra.':'Chọn đáp án, sau đó xem giải thích.'),'hub');
     html+=`<div class="m3-question-card"><div class="m3-quiz-top"><span>${quiz.kind==='baithi'?'📝 Đề thi':quiz.kind==='exercises'?'✏️ Bài tập':'🔎 Luyện tập'}</span>${clock}<button class="m3-small" data-action="speak" data-text="${e(q.q)}" title="Nghe câu hỏi">🔊 Nghe câu hỏi</button></div>
-      <div class="m3-question-text">${e(q.q)}</div><div data-question-illustration></div><div class="m3-options">${options.map((v,i)=>{
+      <div class="m3-question-text">${e(q.q)}</div>${illustration?'<div data-question-illustration></div>':''}<div class="m3-options">${options.map((v,i)=>{
         const selected=chosen===str(v),correct=reveal&&str(v)===str(q.a),wrong=reveal&&selected&&!correct;
         return `<button type="button" class="m3-choice ${selected?'selected':''} ${correct?'correct':''} ${wrong?'wrong':''}" data-action="choose" data-option="${i}" aria-pressed="${selected}"><span>${'ABCD'[i]||i+1}</span>${e(v)}</button>`;
       }).join('')}</div>
@@ -309,7 +382,7 @@
       <div class="m3-quiz-footer"><span>Đã chọn: ${quiz.answers.size}/${len} câu</span><button class="m3-submit" data-action="submit">${quiz.mode==='official'?'Nộp bài và chấm điểm':'Xem kết quả'}</button></div></div>`;
     root.innerHTML=html;
     ctx?.hooks?.setScore?.(quiz.mode==='local'?countRight():0,quiz.mode==='local'?quiz.answers.size-countRight():0);
-    if(q.illustration){const id=q.id,at=quiz.at;void imageHtml(q.illustration).then(html=>{if(quiz?.questions?.[quiz.at]?.id===id&&quiz.at===at){const slot=find('[data-question-illustration]');if(slot)slot.innerHTML=html;}});}
+    if(illustration){const id=q.id,at=quiz.at;void imageHtml(illustration).then(html=>{if(quiz?.questions?.[quiz.at]?.id===id&&quiz.at===at){const slot=find('[data-question-illustration]');if(slot)slot.innerHTML=html;}});}
   }
   async function submitOfficial() {
     if(!quiz||quiz.mode!=='official'||quiz.submitting)return;
@@ -417,7 +490,10 @@
     try {
       const d=await load('lab');if(!validLive(nonce))return;
       setPage('discover','lab-home',{topic:12,title:'12. Math Lab'});
-      root.innerHTML=head('12. Math Lab – Toán tư duy Mỹ','9 Lab · 88 hành trình · 352 hoạt động')+list(arr(d.labs).map(l=>folder(l.title,l.subtitle,'✨','lab-track',`data-id="${e(l.display_code)}"`,`${arr(l.journeys).length} hành trình`)));
+      root.innerHTML=head('12. Math Lab – Toán tư duy Mỹ','9 Lab · 88 hành trình · 352 hoạt động')+list(arr(d.labs).map(l=>{
+        const labNumber=n(/^12\.(\d+)$/.exec(str(l.display_code))?.[1]);
+        return folder(l.title,l.subtitle,LAB_HOME_ICONS[labNumber-1]||'✨','lab-track',`data-id="${e(l.display_code)}"`,`${arr(l.journeys).length} hành trình`);
+      }),'m3-lab-home-grid');
     } catch(err){if(validLive(nonce))errorView(err);}
   }
   async function showLabTrack(code) {
@@ -655,7 +731,9 @@
 #class3-math-runtime .m3-back,#class3-math-runtime .m3-small{min-height:40px;padding:9px 15px;border:1px solid #c4b5fd;border-radius:13px;color:#6d28d9;background:#faf5ff;font-size:15px;font-weight:900;flex-shrink:0}
 #class3-math-runtime .m3-back:hover,#class3-math-runtime .m3-small:hover{background:#f3e8ff;border-color:#8b5cf6}
 #class3-math-runtime .m3-folder-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:12px}
-#class3-math-runtime .m3-folder-grid.m3-discover-sub-grid{grid-template-columns:repeat(2,minmax(0,1fr));width:100%}
+#class3-math-runtime .m3-folder-grid.m3-discover-home-grid{grid-template-columns:repeat(4,minmax(0,1fr));width:100%}
+#class3-math-runtime .m3-folder-grid.m3-discover-sub-grid{grid-template-columns:repeat(3,minmax(0,1fr));width:100%}
+#class3-math-runtime .m3-folder-grid.m3-lab-home-grid{grid-template-columns:repeat(3,minmax(0,1fr));width:100%}
 #class3-math-runtime .m3-folder{--m3-br:#f9a8d4;--m3-icon-bg:#ffe0ed;min-height:142px;text-align:left;border:1px solid var(--m3-br);background:linear-gradient(135deg,#fff8fc,#fbf4ff);border-radius:20px;padding:14px;display:flex;flex-direction:column;justify-content:space-between;gap:12px;box-shadow:0 4px 14px rgba(76,29,149,.055);transform:none!important;translate:none!important;transition:border-color .18s ease,box-shadow .18s ease,filter .18s ease!important}
 #class3-math-runtime .m3-folder:nth-child(6n+2){--m3-br:#86efac;--m3-icon-bg:#dcfce7;background:linear-gradient(135deg,#f7fffc,#ecfdf5)}
 #class3-math-runtime .m3-folder:nth-child(6n+3){--m3-br:#c4b5fd;--m3-icon-bg:#ede9fe;background:linear-gradient(135deg,#fdfaff,#f5f3ff)}
@@ -674,9 +752,19 @@
 #class3-math-runtime .m3-folder-copy{min-width:0;flex:1}
 #class3-math-runtime .m3-folder-copy strong{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;color:#5b216e;font-size:19px;font-weight:950;line-height:1.28}
 #class3-math-runtime .m3-folder-copy small{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;color:#475467;font-size:15px;font-weight:750;margin-top:6px;line-height:1.4}
-#class3-math-runtime .m3-folder-grid.m3-discover-sub-grid .m3-folder{min-height:178px}
-#class3-math-runtime .m3-folder-grid.m3-discover-sub-grid .m3-folder-copy strong{-webkit-line-clamp:4;line-clamp:4;overflow:visible}
-#class3-math-runtime .m3-folder-grid.m3-discover-sub-grid .m3-folder-copy small{-webkit-line-clamp:3;line-clamp:3;overflow:visible}
+#class3-math-runtime .m3-folder-grid.m3-discover-home-grid .m3-folder{min-height:168px;padding:12px;gap:8px}
+#class3-math-runtime .m3-folder-grid.m3-discover-home-grid .m3-folder-head{flex-direction:row;align-items:center;gap:10px;min-width:0}
+#class3-math-runtime .m3-folder-grid.m3-discover-home-grid .m3-folder-icon{width:56px;height:56px;flex:0 0 56px;font-size:34px}
+#class3-math-runtime .m3-folder-grid.m3-discover-home-grid .m3-folder-copy strong{font-size:18px;line-height:1.24;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;line-clamp:2;overflow:hidden;overflow-wrap:break-word}
+#class3-math-runtime .m3-folder-grid.m3-discover-home-grid .m3-topic-description{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;line-clamp:2;overflow:hidden;min-height:36px;color:#475467;font-size:14px;font-weight:750;line-height:1.3}
+#class3-math-runtime .m3-folder-grid.m3-discover-sub-grid .m3-folder{min-height:148px;padding:12px;gap:8px}
+#class3-math-runtime .m3-folder-grid.m3-discover-sub-grid .m3-folder-head{align-items:flex-start;gap:10px}
+#class3-math-runtime .m3-folder-grid.m3-discover-sub-grid .m3-folder-icon{width:53px;height:53px;flex:0 0 53px;font-size:32px}
+#class3-math-runtime .m3-folder-grid.m3-discover-sub-grid .m3-folder-copy strong{font-size:18px;line-height:1.26;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;line-clamp:2;overflow:hidden;overflow-wrap:break-word}
+#class3-math-runtime .m3-folder-grid.m3-discover-sub-grid .m3-folder-copy small{font-size:14px;line-height:1.35;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;line-clamp:2;overflow:hidden;overflow-wrap:break-word;margin-top:7px}
+#class3-math-runtime .m3-folder-grid.m3-lab-home-grid .m3-folder{min-height:202px}
+#class3-math-runtime .m3-folder-grid.m3-lab-home-grid .m3-folder-copy strong{display:block;-webkit-line-clamp:unset;line-clamp:unset;overflow:visible;white-space:normal;overflow-wrap:break-word}
+#class3-math-runtime .m3-folder-grid.m3-lab-home-grid .m3-folder-copy small{display:block;-webkit-line-clamp:unset;line-clamp:unset;overflow:visible;white-space:normal;overflow-wrap:break-word}
 #class3-math-runtime .m3-folder-foot{display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(124,58,237,.12);padding-top:7px;font-size:14px;font-weight:900;color:#7c3aed}
 #class3-math-runtime .m3-folder.is-locked{background:#f8fafc;border-color:#cbd5e1}
 #class3-math-runtime .m3-question-card,#class3-math-runtime .m3-paper,#class3-math-runtime .m3-result{border:1px solid #e9d5ff;border-radius:20px;padding:clamp(12px,2vw,24px);background:#fff;box-shadow:0 4px 15px rgba(76,29,149,.055)}
@@ -742,8 +830,25 @@
 #class3-math-runtime .m3-history article{border:1px solid #ddd6fe;background:#fff;border-radius:14px;padding:12px}
 #class3-math-runtime .m3-clock{font-weight:950;color:#be185d}
 @keyframes m3spin{to{transform:rotate(360deg)}}
-@media(min-width:768px) and (max-width:950px){#class3-math-runtime .m3-folder-grid.m3-discover-sub-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:767px){#class3-math-runtime .m3-folder-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}#class3-math-runtime .m3-folder{padding:10px;min-height:132px;border-radius:16px}#class3-math-runtime .m3-folder-head{flex-direction:column;gap:7px}#class3-math-runtime .m3-folder-icon{width:52px;height:52px;flex:0 0 52px;font-size:31px}#class3-math-runtime .m3-folder-copy strong{font-size:17px}#class3-math-runtime .m3-folder-copy small{font-size:14px}#class3-math-runtime .m3-folder-grid.m3-discover-sub-grid{grid-template-columns:1fr}#class3-math-runtime .m3-folder-grid.m3-discover-sub-grid .m3-folder{min-height:auto}#class3-math-runtime .m3-section-header{flex-direction:column}#class3-math-runtime .m3-options{grid-template-columns:1fr}#class3-math-runtime .m3-choice{font-size:17px;min-height:58px}#class3-math-runtime .m3-quiz-nav{grid-template-columns:minmax(0,1fr) 76px minmax(0,1fr);gap:5px}#class3-math-runtime .m3-nav,#class3-math-runtime .m3-count{font-size:14px;padding:7px 5px}}
+@media(min-width:768px) and (max-width:899px){#class3-math-runtime .m3-folder-grid.m3-discover-home-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(min-width:768px) and (max-width:899px){#class3-math-runtime .m3-folder-grid.m3-discover-sub-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:768px) and (max-width:899px){#class3-math-runtime .m3-folder-grid.m3-lab-home-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:767px){#class3-math-runtime .m3-folder-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}#class3-math-runtime .m3-folder-grid.m3-discover-home-grid{grid-template-columns:repeat(2,minmax(0,1fr))}#class3-math-runtime .m3-folder{padding:10px;min-height:132px;border-radius:16px}#class3-math-runtime .m3-folder-head{flex-direction:column;gap:7px}#class3-math-runtime .m3-folder-icon{width:52px;height:52px;flex:0 0 52px;font-size:31px}#class3-math-runtime .m3-folder-copy strong{font-size:17px}#class3-math-runtime .m3-folder-copy small{font-size:14px}#class3-math-runtime .m3-folder-grid.m3-discover-sub-grid{grid-template-columns:1fr}#class3-math-runtime .m3-folder-grid.m3-discover-sub-grid .m3-folder{min-height:116px}#class3-math-runtime .m3-folder-grid.m3-lab-home-grid{grid-template-columns:1fr}#class3-math-runtime .m3-folder-grid.m3-lab-home-grid .m3-folder{min-height:auto}#class3-math-runtime .m3-section-header{flex-direction:column}#class3-math-runtime .m3-options{grid-template-columns:1fr}#class3-math-runtime .m3-choice{font-size:17px;min-height:58px}#class3-math-runtime .m3-quiz-nav{grid-template-columns:minmax(0,1fr) 76px minmax(0,1fr);gap:5px}#class3-math-runtime .m3-nav,#class3-math-runtime .m3-count{font-size:14px;padding:7px 5px}}
+@media(max-width:767px){
+#class3-math-runtime .m3-folder-grid.m3-discover-home-grid .m3-folder{min-height:168px;padding:10px}
+#class3-math-runtime .m3-folder-grid.m3-discover-home-grid .m3-folder-head{flex-direction:row;align-items:center;gap:8px}
+#class3-math-runtime .m3-folder-grid.m3-discover-home-grid .m3-folder-icon{width:48px;height:48px;flex:0 0 48px;font-size:29px}
+#class3-math-runtime .m3-folder-grid.m3-discover-home-grid .m3-folder-copy strong{font-size:16px}
+#class3-math-runtime .m3-folder-grid.m3-discover-home-grid .m3-topic-description{font-size:13px}
+#class3-math-runtime .m3-folder-grid.m3-discover-sub-grid .m3-folder-head{flex-direction:row;align-items:flex-start}
+#class3-math-runtime .m3-folder-grid.m3-discover-sub-grid .m3-folder-icon{width:50px;height:50px;flex:0 0 50px;font-size:30px}
+#class3-math-runtime .m3-folder-grid.m3-discover-sub-grid .m3-folder-copy strong{font-size:17px}
+}
+@media(max-width:479px){
+#class3-math-runtime .m3-folder-grid.m3-discover-home-grid .m3-folder-head{flex-direction:column;align-items:flex-start;gap:7px}
+#class3-math-runtime .m3-folder-grid.m3-discover-home-grid .m3-folder{min-height:189px}
+#class3-math-runtime .m3-folder-grid.m3-discover-home-grid .m3-folder-copy strong{font-size:17px}
+}
 @media(prefers-reduced-motion:reduce){#class3-math-runtime *,#class3-math-runtime *:before{animation:none!important;transition:none!important}#class3-math-runtime .m3-folder:hover .m3-folder-icon{transform:none!important}}
 `;
 })();
