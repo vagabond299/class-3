@@ -46,9 +46,24 @@
     '2.1': ['Cộng, trừ đến 10.000','➕','Đặt tính, cộng trừ có nhớ theo hàng'],
     '2.2': ['Cộng, trừ đến 100.000','💯','Tính nhẩm với số có nhiều chữ số'],
     '2.3': ['Tính nhẩm cộng, trừ','⚡','Số tròn chục, trăm, nghìn; tìm x'],
-    '3.1': ['Nhân với số 1 chữ số','✖️','Nhân lần lượt theo hàng, nhớ khi cần'],
-    '3.2': ['Chia cho số 1 chữ số','➗','Chia nhiều chữ số, tìm thương đúng'],
-    '3.3': ['Nhân, chia nhẩm','🧠','Tính nhanh với số tròn chục, trăm, nghìn'],
+    '3.1': ['Hướng dẫn','📖','Hiểu phép nhân, phép chia qua những nhóm bằng nhau'],
+    '3.2': ['Ôn bảng nhân, chia 2 và 5','🔄','Ôn kiến thức nền tảng từ lớp 2'],
+    '3.3': ['Các bảng nhân, chia mới','✖️','Sáu bảng: 3, 4, 6, 7, 8, 9'],
+    '3.3.1': ['Bảng nhân 3 và bảng chia 3','3️⃣','50 câu · SGK bài 5'],
+    '3.3.2': ['Bảng nhân 4 và bảng chia 4','4️⃣','50 câu · SGK bài 6'],
+    '3.3.3': ['Bảng nhân 6 và bảng chia 6','6️⃣','50 câu · SGK bài 9'],
+    '3.3.4': ['Bảng nhân 7 và bảng chia 7','7️⃣','50 câu · SGK bài 10'],
+    '3.3.5': ['Bảng nhân 8 và bảng chia 8','8️⃣','50 câu · SGK bài 11'],
+    '3.3.6': ['Bảng nhân 9 và bảng chia 9','9️⃣','50 câu · SGK bài 12'],
+    '3.4': ['Nhân số có hai chữ số','✖️','Nhân với số có một chữ số · Bài 23'],
+    '3.5': ['Chia hết và chia có dư','➗','Hiểu thương và số dư · Bài 25'],
+    '3.6': ['Chia số có hai chữ số','➗','Chia cho số có một chữ số · Bài 26'],
+    '3.7': ['Nhân số có ba chữ số','✖️','Nhân với số có một chữ số · Bài 36'],
+    '3.8': ['Chia số có ba chữ số','➗','Chia cho số có một chữ số · Bài 37'],
+    '3.9': ['Nhân số có bốn chữ số','✖️','Học kỳ II · Bài 56'],
+    '3.10': ['Chia số có bốn chữ số','➗','Học kỳ II · Bài 57'],
+    '3.11': ['Nhân số có năm chữ số','✖️','Học kỳ II · Bài 70'],
+    '3.12': ['Chia số có năm chữ số','➗','Học kỳ II · Bài 71'],
     '4.1': ['Trung điểm đoạn thẳng','📍','Nhận biết và tính nửa đoạn thẳng'],
     '4.2': ['Tâm, bán kính, đường kính','⭕','Nhận biết các yếu tố của hình tròn'],
     '4.3': ['Góc vuông và góc khác','📐','Nhận dạng góc, đếm số góc vuông'],
@@ -82,6 +97,12 @@
     '11.5': ['Toán nhiều bước, logic','🧩','Phân tích dữ kiện và lập luận'],
     '11.6': ['Hình học nâng cao','📐','Kết hợp nhiều bước tính hình học']
   });
+  // Order is tied to the KNTT textbook. The 3.3 tile is a container, not a quiz.
+  const TOPIC3_SECTIONS = Object.freeze([
+    '3.2','3.3','3.4','3.5','3.6','3.7','3.8','3.9','3.10','3.11','3.12'
+  ]);
+  const TOPIC3_TABLES = Object.freeze(['3.3.1','3.3.2','3.3.3','3.3.4','3.3.5','3.3.6']);
+  const TOPIC3_NODES = Object.freeze(TOPIC3_SECTIONS.filter(code=>code!=='3.3').concat(TOPIC3_TABLES));
   const LAB_HOME_ICONS = Object.freeze(['🔢','🧮','📦','🔍','🍕','⏰','📐','📊','🧠']);
   function discoverSubUi(topic,sub,sourceTitle) {
     const label=DISCOVER_SUB_UI[`${topic}.${sub}`];
@@ -107,7 +128,9 @@
   let ctx = null, root = null, page = {tab:'discover',view:'hub'};
   let renderNonce = 0, live = false, gameRunning = null, audio = null, speechNonce = 0;
   let quiz = null, timer = 0, progress = null, catalog = null;
-  let lessonPage = 0, lessonChoice = {}, labChoices = {}, labHintLevel = 0;
+  let lessonPage = 0, lessonChoice = {}, lessonMistakes = {}, practiceState = {}, labChoices = {}, labHintLevel = 0;
+  let discoverGuideSource = null;
+  const lastDiscoverFirst = new Map(); // Public question IDs only; no account or result data.
   let chosenSemester = 1, chosenExerciseSemester = 1;
   let onClickRef = null, onInputRef = null, currentLab = null, currentJourney = null;
   let learningQueue=[], learningInFlight=null;
@@ -171,6 +194,144 @@
     if (!src.startsWith('assets/images/') || src.includes('..') || /[\x00-\x1f]/.test(src)) return '';
     return `<figure class="m3-illustration"><img src="${e(src)}" loading="lazy" decoding="async" alt="${e(info.alt_vi||info.name_vi||illustration.alt||'Minh hoạ Toán')}"><figcaption>${e(illustration.caption||'')}</figcaption></figure>`;
   }
+  const safeInt=(value,minimum,maximum)=>Math.max(minimum,Math.min(maximum,Math.round(Number(value)||0)));
+  function geometrySvg(kind) {
+    const points={
+      square:'48,28 172,28 172,152 48,152',rectangle:'35,52 205,52 205,139 35,139',
+      right_triangle:'48,38 48,160 200,160',triangle:'112,25 35,170 190,170',
+      right_trapezoid:'50,50 145,50 205,155 50,155',
+      parallelogram:'60,48 175,48 205,152 90,152',
+      house:'50,100 130,30 210,100 210,175 50,175'
+    };
+    const p=points[kind];if(!p)return '';
+    return `<svg class="m3-math-svg" viewBox="0 0 250 205" role="img" aria-label="Hình học cần quan sát và đếm góc vuông"><polygon points="${p}" fill="#f0e8ff" stroke="#7041b2" stroke-width="4" stroke-linejoin="round"/></svg>`;
+  }
+  function gridModel(rows,cols,filled){
+    rows=safeInt(rows,1,10);cols=safeInt(cols,1,12);filled=safeInt(filled,0,rows*cols);
+    return `<div class="m3-math-grid" style="--m3-cols:${cols}">${Array.from({length:rows*cols},(_,i)=>`<span class="${i<filled?'on':''}" aria-label="${i<filled?'Ô có tô màu':'Ô chưa tô màu'}"></span>`).join('')}</div>`;
+  }
+  function tallySvg(count){
+    count=safeInt(count,0,50);const groups=Math.ceil(count/5),width=Math.max(70,groups*48+12);
+    let lines='';for(let k=0;k<count;k++){
+      const g=Math.floor(k/5),position=k%5,x=12+g*46+position*8;
+      if(position===4)lines+=`<line x1="${12+g*46-3}" y1="26" x2="${12+g*46+29}" y2="3"/>`;
+      else lines+=`<line x1="${x}" y1="3" x2="${x}" y2="26"/>`;
+    }
+    return `<svg class="m3-tally-svg" viewBox="0 0 ${width} 30" style="width:${width}px" aria-label="${count} vạch kiểm đếm">${lines}</svg>`;
+  }
+  // Adapted from the 3-column arithmetic layout in the provided Toán 2 module.
+  // Only the explicitly marked Khám phá operations use this interactive layout.
+  function verticalArithmeticHtml(vm, solved=false, answer='') {
+    if (!vm || vm.kind!=='vertical_arithmetic') return '';
+    const a=Number(vm.a),b=Number(vm.b),op=str(vm.operator);
+    if(!Number.isSafeInteger(a)||!Number.isSafeInteger(b)||a<0||b<0||a>99999||b>99999||!['+','-','×'].includes(op))return '';
+    const expected=op==='+'?a+b:op==='-'?a-b:a*b;
+    if(!Number.isSafeInteger(expected)||expected<0||expected>999999)return '';
+    const answerText=str(answer).trim().replace(/\s/g,'');
+    const showResult=solved && answerText===String(expected);
+    const columns=Math.max(op==='×'?2:4,String(a).length,String(b).length,String(expected).length);
+    const digitCells=(num)=>String(num).padStart(columns,' ').split('').map(d=>`<span class="m3-vertical-digit" aria-hidden="true">${d===' '?'&nbsp;':e(d)}</span>`).join('');
+    const resultCells=(showResult?String(expected):'?'.repeat(columns)).padStart(columns,' ').split('').map(d=>`<span class="m3-vertical-result${showResult?' is-revealed':''}" aria-hidden="true">${d===' '?'&nbsp;':e(d)}</span>`).join('');
+    const operationName=op==='+'?'cộng':op==='-'?'trừ':'nhân';
+    const description=showResult?`${a} ${operationName} ${b} bằng ${expected}`:`${a} ${operationName} ${b}, chưa biết kết quả`;
+    return `<div class="m3-vertical-arithmetic" style="--m3-vertical-columns:${columns}" role="img" aria-label="${e(description)}">
+      <span class="m3-vertical-sign" aria-hidden="true"></span>${digitCells(a)}
+      <span class="m3-vertical-sign" aria-hidden="true">${op==='+'?'+':op==='-'?'−':'×'}</span>${digitCells(b)}
+      <span class="m3-vertical-line" aria-hidden="true"></span>
+      <span class="m3-vertical-sign" aria-hidden="true"></span>${resultCells}
+    </div>`;
+  }
+  function renderMathVisual(vm,solved=false,answer=''){
+    if(!vm||typeof vm!=='object')return '';
+    const kind=str(vm.kind);let body='';
+    if(kind==='vertical_arithmetic')body=verticalArithmeticHtml(vm,solved,answer);
+    else if(kind==='geometry_shape')body=geometrySvg(str(vm.shape));
+    else if(kind==='fraction_bar'){
+      const total=safeInt(vm.parts,2,12),shaded=safeInt(vm.shaded,0,total);
+      body=`<div class="m3-fraction-strip" style="--m3-cols:${total}">${Array.from({length:total},(_,i)=>`<span class="${i<shaded?'on':''}"></span>`).join('')}</div><p class="m3-caption">Các phần của thanh bằng nhau.</p>`;
+    }else if(kind==='fraction_dots'){
+      const total=safeInt(vm.total,1,60),pieces=safeInt(vm.parts,1,12),nEach=total/pieces;
+      body=`<div class="m3-math-dots">${Array.from({length:total},(_,i)=>`<span class="${i<nEach?'on':''}"></span>`).join('')}</div><p class="m3-caption">Nhóm tô màu là một trong ${pieces} nhóm bằng nhau.</p>`;
+    }else if(kind==='area_grid')body=gridModel(vm.rows,vm.cols,vm.filled);
+    else if(kind==='area_compare'){
+      const a=safeInt(vm.a,1,30),b=safeInt(vm.b,1,30);
+      body=`<div class="m3-visual-pair"><div><strong>Hình A</strong>${gridModel(Math.ceil(a/5),5,a)}</div><div><strong>Hình B</strong>${gridModel(Math.ceil(b/5),5,b)}</div></div>`;
+    }else if(kind==='tally_chart'){
+      body='<div class="m3-tally-chart"><div class="m3-tally-heading"><strong>Nhóm</strong><strong>Vạch kiểm đếm</strong></div>'+arr(vm.rows).map(x=>`<div class="m3-tally-row"><strong>${e(x.label)}</strong>${tallySvg(x.count)}</div>`).join('')+'</div><p class="m3-caption">Mỗi cụm bốn vạch dọc và một vạch chéo là 5.</p>';
+    }else if(kind==='segment_midpoint'){
+      body=`<svg class="m3-math-svg" viewBox="0 0 280 120" role="img" aria-label="Đoạn AB có M ở chính giữa"><path d="M 28 58 H 252" stroke="#7041b2" stroke-width="4"/><g fill="#ec4899"><circle cx="28" cy="58" r="6"/><circle cx="140" cy="58" r="6"/><circle cx="252" cy="58" r="6"/></g><g font-size="17" font-weight="800" fill="#6d28d9"><text x="23" y="92">A</text><text x="135" y="92">M</text><text x="246" y="92">B</text><text x="96" y="23">${safeInt(vm.length,1,9999)} cm</text></g></svg>`;
+    }else if(kind==='circle_parts'){
+      body=`<svg class="m3-math-svg" viewBox="0 0 250 190" role="img" aria-label="Hình tròn tâm O, bán kính OM và đường kính AB"><circle cx="125" cy="92" r="69" fill="#f1eaff" stroke="#7c3aed" stroke-width="3"/><line x1="56" y1="92" x2="194" y2="92" stroke="#ec4899" stroke-width="3"/><line x1="125" y1="92" x2="125" y2="23" stroke="#0d9488" stroke-width="3"/><circle cx="125" cy="92" r="4" fill="#7c3aed"/><g font-size="16" fill="#5b216e"><text x="107" y="110">O</text><text x="46" y="87">A</text><text x="200" y="87">B</text><text x="132" y="24">M</text></g></svg>`;
+    }else if(kind==='clock_concept'){
+      body=clockSvg(vm.hour,vm.minute);
+    }else if(kind==='solid_faces'){
+      body=`<svg class="m3-math-svg" viewBox="0 0 300 220" role="img" aria-label="Khối hộp có các mặt, cạnh và đỉnh"><polygon points="66,65 204,65 259,26 119,26" fill="#d8b4fe" stroke="#6d28d9" stroke-width="3"/><polygon points="204,65 259,26 259,160 204,200" fill="#a5b4fc" stroke="#6d28d9" stroke-width="3"/><rect x="66" y="65" width="138" height="135" fill="#e0e7ff" stroke="#6d28d9" stroke-width="3"/></svg><p class="m3-caption">Khối hộp chữ nhật: 6 mặt, 12 cạnh và 8 đỉnh.</p>`;
+    }else if(kind==='measurement_concept'){
+      body='<div class="m3-concept-icons"><span>📏<strong>mm</strong><small>Độ dài</small></span><span>⚖️<strong>g</strong><small>Khối lượng</small></span><span>🧪<strong>ml</strong><small>Dung tích</small></span><span>🌡️<strong>°C</strong><small>Nhiệt độ</small></span></div>';
+    }else if(kind==='roman_numerals'){
+      body='<div class="m3-concept-icons"><span>Ⅰ<strong>1</strong></span><span>Ⅴ<strong>5</strong></span><span>Ⅹ<strong>10</strong></span><span>ⅩⅣ<strong>14</strong></span></div>';
+    }else if(kind==='place_value'){
+      const value=safeInt(vm.value,0,99999),digits=String(value).padStart(5,'0').split('');
+      body='<div class="m3-place-value">'+['Chục nghìn','Nghìn','Trăm','Chục','Đơn vị'].map((label,i)=>`<div><strong>${label}</strong><span>${digits[i]}</span></div>`).join('')+'</div>';
+    }else if(kind==='math_groups'){
+      const rows=safeInt(vm.rows,1,6),cols=safeInt(vm.cols,1,8);
+      body=gridModel(rows,cols,rows*cols)+`<p class="m3-caption">${rows} hàng, mỗi hàng ${cols} ô: ${rows} × ${cols} = ${rows*cols} ô.</p>`;
+    }else if(kind==='money_concept'){
+      body='<div class="m3-concept-icons m3-money-concept"><span>5 000<small>đồng</small></span><span>2 000<small>đồng</small></span><span>1 000<small>đồng</small></span></div><p class="m3-caption">5 000 + 2 000 + 1 000 = 8 000 đồng.</p>';
+    }else if(kind==='column_addition'){
+      const a=safeInt(vm.a,0,99999),b=safeInt(vm.b,0,99999);
+      body=`<div class="m3-column-calc"><div>${a.toLocaleString('vi-VN')}</div><div>+ ${b.toLocaleString('vi-VN')}</div><hr/><strong>${(a+b).toLocaleString('vi-VN')}</strong></div><p class="m3-caption">Viết các hàng cùng tên thẳng cột và tính từ phải sang trái.</p>`;
+    }else if(kind==='expression_steps'){
+      body='<div class="m3-concept-steps">'+arr(vm.steps).map((step,i)=>`<span>${e(step)}</span>${i<arr(vm.steps).length-1?'<span>↓</span>':''}`).join('')+'</div>';
+    }else if(kind==='multiplication_setup'){
+      // Direct multiplication only: the vertical result must match the actual answer.
+      const a=Number(vm.a),b=Number(vm.b);
+      if(Number.isSafeInteger(a)&&Number.isSafeInteger(b)&&a>0&&a<=99999&&b>=1&&b<=9){
+        body=verticalArithmeticHtml({kind:'vertical_arithmetic',a,b,operator:'×'},solved,answer);
+        if(body)body+='<p class="m3-caption">Nhân lần lượt từ hàng đơn vị; ghi số nhớ nếu có.</p>';
+      }
+    }else if(kind==='multiplication_two_steps'){
+      // An expression a × b + c has TWO operations: never show a × b as its final answer.
+      const a=Number(vm.a),b=Number(vm.b),addend=Number(vm.addend);
+      if(Number.isSafeInteger(a)&&Number.isSafeInteger(b)&&Number.isSafeInteger(addend)&&a>0&&a<=99999&&b>=1&&b<=9&&addend>=0&&addend<=99999){
+        const product=a*b,total=product+addend;
+        const done=solved&&str(answer).trim().replace(/\s/g,'')===String(total);
+        const first=verticalArithmeticHtml({kind:'vertical_arithmetic',a,b,operator:'×'},done,String(product));
+        if(first)body=`<div class="m3-mul-steps"><p><strong>Bước 1:</strong> Thực hiện phép nhân.</p>${first}<p class="m3-mul-next"><strong>Bước 2:</strong> ${done?product:'?'} + ${addend} = <strong class="${done?'m3-mul-answer':''}">${done?total:'?'}</strong></p></div>`;
+      }
+    }else if(kind==='multiplication_unknown_factor'){
+      // The unknown factor is never printed (or put in aria-label) before a correct choice.
+      const b=Number(vm.multiplier),product=Number(vm.product);
+      if(Number.isSafeInteger(b)&&Number.isSafeInteger(product)&&b>=1&&b<=9&&product>0&&product<=999999&&product%b===0){
+        const factor=product/b;
+        const done=solved&&str(answer).trim().replace(/\s/g,'')===String(factor);
+        body=`<div class="m3-mul-unknown"><p><strong>Tìm thừa số chưa biết</strong></p><div class="m3-mul-equation"><strong class="${done?'m3-mul-answer':''}">${done?factor:'?'}</strong><span>×</span><span>${b}</span><span>=</span><span>${product}</span></div><p class="m3-caption">Muốn tìm thừa số chưa biết, lấy tích chia cho thừa số đã biết.</p></div>`;
+        if(done)body+=`<div class="m3-mul-worked"><p><strong>C\u00e1ch t\u00ecm:</strong> ${product} : ${b} = <strong>${factor}</strong></p><p><strong>Ki\u1ec3m tra:</strong> ${factor} \u00d7 ${b} = ${product}</p></div>`;
+      }
+    }else if(kind==='joined_squares'){
+      const side=safeInt(vm.side,1,99);
+      body=`<svg class="m3-math-svg" viewBox="0 0 300 190" role="img" aria-label="Hai hình vuông cạnh ${side} cm ghép cạnh nhau"><rect x="34" y="47" width="112" height="112" fill="#ede9fe" stroke="#6d28d9" stroke-width="3"/><rect x="146" y="47" width="112" height="112" fill="#bfdbfe" stroke="#6d28d9" stroke-width="3"/><g fill="#5b216e" font-size="16" font-weight="800"><text x="146" y="31" text-anchor="middle">Hai hình vuông bằng nhau</text><text x="90" y="175" text-anchor="middle">${side} cm</text><text x="203" y="175" text-anchor="middle">${side} cm</text></g></svg>`;
+    }else if(kind==='cutout_square'){
+      const side=safeInt(vm.side,3,99),cut=safeInt(vm.cut,1,side-1),gap=Math.max(12,Math.min(130,Math.round(150*cut/side))),x=198-gap,y=22+gap;
+      body=`<svg class="m3-math-svg" viewBox="0 0 280 224" role="img" aria-label="Hình vuông cạnh ${side} cm bỏ đi hình vuông nhỏ cạnh ${cut} cm ở góc"><path d="M 48 22 H ${x} V ${y} H 198 V 172 H 48 Z" fill="#c4b5fd" stroke="#6d28d9" stroke-width="3" stroke-linejoin="round"/><path d="M ${x} 22 H 198 V ${y}" stroke="#94a3b8" stroke-dasharray="4 4" fill="none" stroke-width="2"/><g fill="#5b216e" font-size="16" font-weight="800"><text x="36" y="100" transform="rotate(-90,36,100)">${side} cm</text><text x="212" y="31">Bỏ</text><text x="212" y="48">${cut} cm</text></g></svg>`;
+    }else if(kind==='segment_quarters'){
+      const length=safeInt(vm.length,4,9999);
+      body=`<svg class="m3-math-svg" viewBox="0 0 310 125" role="img" aria-label="A, N, M, B thẳng hàng; N là trung điểm AM và M là trung điểm AB"><path d="M 30 57 H 280" stroke="#7041b2" stroke-width="4"/><g fill="#db2777"><circle cx="30" cy="57" r="6"/><circle cx="92.5" cy="57" r="6"/><circle cx="155" cy="57" r="6"/><circle cx="280" cy="57" r="6"/></g><g fill="#5b216e" font-size="18" font-weight="800"><text x="24" y="88">A</text><text x="85" y="88">N</text><text x="149" y="88">M</text><text x="274" y="88">B</text><text x="150" y="22" text-anchor="middle">AB = ${length} cm</text></g></svg>`;
+    }else if(kind==='rectangle_area'){
+      const w=safeInt(vm.width,1,9999),h=safeInt(vm.height,1,9999),width=180,height=Math.max(68,180*h/w);
+      body=`<svg class="m3-math-svg" viewBox="0 0 280 215" role="img" aria-label="Hình chữ nhật dài ${w} và rộng ${h} xăng-ti-mét"><rect x="55" y="38" width="${width}" height="${Math.min(130,height)}" fill="#e9d5ff" stroke="#7c3aed" stroke-width="3"/><g fill="#5b216e" font-size="17" font-weight="800"><text x="135" y="25" text-anchor="middle">${w} cm</text><text x="50" y="114" text-anchor="end">${h} cm</text></g></svg>`;
+    }
+    return body?`<figure class="m3-math-visual">${body}</figure>`:'';
+  }
+  function scopeBadge(guide){
+    const scope=str(guide?.scope||'');return scope?`<span class="m3-scope ${scope==='Nâng cao'?'m3-advanced':''}">${e(scope)}</span>`:'';
+  }
+  function guideHtml(source,title){
+    const guide=source?.find(q=>q?.lesson_intro)?.lesson_intro;if(!guide)return '';
+    const ref=arr(guide.sgk_source_lessons).map(x=>`Bài ${safeInt(x,1,81)}`).join(', ');
+    return `<div class="m3-guide"><div class="m3-guide-meta">${scopeBadge(guide)}<span>Liên hệ SGK: ${e(ref)}</span></div><div class="m3-guide-grid"><article><span>1</span><h3>👀 Quan sát</h3><p>${e(guide.observe)}</p></article><article><span>2</span><h3>💡 Hiểu bản chất</h3><p>${e(guide.understand)}</p></article><article><span>3</span><h3>✏️ Cô làm mẫu</h3><p>${e(guide.worked_example)}</p></article></div><div class="m3-guide-lower"><section><h3>👣 Con thực hiện</h3><ol>${arr(guide.micro_steps).map(x=>`<li>${e(x)}</li>`).join('')}</ol></section><section><h3>🎯 Tự kiểm</h3><p>${e(guide.self_check)}</p><p class="m3-caution">Lưu ý: ${e(guide.common_mistake)}</p></section></div><div class="m3-guide-ctas"><button class="m3-small" data-action="guide-speak">🔊 Nghe hướng dẫn</button><button class="m3-submit" data-action="discover-begin">Sang luyện tập · ${source.length} câu →</button></div></div>`;
+  }
+
   // Adaptive learning telemetry is separate from official assessments. Events never
   // grant exam scores, subject access, or sequential exercise unlock rights.
   function observeLearning(question,correct,origin) {
@@ -191,6 +352,7 @@
   function stopSpeech() {
     speechNonce++;
     if (audio) {try{audio.pause();audio.removeAttribute('src');audio.load();}catch(_){}audio=null;}
+    try{ctx?.hooks?.stopTTS?.();}catch(_){}
     try{window.speechSynthesis?.cancel?.();}catch(_){}
   }
   async function speak(text) {
@@ -199,12 +361,15 @@
     if (!cleaned) return;
     const token=speechNonce;
     try {
+      if(typeof ctx?.hooks?.speakVietnamese==='function'){
+        await ctx.hooks.speakVietnamese(cleaned);return;
+      }
       audio=new Audio(); audio.referrerPolicy='no-referrer';
       audio.src='https://translate.google.com/translate_tts?ie=UTF-8&tl=vi&client=tw-ob&q='+encodeURIComponent(cleaned);
       audio.playbackRate=.92;
       await audio.play();
     } catch (_) {
-      if (token===speechNonce && 'speechSynthesis' in window) {const u=new SpeechSynthesisUtterance(cleaned);u.lang='vi-VN';u.rate=.9;window.speechSynthesis.speak(u);}
+      if(token===speechNonce)notice('Tạm thời không phát được giọng đọc Google. Bé có thể đọc hướng dẫn trên màn hình nhé.');
     }
   }
   function stopGame() {
@@ -233,9 +398,13 @@
         action:(topic===12?view!=='lab-home':view!=='topic')
           ?()=>{void (topic===12?showLabHome():showDiscoverTopic(topic));}:null}
     ];
-    if(topic<=11 && page.sub!=null && (view==='quiz'||view==='result')){
+    if(topic===3 && (view==='subtopic' || (str(page.node).startsWith('3.3.') && (view==='quiz'||view==='result')))) {
+      items.push({title:'3.3. Các bảng nhân, chia mới',
+        action:view==='subtopic'?null:()=>{void showDiscoverNestedTopic(3);}});
+    }
+    if(topic<=11 && page.sub!=null && (view==='quiz'||view==='result'||view==='guide')){
       items.push({title:str(page.title)||`${page.sub}. Mục học`,
-        action:view==='result'?()=>{void showDiscoverSub(topic,page.sub);}:null});
+        action:view==='result'?()=>{void showDiscoverSub(topic,page.sub,page.node||'');}:null});
     }else if(topic===12 && (view==='lab-track'||view==='lab-activity')){
       const labTitle=str(page.labTitle||currentLab?.title||page.title);
       if(labTitle)items.push({title:labTitle,
@@ -246,10 +415,10 @@
   }
   function validLive(nonce) {return live && !!root?.isConnected && nonce===renderNonce;}
   function loading() {if(root)root.innerHTML='<div class="m3-loading"><span class="m3-spinner"></span>Đang tải nội dung Toán 3…</div>';}
-  function errorView(err) {if(!root)return;root.innerHTML=`<div class="m3-empty">Không mở được dữ liệu Toán 3. ${e(err?.message||'Vui lòng thử lại.')}</div>`;}
+  function errorView(_err) {if(!root)return;root.innerHTML='<div class="m3-empty">Chưa thể tải nội dung Toán 3. Bé vui lòng thử lại sau nhé.</div>';}
   function head(title,desc='',back='hub') {return `<div class="m3-section-header"><div><h2>${e(title)}</h2>${desc?`<p>${e(desc)}</p>`:''}</div>${back==='home'?'':`<button class="m3-back" data-action="back" data-target="${e(back)}">← Quay lại</button>`}</div>`;}
-  function folder(title,desc,icon,action,attributes='',foot='Khám phá ngay',locked=false) {
-    return `<button type="button" class="m3-folder${locked?' is-locked':''}" data-action="${e(action)}" ${attributes}>
+  function folder(title,desc,icon,action,attributes='',foot='Khám phá ngay',locked=false,extraClass='') {
+    return `<button type="button" class="m3-folder${locked?' is-locked':''}${extraClass?' '+e(extraClass):''}" data-action="${e(action)}" ${attributes}>
       <span class="m3-folder-head"><span class="m3-folder-icon" aria-hidden="true">${e(icon)}</span><span class="m3-folder-copy"><strong>${e(title)}</strong><small>${e(desc)}</small></span></span>
       <span class="m3-folder-foot"><span>${e(foot)}</span><span>${locked?'🔒':'➜'}</span></span></button>`;
   }
@@ -306,26 +475,208 @@
     try {
       const d=topic<=5?await load('discover1'):await load('discover2');if(!validLive(nonce))return;
       const grouped=new Map();arr(d).forEach(q=>{const parts=/^Q_(\d+)_(\d+)_/.exec(str(q.id));if(n(parts?.[1])!==topic)return;const id=parts[2];if(!grouped.has(id))grouped.set(id,{id,name:q.sub,items:[]});grouped.get(id).items.push(q);});
-      root.innerHTML=head(`${topic}. ${TOPICS[topic-1][0]}`,'Chọn mục nhỏ để học và trả lời từng câu')+list([...grouped.values()].map(item=>{
+      if(topic===3){
+        const counts=new Map();
+        arr(d).filter(q=>str(q.id).startsWith('Q_3_')).forEach(q=>{
+          if(TOPIC3_NODES.includes(str(q.learning_node))) counts.set(q.learning_node,(counts.get(q.learning_node)||0)+1);
+        });
+        const complete=TOPIC3_NODES.every(code=>counts.get(code)>=50);
+        if(!complete){
+          root.innerHTML=head('3. Phép nhân và chia','Cần cập nhật tệp kham_pha_toan_3_part1.json cùng phiên bản với JS.')+
+            '<div class="m3-empty">Kho câu hỏi mới chưa đầy đủ. Vui lòng cập nhật JSON Toán 3 rồi tải lại chương trình.</div>';
+          return;
+        }
+        const cards=[folder('3.1. Hướng dẫn','Quan sát · Hiểu · Làm mẫu · Học khi cần','📖',
+            'discover-topic-guide','data-topic="3"','Tự chọn, không bắt buộc',false,'m3-discover-guide-card')];
+        TOPIC3_SECTIONS.forEach(code=>{
+          const ui=discoverSubUi(3,code.slice(2));
+          if(code==='3.3'){
+            cards.push(folder(`${code}. ${ui.title}`,ui.desc,'✖️',
+              'discover-nested-topic','data-topic="3"', '6 mục nhỏ · 300 câu'));
+          }else{
+            const sub=code.slice(2),count=counts.get(code)||0;
+            cards.push(folder(`${code}. ${ui.title}`,ui.desc,ui.icon,
+              'discover-sub',`data-topic="3" data-sub="${e(sub)}"`,`${count} câu · Luyện ngay`));
+          }
+        });
+        root.innerHTML=head('3. Phép nhân và chia',
+          'Ôn bảng 2, 5 → học bảng 3–9 → nhân/chia hai, ba, bốn, năm chữ số theo SGK.')+
+          list(cards,'m3-discover-sub-grid m3-discover-topic-grid');
+        return;
+      }
+      // A single optional introduction is the FIRST sibling learning item,
+      // mirroring Class 2's independent introduction tile. All existing
+      // quiz sub IDs, JSON question IDs and assessment links stay unchanged.
+      const sections=[...grouped.values()];
+      const hasGuide=sections.some(item=>item.items.some(q=>q?.lesson_intro));
+      const cards=[];
+      if(hasGuide){
+        cards.push(folder(`${topic}.1. H\u01b0\u1edbng d\u1eabn`,
+          `Ki\u1ebfn th\u1ee9c n\u1ec1n t\u1ea3ng \u00b7 Quan s\u00e1t \u00b7 Hi\u1ec3u \u00b7 L\u00e0m m\u1eabu`,
+          '\ud83d\udcd6','discover-topic-guide',`data-topic="${topic}"`,
+          'H\u1ecdc t\u00f9y ch\u1ecdn',false,'m3-discover-guide-card'));
+      }
+      sections.forEach((item,index)=>{
         const ui=discoverSubUi(topic,item.id,item.name);
-        return folder(`${item.id}. ${ui.title}`,ui.desc||`${item.items.length} câu hỏi`,ui.icon,'discover-sub',`data-topic="${topic}" data-sub="${e(item.id)}"`,`${item.items.length} câu hỏi`);
-      }),'m3-discover-sub-grid');
+        const attrs=`data-topic="${topic}" data-sub="${e(item.id)}"`;
+        const code=`${topic}.${index+(hasGuide?2:1)}`;
+        cards.push(folder(`${code}. ${ui.title}`,ui.desc||`${item.items.length} c\u00e2u h\u1ecfi`,
+          ui.icon,'discover-sub',attrs,`${item.items.length} c\u00e2u \u00b7 Luy\u1ec7n ngay`));
+      });
+      root.innerHTML=head(`${topic}. ${TOPICS[topic-1][0]}`,
+        'Ch\u1ecdn m\u1ee5c Luy\u1ec7n t\u1eadp \u0111\u1ec3 v\u00e0o th\u1eb3ng c\u00e2u h\u1ecfi. H\u01b0\u1edbng d\u1eabn l\u00e0 m\u1ee5c \u0111\u1ea7u ti\u00ean, kh\u00f4ng b\u1eaft bu\u1ed9c.')+
+        list(cards,`m3-discover-sub-grid m3-discover-topic-grid${cards.length<=4?' m3-discover-topic-grid--compact':''}`);
     } catch(err){if(validLive(nonce))errorView(err);}
   }
-  async function showDiscoverSub(topic,sub) {
+  // Topic 3.3 opens six independent practice banks; none is mixed into another.
+  async function showDiscoverNestedTopic(topic=3){
+    if(topic!==3)return showDiscoverTopic(topic);
+    const nonce=++renderNonce;cleanView();setPage('discover','subtopic',{
+      topic:3,sub:'3',title:'3.3. Các bảng nhân, chia mới'
+    });loading();
+    try{
+      const d=await load('discover1');if(!validLive(nonce))return;
+      const cards=TOPIC3_TABLES.map(code=>{
+        const ui=discoverSubUi(3,code.slice(2)),count=arr(d).filter(q=>q.learning_node===code).length;
+        return folder(`${code}. ${ui.title}`,`Học theo SGK · ${ui.desc}`,ui.icon,
+          'discover-leaf',`data-topic="3" data-sub="3" data-node="${e(code)}"`,
+          `${count} câu · Luyện ngay`);
+      });
+      root.innerHTML=head('3.3. Các bảng nhân, chia mới',
+          'Chọn riêng từng bảng để luyện; mỗi bảng có 50 câu, không trộn bảng khác.')+
+          list(cards,'m3-discover-sub-grid m3-discover-topic-grid');
+    }catch(err){if(validLive(nonce))errorView(err);}
+  }
+  // One independent guide per main topic; old guides remain accessible inside
+  // it as optional sections. Switching sections does not enter any quiz.
+  async function showDiscoverTopicGuide(topic,sectionId='') {
+    const nonce=++renderNonce;
+    cleanView();discoverGuideSource=null;
+    setPage('discover','guide',{topic,sub:'guide',title:`${topic}.1. H\u01b0\u1edbng d\u1eabn`});
+    loading();
+    try {
+      const d=await load(topic<=5?'discover1':'discover2');
+      if(!validLive(nonce))return;
+      const grouped=new Map();
+      arr(d).forEach(q=>{
+        const m=/^Q_(\d+)_(\d+)_/.exec(str(q?.id));
+        if(n(m?.[1])!==topic || !q?.lesson_intro)return;
+        if(!grouped.has(m[2]))grouped.set(m[2],{sub:m[2],source:[]});
+        grouped.get(m[2]).source.push(q);
+      });
+      const guides=[...grouped.values()];
+      if(!guides.length)return dialog('M\u1ee5c n\u00e0y ch\u01b0a c\u00f3 h\u01b0\u1edbng d\u1eabn.');
+      const current=guides.find(x=>x.sub===str(sectionId))||guides[0];
+      const allQuestions=arr(d).filter(q=>{
+        const m=/^Q_(\d+)_(\d+)_/.exec(str(q?.id));
+        return n(m?.[1])===topic && str(m?.[2])===current.sub;
+      });
+      const ui=discoverSubUi(topic,current.sub,allQuestions[0]?.sub);
+      discoverGuideSource=allQuestions;
+      page.guideSub=current.sub;
+      const sectionButtons=guides.map((g,i)=>{
+        const item=discoverSubUi(topic,g.sub,g.source[0]?.sub);
+        return `<button type="button" class="m3-guide-section-tab${current.sub===g.sub?' active':''}" data-action="discover-guide-section" data-topic="${topic}" data-sub="${e(g.sub)}" aria-pressed="${current.sub===g.sub}">${i+1}. ${e(item.title)}</button>`;
+      }).join('');
+      root.innerHTML=head(`${topic}.1. H\u01b0\u1edbng d\u1eabn - ${TOPICS[topic-1][0]}`,
+          'H\u1ecdc khi c\u1ea7n; c\u00f3 th\u1ec3 ch\u1ecdn th\u1eb3ng b\u00e0i luy\u1ec7n \u1edf danh s\u00e1ch.')+
+        `<div class="m3-guide-sections" role="group" aria-label="Ch\u1ecdn n\u1ed9i dung h\u01b0\u1edbng d\u1eabn">${sectionButtons}</div>`+
+        `<h3 class="m3-guide-section-heading">${e(ui.title)}</h3>`+
+        guideHtml(allQuestions,ui.title);
+    }catch(err){if(validLive(nonce))errorView(err);}
+  }
+  async function showDiscoverSub(topic,sub,node='') {
+    if(topic===3 && str(sub)==='3' && !node) return showDiscoverNestedTopic(topic);
+    const nonce=++renderNonce;
     const d=topic<=5?await load('discover1'):await load('discover2');
-    const source=arr(d).filter(q=>{const p=/^Q_(\d+)_(\d+)_/.exec(str(q.id));return n(p?.[1])===topic&&str(p?.[2])===str(sub);});
-    if(!source.length) return dialog('Chưa có câu hỏi cho mục này.');
-    const ui=discoverSubUi(topic,sub,source[0].sub);
-    startLocalQuiz('discover',source,`${sub}. ${ui.title}`,{topic,sub});
+    if(!validLive(nonce))return;
+    const nodeKey=topic===3?(node||`3.${sub}`):'';
+    if(topic===3 && !TOPIC3_NODES.includes(nodeKey)) return dialog('Mục luyện tập không hợp lệ.');
+    const source=arr(d).filter(q=>{
+      if(topic===3)return str(q.learning_node)===nodeKey;
+      const p=/^Q_(\d+)_(\d+)_/.exec(str(q.id));
+      return n(p?.[1])===topic&&str(p?.[2])===str(sub);
+    });
+    if(topic===3 && source.length<50)return dialog('Kho câu hỏi của mục này chưa đủ 50 câu. Vui lòng cập nhật dữ liệu JSON.');
+    if(!source.length)return dialog('Chưa có câu hỏi cho mục này.');
+    const code=topic===3?nodeKey:`${topic}.${n(sub)+1}`;
+    const ui=topic===3?discoverSubUi(3,code.slice(2)):discoverSubUi(topic,sub,source[0].sub);
+    const title=`${code}. ${ui.title}`;
+    discoverGuideSource=null;
+    startLocalQuiz('discover',source,title,{topic,sub,node:nodeKey});
+  }
+  // Guard against stale/mismatched JSON: the drawing must solve the SAME question.
+  function verifiedMultiplicationVisual(q) {
+    const vm=q?.visual_model;
+    if(!vm || typeof vm!=='object')return null;
+    if(vm.kind==='multiplication_setup'){
+      const a=Number(vm.a),b=Number(vm.b),answer=str(q.a).trim().replace(/\s/g,'');
+      return Number.isSafeInteger(a)&&a>0&&a<=99999&&Number.isSafeInteger(b)&&b>=1&&b<=9&&a*b<=100000&&String(a*b)===answer
+        ?{kind:'multiplication_setup',a,b}:null;
+    }
+    if(!/^Q_3_1_\d+$/.test(str(q?.id)))return vm;
+    const question=str(q.q).trim(),answer=str(q.a).trim().replace(/\s/g,'');
+    const unknown=question.match(/\u25a1\s*\u00d7\s*(\d+)\s*=\s*(\d+)\s*\?/);
+    if(unknown){
+      const b=Number(unknown[1]),product=Number(unknown[2]);
+      if(Number.isSafeInteger(b)&&b>=1&&b<=9&&Number.isSafeInteger(product)&&product>0&&product%b===0&&String(product/b)===answer){
+        return {kind:'multiplication_unknown_factor',multiplier:b,product};
+      }
+      return null;
+    }
+    const two=question.match(/^T\u00ednh theo \u0111\u00fang th\u1ee9 t\u1ef1:\s*(\d+)\s*\u00d7\s*(\d+)\s*\+\s*(\d+)\s*=\s*\?$/);
+    if(two){
+      const a=Number(two[1]),b=Number(two[2]),addend=Number(two[3]);
+      if(Number.isSafeInteger(a)&&a>0&&a<=99999&&Number.isSafeInteger(b)&&b>=1&&b<=9&&Number.isSafeInteger(addend)&&addend>=0&&String(a*b+addend)===answer){
+        return {kind:'multiplication_two_steps',a,b,addend};
+      }
+      return null;
+    }
+    // Do not present an a x b column when the sought answer is NOT a x b.
+    const a=Number(vm.a),b=Number(vm.b);
+    return Number.isSafeInteger(a)&&a>0&&a<=99999&&Number.isSafeInteger(b)&&b>=1&&b<=9&&String(a*b)===answer
+      ?{kind:'multiplication_setup',a,b}:null;
   }
   function makeQuestion(q,source='generic') {
     if(source==='exam') return {id:str(q.question_id),q:q.question_text,o:q.options,a:q.answer,h:q.hint,skill:q.competency||q.skill_tag,score:n(q.score)};
-    return {id:str(q.id),q:q.q,o:q.o,a:q.a,h:q.h,skill:q.competency||q.skill_tag,illustration:q.illustration?.role==='topic_cover'?null:q.illustration};
+    return {id:str(q.id),q:q.q,o:q.o,a:q.a,h:q.h,skill:q.competency||q.skill_tag||q.tag,illustration:q.illustration?.role==='topic_cover'?null:q.illustration,visual_model:verifiedMultiplicationVisual(q)};
+  }
+  // Short mathematical answers can share one row; descriptive answers stay readable.
+  // This only chooses a CSS layout and never changes the order or value of answers.
+  function choiceLayoutClass(choices) {
+    const values=arr(choices).map(x=>str(x).replace(/\s+/g,' ').trim());
+    const count=values.length;
+    if(count<2||count>4)return 'm3-options m3-options--readable';
+    const maxLength=Math.max(...values.map(x=>x.length));
+    const averageLength=values.reduce((sum,x)=>sum+x.length,0)/count;
+    if(maxLength>30||averageLength>20)return 'm3-options m3-options--readable';
+    return `m3-options m3-options--${count===4?'four':count===3?'three':'two'}`;
+  }
+  // Khám phá: each run mixes all questions while keeping answers/hints/models attached.
+  // Remember only the first public question ID per subtopic (also across F5 in this tab).
+  function shuffleDiscoverQuestions(source,topic,sub) {
+    const ordered=shuffle(source),key=`epsilon-class3-math-discover-first:${topic}.${sub}`;
+    if(!ordered.length)return ordered;
+    let previousId=lastDiscoverFirst.get(key)||'';
+    if(!previousId){try{previousId=window.sessionStorage.getItem(key)||'';}catch(_){}}
+    if(previousId&&ordered.length>1){
+      const previous=source.find(q=>str(q.id)===previousId);
+      const previousText=str(previous?.q).replace(/\s+/g,' ').trim();
+      const firstText=str(ordered[0].q).replace(/\s+/g,' ').trim();
+      if(str(ordered[0].id)===previousId||(previous&&firstText===previousText)){
+        let other=ordered.findIndex((q,i)=>i>0&&str(q.id)!==previousId&&str(q.q).replace(/\s+/g,' ').trim()!==previousText);
+        if(other<0)other=ordered.findIndex((q,i)=>i>0&&str(q.id)!==previousId);
+        if(other>0)[ordered[0],ordered[other]]=[ordered[other],ordered[0]];
+      }
+    }
+    const firstId=str(ordered[0].id);lastDiscoverFirst.set(key,firstId);
+    try{window.sessionStorage.setItem(key,firstId);}catch(_){}
+    return ordered;
   }
   function startLocalQuiz(tab,source,title,extra={}) {
+    const questions=tab==='discover'?shuffleDiscoverQuestions(source,extra.topic,extra.node||extra.sub):source;
     cleanView();setPage(tab,'quiz',{title,...extra});
-    quiz={mode:'local',kind:tab,title,questions:source.map(q=>makeQuestion(q)),at:0,answers:new Map(),revealed:new Set(),began:Date.now()};
+    quiz={mode:'local',kind:tab,title,questions:questions.map(q=>makeQuestion(q)),at:0,answers:new Map(),revealed:new Set(),wrongAttempts:new Map(),began:Date.now()};
     renderQuestion();
   }
   async function startOfficial(kind,id) {
@@ -365,19 +716,32 @@
     timer=setInterval(refresh,1000);refresh();
   }
   function countRight() {return !quiz?0:quiz.questions.reduce((s,q)=>s+(quiz.answers.get(q.id)===str(q.a)?1:0),0);}
+  function questionSpeech(q) {
+    const text=str(q?.q).trim();
+    const expr=/^(?:Đặt tính rồi tính:\s*)?(\d{1,5})\s*([+\-×:])\s*(\d{1,5})\s*=\s*\?$/.exec(text);
+    if(expr){
+      const op={'+':'cộng','-':'trừ','×':'nhân',':':'chia'}[expr[2]];
+      return `Bé ơi, ${expr[1]} ${op} ${expr[3]} bằng bao nhiêu?`;
+    }
+    const remain=/^(\d{1,2})\s*:\s*(\d)\s*=\s*\?\s*\(viết thương và số dư\)$/.exec(text);
+    if(remain)return `Bé ơi, ${remain[1]} chia ${remain[2]} được bao nhiêu và dư mấy?`;
+    return text;
+  }
   function renderQuestion() {
     if(!quiz||!root)return;
     const q=quiz.questions[quiz.at],pos=quiz.at,len=quiz.questions.length;
     const chosen=quiz.answers.get(q.id),reveal=quiz.mode==='local' && quiz.revealed.has(q.id);
     const options=arr(q.o),clock=quiz.totalSeconds?'<span class="m3-clock" data-quiz-clock>40:00</span>':'';
+    const mistakes=quiz.wrongAttempts?.get(q.id)||0,showAnswer=reveal&&(chosen===str(q.a)||mistakes>=2);
     const illustration=q.illustration?.role==='topic_cover'?null:q.illustration;
     let html=head(quiz.title,(quiz.kind==='baithi'?'Chế độ thi: không hiển thị đáp án trước khi nộp.':quiz.mode==='official'?'Kết quả sẽ được máy chủ kiểm tra.':'Chọn đáp án, sau đó xem giải thích.'),'hub');
-    html+=`<div class="m3-question-card"><div class="m3-quiz-top"><span>${quiz.kind==='baithi'?'📝 Đề thi':quiz.kind==='exercises'?'✏️ Bài tập':'🔎 Luyện tập'}</span>${clock}<button class="m3-small" data-action="speak" data-text="${e(q.q)}" title="Nghe câu hỏi">🔊 Nghe câu hỏi</button></div>
-      <div class="m3-question-text">${e(q.q)}</div>${illustration?'<div data-question-illustration></div>':''}<div class="m3-options">${options.map((v,i)=>{
-        const selected=chosen===str(v),correct=reveal&&str(v)===str(q.a),wrong=reveal&&selected&&!correct;
+    // Hướng dẫn là một mục học riêng ở danh sách, không chèn vào bài luyện tập.
+    html+=`<div class="m3-question-card"><div class="m3-quiz-top"><span>${quiz.kind==='baithi'?'📝 Đề thi':quiz.kind==='exercises'?'✏️ Bài tập':'🔎 Luyện tập'}</span>${clock}<button class="m3-small" data-action="speak" data-text="${e(questionSpeech(q))}" title="Nghe câu hỏi">🔊 Nghe câu hỏi</button></div>
+      <div class="m3-question-text">${e(q.q)}</div>${renderMathVisual(q.visual_model,reveal&&chosen===str(q.a),q.a)}${illustration?'<div data-question-illustration></div>':''}<div class="${choiceLayoutClass(options)}">${options.map((v,i)=>{
+        const selected=chosen===str(v),correct=showAnswer&&str(v)===str(q.a),wrong=reveal&&selected&&!correct;
         return `<button type="button" class="m3-choice ${selected?'selected':''} ${correct?'correct':''} ${wrong?'wrong':''}" data-action="choose" data-option="${i}" aria-pressed="${selected}"><span>${'ABCD'[i]||i+1}</span>${e(v)}</button>`;
       }).join('')}</div>
-      ${reveal?`<div class="m3-explain">${chosen===str(q.a)?'✅ Chính xác!':'🌱 Con thử suy nghĩ thêm nhé.'}${q.h?` <strong>Gợi ý:</strong> ${e(q.h)}`:''}</div>`:''}
+      ${reveal?`<div class="m3-explain">${chosen===str(q.a)?'✅ Chính xác! Con hãy nói lại cách làm của mình.':mistakes>=2?`🌱 Con xem thêm đáp án đúng là ${e(q.a)} rồi thử tự giải lại.`:'🌱 Chưa đúng, con xem gợi ý và thử chọn lại nhé.'}${q.h?` <strong>${chosen===str(q.a)?'Cách kiểm tra':'Gợi ý'}:</strong> ${e(q.h)}`:''}</div>`:''}
       <div class="m3-quiz-nav"><button class="m3-nav" data-action="prev" ${pos===0?'disabled':''}>← Câu trước</button><span class="m3-count">${pos+1} / ${len}</span><button class="m3-nav primary" data-action="next" ${pos===len-1?'disabled':''}>Câu sau →</button></div>
       <div class="m3-quiz-footer"><span>Đã chọn: ${quiz.answers.size}/${len} câu</span><button class="m3-submit" data-action="submit">${quiz.mode==='official'?'Nộp bài và chấm điểm':'Xem kết quả'}</button></div></div>`;
     root.innerHTML=html;
@@ -412,7 +776,7 @@
   function showLocalResult() {
     if(!quiz)return;
     const q=quiz,score=countRight();
-    const location=q.kind==='discover'?{topic:page.topic,sub:page.sub}:{};
+    const location=q.kind==='discover'?{topic:page.topic,sub:page.sub,node:page.node}:{};
     cleanView();setPage(q.kind,'result',{title:q.title,...location});
     root.innerHTML=head('Kết quả luyện tập',q.title)+`<section class="m3-result"><div class="m3-medal">🌟</div><h3>${score} / ${q.questions.length} câu đúng</h3><p>Bé có thể làm lại để hiểu hơn. Kết quả luyện tập này không mở khóa Bài tập chính thức.</p><button class="m3-submit" data-action="back" data-target="hub">Quay lại</button></section>`;
   }
@@ -422,6 +786,110 @@
     const d=await api('assessmentProgressGet',{});
     progress=d;return d;
   }
+  function practiceFor(id,type){
+    if(!practiceState[id]||practiceState[id].type!==type)practiceState[id]={type,mode:type==='shape_drawing'?'square':type==='clock_calendar'?'clock':'',points:[],cells:[],feedback:'',values:{},step:0};
+    return practiceState[id];
+  }
+  function clockSvg(hour=8,minute=35){
+    hour=safeInt(hour,1,12);minute=safeInt(minute,0,59);
+    const angle=(degrees,length)=>{const r=degrees*Math.PI/180;return [125+length*Math.sin(r),125-length*Math.cos(r)];};
+    const H=angle(((hour%12)+minute/60)*30,58),M=angle(minute*6,88);
+    const ticks=Array.from({length:12},(_,i)=>{const pos=angle((i+1)*30,103);return `<text x="${pos[0]}" y="${pos[1]+5}" text-anchor="middle" font-weight="800" font-size="16" fill="#5b216e">${i+1}</text>`;}).join('');
+    return `<svg class="m3-practical-svg" viewBox="0 0 250 250" role="img" aria-label="Đồng hồ kim chỉ ${hour} giờ ${minute} phút"><circle cx="125" cy="125" r="118" fill="#fff" stroke="#8b5cf6" stroke-width="5"/>${ticks}<line x1="125" y1="125" x2="${H[0]}" y2="${H[1]}" stroke="#ec4899" stroke-width="7" stroke-linecap="round"/><line x1="125" y1="125" x2="${M[0]}" y2="${M[1]}" stroke="#2563eb" stroke-width="4" stroke-linecap="round"/><circle cx="125" cy="125" r="6" fill="#7c3aed"/></svg>`;
+  }
+  function drawingSvg(state){
+    const scale=(v)=>38+safeInt(v,0,6)*36;
+    const dots=Array.from({length:49},(_,i)=>{const x=i%7,y=Math.floor(i/7);return `<circle cx="${scale(x)}" cy="${scale(y)}" r="7" fill="#faf5ff" stroke="#a78bfa" stroke-width="2" data-action="practice-point" data-x="${x}" data-y="${y}"/>`;}).join('');
+    const pts=arr(state.points),path=pts.map(p=>`${scale(p.x)},${scale(p.y)}`).join(' ');
+    let drawing='';
+    if(state.mode==='circle'&&pts.length>1){const radius=Math.hypot(pts[0].x-pts[1].x,pts[0].y-pts[1].y)*36;drawing=`<circle cx="${scale(pts[0].x)}" cy="${scale(pts[0].y)}" r="${radius}" fill="#f3e8ff" fill-opacity=".4" stroke="#db2777" stroke-width="3"/>`;}
+    else if(pts.length>1)drawing=`<polyline points="${path}${pts.length===4?' '+path.split(' ')[0]:''}" fill="${pts.length===4?'#ede9fe':'none'}" fill-opacity=".65" stroke="#db2777" stroke-width="3" stroke-linejoin="round"/>`;
+    return `<svg class="m3-practical-svg" viewBox="0 0 295 295" aria-label="Bảng lưới điểm để dựng hình">${drawing}${dots}</svg>`;
+  }
+  function practicalHtml(cfg,id){
+    const type=str(cfg.type),state=practiceFor(id,type);
+    state.instruction=str(cfg.instruction||state.instruction||'Thực hành bằng mô hình trực quan.');
+    let content='';
+    if(type==='shape_drawing'){
+      const mode=state.mode||'square';
+      content=`<p>Chọn hình cần vẽ, rồi chạm lần lượt các điểm trên lưới. Với hình tròn, điểm đầu là tâm và điểm thứ hai nằm trên đường tròn.</p><div class="m3-practical-controls">${[['square','Hình vuông'],['rectangle','Hình chữ nhật'],['circle','Hình tròn']].map(([key,label])=>`<button class="m3-sem ${mode===key?'active':''}" data-action="practice-mode" data-mode="${key}">${label}</button>`).join('')}<button class="m3-small" data-action="practice-reset">Xóa nét vẽ</button></div>${drawingSvg(state)}<p>Đã chọn: ${arr(state.points).length}/${mode==='circle'?2:4} điểm</p>`;
+    }else if(type==='measurement'){
+      const tasks=[['Thước đo','Điều chỉnh thước để chỉ 35 mm',35,'mm',0,100,5],['Cân','Cân được 450 g',450,'g',0,1000,50],['Bình chia vạch','Bình chứa 250 ml',250,'ml',0,500,25],['Nhiệt kế','Nhiệt kế chỉ 28°C',28,'°C',0,50,1]];
+      const index=safeInt(state.step,0,3),[tool,prompt,target,unit,min,max,step]=tasks[index];
+      const current=state.values.value??min;
+      content=`<div class="m3-practical-controls"><strong>${index+1}/4 · ${e(tool)}</strong><span>${e(prompt)}</span></div><div class="m3-practical-symbols">${['📏','⚖️','🧪','🌡️'][index]}</div><input aria-label="Điều chỉnh số đo" data-practice-field="value" type="range" min="${min}" max="${max}" step="${step}" value="${safeInt(current,min,max)}" style="width:100%;accent-color:#8b5cf6"><p>Giá trị con chọn: <strong data-practical-value>${safeInt(current,min,max)} ${e(unit)}</strong></p><div class="m3-practical-controls"><button class="m3-small" data-action="practice-prev-step" ${index===0?'disabled':''}>← Dụng cụ trước</button><button class="m3-small" data-action="practice-next-step" ${index===3?'disabled':''}>Dụng cụ tiếp →</button></div>`;
+    }else if(type==='count_area'){
+      const selected=new Set(arr(state.cells)),target=12;
+      content=`<p>Hãy tô đúng <strong>${target} ô</strong>. Mỗi ô ứng với 1 cm²; tự đếm diện tích vừa tô.</p><div class="m3-practical-grid" style="--m3-cols:5">${Array.from({length:20},(_,i)=>`<button type="button" data-action="practice-cell" data-index="${i}" class="${selected.has(i)?'selected':''}" aria-pressed="${selected.has(i)}" aria-label="Ô số ${i+1}"></button>`).join('')}</div><p>Đã tô <strong>${selected.size}</strong> ô: diện tích <strong>${selected.size} cm²</strong>.</p><button class="m3-small" data-action="practice-reset">Tô lại từ đầu</button>`;
+    }else if(type==='build_area'){
+      const length=safeInt(state.values.length??3,1,7),width=safeInt(state.values.width??2,1,6);
+      content=`<p>Hãy dựng hình chữ nhật <strong>dài 6 ô và rộng 4 ô</strong>. Mỗi ô có diện tích 1 cm².</p><div class="m3-practical-controls"><label>Chiều dài <select class="m3-practical-select" data-practice-field="length">${Array.from({length:7},(_,i)=>`<option value="${i+1}" ${length===i+1?'selected':''}>${i+1} ô</option>`).join('')}</select></label><label>Chiều rộng <select class="m3-practical-select" data-practice-field="width">${Array.from({length:6},(_,i)=>`<option value="${i+1}" ${width===i+1?'selected':''}>${i+1} ô</option>`).join('')}</select></label></div>${gridModel(width,length,width*length)}<p>Diện tích con vừa dựng: ${length} × ${width} = <strong>${length*width} cm²</strong>.</p>`;
+    }else if(type==='clock_calendar'){
+      const mode=state.mode||'clock';
+      content=`<div class="m3-practical-controls"><button class="m3-sem ${mode==='clock'?'active':''}" data-action="practice-mode" data-mode="clock">🕒 Đồng hồ</button><button class="m3-sem ${mode==='calendar'?'active':''}" data-action="practice-mode" data-mode="calendar">📅 Lịch</button></div>`;
+      if(mode==='clock'){
+        const hour=safeInt(state.values.hour??12,1,12),minute=safeInt(state.values.minute??0,0,59);
+        content+=`<p>Con hãy đặt đồng hồ chỉ <strong>8 giờ 35 phút</strong>.</p>${clockSvg(hour,minute)}<div class="m3-practical-controls"><label>Giờ <select class="m3-practical-select" data-practice-field="hour">${Array.from({length:12},(_,i)=>`<option value="${i+1}" ${hour===i+1?'selected':''}>${i+1}</option>`).join('')}</select></label><label>Phút <select class="m3-practical-select" data-practice-field="minute">${Array.from({length:12},(_,i)=>`<option value="${i*5}" ${minute===i*5?'selected':''}>${String(i*5).padStart(2,'0')}</option>`).join('')}</select></label></div>`;
+      }else{
+        const sel=state.values.day||0;
+        content+='<p>Đây là lịch mẫu: ngày 1 là thứ Hai. <strong>Hãy chọn ngày thứ Hai thứ ba của tháng.</strong></p><div class="m3-practical-calendar">'+['T2','T3','T4','T5','T6','T7','CN'].map(x=>`<span><strong>${x}</strong></span>`).join('')+Array.from({length:30},(_,i)=>`<button type="button" data-action="practice-day" data-day="${i+1}" class="${sel===i+1?'selected':''}">${i+1}</button>`).join('')+'</div>';
+      }
+    }else if(type==='data_survey'){
+      const values=state.values,observations=['🔴','🔵','🟡','🔵','🔴','🟡','🔴','🔵','🔴','🟡','🔵','🔴'];
+      content=`<p>Quan sát 12 thẻ màu. Con tự đếm từng màu, ghi kết quả vào bảng rồi nhấn kiểm tra.</p><div class="m3-practical-symbols" aria-label="12 thẻ màu">${observations.join(' ')}</div><div class="m3-practical-controls">${[['red','Đỏ'],['blue','Xanh'],['yellow','Vàng']].map(([key,title])=>`<label>${title} <input class="m3-practical-select" aria-label="Số thẻ ${title}" type="number" min="0" max="12" step="1" data-practice-field="${key}" value="${e(values[key]??'')}"></label>`).join('')}</div>`;
+    }
+    return `<div class="m3-practical"><h3>🧩 Thực hành bằng thao tác</h3><p>${e(cfg.instruction)}</p>${content}<div class="m3-practical-controls"><button class="m3-submit" data-action="practice-check">Kiểm tra hoạt động</button></div>${state.feedback?`<p class="m3-practical-msg" role="status">${e(state.feedback)}</p>`:''}<p class="m3-caption">Đây là phần luyện tự học, không tự ghi điểm hoặc mở khóa trên máy chủ.</p></div>`;
+  }
+  function practiceRefresh(){
+    const dest=find('[data-practical-root]');
+    if(!dest||!page?.id)return;
+    const source=practiceState[page.id],config=source&&{
+      type:source.type,instruction:({shape_drawing:'Vẽ hình bằng cách nối các điểm trên lưới.',measurement:'Quan sát số đo và dụng cụ.',count_area:'Tô đúng các ô diện tích.',build_area:'Dựng hình từ số hàng và số cột.',clock_calendar:'Đặt giờ và xem lịch.',data_survey:'Thu thập và ghi số liệu.'})[source.type]};
+    if(config){config.instruction=source.instruction||config.instruction;dest.innerHTML=practicalHtml(config,page.id);}
+  }
+  function shapeValid(pts,mode){
+    if(mode==='circle')return pts.length===2&&Math.hypot(pts[0].x-pts[1].x,pts[0].y-pts[1].y)>0;
+    if(pts.length!==4)return false;
+    const v=pts.map((p,i)=>({x:pts[(i+1)%4].x-p.x,y:pts[(i+1)%4].y-p.y}));
+    if(v.some(p=>!p.x&&!p.y))return false;
+    if(!v.every((p,i)=>p.x*v[(i+1)%4].x+p.y*v[(i+1)%4].y===0))return false;
+    const l=v.map(p=>p.x*p.x+p.y*p.y);
+    return l[0]===l[2]&&l[1]===l[3]&&(mode!=='square'||l[0]===l[1]);
+  }
+  function practicalCheck(state){
+    if(state.type==='shape_drawing')return shapeValid(arr(state.points),state.mode)?'Đúng rồi! Con đã dựng được hình. Hãy thử dùng thước và ê ke hoặc com-pa thật để đối chiếu.':'Con kiểm tra số điểm và các góc vuông. Hình tròn cần tâm và một điểm trên đường tròn.';
+    if(state.type==='measurement'){
+      const tasks=[35,450,250,28],goal=tasks[safeInt(state.step,0,3)];
+      return Number(state.values.value)===goal?'Đúng rồi! Con đã đọc đúng số đo và đơn vị của dụng cụ này.':'Hãy đối chiếu vạch chia và đơn vị của dụng cụ, rồi chỉnh về số đo mà bài yêu cầu.';
+    }
+    if(state.type==='count_area')return arr(state.cells).length===12?'Chính xác! 12 ô, mỗi ô 1 cm² nên diện tích bằng 12 cm².':'Đếm lại từng ô đã tô, con cần đúng 12 ô.';
+    if(state.type==='build_area')return Number(state.values.length)===6&&Number(state.values.width)===4?'Giỏi lắm! 6 cột và 4 hàng tạo 24 ô, diện tích là 24 cm².':'Dài 6 ô và rộng 4 ô. Hãy chọn đúng cả hai kích thước rồi đếm ô.';
+    if(state.type==='clock_calendar'){
+      if(state.mode==='calendar')return Number(state.values.day)===15?'Đúng rồi! Thứ Hai rơi vào ngày 1, 8 và 15.':'Bắt đầu từ ngày 1 thứ Hai, cứ cộng thêm 7 ngày để tìm thứ Hai tiếp theo.';
+      return Number(state.values.hour)===8&&Number(state.values.minute)===35?'Đúng rồi! Kim giờ ở khoảng sau số 8 và kim phút ở số 7.':'Hãy xem lại: kim phút chỉ số 7 tức 35 phút; kim giờ nằm sau số 8.';
+    }
+    if(state.type==='data_survey')return Number(state.values.red)===5&&Number(state.values.blue)===4&&Number(state.values.yellow)===3?'Đúng rồi! Có 5 thẻ đỏ, 4 thẻ xanh, 3 thẻ vàng; tổng cộng 12 thẻ.':'Con đếm từng loại thẻ từ trái sang phải, rồi kiểm tra tổng ba nhóm bằng 12.';
+    return 'Con kiểm tra lại dữ kiện và thử tiếp nhé.';
+  }
+  function practicalAction(action,button){
+    const state=practiceState[page?.id];if(!state)return;
+    state.feedback='';
+    if(action==='practice-mode'){
+      state.mode=button.dataset.mode;state.points=[];
+    }else if(action==='practice-reset'){state.points=[];state.cells=[];}
+    else if(action==='practice-point'){
+      const limit=state.mode==='circle'?2:4;
+      if(state.points.length>=limit)state.points=[];
+      state.points.push({x:safeInt(button.dataset.x,0,6),y:safeInt(button.dataset.y,0,6)});
+    }else if(action==='practice-cell'){
+      const id=safeInt(button.dataset.index,0,19),s=new Set(arr(state.cells));s.has(id)?s.delete(id):s.add(id);state.cells=[...s];
+    }else if(action==='practice-prev-step'||action==='practice-next-step'){
+      state.step=safeInt(state.step+(action==='practice-next-step'?1:-1),0,3);state.values.value='';
+    }else if(action==='practice-day')state.values.day=safeInt(button.dataset.day,1,30);
+    else if(action==='practice-check')state.feedback=practicalCheck(state);
+    practiceRefresh();
+  }
+
   async function showLesson(id,index=0) {
     if(!requirePremium('Bài học'))return;
     const nonce=++renderNonce;stopSpeech();loading();
@@ -434,7 +902,8 @@
       let content='';
       if(p.page_type==='explore'){
         content=`<p class="m3-lead">${e(p.intro||'')}</p><p>${e(p.story||'')}</p>`;
-        content+=await imageHtml(p.illustration);
+        content+=renderMathVisual(p.lesson_visual);
+        if(!p.lesson_visual)content+=await imageHtml(p.illustration);
         if(p.visual_scene) content+=`<p class="m3-note">👀 ${e(p.visual_scene)}</p>`;
         content+=`<div class="m3-knowledge">${arr(p.knowledge_cards).map(x=>`<article><strong>${e(x.title)}</strong><p>${e(x.text)}</p></article>`).join('')}</div>`;
         if(arr(p.worked_examples).length)content+=`<h3>✏️ Ví dụ có hướng dẫn</h3>${arr(p.worked_examples).map(x=>`<p class="m3-example">${e(x)}</p>`).join('')}`;
@@ -442,8 +911,9 @@
         if(p.common_mistake) content+=`<p class="m3-note">💡 ${e(p.common_mistake)}</p>`;
         if(p.self_check)content+=`<p class="m3-self-check">🎯 ${e(p.self_check)}</p>`;
       } else if(p.page_type==='practice') {
-        content=`<p>${e(p.practice_strategy||'Con hãy chọn đáp án đúng trong các câu sau.')}</p>`;
-        content+=arr(p.items).map((item,j)=>{const key=`${id}_${j}`,chosen=lessonChoice[key];return `<div class="m3-guided"><strong>${j+1}. ${e(item.prompt)}</strong><div class="m3-options">${arr(item.options).map((o,i)=>`<button class="m3-choice ${chosen===str(o)?'selected':''}" data-action="lesson-choose" data-question="${j}" data-option="${i}">${e(o)}</button>`).join('')}</div>${chosen?`<p class="${chosen===str(item.answer)?'m3-good':'m3-bad'}">${chosen===str(item.answer)?'✅ Đúng rồi!':'🌱 Thử lại nhé!'} ${chosen===str(item.answer)?e(item.hint||''):''}</p>`:''}</div>`;}).join('');
+        content=Array.isArray(p.practice_strategy)?`<div class="m3-note"><strong>Cách làm từng bước:</strong><ol>${p.practice_strategy.map(x=>`<li>${e(x)}</li>`).join('')}</ol></div>`:`<p>${e(p.practice_strategy||'Con hãy chọn đáp án đúng trong các câu sau.')}</p>`;
+        if(p.practical_activity)content+=`<section class="m3-practical-root" data-practical-root>${practicalHtml(p.practical_activity,id)}</section>`;
+        content+=arr(p.items).map((item,j)=>{const key=`${id}_${j}`,chosen=lessonChoice[key];return `<div class="m3-guided"><strong>${j+1}. ${e(item.prompt)}</strong><div class="${choiceLayoutClass(item.options)}">${arr(item.options).map((o,i)=>`<button class="m3-choice ${chosen===str(o)?'selected':''}" data-action="lesson-choose" data-question="${j}" data-option="${i}">${e(o)}</button>`).join('')}</div>${chosen?`<p class="${chosen===str(item.answer)?'m3-good':'m3-bad'}">${chosen===str(item.answer)?'✅ Đúng rồi! Con hãy tự giải thích nhé.':'🌱 Chưa đúng, con xem gợi ý rồi thử lại nhé!'} ${e(item.hint||'')}</p>`:''}</div>`;}).join('');
         if(arr(p.extra_examples).length) content+=`<h3>Ví dụ mở rộng</h3>${p.extra_examples.map(x=>`<p>${e(x)}</p>`).join('')}`;
         if(p.feedback_on_wrong)content+=`<p class="m3-note">💡 ${e(p.feedback_on_wrong)}</p>`;
       } else {
@@ -497,6 +967,9 @@
     } catch(err){if(validLive(nonce))errorView(err);}
   }
   async function showLabTrack(code) {
+    // Attempt to obtain verified SGK milestones before displaying a gated journey.
+    // A static JSON file is public: the server must separately enforce private entitlements.
+    if(authenticated()&&premium()&&!progress)await getProgress().catch(()=>null);
     const d=await load('lab'),lab=arr(d.labs).find(l=>l.display_code===code);if(!lab)return;
     currentLab=lab;setPage('discover','lab-track',{topic:12,code,labTitle:lab.title,title:lab.title});
     const saved=labSaved();
@@ -520,7 +993,7 @@
   function labActivityControls(a) {
     const v=valueOfLab();
     if(a.type==='choices'){
-      const sel=Array.isArray(v)?v:[v];return `<div class="m3-options">${arr(a.choices).map((x,i)=>`<button class="m3-choice ${sel.includes(i)?'selected':''}" data-action="lab-choice" data-index="${i}">${e(x)}</button>`).join('')}</div>`;
+      const sel=Array.isArray(v)?v:[v];return `<div class="${choiceLayoutClass(a.choices)}">${arr(a.choices).map((x,i)=>`<button class="m3-choice ${sel.includes(i)?'selected':''}" data-action="lab-choice" data-index="${i}">${e(x)}</button>`).join('')}</div>`;
     }
     if(a.type==='number_input'||a.type==='equal_share')return numberField(a.type==='equal_share'?'Mỗi nhóm có bao nhiêu?':'Nhập kết quả',v??'',-100000,100000,1);
     if(a.type==='place_value_build'){
@@ -535,7 +1008,7 @@
       const sel=arr(v);return `<div class="m3-fraction">${Array.from({length:n(a.denominator)},(_,i)=>`<button class="${sel.includes(i)?'selected':''}" data-action="lab-fraction" data-index="${i}">${sel.includes(i)?'🟪':'⬜'}</button>`).join('')}</div>`;
     }
     if(a.type==='order_numbers'){
-      const sel=arr(v);return `<p>Chạm các số theo thứ tự yêu cầu:</p><div class="m3-options">${arr(a.numbers).map((x,i)=>`<button class="m3-choice ${sel.includes(i)?'selected':''}" data-action="lab-order" data-index="${i}" ${sel.includes(i)?'disabled':''}>${e(x)}</button>`).join('')}</div><p>Đã chọn: ${sel.map(i=>e(a.numbers[i])).join(' → ')}</p><button class="m3-small" data-action="lab-clear">Làm lại thứ tự</button>`;
+      const sel=arr(v);return `<p>Chạm các số theo thứ tự yêu cầu:</p><div class="${choiceLayoutClass(a.numbers)}">${arr(a.numbers).map((x,i)=>`<button class="m3-choice ${sel.includes(i)?'selected':''}" data-action="lab-order" data-index="${i}" ${sel.includes(i)?'disabled':''}>${e(x)}</button>`).join('')}</div><p>Đã chọn: ${sel.map(i=>e(a.numbers[i])).join(' → ')}</p><button class="m3-small" data-action="lab-clear">Làm lại thứ tự</button>`;
     }
     if(a.type==='open_number_line'||a.type==='measure_slider')return `<div class="m3-slider"><input type="range" data-lab-range min="${n(a.min)}" max="${n(a.max)}" step="1" value="${Number.isFinite(Number(v))?Number(v):n(a.min)}"><span data-lab-range-value>${Number.isFinite(Number(v))?Number(v):n(a.min)} ${e(a.unit||'')}</span></div>`;
     if(a.type==='clock_set'){
@@ -559,12 +1032,13 @@
   }
   function checkActivity(a,v) {
     if(a.type==='choices'){
+      if(v===undefined||v===null)return false;
       const indices=arr(a.answer_indices);
       if(indices.length) return JSON.stringify(arr(v).slice().sort((a,b)=>a-b))===JSON.stringify(indices.slice().sort((a,b)=>a-b));
       return n(v)>=0&&str(a.choices?.[n(v)])===str(a.answer);
     }
-    if(a.type==='number_input')return Number(v)===Number(a.target);
-    if(a.type==='equal_share')return Number(v)===Number(a.answer_each);
+    if(a.type==='number_input')return v!==undefined&&v!==null&&str(v).trim()!==''&&Number(v)===Number(a.target);
+    if(a.type==='equal_share')return v!==undefined&&v!==null&&str(v).trim()!==''&&Number(v)===Number(a.answer_each);
     if(a.type==='place_value_build')return Object.entries(a.expected||{}).every(([k,val])=>n(v?.[k])===n(val));
     if(a.type==='array_build')return n(v?.a)===n(a.expected_rows)&&n(v?.b)===n(a.expected_cols);
     if(a.type==='group_build')return n(v?.a)===n(a.expected_groups)&&n(v?.b)===n(a.expected_per_group);
@@ -587,7 +1061,8 @@
     const a=getActivity();if(!a)return;
     const at=n(page.activity),count=currentJourney.activities.length,done=!!labSaved()[a.id];
     const feedback=labChoices[a.id+'_checked'];
-    root.innerHTML=head(currentJourney.title,`Hoạt động ${at+1} / ${count}`,'lab-track')+`<section class="m3-paper"><h3>${e(a.teacher||'Cùng khám phá')}</h3><p class="m3-lead">${e(a.prompt||'')}</p><button class="m3-small" data-action="lab-speak">🔊 Nghe hướng dẫn</button>${labActivityControls(a)}${feedback?`<p class="${feedback==='ok'?'m3-good':'m3-bad'}">${e(feedback==='ok'?a.success||'Đúng rồi!':a.wrong_audio||'Con thử lại nhé.')}</p>`:''}${labHintLevel>0?`<p class="m3-note">💡 ${e(arr(a.hints)[Math.min(labHintLevel-1,arr(a.hints).length-1)]||'')}</p>`:''}<div class="m3-lab-actions"><button class="m3-small" data-action="lab-hint">💡 Gợi ý ${labHintLevel}</button><button class="m3-submit" data-action="lab-check">Kiểm tra</button></div><div class="m3-quiz-nav"><button class="m3-nav" data-action="lab-step" data-diff="-1" ${at===0?'disabled':''}>← Hoạt động trước</button><span class="m3-count">${at+1} / ${count}${done?' ✅':''}</span><button class="m3-nav primary" data-action="lab-step" data-diff="1" ${at===count-1?'disabled':''}>Hoạt động sau →</button></div></section>`;
+    const wrongHint=arr(a.hints)[Math.min(labHintLevel,arr(a.hints).length-1)]||a.wrong_audio||'Con thử lại nhé.';
+    root.innerHTML=head(currentJourney.title,`Hoạt động ${at+1} / ${count}`,'lab-track')+`<section class="m3-paper"><h3>${e(a.teacher||'Cùng khám phá')}</h3><p class="m3-lead">${e(a.prompt||'')}</p><button class="m3-small" data-action="lab-speak">🔊 Nghe hướng dẫn</button>${labActivityControls(a)}${feedback?`<p class="${feedback==='ok'?'m3-good':'m3-bad'}">${e(feedback==='ok'?a.success||'Đúng rồi!':wrongHint)}${feedback==='ok'&&a.reflection_prompt?`<p>${e(a.reflection_prompt)}</p>`:''}</p>`:''}${labHintLevel>0?`<p class="m3-note">💡 ${e(arr(a.hints)[Math.min(labHintLevel-1,arr(a.hints).length-1)]||'')}</p>`:''}<div class="m3-lab-actions"><button class="m3-small" data-action="lab-hint">💡 Gợi ý ${labHintLevel}</button><button class="m3-submit" data-action="lab-check">Kiểm tra</button></div><div class="m3-quiz-nav"><button class="m3-nav" data-action="lab-step" data-diff="-1" ${at===0?'disabled':''}>← Hoạt động trước</button><span class="m3-count">${at+1} / ${count}${done?' ✅':''}</span><button class="m3-nav primary" data-action="lab-step" data-diff="1" ${at===count-1?'disabled':''}>Hoạt động sau →</button></div></section>`;
   }
   function labValueChanged(field,value,kind='number') {
     const a=getActivity();if(!a)return;
@@ -628,7 +1103,9 @@
 
   async function navigateBack() {
     if(!page||page.view==='hub') return showHub(page?.tab||'discover');
-    if(page.view==='topic'||((page.view==='quiz'||page.view==='result')&&page.tab==='discover')) return page.view==='topic'?showHub('discover'):showDiscoverTopic(page.topic);
+    if(page.view==='subtopic' && page.tab==='discover')return showDiscoverTopic(page.topic);
+    if((page.view==='quiz'||page.view==='result')&&page.tab==='discover'&&str(page.node).startsWith('3.3.'))return showDiscoverNestedTopic(3);
+    if(page.view==='topic'||((page.view==='guide'||page.view==='quiz'||page.view==='result')&&page.tab==='discover')) return page.view==='topic'?showHub('discover'):showDiscoverTopic(page.topic);
     if(page.view==='lab-activity')return showLabTrack(page.code);
     if(page.view==='lab-track')return showLabHome();
     if(page.view==='category')return showHub('exams');
@@ -642,6 +1119,12 @@
     if(a==='exercise-sem'){chosenExerciseSemester=n(btn.dataset.sem);return showHub('exercises');}
     if(a==='discover-topic')return showDiscoverTopic(n(btn.dataset.topic));
     if(a==='discover-sub')return showDiscoverSub(n(btn.dataset.topic),btn.dataset.sub);
+    if(a==='discover-nested-topic')return showDiscoverNestedTopic(n(btn.dataset.topic));
+    if(a==='discover-leaf')return showDiscoverSub(n(btn.dataset.topic),btn.dataset.sub,btn.dataset.node);
+    if(a==='discover-topic-guide')return showDiscoverTopicGuide(n(btn.dataset.topic));
+    if(a==='discover-guide-section')return showDiscoverTopicGuide(n(btn.dataset.topic),btn.dataset.sub);
+    if(a==='discover-begin')return showDiscoverSub(page.topic,page.guideSub);
+    if(a==='guide-speak'){const g=discoverGuideSource?.find(q=>q?.lesson_intro)?.lesson_intro;return speak(g?[g.observe,g.understand,g.worked_example,...arr(g.micro_steps),g.common_mistake,g.self_check].join('. '):'');}
     if(a==='lab-home')return showLabHome();
     if(a==='lab-track')return showLabTrack(id);
     if(a==='lab-journey'){
@@ -663,13 +1146,14 @@
     if(a==='lab-hint'){labHintLevel=Math.min(3,labHintLevel+1);return renderLabActivity();}
     if(a==='lab-check') {const act=getActivity();const correct=checkActivity(act,valueOfLab());labChoices[act.id+'_checked']=correct?'ok':'wrong';if(correct)markLab(act.id);return renderLabActivity();}
     if(a==='lab-speak')return speak(getActivity()?.instruction_audio||getActivity()?.prompt||'');
+    if(a.startsWith('practice-'))return practicalAction(a,btn);
     if(a==='lesson')return showLesson(id);
     if(a==='lesson-speak'){const data=await load('lessons'),lesson=data.bai_hoc.find(x=>x.lesson_id===page.id);return speak(lesson?.pages?.[lessonPage]?.teacher_script||lesson?.pages?.[lessonPage]?.intro||lesson?.source_title||'');}
     if(a==='lesson-stop')return stopSpeech();
     if(a==='lesson-page')return showLesson(page.id,idx);
     if(a==='lesson-choose'){
       const data=await load('lessons'),lesson=data.bai_hoc.find(x=>x.lesson_id===page.id),item=lesson?.pages?.[lessonPage]?.items?.[n(btn.dataset.question)];
-      if(item){const key=`${page.id}_${btn.dataset.question}`,choice=item.options[n(btn.dataset.option)];if(!Object.prototype.hasOwnProperty.call(lessonChoice,key))observeLearning({id:key,skill:item.competency||item.skill_tag},str(choice)===str(item.answer),'lesson');lessonChoice[key]=choice;}return showLesson(page.id,lessonPage);
+      if(item){const key=`${page.id}_${btn.dataset.question}`,choice=item.options[n(btn.dataset.option)];if(!Object.prototype.hasOwnProperty.call(lessonChoice,key))observeLearning({id:key,skill:item.competency||item.skill_tag},str(choice)===str(item.answer),'lesson');lessonChoice[key]=choice;if(str(choice)!==str(item.answer))lessonMistakes[key]=(lessonMistakes[key]||0)+1;}return showLesson(page.id,lessonPage);
     }
     if(a==='exercise')return startOfficial('baitap',id);
     if(a==='review')return showReview(id);
@@ -677,7 +1161,7 @@
     if(a==='exam')return startOfficial('baithi',id);
     if(a==='game')return playGame(id);
     if(a==='speak')return speak(btn.dataset.text);
-    if(a==='choose'&&quiz){const q=quiz.questions[quiz.at],choice=str(q.o[idx]);quiz.answers.set(q.id,choice);if(quiz.mode==='local'&&!quiz.revealed.has(q.id))observeLearning(q,choice===str(q.a),quiz.kind);if(quiz.mode==='local')quiz.revealed.add(q.id);return renderQuestion();}
+    if(a==='choose'&&quiz){const q=quiz.questions[quiz.at],optionIndex=Number(btn.dataset.option);if(!Number.isInteger(optionIndex)||optionIndex<0||optionIndex>=arr(q.o).length)return;const choice=str(q.o[optionIndex]);quiz.answers.set(q.id,choice);if(quiz.mode==='local'){if(!quiz.revealed.has(q.id))observeLearning(q,choice===str(q.a),quiz.kind);if(choice!==str(q.a))quiz.wrongAttempts.set(q.id,(quiz.wrongAttempts.get(q.id)||0)+1);quiz.revealed.add(q.id);}return renderQuestion();}
     if(a==='prev'&&quiz){quiz.at=Math.max(0,quiz.at-1);stopSpeech();return renderQuestion();}
     if(a==='next'&&quiz){quiz.at=Math.min(quiz.questions.length-1,quiz.at+1);stopSpeech();return renderQuestion();}
     if(a==='submit'){
@@ -691,10 +1175,16 @@
     const input=event.target;
     if(input.matches('[data-lab-field]'))labValueChanged(input.dataset.labField,input.value);
     else if(input.matches('[data-lab-range]'))labValueChanged('',input.value,'range');
+    else if(input.matches('[data-practice-field]')){
+      const state=practiceState[page?.id];if(!state)return;
+      state.values[input.dataset.practiceField]=input.value;
+      if(event.type==='change' && input.tagName==='SELECT')practiceRefresh();
+      const display=find('[data-practical-value]');if(display){const u=state.step===0?'mm':state.step===1?'g':state.step===2?'ml':'°C';display.textContent=input.value+' '+u;}
+    }
   }
   function bindRoot() {
-    onClickRef=(event)=>{void handleClick(event).catch(err=>{console.error('[Class3 Math action]',err);dialog('Chưa thực hiện được thao tác. Bé thử lại nhé!');});};
-    onInputRef=handleInput;root.addEventListener('click',onClickRef);root.addEventListener('input',onInputRef);
+    onClickRef=(event)=>{void handleClick(event).catch(err=>{console.warn('[Class3 Math] Có lỗi thao tác.');dialog('Chưa thực hiện được thao tác. Bé thử lại nhé!');});};
+    onInputRef=handleInput;root.addEventListener('click',onClickRef);root.addEventListener('input',onInputRef);root.addEventListener('change',onInputRef);
   }
   function ensureStyle() {
     if(document.getElementById('class3-math-module-style'))return;
@@ -703,7 +1193,7 @@
   async function render(nextCtx) {
     const newCtx=nextCtx||{},oldHost=ctx?.host,previousUser=ctx?.user?.userId||'',nextUser=newCtx?.user?.userId||'';
     if(root&&(oldHost!==newCtx.host||!root.isConnected))destroy();
-    if(previousUser!==nextUser){learningQueue=[];learningInFlight=null;lessonChoice={};labChoices={};progress=null;}
+    if(previousUser!==nextUser){learningQueue=[];learningInFlight=null;lessonChoice={};lessonMistakes={};practiceState={};labChoices={};progress=null;}
     ctx=newCtx;live=true;ensureStyle();
     if(!root) {root=document.createElement('section');root.id=ROOT_ID;root.setAttribute('aria-label','Module Toán 3');ctx.host?.replaceChildren(root);bindRoot();}
     const tab=LABELS[nextCtx?.tabId]?nextCtx.tabId:'discover';
@@ -711,7 +1201,7 @@
   }
   function destroy() {
     live=false;renderNonce++;cleanView();
-    try{root?.removeEventListener('click',onClickRef);root?.removeEventListener('input',onInputRef);}catch(_){}
+    try{root?.removeEventListener('click',onClickRef);root?.removeEventListener('input',onInputRef);root?.removeEventListener('change',onInputRef);}catch(_){}
     try{root?.remove();}catch(_){}
     root=null;ctx?.hooks?.clearDetail?.();ctx=null;progress=null;currentLab=null;currentJourney=null;learningQueue=[];
   }
@@ -719,20 +1209,28 @@
   window.CLASS3_SUBJECT_MODULES.math=Object.freeze({render,destroy});
 
   const STYLES = `
-#class3-math-runtime{--m3-purple:#7c3aed;--m3-pink:#ec4899;--m3-line:#ddd6fe;color:#344054;font-family:"Nunito","Segoe UI",Arial,sans-serif;max-width:82rem;margin:0 auto}
+#class3-math-runtime{--m3-purple:#7c3aed;--m3-pink:#ec4899;--m3-line:#ddd6fe;color:#344054;font-family:"Nunito","Segoe UI",Arial,sans-serif;font-size:16px;max-width:82rem;margin:0 auto}
 #class3-math-runtime *{box-sizing:border-box}
 #class3-math-runtime button{font:inherit;cursor:pointer}
+#class3-math-runtime input,#class3-math-runtime select,#class3-math-runtime textarea{font-family:inherit;font-size:16px}
 #class3-math-runtime button:disabled{opacity:.42;cursor:not-allowed}
 #class3-math-runtime h2,#class3-math-runtime h3,#class3-math-runtime h4{color:#5b216e;margin:0 0 .55rem;line-height:1.3}
 #class3-math-runtime p{line-height:1.6}
 #class3-math-runtime .m3-section-header{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin:2px 0 14px}
 #class3-math-runtime .m3-section-header h2{font-size:clamp(22px,2.4vw,29px);font-weight:950;margin:0}
 #class3-math-runtime .m3-section-header p{margin:.25rem 0 0;color:#667085;font-weight:750}
-#class3-math-runtime .m3-back,#class3-math-runtime .m3-small{min-height:40px;padding:9px 15px;border:1px solid #c4b5fd;border-radius:13px;color:#6d28d9;background:#faf5ff;font-size:15px;font-weight:900;flex-shrink:0}
+#class3-math-runtime .m3-back,#class3-math-runtime .m3-small{min-height:40px;padding:9px 15px;border:1px solid #c4b5fd;border-radius:13px;color:#6d28d9;background:#faf5ff;font-size:16px;font-weight:900;flex-shrink:0}
 #class3-math-runtime .m3-back:hover,#class3-math-runtime .m3-small:hover{background:#f3e8ff;border-color:#8b5cf6}
 #class3-math-runtime .m3-folder-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:12px}
 #class3-math-runtime .m3-folder-grid.m3-discover-home-grid{grid-template-columns:repeat(4,minmax(0,1fr));width:100%}
 #class3-math-runtime .m3-folder-grid.m3-discover-sub-grid{grid-template-columns:repeat(3,minmax(0,1fr));width:100%}
+/* A single guide tile is placed first in each topic, like Class 2.
+   3-column topic grids become 2-column when there are at most four tiles. */
+#class3-math-runtime .m3-folder-grid.m3-discover-topic-grid--compact{grid-template-columns:repeat(2,minmax(0,1fr))}
+#class3-math-runtime .m3-folder.m3-discover-guide-card{--m3-br:#f9a8d4;--m3-icon-bg:#fce7f3;background:linear-gradient(135deg,#fdf2f8,#faf5ff)}
+#class3-math-runtime .m3-folder.m3-discover-guide-card .m3-folder-foot{color:#be185d}
+@media(min-width:768px) and (max-width:899px){#class3-math-runtime .m3-folder-grid.m3-discover-topic-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:767px){#class3-math-runtime .m3-folder-grid.m3-discover-topic-grid{grid-template-columns:1fr}#class3-math-runtime .m3-folder-grid.m3-discover-topic-grid--compact{grid-template-columns:1fr}}
 #class3-math-runtime .m3-folder-grid.m3-lab-home-grid{grid-template-columns:repeat(3,minmax(0,1fr));width:100%}
 #class3-math-runtime .m3-folder{--m3-br:#f9a8d4;--m3-icon-bg:#ffe0ed;min-height:142px;text-align:left;border:1px solid var(--m3-br);background:linear-gradient(135deg,#fff8fc,#fbf4ff);border-radius:20px;padding:14px;display:flex;flex-direction:column;justify-content:space-between;gap:12px;box-shadow:0 4px 14px rgba(76,29,149,.055);transform:none!important;translate:none!important;transition:border-color .18s ease,box-shadow .18s ease,filter .18s ease!important}
 #class3-math-runtime .m3-folder:nth-child(6n+2){--m3-br:#86efac;--m3-icon-bg:#dcfce7;background:linear-gradient(135deg,#f7fffc,#ecfdf5)}
@@ -751,26 +1249,30 @@
 #class3-math-runtime .m3-folder:is(:hover,:focus-visible) .m3-folder-icon{transform:scale(1.07);box-shadow:0 5px 12px rgba(109,40,217,.22),inset 0 1px 2px #fff}
 #class3-math-runtime .m3-folder-copy{min-width:0;flex:1}
 #class3-math-runtime .m3-folder-copy strong{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;color:#5b216e;font-size:19px;font-weight:950;line-height:1.28}
-#class3-math-runtime .m3-folder-copy small{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;color:#475467;font-size:15px;font-weight:750;margin-top:6px;line-height:1.4}
+#class3-math-runtime .m3-folder-copy small{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;color:#475467;font-size:16px;font-weight:750;margin-top:6px;line-height:1.4}
 #class3-math-runtime .m3-folder-grid.m3-discover-home-grid .m3-folder{min-height:168px;padding:12px;gap:8px}
 #class3-math-runtime .m3-folder-grid.m3-discover-home-grid .m3-folder-head{flex-direction:row;align-items:center;gap:10px;min-width:0}
 #class3-math-runtime .m3-folder-grid.m3-discover-home-grid .m3-folder-icon{width:56px;height:56px;flex:0 0 56px;font-size:34px}
 #class3-math-runtime .m3-folder-grid.m3-discover-home-grid .m3-folder-copy strong{font-size:18px;line-height:1.24;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;line-clamp:2;overflow:hidden;overflow-wrap:break-word}
-#class3-math-runtime .m3-folder-grid.m3-discover-home-grid .m3-topic-description{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;line-clamp:2;overflow:hidden;min-height:36px;color:#475467;font-size:14px;font-weight:750;line-height:1.3}
+#class3-math-runtime .m3-folder-grid.m3-discover-home-grid .m3-topic-description{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;line-clamp:2;overflow:hidden;min-height:36px;color:#475467;font-size:16px;font-weight:750;line-height:1.3}
 #class3-math-runtime .m3-folder-grid.m3-discover-sub-grid .m3-folder{min-height:148px;padding:12px;gap:8px}
 #class3-math-runtime .m3-folder-grid.m3-discover-sub-grid .m3-folder-head{align-items:flex-start;gap:10px}
 #class3-math-runtime .m3-folder-grid.m3-discover-sub-grid .m3-folder-icon{width:53px;height:53px;flex:0 0 53px;font-size:32px}
 #class3-math-runtime .m3-folder-grid.m3-discover-sub-grid .m3-folder-copy strong{font-size:18px;line-height:1.26;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;line-clamp:2;overflow:hidden;overflow-wrap:break-word}
-#class3-math-runtime .m3-folder-grid.m3-discover-sub-grid .m3-folder-copy small{font-size:14px;line-height:1.35;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;line-clamp:2;overflow:hidden;overflow-wrap:break-word;margin-top:7px}
+#class3-math-runtime .m3-folder-grid.m3-discover-sub-grid .m3-folder-copy small{font-size:16px;line-height:1.35;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;line-clamp:2;overflow:hidden;overflow-wrap:break-word;margin-top:7px}
 #class3-math-runtime .m3-folder-grid.m3-lab-home-grid .m3-folder{min-height:202px}
 #class3-math-runtime .m3-folder-grid.m3-lab-home-grid .m3-folder-copy strong{display:block;-webkit-line-clamp:unset;line-clamp:unset;overflow:visible;white-space:normal;overflow-wrap:break-word}
 #class3-math-runtime .m3-folder-grid.m3-lab-home-grid .m3-folder-copy small{display:block;-webkit-line-clamp:unset;line-clamp:unset;overflow:visible;white-space:normal;overflow-wrap:break-word}
-#class3-math-runtime .m3-folder-foot{display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(124,58,237,.12);padding-top:7px;font-size:14px;font-weight:900;color:#7c3aed}
+#class3-math-runtime .m3-folder-foot{display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(124,58,237,.12);padding-top:7px;font-size:16px;font-weight:900;color:#7c3aed}
 #class3-math-runtime .m3-folder.is-locked{background:#f8fafc;border-color:#cbd5e1}
 #class3-math-runtime .m3-question-card,#class3-math-runtime .m3-paper,#class3-math-runtime .m3-result{border:1px solid #e9d5ff;border-radius:20px;padding:clamp(12px,2vw,24px);background:#fff;box-shadow:0 4px 15px rgba(76,29,149,.055)}
 #class3-math-runtime .m3-question-text{font-size:clamp(20px,2vw,25px);font-weight:950;color:#5b216e;text-align:center;line-height:1.45;margin:20px 0}
-#class3-math-runtime .m3-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;margin:16px 0}
-#class3-math-runtime .m3-choice{min-height:66px;padding:13px 14px;border:1px solid #c4b5fd;border-radius:16px;background:#faf5ff;color:#344054;font-size:18px;font-weight:850;text-align:left;display:flex;align-items:center;gap:12px;transition:background .18s,border-color .18s,box-shadow .18s}
+#class3-math-runtime .m3-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:14px 0}
+#class3-math-runtime .m3-options.m3-options--four{grid-template-columns:repeat(4,minmax(0,1fr))}
+#class3-math-runtime .m3-options.m3-options--three{grid-template-columns:repeat(3,minmax(0,1fr))}
+#class3-math-runtime .m3-options.m3-options--two{grid-template-columns:repeat(2,minmax(0,1fr))}
+#class3-math-runtime .m3-options.m3-options--readable{grid-template-columns:repeat(2,minmax(0,1fr))}
+#class3-math-runtime .m3-choice{min-height:54px;min-width:0;padding:10px 12px;overflow-wrap:break-word;line-height:1.35;border:1px solid #c4b5fd;border-radius:16px;background:#faf5ff;color:#344054;font-size:18px;font-weight:850;text-align:left;display:flex;align-items:center;gap:12px;transition:background .18s,border-color .18s,box-shadow .18s}
 #class3-math-runtime .m3-choice:nth-child(4n+1){background:#fff1f7;border-color:#f9a8d4}
 #class3-math-runtime .m3-choice:nth-child(4n+2){background:#ecfdf5;border-color:#86efac}
 #class3-math-runtime .m3-choice:nth-child(4n+3){background:#f5f3ff;border-color:#c4b5fd}
@@ -803,7 +1305,7 @@
 #class3-math-runtime .m3-sem.active{color:#fff;border-color:#8b5cf6;background:linear-gradient(100deg,#ec4899,#8b5cf6)}
 #class3-math-runtime .m3-illustration{max-width:560px;margin:12px auto;text-align:center}
 #class3-math-runtime .m3-illustration img{width:100%;max-height:360px;object-fit:contain;border-radius:17px;border:1px solid #e9d5ff}
-#class3-math-runtime .m3-caption,#class3-math-runtime .m3-illustration figcaption{text-align:center;color:#667085;font-size:14px}
+#class3-math-runtime .m3-caption,#class3-math-runtime .m3-illustration figcaption{text-align:center;color:#667085;font-size:16px}
 #class3-math-runtime .m3-scene-emoji{text-align:center;font-size:65px;line-height:1.4}
 #class3-math-runtime .m3-result{text-align:center;max-width:850px;margin:0 auto}
 #class3-math-runtime .m3-result ul{text-align:left;line-height:1.8}
@@ -811,7 +1313,7 @@
 #class3-math-runtime .m3-medal{font-size:65px}
 #class3-math-runtime .m3-loading,#class3-math-runtime .m3-empty{min-height:220px;display:flex;align-items:center;justify-content:center;gap:12px;background:#fff;border:1px dashed #c4b5fd;border-radius:20px;text-align:center;padding:24px;color:#6d28d9;font-size:18px;font-weight:850}
 #class3-math-runtime .m3-spinner{width:24px;height:24px;border:3px solid #ddd6fe;border-top-color:#8b5cf6;border-radius:50%;animation:m3spin .8s linear infinite}
-#class3-math-runtime .m3-lab-number{display:flex;flex-direction:column;gap:6px;font-size:15px;font-weight:900;color:#6d28d9;min-width:105px}
+#class3-math-runtime .m3-lab-number{display:flex;flex-direction:column;gap:6px;font-size:16px;font-weight:900;color:#6d28d9;min-width:105px}
 #class3-math-runtime .m3-lab-number input{height:45px;border:1px solid #c4b5fd;border-radius:12px;background:#fff;padding:9px;font-size:20px;font-weight:850;color:#344054;width:100%}
 #class3-math-runtime .m3-lab-fields{display:flex;flex-wrap:wrap;gap:12px;margin:18px 0}
 #class3-math-runtime .m3-lab-actions{display:flex;align-items:center;justify-content:flex-end;gap:12px;flex-wrap:wrap;margin:13px 0}
@@ -833,13 +1335,13 @@
 @media(min-width:768px) and (max-width:899px){#class3-math-runtime .m3-folder-grid.m3-discover-home-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(min-width:768px) and (max-width:899px){#class3-math-runtime .m3-folder-grid.m3-discover-sub-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(min-width:768px) and (max-width:899px){#class3-math-runtime .m3-folder-grid.m3-lab-home-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:767px){#class3-math-runtime .m3-folder-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}#class3-math-runtime .m3-folder-grid.m3-discover-home-grid{grid-template-columns:repeat(2,minmax(0,1fr))}#class3-math-runtime .m3-folder{padding:10px;min-height:132px;border-radius:16px}#class3-math-runtime .m3-folder-head{flex-direction:column;gap:7px}#class3-math-runtime .m3-folder-icon{width:52px;height:52px;flex:0 0 52px;font-size:31px}#class3-math-runtime .m3-folder-copy strong{font-size:17px}#class3-math-runtime .m3-folder-copy small{font-size:14px}#class3-math-runtime .m3-folder-grid.m3-discover-sub-grid{grid-template-columns:1fr}#class3-math-runtime .m3-folder-grid.m3-discover-sub-grid .m3-folder{min-height:116px}#class3-math-runtime .m3-folder-grid.m3-lab-home-grid{grid-template-columns:1fr}#class3-math-runtime .m3-folder-grid.m3-lab-home-grid .m3-folder{min-height:auto}#class3-math-runtime .m3-section-header{flex-direction:column}#class3-math-runtime .m3-options{grid-template-columns:1fr}#class3-math-runtime .m3-choice{font-size:17px;min-height:58px}#class3-math-runtime .m3-quiz-nav{grid-template-columns:minmax(0,1fr) 76px minmax(0,1fr);gap:5px}#class3-math-runtime .m3-nav,#class3-math-runtime .m3-count{font-size:14px;padding:7px 5px}}
+@media(max-width:767px){#class3-math-runtime .m3-folder-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}#class3-math-runtime .m3-folder-grid.m3-discover-home-grid{grid-template-columns:repeat(2,minmax(0,1fr))}#class3-math-runtime .m3-folder{padding:10px;min-height:132px;border-radius:16px}#class3-math-runtime .m3-folder-head{flex-direction:column;gap:7px}#class3-math-runtime .m3-folder-icon{width:52px;height:52px;flex:0 0 52px;font-size:31px}#class3-math-runtime .m3-folder-copy strong{font-size:17px}#class3-math-runtime .m3-folder-copy small{font-size:16px}#class3-math-runtime .m3-folder-grid.m3-discover-sub-grid{grid-template-columns:1fr}#class3-math-runtime .m3-folder-grid.m3-discover-sub-grid .m3-folder{min-height:116px}#class3-math-runtime .m3-folder-grid.m3-lab-home-grid{grid-template-columns:1fr}#class3-math-runtime .m3-folder-grid.m3-lab-home-grid .m3-folder{min-height:auto}#class3-math-runtime .m3-section-header{flex-direction:column}#class3-math-runtime .m3-options{grid-template-columns:repeat(2,minmax(0,1fr))}#class3-math-runtime .m3-choice{font-size:17px;min-height:58px}#class3-math-runtime .m3-quiz-nav{grid-template-columns:minmax(0,1fr) 76px minmax(0,1fr);gap:5px}#class3-math-runtime .m3-nav,#class3-math-runtime .m3-count{font-size:16px;padding:7px 5px}}
 @media(max-width:767px){
 #class3-math-runtime .m3-folder-grid.m3-discover-home-grid .m3-folder{min-height:168px;padding:10px}
 #class3-math-runtime .m3-folder-grid.m3-discover-home-grid .m3-folder-head{flex-direction:row;align-items:center;gap:8px}
 #class3-math-runtime .m3-folder-grid.m3-discover-home-grid .m3-folder-icon{width:48px;height:48px;flex:0 0 48px;font-size:29px}
 #class3-math-runtime .m3-folder-grid.m3-discover-home-grid .m3-folder-copy strong{font-size:16px}
-#class3-math-runtime .m3-folder-grid.m3-discover-home-grid .m3-topic-description{font-size:13px}
+#class3-math-runtime .m3-folder-grid.m3-discover-home-grid .m3-topic-description{font-size:16px}
 #class3-math-runtime .m3-folder-grid.m3-discover-sub-grid .m3-folder-head{flex-direction:row;align-items:flex-start}
 #class3-math-runtime .m3-folder-grid.m3-discover-sub-grid .m3-folder-icon{width:50px;height:50px;flex:0 0 50px;font-size:30px}
 #class3-math-runtime .m3-folder-grid.m3-discover-sub-grid .m3-folder-copy strong{font-size:17px}
@@ -849,6 +1351,116 @@
 #class3-math-runtime .m3-folder-grid.m3-discover-home-grid .m3-folder{min-height:189px}
 #class3-math-runtime .m3-folder-grid.m3-discover-home-grid .m3-folder-copy strong{font-size:17px}
 }
+
+/* Responsive answer choices respect the actual question card width. */
+#class3-math-runtime .m3-question-card,#class3-math-runtime .m3-guided,#class3-math-runtime .m3-paper{container-type:inline-size}
+@media(max-width:920px){
+#class3-math-runtime .m3-options.m3-options--four,#class3-math-runtime .m3-options.m3-options--three{grid-template-columns:repeat(2,minmax(0,1fr))}
+#class3-math-runtime .m3-options.m3-options--readable{grid-template-columns:1fr}
+}
+@container (max-width:740px){
+#class3-math-runtime .m3-options.m3-options--four,#class3-math-runtime .m3-options.m3-options--three{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@container (max-width:550px){
+#class3-math-runtime .m3-options.m3-options--readable{grid-template-columns:1fr}
+}
+@container (max-width:300px){
+#class3-math-runtime .m3-options.m3-options--two{grid-template-columns:1fr}
+}
+
+#class3-math-runtime .m3-folder.m3-discover-guide-card{--m3-br:#f9a8d4;--m3-icon-bg:#fce7f3;background:linear-gradient(135deg,#fff0f7,#faf5ff)}
+#class3-math-runtime .m3-guide-sections{display:flex;flex-wrap:wrap;gap:9px;margin:8px 0 16px}
+#class3-math-runtime .m3-guide-section-tab{border:1px solid #ddd6fe;border-radius:12px;background:#faf5ff;color:#6d28d9;font-size:16px;font-weight:850;padding:10px 13px;min-height:44px;text-align:left;cursor:pointer}
+#class3-math-runtime .m3-guide-section-tab.active{background:linear-gradient(105deg,#ec4899,#8b5cf6);color:#fff;border-color:#8b5cf6}
+#class3-math-runtime .m3-guide-section-tab:focus-visible{outline:3px solid #a78bfa;outline-offset:2px}
+#class3-math-runtime .m3-guide-section-heading{font-size:20px;color:#5b216e;margin:8px 0 0}
+@media(max-width:479px){#class3-math-runtime .m3-guide-section-tab{width:100%}}
+#class3-math-runtime .m3-guide{display:grid;gap:16px}
+#class3-math-runtime .m3-guide-meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;color:#64748b;font-size:16px;font-weight:750}
+#class3-math-runtime .m3-scope{background:#dbeafe;color:#1e40af;border:1px solid #93c5fd;padding:5px 12px;border-radius:99px;font-weight:900}
+#class3-math-runtime .m3-scope.m3-advanced{color:#92400e;background:#fffbeb;border-color:#fcd34d}
+#class3-math-runtime .m3-guide-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+#class3-math-runtime .m3-guide-grid article{border:1px solid #ddd6fe;border-radius:18px;background:#fff;padding:16px;box-shadow:0 5px 15px rgba(80,40,130,.05)}
+#class3-math-runtime .m3-guide-grid article>span{font-size:16px;font-weight:950;display:inline-flex;align-items:center;justify-content:center;width:29px;height:29px;background:#f3e8ff;color:#7c3aed;border-radius:50%;margin-bottom:9px}
+#class3-math-runtime .m3-guide-grid article:nth-child(2){background:#f0fdf4;border-color:#bbf7d0}
+#class3-math-runtime .m3-guide-grid article:nth-child(3){background:#eff6ff;border-color:#bfdbfe}
+#class3-math-runtime .m3-guide-grid h3{font-size:19px;margin:0 0 8px}
+#class3-math-runtime .m3-guide-grid p{font-size:17px;margin:0}
+#class3-math-runtime .m3-guide-lower{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+#class3-math-runtime .m3-guide-lower section{background:#faf5ff;border:1px solid #ddd6fe;border-radius:16px;padding:15px}
+#class3-math-runtime .m3-guide-lower h3{font-size:17px}
+#class3-math-runtime .m3-guide-lower ol{padding-left:22px;line-height:1.85}
+#class3-math-runtime .m3-caution{color:#b45309}
+#class3-math-runtime .m3-guide-ctas{display:flex;justify-content:flex-end;gap:12px;align-items:center;flex-wrap:wrap}
+#class3-math-runtime .m3-guide-return{margin:-2px 0 10px}
+#class3-math-runtime .m3-math-visual{margin:16px auto 18px;padding:14px;border:1px solid #c7d2fe;background:linear-gradient(135deg,#faf5ff,#eff6ff);border-radius:18px;text-align:center;width:min(100%,620px)}
+#class3-math-runtime .m3-math-svg{width:100%;height:auto;max-width:360px;max-height:220px;display:block;margin:auto}
+#class3-math-runtime .m3-fraction-strip{display:grid;grid-template-columns:repeat(var(--m3-cols),minmax(0,1fr));width:min(100%,460px);height:80px;margin:10px auto;border:2px solid #6d28d9;border-radius:8px;overflow:hidden}
+#class3-math-runtime .m3-fraction-strip span{border-right:1px solid #a78bfa;background:#fff}
+#class3-math-runtime .m3-fraction-strip span:last-child{border-right:0}
+#class3-math-runtime .m3-fraction-strip .on{background:#c084fc}
+#class3-math-runtime .m3-math-dots{display:grid;grid-template-columns:repeat(10,minmax(0,1fr));gap:6px;width:min(100%,360px);margin:auto}
+#class3-math-runtime .m3-math-dots span{aspect-ratio:1;background:#fff;border:2px solid #a78bfa;border-radius:50%}
+#class3-math-runtime .m3-math-dots .on{background:#8b5cf6}
+#class3-math-runtime .m3-math-grid{display:grid;grid-template-columns:repeat(var(--m3-cols),minmax(0,1fr));gap:3px;width:max-content;max-width:100%;margin:10px auto}
+#class3-math-runtime .m3-math-grid span{width:26px;height:26px;border:1px solid #93c5fd;background:#fff;border-radius:3px}
+#class3-math-runtime .m3-math-grid span.on{background:#60a5fa;border-color:#2563eb}
+#class3-math-runtime .m3-visual-pair{display:flex;justify-content:center;gap:18px;flex-wrap:wrap}
+#class3-math-runtime .m3-tally-chart{max-width:550px;margin:auto;text-align:left;background:#fff;border:1px solid #ddd6fe;border-radius:12px;overflow:hidden}
+#class3-math-runtime .m3-tally-heading,#class3-math-runtime .m3-tally-row{display:grid;grid-template-columns:minmax(85px,1fr) minmax(150px,2fr);align-items:center;padding:10px 12px;gap:8px;border-bottom:1px solid #e5e7eb}
+#class3-math-runtime .m3-tally-heading{background:#ede9fe;color:#6d28d9}
+#class3-math-runtime .m3-tally-row:last-child{border-bottom:0}
+#class3-math-runtime .m3-tally-svg{height:30px;max-width:100%;stroke:#6d28d9;stroke-width:2.7;stroke-linecap:round}
+#class3-math-runtime .m3-practical-root{background:linear-gradient(135deg,#f0fdf4,#eff6ff);border:1px solid #86efac;border-radius:19px;padding:15px;margin:15px 0 20px}
+#class3-math-runtime .m3-practical-root h3{color:#0f766e}
+#class3-math-runtime .m3-practical-controls{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:12px 0}
+#class3-math-runtime .m3-practical-select{border:1px solid #93c5fd;background:#fff;padding:9px;border-radius:10px;min-height:40px;font:inherit}
+#class3-math-runtime .m3-practical-grid{display:grid;grid-template-columns:repeat(var(--m3-cols),minmax(0,1fr));gap:4px;width:max-content;max-width:100%;margin:15px auto}
+#class3-math-runtime .m3-practical-grid button{width:34px;height:34px;border:1px solid #a5b4fc;border-radius:6px;background:#fff}
+#class3-math-runtime .m3-practical-grid button.selected{background:#8b5cf6;border-color:#6d28d9}
+#class3-math-runtime .m3-practical-msg{padding:11px;border-radius:10px;background:#fff;border:1px solid #bfdbfe;color:#1d4ed8;font-weight:850;margin:10px 0}
+#class3-math-runtime .m3-practical-svg{width:min(100%,460px);display:block;margin:10px auto;border:1px solid #ddd6fe;border-radius:12px;background:#fff}
+#class3-math-runtime .m3-practical-svg [data-action]{cursor:crosshair}
+#class3-math-runtime .m3-practical-symbols{font-size:32px;letter-spacing:4px;line-height:1.7;text-align:center;background:#fff;padding:8px;border:1px solid #ddd6fe;border-radius:14px}
+#class3-math-runtime .m3-practical-calendar{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px;width:min(100%,410px);margin:12px auto}
+#class3-math-runtime .m3-practical-calendar span,#class3-math-runtime .m3-practical-calendar button{display:flex;justify-content:center;align-items:center;min-height:35px;border:1px solid #ddd6fe;background:#fff;border-radius:7px}
+#class3-math-runtime .m3-practical-calendar button.selected{background:#d8b4fe;border-color:#8b5cf6}
+@media(max-width:767px){#class3-math-runtime .m3-guide-grid{grid-template-columns:1fr}#class3-math-runtime .m3-guide-lower{grid-template-columns:1fr}#class3-math-runtime .m3-guide-grid p{font-size:16px}#class3-math-runtime .m3-guide-ctas button{flex:1}#class3-math-runtime .m3-math-grid span{width:21px;height:21px}#class3-math-runtime .m3-practical-grid button{width:30px;height:30px}}
+
+
+#class3-math-runtime .m3-place-value{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:5px;max-width:540px;margin:0 auto}
+#class3-math-runtime .m3-place-value>div{display:flex;flex-direction:column;border:1px solid #c4b5fd;border-radius:10px;overflow:hidden;background:#fff}
+#class3-math-runtime .m3-place-value strong{background:#ede9fe;font-size:16px;min-height:35px;display:flex;align-items:center;justify-content:center;color:#6d28d9;padding:3px}
+#class3-math-runtime .m3-place-value span{font-size:30px;font-weight:950;color:#b91c70}
+#class3-math-runtime .m3-column-calc{margin:0 auto;font-size:26px;line-height:1.45;max-width:200px;text-align:right;font-family:ui-monospace,Consolas,monospace;font-variant-numeric:tabular-nums}
+#class3-math-runtime .m3-column-calc hr{border:0;border-top:3px solid #7c3aed;margin:2px 0}
+/* Khám phá cộng/trừ: các chữ số thẳng hàng, dấu hỏi đỏ; 4 hoặc 5 cột tùy kết quả. */
+#class3-math-runtime .m3-vertical-arithmetic{display:grid;grid-template-columns:34px repeat(var(--m3-vertical-columns),44px);column-gap:10px;row-gap:8px;width:max-content;max-width:100%;margin:1px auto 3px;justify-items:center;align-items:center;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:43px;font-weight:900;line-height:1.1;font-variant-numeric:tabular-nums;color:#334155}
+#class3-math-runtime .m3-vertical-digit,#class3-math-runtime .m3-vertical-result,#class3-math-runtime .m3-vertical-sign{display:flex;align-items:center;justify-content:center;min-width:0;width:100%;height:49px}
+#class3-math-runtime .m3-vertical-sign{color:#ec4899}
+#class3-math-runtime .m3-vertical-line{grid-column:1/-1;width:100%;height:3px;margin:0;border-radius:9px;background:#7c3aed}
+#class3-math-runtime .m3-vertical-result{color:#dc2626;font-weight:950}
+#class3-math-runtime .m3-vertical-result.is-revealed{color:#dc2626}
+@media(max-width:520px){#class3-math-runtime .m3-vertical-arithmetic{grid-template-columns:27px repeat(var(--m3-vertical-columns),minmax(0,34px));column-gap:5px;row-gap:6px;font-size:32px}#class3-math-runtime .m3-vertical-digit,#class3-math-runtime .m3-vertical-result,#class3-math-runtime .m3-vertical-sign{height:38px}}
+
+/* Multiplication: distinguish direct products, two-step expressions and hidden factors. */
+#class3-math-runtime .m3-mul-steps>p:first-child,#class3-math-runtime .m3-mul-unknown>p:first-child{font-size:17px;color:#5b216e;margin:3px 0 10px}
+#class3-math-runtime .m3-mul-next{font-size:22px;font-weight:850;color:#344054;margin:14px auto 4px}
+#class3-math-runtime .m3-mul-unknown{display:grid;gap:7px;justify-items:center}
+#class3-math-runtime .m3-mul-equation{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:11px;color:#344054;font-size:30px;font-weight:950;font-variant-numeric:tabular-nums}
+#class3-math-runtime .m3-mul-equation>strong{color:#dc2626;min-width:24px;text-align:center}
+#class3-math-runtime .m3-mul-answer{color:#dc2626!important}
+#class3-math-runtime .m3-mul-worked{display:grid;gap:3px;padding:7px 12px;margin-top:5px;border-radius:12px;background:#f0fdf4;border:1px solid #86efac;color:#065f46;font-weight:800;font-size:17px}
+#class3-math-runtime .m3-mul-worked p{margin:1px}
+@media(max-width:520px){#class3-math-runtime .m3-mul-next{font-size:19px}#class3-math-runtime .m3-mul-equation{font-size:25px;gap:7px}}
+
+#class3-math-runtime .m3-concept-icons{display:flex;justify-content:center;flex-wrap:wrap;gap:12px}
+#class3-math-runtime .m3-concept-icons span{display:flex;flex-direction:column;min-width:86px;align-items:center;justify-content:center;background:#fff;border:1px solid #c4b5fd;border-radius:14px;padding:12px;font-size:28px;font-weight:900;color:#6d28d9}
+#class3-math-runtime .m3-concept-icons strong{font-size:20px}
+#class3-math-runtime .m3-concept-icons small{font-size:16px;color:#64748b}
+#class3-math-runtime .m3-money-concept span{font-size:20px;background:#ecfdf5;border-color:#86efac}
+#class3-math-runtime .m3-concept-steps{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;font-size:25px;font-weight:900;color:#6d28d9}
+
 @media(prefers-reduced-motion:reduce){#class3-math-runtime *,#class3-math-runtime *:before{animation:none!important;transition:none!important}#class3-math-runtime .m3-folder:hover .m3-folder-icon{transform:none!important}}
 `;
 })();
