@@ -26,7 +26,7 @@
     ['Một phần mấy & gấp, giảm','🍰','Phân số đơn vị, gấp giảm và so sánh'],
     ['Toán có lời văn','📝','Hai bước tính, rút về đơn vị, mua bán'],
     ['Hình học, dữ liệu & xác suất','📊','Chu vi, diện tích, bảng số liệu, khả năng'],
-    ['Ôn tập Khám phá','📚','Chờ bổ sung ngân hàng câu hỏi mục 11'],
+    ['Toán nâng cao','🌟','Suy luận, tìm quy luật và giải toán sáng tạo'],
     ['Math Lab – Toán tư duy Mỹ','✨','Mô hình, khám phá và nhiều cách giải']
   ];
   const GAMES = [
@@ -66,7 +66,14 @@
   const authenticated = () => !!(ctx?.isAuthenticated && ctx?.user?.userId);
   const notice = (txt) => ctx?.hooks?.showToast?.(str(txt));
   const dialog = (txt) => ctx?.hooks?.showDialog?.({title:'Toán 3 thông báo',message:str(txt),icon:'🐝'});
-  const detail = (title) => ctx?.hooks?.setDetail?.(title || '');
+  // The shared shell owns the breadcrumb UI; use the existing structured-detail hook.
+  const detail = (value) => {
+    const hooks=ctx?.hooks;
+    if(typeof hooks?.setDetail!=='function')return;
+    if(value&&typeof value==='object'){
+      hooks.setDetail(hooks.supportsStructuredDetail===true?value:str(value.title));
+    }else hooks.setDetail(value||'');
+  };
   const clearDetail = () => ctx?.hooks?.clearDetail?.();
   const safeName = () => ctx?.user?.name || 'Bé';
   const api = async (action,payload={}) => {
@@ -152,7 +159,32 @@
   }
   function stopTimer() {if(timer){window.clearInterval(timer);timer=0;}}
   function cleanView() {if(learningQueue.length)void flushLearning();stopSpeech();stopTimer();stopGame();quiz=null;labHintLevel=0;ctx?.hooks?.setScore?.(0,0);}
-  function setPage(tab,view,other={}) {page={tab,view,...other};detail(view==='hub'?'':(other.title||LABELS[tab]));}
+  function setPage(tab,view,other={}) {
+    page={tab,view,...other};
+    if(view==='hub'){clearDetail();return;}
+    if(tab!=='discover'){detail(other.title||LABELS[tab]);return;}
+    const topic=n(page.topic);
+    if(topic<1||topic>TOPICS.length){detail(other.title||LABELS[tab]);return;}
+
+    // Three native subbanner levels: Explore > main topic > learning subtopic.
+    // Parent breadcrumb tabs navigate back through the Math module, not the Home page.
+    const items=[
+      {title:'Khám phá',action:()=>{void showHub('discover');}},
+      {title:`${topic}. ${TOPICS[topic-1][0]}`,
+        action:(topic===12?view!=='lab-home':view!=='topic')
+          ?()=>{void (topic===12?showLabHome():showDiscoverTopic(topic));}:null}
+    ];
+    if(topic<=11 && page.sub!=null && (view==='quiz'||view==='result')){
+      items.push({title:str(page.title)||`${page.sub}. Mục học`,
+        action:view==='result'?()=>{void showDiscoverSub(topic,page.sub);}:null});
+    }else if(topic===12 && (view==='lab-track'||view==='lab-activity')){
+      const labTitle=str(page.labTitle||currentLab?.title||page.title);
+      if(labTitle)items.push({title:labTitle,
+        action:view==='lab-activity'?()=>{void showLabTrack(page.code);}:null});
+      if(view==='lab-activity'&&page.title)items.push({title:str(page.title)});
+    }
+    detail({title:items.map(item=>item.title).join(' › '),items});
+  }
   function validLive(nonce) {return live && !!root?.isConnected && nonce===renderNonce;}
   function loading() {if(root)root.innerHTML='<div class="m3-loading"><span class="m3-spinner"></span>Đang tải nội dung Toán 3…</div>';}
   function errorView(err) {if(!root)return;root.innerHTML=`<div class="m3-empty">Không mở được dữ liệu Toán 3. ${e(err?.message||'Vui lòng thử lại.')}</div>`;}
@@ -162,14 +194,14 @@
       <span class="m3-folder-head"><span class="m3-folder-icon" aria-hidden="true">${e(icon)}</span><span class="m3-folder-copy"><strong>${e(title)}</strong><small>${e(desc)}</small></span></span>
       <span class="m3-folder-foot"><span>${e(foot)}</span><span>${locked?'🔒':'➜'}</span></span></button>`;
   }
-  function list(items) {return `<div class="m3-folder-grid">${items.join('')}</div>`;}
+  function list(items, extraClass='') {return `<div class="m3-folder-grid${extraClass?' '+extraClass:''}">${items.join('')}</div>`;}
   function roleLabel() {return ctx?.accessType==='admin'?'Admin':ctx?.accessType==='vip'?'VIP':ctx?.accessType==='trial'?'Trial':'Regular / Khách';}
   async function showHub(tab) {
     const nonce=++renderNonce;cleanView();setPage(tab,'hub');loading();
     try {
       let html='', title=LABELS[tab]||'Toán 3', subtitle='Lớp 3 · Kết nối tri thức với cuộc sống';
       if(tab==='discover'){
-        html=list(TOPICS.map((x,i)=>folder(`${i+1}. ${x[0]}`,x[2],x[1],i===11?'lab-home':'discover-topic',`data-topic="${i+1}"`,i===10?'Chờ cập nhật':i===11?'9 Lab · 88 hành trình':'50 câu / mục nhỏ',i===10)));
+        html=list(TOPICS.map((x,i)=>folder(`${i+1}. ${x[0]}`,x[2],x[1],i===11?'lab-home':'discover-topic',`data-topic="${i+1}"`,i===11?'9 Lab · 88 hành trình':'50 câu / mục nhỏ')));
       } else if(tab==='lessons'){
         const d=await load('lessons');if(!validLive(nonce))return;
         html=`<div class="m3-semesters"><button class="m3-sem ${chosenSemester===2?'':'active'}" data-action="semester" data-sem="1">Học kỳ 1</button><button class="m3-sem ${chosenSemester===2?'active':''}" data-action="semester" data-sem="2">Học kỳ 2</button></div>`;
@@ -201,20 +233,19 @@
     } catch(err){if(validLive(nonce))errorView(err);}
   }
   async function showDiscoverTopic(topic) {
-    if(topic===11) {dialog('Mục 11 Khám phá sẽ được bổ sung sau.');return;}
     if(topic===12) return showLabHome();
-    const nonce=++renderNonce;setPage('discover','topic',{topic,title:`${topic}. ${TOPICS[topic-1][0]}`});loading();
+    const nonce=++renderNonce;cleanView();setPage('discover','topic',{topic,title:`${topic}. ${TOPICS[topic-1][0]}`});loading();
     try {
       const d=topic<=5?await load('discover1'):await load('discover2');if(!validLive(nonce))return;
       const grouped=new Map();arr(d).forEach(q=>{const parts=/^Q_(\d+)_(\d+)_/.exec(str(q.id));if(n(parts?.[1])!==topic)return;const id=parts[2];if(!grouped.has(id))grouped.set(id,{id,name:q.sub,items:[]});grouped.get(id).items.push(q);});
-      root.innerHTML=head(`${topic}. ${TOPICS[topic-1][0]}`,'Chọn mục nhỏ để học và trả lời từng câu')+list([...grouped.values()].map((item,i)=>folder(`${topic}.${item.id} ${item.name}`,`${item.items.length} câu hỏi`,'📚','discover-sub',`data-topic="${topic}" data-sub="${e(item.id)}"`,'Bắt đầu')));
+      root.innerHTML=head(`${topic}. ${TOPICS[topic-1][0]}`,'Chọn mục nhỏ để học và trả lời từng câu')+list([...grouped.values()].map((item,i)=>folder(`${item.id}. ${item.name}`,`${item.items.length} câu hỏi`,'📚','discover-sub',`data-topic="${topic}" data-sub="${e(item.id)}"`,'Bắt đầu')),'m3-discover-sub-grid');
     } catch(err){if(validLive(nonce))errorView(err);}
   }
   async function showDiscoverSub(topic,sub) {
     const d=topic<=5?await load('discover1'):await load('discover2');
     const source=arr(d).filter(q=>{const p=/^Q_(\d+)_(\d+)_/.exec(str(q.id));return n(p?.[1])===topic&&str(p?.[2])===str(sub);});
     if(!source.length) return dialog('Chưa có câu hỏi cho mục này.');
-    startLocalQuiz('discover',source,`${topic}.${sub} ${source[0].sub}`,{topic,sub});
+    startLocalQuiz('discover',source,`${sub}. ${source[0].sub}`,{topic,sub});
   }
   function makeQuestion(q,source='generic') {
     if(source==='exam') return {id:str(q.question_id),q:q.question_text,o:q.options,a:q.answer,h:q.hint,skill:q.competency||q.skill_tag,score:n(q.score)};
@@ -308,7 +339,8 @@
   function showLocalResult() {
     if(!quiz)return;
     const q=quiz,score=countRight();
-    cleanView();setPage(q.kind,'result',{title:q.title});
+    const location=q.kind==='discover'?{topic:page.topic,sub:page.sub}:{};
+    cleanView();setPage(q.kind,'result',{title:q.title,...location});
     root.innerHTML=head('Kết quả luyện tập',q.title)+`<section class="m3-result"><div class="m3-medal">🌟</div><h3>${score} / ${q.questions.length} câu đúng</h3><p>Bé có thể làm lại để hiểu hơn. Kết quả luyện tập này không mở khóa Bài tập chính thức.</p><button class="m3-submit" data-action="back" data-target="hub">Quay lại</button></section>`;
   }
   async function getProgress(force=false) {
@@ -384,13 +416,13 @@
     const nonce=++renderNonce;stopSpeech();loading();
     try {
       const d=await load('lab');if(!validLive(nonce))return;
-      setPage('discover','lab-home',{title:'12. Math Lab'});
+      setPage('discover','lab-home',{topic:12,title:'12. Math Lab'});
       root.innerHTML=head('12. Math Lab – Toán tư duy Mỹ','9 Lab · 88 hành trình · 352 hoạt động')+list(arr(d.labs).map(l=>folder(l.title,l.subtitle,'✨','lab-track',`data-id="${e(l.display_code)}"`,`${arr(l.journeys).length} hành trình`)));
     } catch(err){if(validLive(nonce))errorView(err);}
   }
   async function showLabTrack(code) {
     const d=await load('lab'),lab=arr(d.labs).find(l=>l.display_code===code);if(!lab)return;
-    currentLab=lab;setPage('discover','lab-track',{code,title:lab.title});
+    currentLab=lab;setPage('discover','lab-track',{topic:12,code,labTitle:lab.title,title:lab.title});
     const saved=labSaved();
     root.innerHTML=head(lab.title,lab.subtitle||'Các hành trình theo SGK')+list(arr(lab.journeys).map((j,i)=>{
       const done=arr(j.activities).filter(a=>saved[a.id]).length;
@@ -472,7 +504,7 @@
   function showJourney(index,activity=0) {
     if(!currentLab?.journeys?.[index])return;
     currentJourney=currentLab.journeys[index];labHintLevel=0;
-    page={tab:'discover',view:'lab-activity',code:currentLab.display_code,journeyIndex:index,activity,title:currentJourney.title};
+    setPage('discover','lab-activity',{topic:12,code:currentLab.display_code,labTitle:currentLab.title,journeyIndex:index,activity,title:currentJourney.title});
     renderLabActivity();
   }
   function renderLabActivity() {
@@ -520,7 +552,7 @@
 
   async function navigateBack() {
     if(!page||page.view==='hub') return showHub(page?.tab||'discover');
-    if(page.view==='topic'||(page.view==='quiz'&&page.tab==='discover')) return page.view==='topic'?showHub('discover'):showDiscoverTopic(page.topic);
+    if(page.view==='topic'||((page.view==='quiz'||page.view==='result')&&page.tab==='discover')) return page.view==='topic'?showHub('discover'):showDiscoverTopic(page.topic);
     if(page.view==='lab-activity')return showLabTrack(page.code);
     if(page.view==='lab-track')return showLabHome();
     if(page.view==='category')return showHub('exams');
@@ -623,6 +655,7 @@
 #class3-math-runtime .m3-back,#class3-math-runtime .m3-small{min-height:40px;padding:9px 15px;border:1px solid #c4b5fd;border-radius:13px;color:#6d28d9;background:#faf5ff;font-size:15px;font-weight:900;flex-shrink:0}
 #class3-math-runtime .m3-back:hover,#class3-math-runtime .m3-small:hover{background:#f3e8ff;border-color:#8b5cf6}
 #class3-math-runtime .m3-folder-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:12px}
+#class3-math-runtime .m3-folder-grid.m3-discover-sub-grid{grid-template-columns:repeat(2,minmax(0,1fr));width:100%}
 #class3-math-runtime .m3-folder{--m3-br:#f9a8d4;--m3-icon-bg:#ffe0ed;min-height:142px;text-align:left;border:1px solid var(--m3-br);background:linear-gradient(135deg,#fff8fc,#fbf4ff);border-radius:20px;padding:14px;display:flex;flex-direction:column;justify-content:space-between;gap:12px;box-shadow:0 4px 14px rgba(76,29,149,.055);transform:none!important;translate:none!important;transition:border-color .18s ease,box-shadow .18s ease,filter .18s ease!important}
 #class3-math-runtime .m3-folder:nth-child(6n+2){--m3-br:#86efac;--m3-icon-bg:#dcfce7;background:linear-gradient(135deg,#f7fffc,#ecfdf5)}
 #class3-math-runtime .m3-folder:nth-child(6n+3){--m3-br:#c4b5fd;--m3-icon-bg:#ede9fe;background:linear-gradient(135deg,#fdfaff,#f5f3ff)}
@@ -641,6 +674,9 @@
 #class3-math-runtime .m3-folder-copy{min-width:0;flex:1}
 #class3-math-runtime .m3-folder-copy strong{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;color:#5b216e;font-size:19px;font-weight:950;line-height:1.28}
 #class3-math-runtime .m3-folder-copy small{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;color:#475467;font-size:15px;font-weight:750;margin-top:6px;line-height:1.4}
+#class3-math-runtime .m3-folder-grid.m3-discover-sub-grid .m3-folder{min-height:178px}
+#class3-math-runtime .m3-folder-grid.m3-discover-sub-grid .m3-folder-copy strong{-webkit-line-clamp:4;line-clamp:4;overflow:visible}
+#class3-math-runtime .m3-folder-grid.m3-discover-sub-grid .m3-folder-copy small{-webkit-line-clamp:3;line-clamp:3;overflow:visible}
 #class3-math-runtime .m3-folder-foot{display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(124,58,237,.12);padding-top:7px;font-size:14px;font-weight:900;color:#7c3aed}
 #class3-math-runtime .m3-folder.is-locked{background:#f8fafc;border-color:#cbd5e1}
 #class3-math-runtime .m3-question-card,#class3-math-runtime .m3-paper,#class3-math-runtime .m3-result{border:1px solid #e9d5ff;border-radius:20px;padding:clamp(12px,2vw,24px);background:#fff;box-shadow:0 4px 15px rgba(76,29,149,.055)}
@@ -706,7 +742,8 @@
 #class3-math-runtime .m3-history article{border:1px solid #ddd6fe;background:#fff;border-radius:14px;padding:12px}
 #class3-math-runtime .m3-clock{font-weight:950;color:#be185d}
 @keyframes m3spin{to{transform:rotate(360deg)}}
-@media(max-width:767px){#class3-math-runtime .m3-folder-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}#class3-math-runtime .m3-folder{padding:10px;min-height:132px;border-radius:16px}#class3-math-runtime .m3-folder-head{flex-direction:column;gap:7px}#class3-math-runtime .m3-folder-icon{width:52px;height:52px;flex:0 0 52px;font-size:31px}#class3-math-runtime .m3-folder-copy strong{font-size:17px}#class3-math-runtime .m3-folder-copy small{font-size:14px}#class3-math-runtime .m3-section-header{flex-direction:column}#class3-math-runtime .m3-options{grid-template-columns:1fr}#class3-math-runtime .m3-choice{font-size:17px;min-height:58px}#class3-math-runtime .m3-quiz-nav{grid-template-columns:minmax(0,1fr) 76px minmax(0,1fr);gap:5px}#class3-math-runtime .m3-nav,#class3-math-runtime .m3-count{font-size:14px;padding:7px 5px}}
+@media(min-width:768px) and (max-width:950px){#class3-math-runtime .m3-folder-grid.m3-discover-sub-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:767px){#class3-math-runtime .m3-folder-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}#class3-math-runtime .m3-folder{padding:10px;min-height:132px;border-radius:16px}#class3-math-runtime .m3-folder-head{flex-direction:column;gap:7px}#class3-math-runtime .m3-folder-icon{width:52px;height:52px;flex:0 0 52px;font-size:31px}#class3-math-runtime .m3-folder-copy strong{font-size:17px}#class3-math-runtime .m3-folder-copy small{font-size:14px}#class3-math-runtime .m3-folder-grid.m3-discover-sub-grid{grid-template-columns:1fr}#class3-math-runtime .m3-folder-grid.m3-discover-sub-grid .m3-folder{min-height:auto}#class3-math-runtime .m3-section-header{flex-direction:column}#class3-math-runtime .m3-options{grid-template-columns:1fr}#class3-math-runtime .m3-choice{font-size:17px;min-height:58px}#class3-math-runtime .m3-quiz-nav{grid-template-columns:minmax(0,1fr) 76px minmax(0,1fr);gap:5px}#class3-math-runtime .m3-nav,#class3-math-runtime .m3-count{font-size:14px;padding:7px 5px}}
 @media(prefers-reduced-motion:reduce){#class3-math-runtime *,#class3-math-runtime *:before{animation:none!important;transition:none!important}#class3-math-runtime .m3-folder:hover .m3-folder-icon{transform:none!important}}
 `;
 })();
