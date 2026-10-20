@@ -12,13 +12,7 @@
     "a": "1362",
     "h": "Chào em! Cô giáo Ong Vàng 🐝 gợi ý: Em hãy viết ghép các chữ số theo thứ tự từ hàng nghìn, hàng trăm, hàng chục đến hàng đơn vị nhé!",
     "w": 1,
-    "tag": "TOAN3_C1",
-    "illustration": {
-      "kind": "emoji",
-      "emoji": "🔢",
-      "caption": "Biểu tượng giới thiệu nhóm kiến thức, không dùng làm dữ kiện của câu hỏi.",
-      "role": "topic_cover"
-    }
+    "tag": "TOAN3_C1"
   },
   {
     "id": "Q_1_1_2",
@@ -768,13 +762,7 @@
     "a": "4120, 4170, 4220, 4270",
     "h": "Bé yêu ơi! Cô giáo Ong Vàng 🐝 khuyên em hãy so sánh chữ số hàng nghìn trước, nếu bằng nhau thì so sánh tiếp hàng trăm, hàng chục và hàng đơn vị để tìm dãy số tăng dần nhé!",
     "w": 9,
-    "tag": "TOAN3_C1",
-    "illustration": {
-      "kind": "emoji",
-      "emoji": "↕️",
-      "caption": "Biểu tượng giới thiệu nhóm kiến thức, không dùng làm dữ kiện của câu hỏi.",
-      "role": "topic_cover"
-    }
+    "tag": "TOAN3_C1"
   },
   {
     "id": "Q_1_2_2",
@@ -1524,13 +1512,7 @@
     "a": "2500",
     "h": "Cô Ong Vàng thấy rằng chữ số hàng chục là 5. Nếu hàng chục từ 5 trở lên thì cộng thêm 1 vào hàng trăm, nếu dưới 5 thì giữ nguyên hàng trăm nha!",
     "w": 9,
-    "tag": "TOAN3_C1",
-    "illustration": {
-      "kind": "emoji",
-      "emoji": "🎯",
-      "caption": "Biểu tượng giới thiệu nhóm kiến thức, không dùng làm dữ kiện của câu hỏi.",
-      "role": "topic_cover"
-    }
+    "tag": "TOAN3_C1"
   },
   {
     "id": "Q_1_3_2",
@@ -2280,13 +2262,7 @@
     "a": "2",
     "h": "Em nhớ quy tắc viết chữ số La Mã nhé: I là 1, V là 5, X là 10. Cô Ong Vàng tin em sẽ ghép đúng!",
     "w": 13,
-    "tag": "TOAN3_C1",
-    "illustration": {
-      "kind": "emoji",
-      "emoji": "🏛️",
-      "caption": "Biểu tượng giới thiệu nhóm kiến thức, không dùng làm dữ kiện của câu hỏi.",
-      "role": "topic_cover"
-    }
+    "tag": "TOAN3_C1"
   },
   {
     "id": "Q_1_4_2",
@@ -3036,13 +3012,7 @@
     "a": "4855",
     "h": "Hãy đặt tính thẳng cột từ hàng đơn vị sang hàng nghìn nha. Cô Ong Vàng nhắc em nhớ cộng thêm phần có nhớ (nếu có) nhé!",
     "w": 10,
-    "tag": "TOAN3_C2",
-    "illustration": {
-      "kind": "emoji",
-      "emoji": "➕",
-      "caption": "Biểu tượng giới thiệu nhóm kiến thức, không dùng làm dữ kiện của câu hỏi.",
-      "role": "topic_cover"
-    }
+    "tag": "TOAN3_C2"
   },
   {
     "id": "Q_2_1_2",
@@ -3792,13 +3762,7 @@
     "a": "5150",
     "h": "Thật đơn giản phải không nào! Em chỉ cần cộng chữ số hàng nghìn lại với nhau và giữ nguyên ba chữ số 0 ở sau thôi nè!",
     "w": 10,
-    "tag": "TOAN3_C2",
-    "illustration": {
-      "kind": "emoji",
-      "emoji": "➕",
-      "caption": "Biểu tượng giới thiệu nhóm kiến thức, không dùng làm dữ kiện của câu hỏi.",
-      "role": "topic_cover"
-    }
+    "tag": "TOAN3_C2"
   },
   {
     "id": "Q_2_2_2",
@@ -4548,13 +4512,7 @@
     "a": "545",
     "h": "Cô Ong Vàng mách nhỏ: Muốn tìm số hạng chưa biết, em lấy tổng trừ đi số hạng đã biết nhé!",
     "w": null,
-    "tag": "TOAN3_C2",
-    "illustration": {
-      "kind": "emoji",
-      "emoji": "⚡",
-      "caption": "Biểu tượng giới thiệu nhóm kiến thức, không dùng làm dữ kiện của câu hỏi.",
-      "role": "topic_cover"
-    }
+    "tag": "TOAN3_C2"
   },
   {
     "id": "Q_2_3_2",
@@ -5304,13 +5262,7 @@
     "a": "528",
     "h": "Em hãy thực hiện nhân lần lượt từ phải sang trái (bắt đầu từ chữ số hàng đơn vị) cùng Cô giáo Ong Vàng nha!",
     "w": 4,
-    "tag": "TOAN3_C2",
-    "illustration": {
-      "kind": "emoji",
-      "emoji": "✖️",
-      "caption": "Biểu tượng giới thiệu nhóm kiến thức, không dùng làm dữ kiện của câu hỏi.",
-      "role": "topic_cover"
-    }
+    "tag": "TOAN3_C2"
   },
   {
     "id": "Q_3_1_2",
@@ -6060,13 +6012,7 @@
     "a": "45",
     "h": "Hãy chia lần lượt từ trái sang phải, bắt đầu từ chữ số hàng cao nhất của số bị chia nha em yêu!",
     "w": 7,
-    "tag": "TOAN3_C2",
-    "illustration": {
-      "kind": "emoji",
-      "emoji": "➗",
-      "caption": "Biểu tượng giới thiệu nhóm kiến thức, không dùng làm dữ kiện của câu hỏi.",
-      "role": "topic_cover"
-    }
+    "tag": "TOAN3_C2"
   },
   {
     "id": "Q_3_2_2",
@@ -6816,13 +6762,7 @@
     "a": "6000",
     "h": "Em chỉ cần lấy chữ số ở hàng nghìn nhân với 2, rồi thêm ba chữ số 0 vào sau kết quả thôi nè!",
     "w": null,
-    "tag": "TOAN3_C2",
-    "illustration": {
-      "kind": "emoji",
-      "emoji": "⚡",
-      "caption": "Biểu tượng giới thiệu nhóm kiến thức, không dùng làm dữ kiện của câu hỏi.",
-      "role": "topic_cover"
-    }
+    "tag": "TOAN3_C2"
   },
   {
     "id": "Q_3_3_2",
@@ -7572,13 +7512,7 @@
     "a": "6 cm",
     "h": "Bé ơi, trung điểm chia đoạn thẳng thành hai phần bằng nhau. Em lấy độ dài đoạn AB chia cho 2 là ra AM ngay!",
     "w": 3,
-    "tag": "TOAN3_C1",
-    "illustration": {
-      "kind": "emoji",
-      "emoji": "📍",
-      "caption": "Biểu tượng giới thiệu nhóm kiến thức, không dùng làm dữ kiện của câu hỏi.",
-      "role": "topic_cover"
-    }
+    "tag": "TOAN3_C1"
   },
   {
     "id": "Q_4_1_2",
@@ -8328,13 +8262,7 @@
     "a": "8 cm",
     "h": "Chào em! Cô Ong Vàng nhắc em: Trong một hình tròn, độ dài đường kính luôn gấp 2 lần độ dài bán kính đấy nhé!",
     "w": 17,
-    "tag": "TOAN3_C1",
-    "illustration": {
-      "kind": "emoji",
-      "emoji": "⭕",
-      "caption": "Biểu tượng giới thiệu nhóm kiến thức, không dùng làm dữ kiện của câu hỏi.",
-      "role": "topic_cover"
-    }
+    "tag": "TOAN3_C1"
   },
   {
     "id": "Q_4_2_2",
@@ -9084,13 +9012,7 @@
     "a": "4 góc vuông",
     "h": "Góc vuông là góc có số đo bằng 90 độ, dùng ê-ke kiểm tra sẽ thấy hình chữ nhật luôn có đúng 4 góc vuông ở 4 đỉnh nha!",
     "w": null,
-    "tag": "TOAN3_C1",
-    "illustration": {
-      "kind": "emoji",
-      "emoji": "📐",
-      "caption": "Biểu tượng giới thiệu nhóm kiến thức, không dùng làm dữ kiện của câu hỏi.",
-      "role": "topic_cover"
-    }
+    "tag": "TOAN3_C1"
   },
   {
     "id": "Q_4_3_2",
@@ -9840,15 +9762,7 @@
     "a": "8 đỉnh và 6 mặt",
     "h": "Em hãy tưởng tượng một chiếc hộp giấy nhé! Hộp có 4 đỉnh ở trên, 4 đỉnh ở dưới (tổng cộng 8 đỉnh) và xung quanh có 6 mặt phẳng nha!",
     "w": null,
-    "tag": "TOAN3_C1",
-    "illustration": {
-      "kind": "catalog_image",
-      "imageId": "do_choi_lap_ghep",
-      "src": "assets/images/Do choi/do-choi-lap-ghep.jpg",
-      "alt": "Bạn nhỏ lắp ghép ngôi nhà bằng các khối màu",
-      "caption": "Quan sát các khối ghép trong đời sống.",
-      "role": "topic_cover"
-    }
+    "tag": "TOAN3_C1"
   },
   {
     "id": "Q_4_4_2",
@@ -10598,13 +10512,7 @@
     "a": "80 mm",
     "h": "Mỗi xăng-ti-mét (cm) bằng 10 mi-li-mét (mm). Cô Ong Vàng chúc em đổi đơn vị thật chính xác!",
     "w": 3,
-    "tag": "TOAN3_C3",
-    "illustration": {
-      "kind": "emoji",
-      "emoji": "📏",
-      "caption": "Biểu tượng giới thiệu nhóm kiến thức, không dùng làm dữ kiện của câu hỏi.",
-      "role": "topic_cover"
-    }
+    "tag": "TOAN3_C3"
   },
   {
     "id": "Q_5_1_2",
@@ -11354,13 +11262,7 @@
     "a": "3 kg",
     "h": "Em nhớ công thức này nhé: 1 kg = 1000 g. Vì vậy 3000 g sẽ bằng 3 kg đấy!",
     "w": 18,
-    "tag": "TOAN3_C3",
-    "illustration": {
-      "kind": "emoji",
-      "emoji": "⚖️",
-      "caption": "Biểu tượng giới thiệu nhóm kiến thức, không dùng làm dữ kiện của câu hỏi.",
-      "role": "topic_cover"
-    }
+    "tag": "TOAN3_C3"
   },
   {
     "id": "Q_5_2_2",
@@ -12110,13 +12012,7 @@
     "a": "26°C",
     "h": "Vạch màu đỏ trên nhiệt kế dừng lại ở số nào thì đó chính là nhiệt độ thực tế của phòng đó em yêu!",
     "w": null,
-    "tag": "TOAN3_C3",
-    "illustration": {
-      "kind": "emoji",
-      "emoji": "🌡️",
-      "caption": "Biểu tượng giới thiệu nhóm kiến thức, không dùng làm dữ kiện của câu hỏi.",
-      "role": "topic_cover"
-    }
+    "tag": "TOAN3_C3"
   },
   {
     "id": "Q_5_3_2",
@@ -12866,15 +12762,7 @@
     "a": "8 giờ 25 phút",
     "h": "Kim ngắn chỉ giờ, kim dài chỉ phút. Mỗi khoảng cách số trên mặt đồng hồ tương ứng với 5 phút nha!",
     "w": 14,
-    "tag": "TOAN3_C3",
-    "illustration": {
-      "kind": "catalog_image",
-      "imageId": "do_vat_alarm_clock",
-      "src": "assets/images/Do vat/do_vat_alarm_clock.jpg",
-      "alt": "Đồng hồ báo thức tròn màu xanh dương",
-      "caption": "Ảnh minh họa một đồng hồ; không lấy giờ trên ảnh thay dữ kiện câu hỏi.",
-      "role": "topic_cover"
-    }
+    "tag": "TOAN3_C3"
   },
   {
     "id": "Q_5_4_2",

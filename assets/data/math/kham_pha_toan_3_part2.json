@@ -12,13 +12,7 @@
     "a": "32",
     "h": "Cô Ong Vàng nhắc bé: Trong biểu thức có cả phép cộng và phép nhân, em phải ưu tiên làm phép nhân trước nhé!",
     "w": 7,
-    "tag": "TOAN3_C4",
-    "illustration": {
-      "kind": "emoji",
-      "emoji": "🧮",
-      "caption": "Biểu tượng giới thiệu nhóm kiến thức, không dùng làm dữ kiện của câu hỏi.",
-      "role": "topic_cover"
-    }
+    "tag": "TOAN3_C4"
   },
   {
     "id": "Q_6_1_2",
@@ -768,13 +762,7 @@
     "a": "30",
     "h": "Khi biểu thức có chứa dấu ngoặc đơn, em hãy thực hiện phép tính trong ngoặc trước tiên rồi mới nhân sau nha!",
     "w": 15,
-    "tag": "TOAN3_C4",
-    "illustration": {
-      "kind": "emoji",
-      "emoji": "🧮",
-      "caption": "Biểu tượng giới thiệu nhóm kiến thức, không dùng làm dữ kiện của câu hỏi.",
-      "role": "topic_cover"
-    }
+    "tag": "TOAN3_C4"
   },
   {
     "id": "Q_6_2_2",
@@ -1524,13 +1512,7 @@
     "a": "130",
     "h": "Nhìn xem, mỗi số trong dãy đều bằng số đứng trước nó cộng thêm 5. Số tiếp theo sẽ là 125 + 5 nhé!",
     "w": null,
-    "tag": "TOAN3_C4",
-    "illustration": {
-      "kind": "emoji",
-      "emoji": "🔁",
-      "caption": "Biểu tượng giới thiệu nhóm kiến thức, không dùng làm dữ kiện của câu hỏi.",
-      "role": "topic_cover"
-    }
+    "tag": "TOAN3_C4"
   },
   {
     "id": "Q_6_3_2",
@@ -2280,13 +2262,7 @@
     "a": "130",
     "h": "Muốn tìm số trừ x, em hãy lấy số bị trừ 300 trừ đi hiệu số là 170 nha!",
     "w": 1,
-    "tag": "TOAN3_C4",
-    "illustration": {
-      "kind": "emoji",
-      "emoji": "❓",
-      "caption": "Biểu tượng giới thiệu nhóm kiến thức, không dùng làm dữ kiện của câu hỏi.",
-      "role": "topic_cover"
-    }
+    "tag": "TOAN3_C4"
   },
   {
     "id": "Q_7_1_2",
@@ -3036,13 +3012,7 @@
     "a": "6",
     "h": "Cô Ong Vàng khuyên em lấy tích số là 36 chia cho thừa số đã biết là 6 để tìm x nhé!",
     "w": 16,
-    "tag": "TOAN3_C4",
-    "illustration": {
-      "kind": "emoji",
-      "emoji": "❓",
-      "caption": "Biểu tượng giới thiệu nhóm kiến thức, không dùng làm dữ kiện của câu hỏi.",
-      "role": "topic_cover"
-    }
+    "tag": "TOAN3_C4"
   },
   {
     "id": "Q_7_2_2",
@@ -3792,13 +3762,7 @@
     "a": "11",
     "h": "Em hãy tìm giá trị của tích (x x 2) trước bằng cách lấy 27 trừ đi 5, sau đó mới chia cho 2 để tìm x nhé!",
     "w": 23,
-    "tag": "TOAN3_C4",
-    "illustration": {
-      "kind": "emoji",
-      "emoji": "🧩",
-      "caption": "Biểu tượng giới thiệu nhóm kiến thức, không dùng làm dữ kiện của câu hỏi.",
-      "role": "topic_cover"
-    }
+    "tag": "TOAN3_C4"
   },
   {
     "id": "Q_7_3_2",
@@ -4548,13 +4512,7 @@
     "a": "Hình chia thành 4 phần bằng nhau và tô màu 1 phần",
     "h": "Một phần 4 nghĩa là hình đó phải được chia thành đúng 4 phần bằng nhau và người ta đã tô màu đúng 1 phần em nhé!",
     "w": null,
-    "tag": "TOAN3_C5",
-    "illustration": {
-      "kind": "emoji",
-      "emoji": "🍰",
-      "caption": "Biểu tượng giới thiệu nhóm kiến thức, không dùng làm dữ kiện của câu hỏi.",
-      "role": "topic_cover"
-    }
+    "tag": "TOAN3_C5"
   },
   {
     "id": "Q_8_1_2",
@@ -5304,13 +5262,7 @@
     "a": "24 quả",
     "h": "Để gấp một số lên nhiều lần, em lấy số đó nhân với số lần (8 nhân với 3) nha!",
     "w": 19,
-    "tag": "TOAN3_C5",
-    "illustration": {
-      "kind": "emoji",
-      "emoji": "✖️",
-      "caption": "Biểu tượng giới thiệu nhóm kiến thức, không dùng làm dữ kiện của câu hỏi.",
-      "role": "topic_cover"
-    }
+    "tag": "TOAN3_C5"
   },
   {
     "id": "Q_8_2_2",
@@ -6060,13 +6012,7 @@
     "a": "4 lần",
     "h": "Lấy 12 : 3 = 4 (lần).",
     "w": null,
-    "tag": "TOAN3_C5",
-    "illustration": {
-      "kind": "emoji",
-      "emoji": "➗",
-      "caption": "Biểu tượng giới thiệu nhóm kiến thức, không dùng làm dữ kiện của câu hỏi.",
-      "role": "topic_cover"
-    }
+    "tag": "TOAN3_C5"
   },
   {
     "id": "Q_8_3_2",
@@ -6816,13 +6762,7 @@
     "a": "7 kg",
     "h": "Muốn tìm một phần năm của một số, em chỉ cần lấy số đó chia cho 5 thui nè!",
     "w": 4,
-    "tag": "TOAN3_C5",
-    "illustration": {
-      "kind": "emoji",
-      "emoji": "🍎",
-      "caption": "Biểu tượng giới thiệu nhóm kiến thức, không dùng làm dữ kiện của câu hỏi.",
-      "role": "topic_cover"
-    }
+    "tag": "TOAN3_C5"
   },
   {
     "id": "Q_8_4_2",
@@ -7572,13 +7512,7 @@
     "a": "44 quả",
     "h": "Chào em! Bước 1 em hãy tìm số táo trước (lấy 17 + 10). Bước 2 em cộng số cam ban đầu với số táo vừa tìm được nhé!",
     "w": 8,
-    "tag": "TOAN3_C5",
-    "illustration": {
-      "kind": "emoji",
-      "emoji": "🧩",
-      "caption": "Biểu tượng giới thiệu nhóm kiến thức, không dùng làm dữ kiện của câu hỏi.",
-      "role": "topic_cover"
-    }
+    "tag": "TOAN3_C5"
   },
   {
     "id": "Q_9_1_2",
@@ -8328,13 +8262,7 @@
     "a": "35 cái bút",
     "h": "Mỗi hộp có 28 : 4 = 7 cái bút; 5 hộp có 7 × 5 = 35 cái bút.",
     "w": 19,
-    "tag": "TOAN3_C5",
-    "illustration": {
-      "kind": "emoji",
-      "emoji": "🧩",
-      "caption": "Biểu tượng giới thiệu nhóm kiến thức, không dùng làm dữ kiện của câu hỏi.",
-      "role": "topic_cover"
-    }
+    "tag": "TOAN3_C5"
   },
   {
     "id": "Q_9_2_2",
@@ -9084,15 +9012,7 @@
     "a": "3500 đồng",
     "h": "Tổng tiền mua hàng là 3 × 2 500 = 7 500 đồng. Tiền thừa là 11 000 − 7 500 = 3 500 đồng.",
     "w": 19,
-    "tag": "TOAN3_C5",
-    "illustration": {
-      "kind": "catalog_image",
-      "imageId": "cua_hang_tap_hoa",
-      "src": "assets/images/Noi chon/cua_hang_tap_hoa.jpg",
-      "alt": "Cửa hàng tạp hóa",
-      "caption": "Ảnh minh họa cửa hàng, giúp hình dung bối cảnh mua bán.",
-      "role": "topic_cover"
-    }
+    "tag": "TOAN3_C5"
   },
   {
     "id": "Q_9_3_2",
@@ -9842,15 +9762,7 @@
     "a": "32 cm",
     "h": "Công thức chu vi hình chữ nhật cực dễ nhớ nè em: (Chiều dài + Chiều rộng) rồi nhân với 2 (cùng đơn vị đo) nha!",
     "w": 21,
-    "tag": "TOAN3_C6",
-    "illustration": {
-      "kind": "catalog_image",
-      "imageId": "vuon_hoa_hai_luong",
-      "src": "assets/images/Cay coi/vuon-hoa-hai-luong.jpg",
-      "alt": "Hai luống hoa với tulip đỏ bên trái và hướng dương vàng bên phải",
-      "caption": "Đường bao luống hoa gợi khái niệm chu vi.",
-      "role": "topic_cover"
-    }
+    "tag": "TOAN3_C6"
   },
   {
     "id": "Q_10_1_2",
@@ -10600,13 +10512,7 @@
     "a": "9 cm2",
     "h": "Mỗi ô vuông nhỏ là 1 cm2, nên hình gồm bao nhiêu ô vuông thì diện tích bằng bấy nhiêu xăng-ti-mét vuông đấy!",
     "w": null,
-    "tag": "TOAN3_C6",
-    "illustration": {
-      "kind": "emoji",
-      "emoji": "🔲",
-      "caption": "Biểu tượng giới thiệu nhóm kiến thức, không dùng làm dữ kiện của câu hỏi.",
-      "role": "topic_cover"
-    }
+    "tag": "TOAN3_C6"
   },
   {
     "id": "Q_10_2_2",
@@ -11356,13 +11262,7 @@
     "a": "40 cm2",
     "h": "Diện tích hình chữ nhật bằng Chiều dài nhân với Chiều rộng (cùng đơn vị đo). Cô Ong Vàng tin em sẽ tính đúng!",
     "w": 20,
-    "tag": "TOAN3_C6",
-    "illustration": {
-      "kind": "emoji",
-      "emoji": "📐",
-      "caption": "Biểu tượng giới thiệu nhóm kiến thức, không dùng làm dữ kiện của câu hỏi.",
-      "role": "topic_cover"
-    }
+    "tag": "TOAN3_C6"
   },
   {
     "id": "Q_10_3_2",
@@ -12112,15 +12012,7 @@
     "a": "5 quả",
     "h": "Ký hiệu vạch kiểm đếm: mỗi vạch gạch thẳng tương ứng 1 đơn vị, nhóm 5 vạch có gạch chéo là 5 đơn vị nha em!",
     "w": null,
-    "tag": "TOAN3_C3",
-    "illustration": {
-      "kind": "catalog_image",
-      "imageId": "quay_trai_cay_ro_rang",
-      "src": "assets/images/Do an/quay-trai-cay-ro-rang.jpg",
-      "alt": "Quầy có bốn giỏ táo, cam, chuối và lê",
-      "caption": "Ảnh minh họa các nhóm trái cây để giới thiệu việc phân loại.",
-      "role": "topic_cover"
-    }
+    "tag": "TOAN3_C3"
   },
   {
     "id": "Q_10_4_2",
@@ -12870,13 +12762,7 @@
     "a": "Chắc chắn xảy ra",
     "h": "Chỉ có đồ vật màu đỏ nên rút màu đỏ là chắc chắn.",
     "w": null,
-    "tag": "TOAN3_C3",
-    "illustration": {
-      "kind": "emoji",
-      "emoji": "🎲",
-      "caption": "Biểu tượng giới thiệu nhóm kiến thức, không dùng làm dữ kiện của câu hỏi.",
-      "role": "topic_cover"
-    }
+    "tag": "TOAN3_C3"
   },
   {
     "id": "Q_10_5_2",
@@ -13626,13 +13512,7 @@
     "a": "25",
     "h": "Hiệu giữa hai số liên tiếp tăng dần: +2, +4, +6, +8. Vì vậy 17 + 8 = 25.",
     "w": null,
-    "tag": "TOAN3_C4",
-    "illustration": {
-      "kind": "emoji",
-      "emoji": "🔁",
-      "caption": "Biểu tượng minh họa chủ đề; không chứa dữ kiện của bài toán.",
-      "role": "topic_cover"
-    }
+    "tag": "TOAN3_C4"
   },
   {
     "id": "Q_11_1_2",
@@ -14382,13 +14262,7 @@
     "a": "1 037",
     "h": "Ghép 120 với 880 được 1 000; cộng thêm 37: 1 000 + 37 = 1 037.",
     "w": null,
-    "tag": "TOAN3_C4",
-    "illustration": {
-      "kind": "emoji",
-      "emoji": "🧠",
-      "caption": "Biểu tượng minh họa chủ đề; không chứa dữ kiện của bài toán.",
-      "role": "topic_cover"
-    }
+    "tag": "TOAN3_C4"
   },
   {
     "id": "Q_11_2_2",
@@ -15138,13 +15012,7 @@
     "a": "2",
     "h": "Trừ tổng các chữ số đã biết: 8 − 2 − 3 − 1 = 2.",
     "w": null,
-    "tag": "TOAN3_C1",
-    "illustration": {
-      "kind": "emoji",
-      "emoji": "🔢",
-      "caption": "Biểu tượng minh họa chủ đề; không chứa dữ kiện của bài toán.",
-      "role": "topic_cover"
-    }
+    "tag": "TOAN3_C1"
   },
   {
     "id": "Q_11_3_2",
@@ -15894,13 +15762,7 @@
     "a": "12",
     "h": "Giải ngược: x + 7 = 57 : 3 = 19. Vậy x = 19 − 7 = 12.",
     "w": null,
-    "tag": "TOAN3_C4",
-    "illustration": {
-      "kind": "emoji",
-      "emoji": "🔍",
-      "caption": "Biểu tượng minh họa chủ đề; không chứa dữ kiện của bài toán.",
-      "role": "topic_cover"
-    }
+    "tag": "TOAN3_C4"
   },
   {
     "id": "Q_11_4_2",
@@ -16650,13 +16512,7 @@
     "a": "15 quyển",
     "h": "A giảm 6, B tăng 6 nên khoảng cách giảm 6 + 6 = 12. Còn 27 − 12 = 15 quyển.",
     "w": null,
-    "tag": "TOAN3_C5",
-    "illustration": {
-      "kind": "emoji",
-      "emoji": "🧩",
-      "caption": "Biểu tượng minh họa chủ đề; không chứa dữ kiện của bài toán.",
-      "role": "topic_cover"
-    }
+    "tag": "TOAN3_C5"
   },
   {
     "id": "Q_11_5_2",
@@ -17406,13 +17262,7 @@
     "a": "32 cm",
     "h": "Chiều dài = 6 + 4 = 10 cm. Chu vi = (6 + 10) × 2 = 32 cm.",
     "w": null,
-    "tag": "TOAN3_C6",
-    "illustration": {
-      "kind": "emoji",
-      "emoji": "📐",
-      "caption": "Biểu tượng minh họa chủ đề; không chứa dữ kiện của bài toán.",
-      "role": "topic_cover"
-    }
+    "tag": "TOAN3_C6"
   },
   {
     "id": "Q_11_6_2",
