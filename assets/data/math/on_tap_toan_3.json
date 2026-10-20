@@ -1,6 +1,6 @@
 {
   "schema_version": "TOAN3_ON_TAP_V1",
-  "data_version": "2026-10-14-sgk-review-structure-v1",
+  "data_version": "2026-10-20-edu-content-v2",
   "subject": "Toán",
   "grade": 3,
   "curriculum": "Kết nối tri thức với cuộc sống",
@@ -97,7 +97,7 @@
             "329"
           ],
           "a": "230",
-          "h": "",
+          "h": "Số liền sau = số đã cho + 1. Chú ý trường hợp qua chục, trăm hoặc nghìn.",
           "source_question_id": "TOAN3_B01_Q03",
           "source_lesson_no": 1,
           "review_id": "TOAN3_OT08",
@@ -119,7 +119,7 @@
             "526"
           ],
           "a": "280",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B02_Q10",
           "source_lesson_no": 2,
           "review_id": "TOAN3_OT08",
@@ -141,7 +141,7 @@
             "62"
           ],
           "a": "63",
-          "h": "",
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án.",
           "source_question_id": "TOAN3_B03_Q23",
           "source_lesson_no": 3,
           "review_id": "TOAN3_OT08",
@@ -251,7 +251,7 @@
             "530"
           ],
           "a": "431",
-          "h": "",
+          "h": "Số liền sau = số đã cho + 1. Chú ý trường hợp qua chục, trăm hoặc nghìn.",
           "source_question_id": "TOAN3_B01_Q06",
           "source_lesson_no": 1,
           "review_id": "TOAN3_OT08",
@@ -273,7 +273,7 @@
             "911"
           ],
           "a": "911",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B02_Q24",
           "source_lesson_no": 2,
           "review_id": "TOAN3_OT08",
@@ -295,7 +295,7 @@
             "141"
           ],
           "a": "141",
-          "h": "",
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án.",
           "source_question_id": "TOAN3_B03_Q09",
           "source_lesson_no": 3,
           "review_id": "TOAN3_OT08",
@@ -405,7 +405,7 @@
             "257"
           ],
           "a": "248",
-          "h": "",
+          "h": "Số liền sau = số đã cho + 1. Chú ý trường hợp qua chục, trăm hoặc nghìn.",
           "source_question_id": "TOAN3_B01_Q21",
           "source_lesson_no": 1,
           "review_id": "TOAN3_OT08",
@@ -427,7 +427,7 @@
             "741"
           ],
           "a": "999",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B02_Q13",
           "source_lesson_no": 2,
           "review_id": "TOAN3_OT08",
@@ -449,7 +449,7 @@
             "76"
           ],
           "a": "77",
-          "h": "",
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án.",
           "source_question_id": "TOAN3_B03_Q07",
           "source_lesson_no": 3,
           "review_id": "TOAN3_OT08",
@@ -537,7 +537,7 @@
             "800"
           ],
           "a": "791",
-          "h": "",
+          "h": "Số liền sau = số đã cho + 1. Chú ý trường hợp qua chục, trăm hoặc nghìn.",
           "source_question_id": "TOAN3_B01_Q09",
           "source_lesson_no": 1,
           "review_id": "TOAN3_OT08",
@@ -559,7 +559,7 @@
             "478"
           ],
           "a": "488",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B02_Q07",
           "source_lesson_no": 2,
           "review_id": "TOAN3_OT08",
@@ -581,7 +581,7 @@
             "27"
           ],
           "a": "60",
-          "h": "",
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án.",
           "source_question_id": "TOAN3_B03_Q02",
           "source_lesson_no": 3,
           "review_id": "TOAN3_OT08",
@@ -669,7 +669,7 @@
             "7"
           ],
           "a": "8",
-          "h": "",
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án.",
           "source_question_id": "TOAN3_B01_Q28",
           "source_lesson_no": 1,
           "review_id": "TOAN3_OT08",
@@ -691,7 +691,7 @@
             "500"
           ],
           "a": "500",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B02_Q20",
           "source_lesson_no": 2,
           "review_id": "TOAN3_OT08",
@@ -713,7 +713,7 @@
             "19"
           ],
           "a": "35",
-          "h": "",
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án.",
           "source_question_id": "TOAN3_B03_Q13",
           "source_lesson_no": 3,
           "review_id": "TOAN3_OT08",
@@ -2248,7 +2248,7 @@
             "140"
           ],
           "a": "135",
-          "h": "",
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả.",
           "source_question_id": "TOAN3_B20_Q17",
           "source_lesson_no": 23,
           "review_id": "TOAN3_OT29",
@@ -2292,7 +2292,7 @@
             "6 dư 3"
           ],
           "a": "7 dư 3",
-          "h": "",
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có.",
           "source_question_id": "TOAN3_B22_Q03",
           "source_lesson_no": 25,
           "review_id": "TOAN3_OT29",
@@ -2380,7 +2380,7 @@
             "200"
           ],
           "a": "200",
-          "h": "",
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả.",
           "source_question_id": "TOAN3_B20_Q24",
           "source_lesson_no": 23,
           "review_id": "TOAN3_OT29",
@@ -2424,7 +2424,7 @@
             "12 dư 0"
           ],
           "a": "13",
-          "h": "",
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có.",
           "source_question_id": "TOAN3_B22_Q01",
           "source_lesson_no": 25,
           "review_id": "TOAN3_OT29",
@@ -2512,7 +2512,7 @@
             "260"
           ],
           "a": "260",
-          "h": "",
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả.",
           "source_question_id": "TOAN3_B20_Q09",
           "source_lesson_no": 23,
           "review_id": "TOAN3_OT29",
@@ -2556,7 +2556,7 @@
             "4 dư 7"
           ],
           "a": "4 dư 7",
-          "h": "",
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có.",
           "source_question_id": "TOAN3_B22_Q21",
           "source_lesson_no": 25,
           "review_id": "TOAN3_OT29",
@@ -2644,7 +2644,7 @@
             "156"
           ],
           "a": "159",
-          "h": "",
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả.",
           "source_question_id": "TOAN3_B20_Q10",
           "source_lesson_no": 23,
           "review_id": "TOAN3_OT29",
@@ -2688,7 +2688,7 @@
             "4 dư 6"
           ],
           "a": "4 dư 5",
-          "h": "",
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có.",
           "source_question_id": "TOAN3_B22_Q27",
           "source_lesson_no": 25,
           "review_id": "TOAN3_OT29",
@@ -2776,7 +2776,7 @@
             "693"
           ],
           "a": "686",
-          "h": "",
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả.",
           "source_question_id": "TOAN3_B20_Q04",
           "source_lesson_no": 23,
           "review_id": "TOAN3_OT29",
@@ -2820,7 +2820,7 @@
             "3 dư 7"
           ],
           "a": "3 dư 1",
-          "h": "",
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có.",
           "source_question_id": "TOAN3_B22_Q22",
           "source_lesson_no": 25,
           "review_id": "TOAN3_OT29",
@@ -3681,7 +3681,7 @@
             "156"
           ],
           "a": "157",
-          "h": "",
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có.",
           "source_question_id": "TOAN3_B32_Q13",
           "source_lesson_no": 37,
           "review_id": "TOAN3_OT40",
@@ -3769,7 +3769,7 @@
             "7"
           ],
           "a": "116",
-          "h": "",
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có.",
           "source_question_id": "TOAN3_B32_Q08",
           "source_lesson_no": 37,
           "review_id": "TOAN3_OT40",
@@ -3857,7 +3857,7 @@
             "281"
           ],
           "a": "281",
-          "h": "",
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có.",
           "source_question_id": "TOAN3_B32_Q24",
           "source_lesson_no": 37,
           "review_id": "TOAN3_OT40",
@@ -3945,7 +3945,7 @@
             "105"
           ],
           "a": "104",
-          "h": "",
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có.",
           "source_question_id": "TOAN3_B32_Q06",
           "source_lesson_no": 37,
           "review_id": "TOAN3_OT40",
@@ -4033,7 +4033,7 @@
             "107"
           ],
           "a": "107",
-          "h": "",
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có.",
           "source_question_id": "TOAN3_B32_Q25",
           "source_lesson_no": 37,
           "review_id": "TOAN3_OT40",
@@ -4121,7 +4121,7 @@
             "5"
           ],
           "a": "28",
-          "h": "",
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có.",
           "source_question_id": "TOAN3_B32_Q17",
           "source_lesson_no": 37,
           "review_id": "TOAN3_OT40",
@@ -4209,7 +4209,7 @@
             "124"
           ],
           "a": "125",
-          "h": "",
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có.",
           "source_question_id": "TOAN3_B32_Q18",
           "source_lesson_no": 37,
           "review_id": "TOAN3_OT40",
@@ -4297,7 +4297,7 @@
             "40"
           ],
           "a": "40",
-          "h": "",
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có.",
           "source_question_id": "TOAN3_B32_Q01",
           "source_lesson_no": 37,
           "review_id": "TOAN3_OT40",
@@ -4546,7 +4546,7 @@
             "84"
           ],
           "a": "87",
-          "h": "",
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả.",
           "source_question_id": "TOAN3_B20_Q27",
           "source_lesson_no": 23,
           "review_id": "TOAN3_OT41",
@@ -4568,7 +4568,7 @@
             "5"
           ],
           "a": "4 dư 2",
-          "h": "",
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có.",
           "source_question_id": "TOAN3_B22_Q05",
           "source_lesson_no": 25,
           "review_id": "TOAN3_OT41",
@@ -4634,7 +4634,7 @@
             "136"
           ],
           "a": "135",
-          "h": "",
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có.",
           "source_question_id": "TOAN3_B32_Q04",
           "source_lesson_no": 37,
           "review_id": "TOAN3_OT41",
@@ -4832,7 +4832,7 @@
             "244"
           ],
           "a": "244",
-          "h": "",
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả.",
           "source_question_id": "TOAN3_B20_Q05",
           "source_lesson_no": 23,
           "review_id": "TOAN3_OT41",
@@ -4854,7 +4854,7 @@
             "9"
           ],
           "a": "8 dư 4",
-          "h": "",
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có.",
           "source_question_id": "TOAN3_B22_Q29",
           "source_lesson_no": 25,
           "review_id": "TOAN3_OT41",
@@ -4920,7 +4920,7 @@
             "138"
           ],
           "a": "139",
-          "h": "",
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có.",
           "source_question_id": "TOAN3_B32_Q07",
           "source_lesson_no": 37,
           "review_id": "TOAN3_OT41",
@@ -6539,7 +6539,7 @@
             "711"
           ],
           "a": "612",
-          "h": "",
+          "h": "Số liền sau = số đã cho + 1. Chú ý trường hợp qua chục, trăm hoặc nghìn.",
           "source_question_id": "TOAN3_B01_Q12",
           "source_lesson_no": 1,
           "review_id": "TOAN3_OT44",
@@ -6561,7 +6561,7 @@
             "753"
           ],
           "a": "743",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B02_Q14",
           "source_lesson_no": 2,
           "review_id": "TOAN3_OT44",
@@ -6583,7 +6583,7 @@
             "90"
           ],
           "a": "89",
-          "h": "",
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án.",
           "source_question_id": "TOAN3_B03_Q03",
           "source_lesson_no": 3,
           "review_id": "TOAN3_OT44",
@@ -6913,7 +6913,7 @@
             "71"
           ],
           "a": "390",
-          "h": "",
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả.",
           "source_question_id": "TOAN3_B20_Q29",
           "source_lesson_no": 23,
           "review_id": "TOAN3_OT44",
@@ -6957,7 +6957,7 @@
             "12 dư 1"
           ],
           "a": "12 dư 1",
-          "h": "",
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có.",
           "source_question_id": "TOAN3_B22_Q09",
           "source_lesson_no": 25,
           "review_id": "TOAN3_OT44",
@@ -7155,7 +7155,7 @@
             "4"
           ],
           "a": "140",
-          "h": "",
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có.",
           "source_question_id": "TOAN3_B32_Q05",
           "source_lesson_no": 37,
           "review_id": "TOAN3_OT44",
@@ -7231,7 +7231,7 @@
             "3 504"
           ],
           "a": "3 405",
-          "h": "",
+          "h": "Số liền sau = số đã cho + 1. Chú ý trường hợp qua chục, trăm hoặc nghìn.",
           "source_question_id": "TOAN3_B35_Q21",
           "source_lesson_no": 45,
           "review_id": "TOAN3_OT49",
@@ -7253,7 +7253,7 @@
             "1 222"
           ],
           "a": "5 279",
-          "h": "",
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án.",
           "source_question_id": "TOAN3_B36_Q10",
           "source_lesson_no": 46,
           "review_id": "TOAN3_OT49",
@@ -7319,7 +7319,7 @@
             "3657"
           ],
           "a": "3000 + 600 + 50 + 8",
-          "h": "",
+          "h": "Tách chữ số theo đúng hàng nghìn, trăm, chục, đơn vị; viết thành tổng các giá trị hàng.",
           "source_question_id": "TOAN3_B35_Q26",
           "source_lesson_no": 45,
           "review_id": "TOAN3_OT49",
@@ -7341,7 +7341,7 @@
             "="
           ],
           "a": "<",
-          "h": "",
+          "h": "So sánh hàng nghìn.",
           "source_question_id": "TOAN3_B36_Q07",
           "source_lesson_no": 46,
           "review_id": "TOAN3_OT49",
@@ -7407,7 +7407,7 @@
             "5 693"
           ],
           "a": "5 695",
-          "h": "",
+          "h": "Số liền sau = số đã cho + 1. Chú ý trường hợp qua chục, trăm hoặc nghìn.",
           "source_question_id": "TOAN3_B35_Q24",
           "source_lesson_no": 45,
           "review_id": "TOAN3_OT49",
@@ -7429,7 +7429,7 @@
             "<"
           ],
           "a": "<",
-          "h": "",
+          "h": "So sánh hàng nghìn.",
           "source_question_id": "TOAN3_B36_Q13",
           "source_lesson_no": 46,
           "review_id": "TOAN3_OT49",
@@ -7495,7 +7495,7 @@
             "5 308"
           ],
           "a": "5 209",
-          "h": "",
+          "h": "Số liền sau = số đã cho + 1. Chú ý trường hợp qua chục, trăm hoặc nghìn.",
           "source_question_id": "TOAN3_B35_Q15",
           "source_lesson_no": 45,
           "review_id": "TOAN3_OT49",
@@ -7517,7 +7517,7 @@
             "="
           ],
           "a": ">",
-          "h": "",
+          "h": "So sánh hàng nghìn.",
           "source_question_id": "TOAN3_B36_Q11",
           "source_lesson_no": 46,
           "review_id": "TOAN3_OT49",
@@ -7583,7 +7583,7 @@
             "8 943"
           ],
           "a": "8 934",
-          "h": "",
+          "h": "Số liền sau = số đã cho + 1. Chú ý trường hợp qua chục, trăm hoặc nghìn.",
           "source_question_id": "TOAN3_B35_Q27",
           "source_lesson_no": 45,
           "review_id": "TOAN3_OT49",
@@ -7605,7 +7605,7 @@
             "< (3)"
           ],
           "a": "<",
-          "h": "",
+          "h": "So sánh hàng nghìn.",
           "source_question_id": "TOAN3_B36_Q29",
           "source_lesson_no": 46,
           "review_id": "TOAN3_OT49",
@@ -7671,7 +7671,7 @@
             "2 561"
           ],
           "a": "2 462",
-          "h": "",
+          "h": "Số liền sau = số đã cho + 1. Chú ý trường hợp qua chục, trăm hoặc nghìn.",
           "source_question_id": "TOAN3_B35_Q06",
           "source_lesson_no": 45,
           "review_id": "TOAN3_OT49",
@@ -7693,7 +7693,7 @@
             "="
           ],
           "a": "<",
-          "h": "",
+          "h": "So sánh hàng nghìn.",
           "source_question_id": "TOAN3_B36_Q21",
           "source_lesson_no": 46,
           "review_id": "TOAN3_OT49",
@@ -7759,7 +7759,7 @@
             "4"
           ],
           "a": "4",
-          "h": "",
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án.",
           "source_question_id": "TOAN3_B35_Q07",
           "source_lesson_no": 45,
           "review_id": "TOAN3_OT49",
@@ -7781,7 +7781,7 @@
             "1 627"
           ],
           "a": "1 627",
-          "h": "",
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án.",
           "source_question_id": "TOAN3_B36_Q24",
           "source_lesson_no": 46,
           "review_id": "TOAN3_OT49",
@@ -7847,7 +7847,7 @@
             "6"
           ],
           "a": "7",
-          "h": "",
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án.",
           "source_question_id": "TOAN3_B35_Q22",
           "source_lesson_no": 45,
           "review_id": "TOAN3_OT49",
@@ -7869,7 +7869,7 @@
             "4 400"
           ],
           "a": "5 990",
-          "h": "",
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án.",
           "source_question_id": "TOAN3_B36_Q26",
           "source_lesson_no": 46,
           "review_id": "TOAN3_OT49",
@@ -8613,7 +8613,7 @@
             "5 492"
           ],
           "a": "8 472",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B42_Q19",
           "source_lesson_no": 54,
           "review_id": "TOAN3_OT58",
@@ -8635,7 +8635,7 @@
             "943"
           ],
           "a": "943",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B43_Q02",
           "source_lesson_no": 55,
           "review_id": "TOAN3_OT58",
@@ -8657,7 +8657,7 @@
             "1 861"
           ],
           "a": "5 574",
-          "h": "",
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả.",
           "source_question_id": "TOAN3_B44_Q03",
           "source_lesson_no": 56,
           "review_id": "TOAN3_OT58",
@@ -8679,7 +8679,7 @@
             "598"
           ],
           "a": "597",
-          "h": "",
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có.",
           "source_question_id": "TOAN3_B45_Q12",
           "source_lesson_no": 57,
           "review_id": "TOAN3_OT58",
@@ -8701,7 +8701,7 @@
             "7 748"
           ],
           "a": "7 758",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B42_Q29",
           "source_lesson_no": 54,
           "review_id": "TOAN3_OT58",
@@ -8723,7 +8723,7 @@
             "9 415"
           ],
           "a": "827",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B43_Q14",
           "source_lesson_no": 55,
           "review_id": "TOAN3_OT58",
@@ -8745,7 +8745,7 @@
             "42 810"
           ],
           "a": "42 805",
-          "h": "",
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả.",
           "source_question_id": "TOAN3_B44_Q22",
           "source_lesson_no": 56,
           "review_id": "TOAN3_OT58",
@@ -8767,7 +8767,7 @@
             "3 194"
           ],
           "a": "3 193",
-          "h": "",
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có.",
           "source_question_id": "TOAN3_B45_Q20",
           "source_lesson_no": 57,
           "review_id": "TOAN3_OT58",
@@ -8789,7 +8789,7 @@
             "1 526"
           ],
           "a": "7 532",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B42_Q20",
           "source_lesson_no": 54,
           "review_id": "TOAN3_OT58",
@@ -8811,7 +8811,7 @@
             "4 198"
           ],
           "a": "4 188",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B43_Q03",
           "source_lesson_no": 55,
           "review_id": "TOAN3_OT58",
@@ -8833,7 +8833,7 @@
             "55 952"
           ],
           "a": "55 960",
-          "h": "",
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả.",
           "source_question_id": "TOAN3_B44_Q02",
           "source_lesson_no": 56,
           "review_id": "TOAN3_OT58",
@@ -8855,7 +8855,7 @@
             "444"
           ],
           "a": "443",
-          "h": "",
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có.",
           "source_question_id": "TOAN3_B45_Q30",
           "source_lesson_no": 57,
           "review_id": "TOAN3_OT58",
@@ -8877,7 +8877,7 @@
             "5 301"
           ],
           "a": "5 291",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B42_Q15",
           "source_lesson_no": 54,
           "review_id": "TOAN3_OT58",
@@ -8899,7 +8899,7 @@
             "11 119"
           ],
           "a": "8 507",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B43_Q30",
           "source_lesson_no": 55,
           "review_id": "TOAN3_OT58",
@@ -8921,7 +8921,7 @@
             "8 814"
           ],
           "a": "8 816",
-          "h": "",
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả.",
           "source_question_id": "TOAN3_B44_Q13",
           "source_lesson_no": 56,
           "review_id": "TOAN3_OT58",
@@ -8943,7 +8943,7 @@
             "175"
           ],
           "a": "175",
-          "h": "",
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có.",
           "source_question_id": "TOAN3_B45_Q11",
           "source_lesson_no": 57,
           "review_id": "TOAN3_OT58",
@@ -8965,7 +8965,7 @@
             "7 465"
           ],
           "a": "7 465",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B42_Q21",
           "source_lesson_no": 54,
           "review_id": "TOAN3_OT58",
@@ -8987,7 +8987,7 @@
             "554"
           ],
           "a": "544",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B43_Q13",
           "source_lesson_no": 55,
           "review_id": "TOAN3_OT58",
@@ -9009,7 +9009,7 @@
             "7 975"
           ],
           "a": "63 736",
-          "h": "",
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả.",
           "source_question_id": "TOAN3_B44_Q26",
           "source_lesson_no": 56,
           "review_id": "TOAN3_OT58",
@@ -9031,7 +9031,7 @@
             "4"
           ],
           "a": "1 504",
-          "h": "",
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có.",
           "source_question_id": "TOAN3_B45_Q06",
           "source_lesson_no": 57,
           "review_id": "TOAN3_OT58",
@@ -9053,7 +9053,7 @@
             "3 504"
           ],
           "a": "3 514",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B42_Q22",
           "source_lesson_no": 54,
           "review_id": "TOAN3_OT58",
@@ -9075,7 +9075,7 @@
             "5 979"
           ],
           "a": "5 989",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B43_Q20",
           "source_lesson_no": 55,
           "review_id": "TOAN3_OT58",
@@ -9097,7 +9097,7 @@
             "10 168"
           ],
           "a": "10 170",
-          "h": "",
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả.",
           "source_question_id": "TOAN3_B44_Q05",
           "source_lesson_no": 56,
           "review_id": "TOAN3_OT58",
@@ -9119,7 +9119,7 @@
             "184"
           ],
           "a": "184",
-          "h": "",
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có.",
           "source_question_id": "TOAN3_B45_Q18",
           "source_lesson_no": 57,
           "review_id": "TOAN3_OT58",
@@ -9141,7 +9141,7 @@
             "10 009"
           ],
           "a": "9 999",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B42_Q24",
           "source_lesson_no": 54,
           "review_id": "TOAN3_OT58",
@@ -9163,7 +9163,7 @@
             "5 578"
           ],
           "a": "1 608",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B43_Q29",
           "source_lesson_no": 55,
           "review_id": "TOAN3_OT58",
@@ -9185,7 +9185,7 @@
             "5 346"
           ],
           "a": "5 346",
-          "h": "",
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả.",
           "source_question_id": "TOAN3_B44_Q28",
           "source_lesson_no": 56,
           "review_id": "TOAN3_OT58",
@@ -9207,7 +9207,7 @@
             "793"
           ],
           "a": "794",
-          "h": "",
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có.",
           "source_question_id": "TOAN3_B45_Q13",
           "source_lesson_no": 57,
           "review_id": "TOAN3_OT58",
@@ -9229,7 +9229,7 @@
             "6 211"
           ],
           "a": "9 999",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B42_Q13",
           "source_lesson_no": 54,
           "review_id": "TOAN3_OT58",
@@ -9251,7 +9251,7 @@
             "10 482"
           ],
           "a": "4 058",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B43_Q22",
           "source_lesson_no": 55,
           "review_id": "TOAN3_OT58",
@@ -9303,7 +9303,7 @@
             "33 460"
           ],
           "a": "33 462",
-          "h": "",
+          "h": "Số liền sau = số đã cho + 1. Chú ý trường hợp qua chục, trăm hoặc nghìn.",
           "source_question_id": "TOAN3_B46_Q18",
           "source_lesson_no": 59,
           "review_id": "TOAN3_OT62",
@@ -9325,7 +9325,7 @@
             "< (3)"
           ],
           "a": "<",
-          "h": "",
+          "h": "So sánh các hàng từ trái sang phải.",
           "source_question_id": "TOAN3_B47_Q05",
           "source_lesson_no": 60,
           "review_id": "TOAN3_OT62",
@@ -9347,7 +9347,7 @@
             "60 000"
           ],
           "a": "60 000",
-          "h": "",
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án.",
           "source_question_id": "TOAN3_B48_Q27",
           "source_lesson_no": 61,
           "review_id": "TOAN3_OT62",
@@ -9369,7 +9369,7 @@
             "5"
           ],
           "a": "3",
-          "h": "",
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án.",
           "source_question_id": "TOAN3_B46_Q16",
           "source_lesson_no": 59,
           "review_id": "TOAN3_OT62",
@@ -9391,7 +9391,7 @@
             "65 821"
           ],
           "a": "30 094",
-          "h": "",
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án.",
           "source_question_id": "TOAN3_B47_Q28",
           "source_lesson_no": 60,
           "review_id": "TOAN3_OT62",
@@ -9413,7 +9413,7 @@
             "40 000 (3)"
           ],
           "a": "40 000",
-          "h": "",
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án.",
           "source_question_id": "TOAN3_B48_Q17",
           "source_lesson_no": 61,
           "review_id": "TOAN3_OT62",
@@ -9435,7 +9435,7 @@
             "2"
           ],
           "a": "3",
-          "h": "",
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án.",
           "source_question_id": "TOAN3_B46_Q25",
           "source_lesson_no": 59,
           "review_id": "TOAN3_OT62",
@@ -9457,7 +9457,7 @@
             "64 601"
           ],
           "a": "43 778",
-          "h": "",
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án.",
           "source_question_id": "TOAN3_B47_Q24",
           "source_lesson_no": 60,
           "review_id": "TOAN3_OT62",
@@ -9479,7 +9479,7 @@
             "95 000"
           ],
           "a": "96 000",
-          "h": "",
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án.",
           "source_question_id": "TOAN3_B48_Q09",
           "source_lesson_no": 61,
           "review_id": "TOAN3_OT62",
@@ -9501,7 +9501,7 @@
             "49628"
           ],
           "a": "40000 + 9000 + 600 + 10 + 8",
-          "h": "",
+          "h": "Tách chữ số theo đúng hàng nghìn, trăm, chục, đơn vị; viết thành tổng các giá trị hàng.",
           "source_question_id": "TOAN3_B46_Q05",
           "source_lesson_no": 59,
           "review_id": "TOAN3_OT62",
@@ -9523,7 +9523,7 @@
             "95 910"
           ],
           "a": "35 290",
-          "h": "",
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án.",
           "source_question_id": "TOAN3_B47_Q12",
           "source_lesson_no": 60,
           "review_id": "TOAN3_OT62",
@@ -9545,7 +9545,7 @@
             "30 000"
           ],
           "a": "30 000",
-          "h": "",
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án.",
           "source_question_id": "TOAN3_B48_Q13",
           "source_lesson_no": 61,
           "review_id": "TOAN3_OT62",
@@ -9567,7 +9567,7 @@
             "39 782"
           ],
           "a": "39 784",
-          "h": "",
+          "h": "Số liền sau = số đã cho + 1. Chú ý trường hợp qua chục, trăm hoặc nghìn.",
           "source_question_id": "TOAN3_B46_Q06",
           "source_lesson_no": 59,
           "review_id": "TOAN3_OT62",
@@ -9589,7 +9589,7 @@
             "="
           ],
           "a": "<",
-          "h": "",
+          "h": "So sánh các hàng từ trái sang phải.",
           "source_question_id": "TOAN3_B47_Q09",
           "source_lesson_no": 60,
           "review_id": "TOAN3_OT62",
@@ -9611,7 +9611,7 @@
             "90 000"
           ],
           "a": "90 000",
-          "h": "",
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án.",
           "source_question_id": "TOAN3_B48_Q02",
           "source_lesson_no": 61,
           "review_id": "TOAN3_OT62",
@@ -9633,7 +9633,7 @@
             "84246"
           ],
           "a": "80000 + 4000 + 200 + 40 + 7",
-          "h": "",
+          "h": "Tách chữ số theo đúng hàng nghìn, trăm, chục, đơn vị; viết thành tổng các giá trị hàng.",
           "source_question_id": "TOAN3_B46_Q11",
           "source_lesson_no": 59,
           "review_id": "TOAN3_OT62",
@@ -9655,7 +9655,7 @@
             "24 781"
           ],
           "a": "60 473",
-          "h": "",
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án.",
           "source_question_id": "TOAN3_B47_Q10",
           "source_lesson_no": 60,
           "review_id": "TOAN3_OT62",
@@ -9677,7 +9677,7 @@
             "80 000"
           ],
           "a": "80 000",
-          "h": "",
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án.",
           "source_question_id": "TOAN3_B48_Q28",
           "source_lesson_no": 61,
           "review_id": "TOAN3_OT62",
@@ -9699,7 +9699,7 @@
             "6"
           ],
           "a": "4",
-          "h": "",
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án.",
           "source_question_id": "TOAN3_B46_Q28",
           "source_lesson_no": 59,
           "review_id": "TOAN3_OT62",
@@ -9721,7 +9721,7 @@
             "43 275"
           ],
           "a": "63 711",
-          "h": "",
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án.",
           "source_question_id": "TOAN3_B47_Q02",
           "source_lesson_no": 60,
           "review_id": "TOAN3_OT62",
@@ -9743,7 +9743,7 @@
             "53 000 (3)"
           ],
           "a": "53 000",
-          "h": "",
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án.",
           "source_question_id": "TOAN3_B48_Q04",
           "source_lesson_no": 61,
           "review_id": "TOAN3_OT62",
@@ -9765,7 +9765,7 @@
             "4"
           ],
           "a": "3",
-          "h": "",
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án.",
           "source_question_id": "TOAN3_B46_Q19",
           "source_lesson_no": 59,
           "review_id": "TOAN3_OT62",
@@ -9787,7 +9787,7 @@
             "12 490"
           ],
           "a": "76 312",
-          "h": "",
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án.",
           "source_question_id": "TOAN3_B47_Q30",
           "source_lesson_no": 60,
           "review_id": "TOAN3_OT62",
@@ -9809,7 +9809,7 @@
             "53 000"
           ],
           "a": "52 000",
-          "h": "",
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án.",
           "source_question_id": "TOAN3_B48_Q14",
           "source_lesson_no": 61,
           "review_id": "TOAN3_OT62",
@@ -9831,7 +9831,7 @@
             "81086"
           ],
           "a": "80000 + 1000 + 80 + 7",
-          "h": "",
+          "h": "Tách chữ số theo đúng hàng nghìn, trăm, chục, đơn vị; viết thành tổng các giá trị hàng.",
           "source_question_id": "TOAN3_B46_Q08",
           "source_lesson_no": 59,
           "review_id": "TOAN3_OT62",
@@ -9853,7 +9853,7 @@
             "> (3)"
           ],
           "a": ">",
-          "h": "",
+          "h": "So sánh các hàng từ trái sang phải.",
           "source_question_id": "TOAN3_B47_Q27",
           "source_lesson_no": 60,
           "review_id": "TOAN3_OT62",
@@ -9875,7 +9875,7 @@
             "20 000 (3)"
           ],
           "a": "20 000",
-          "h": "",
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án.",
           "source_question_id": "TOAN3_B48_Q10",
           "source_lesson_no": 61,
           "review_id": "TOAN3_OT62",
@@ -9897,7 +9897,7 @@
             "44919"
           ],
           "a": "40000 + 4000 + 900 + 9",
-          "h": "",
+          "h": "Tách chữ số theo đúng hàng nghìn, trăm, chục, đơn vị; viết thành tổng các giá trị hàng.",
           "source_question_id": "TOAN3_B46_Q17",
           "source_lesson_no": 59,
           "review_id": "TOAN3_OT62",
@@ -9919,7 +9919,7 @@
             "> (3)"
           ],
           "a": ">",
-          "h": "",
+          "h": "So sánh các hàng từ trái sang phải.",
           "source_question_id": "TOAN3_B47_Q13",
           "source_lesson_no": 60,
           "review_id": "TOAN3_OT62",
@@ -9941,7 +9941,7 @@
             "50 000 (3)"
           ],
           "a": "50 000",
-          "h": "",
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án.",
           "source_question_id": "TOAN3_B48_Q22",
           "source_lesson_no": 61,
           "review_id": "TOAN3_OT62",
@@ -9991,7 +9991,7 @@
             "78 110"
           ],
           "a": "78 120",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B49_Q01",
           "source_lesson_no": 63,
           "review_id": "TOAN3_OT65",
@@ -10013,7 +10013,7 @@
             "12 106"
           ],
           "a": "12 106",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B50_Q07",
           "source_lesson_no": 64,
           "review_id": "TOAN3_OT65",
@@ -10035,7 +10035,7 @@
             "97 895"
           ],
           "a": "99 999",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B49_Q24",
           "source_lesson_no": 63,
           "review_id": "TOAN3_OT65",
@@ -10057,7 +10057,7 @@
             "58 573"
           ],
           "a": "53 903",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B50_Q01",
           "source_lesson_no": 64,
           "review_id": "TOAN3_OT65",
@@ -10079,7 +10079,7 @@
             "74 631"
           ],
           "a": "74 621",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B49_Q14",
           "source_lesson_no": 63,
           "review_id": "TOAN3_OT65",
@@ -10101,7 +10101,7 @@
             "54 542"
           ],
           "a": "20 098",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B50_Q17",
           "source_lesson_no": 64,
           "review_id": "TOAN3_OT65",
@@ -10123,7 +10123,7 @@
             "44 359"
           ],
           "a": "44 349",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B49_Q28",
           "source_lesson_no": 63,
           "review_id": "TOAN3_OT65",
@@ -10145,7 +10145,7 @@
             "10 575"
           ],
           "a": "10 585",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B50_Q02",
           "source_lesson_no": 64,
           "review_id": "TOAN3_OT65",
@@ -10167,7 +10167,7 @@
             "87 288"
           ],
           "a": "87 298",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B49_Q18",
           "source_lesson_no": 63,
           "review_id": "TOAN3_OT65",
@@ -10189,7 +10189,7 @@
             "15 535"
           ],
           "a": "15 545",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B50_Q16",
           "source_lesson_no": 64,
           "review_id": "TOAN3_OT65",
@@ -10211,7 +10211,7 @@
             "53 871"
           ],
           "a": "53 871",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B49_Q04",
           "source_lesson_no": 63,
           "review_id": "TOAN3_OT65",
@@ -10233,7 +10233,7 @@
             "10 188"
           ],
           "a": "10 188",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B50_Q08",
           "source_lesson_no": 64,
           "review_id": "TOAN3_OT65",
@@ -10255,7 +10255,7 @@
             "73 929"
           ],
           "a": "89 545",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B49_Q06",
           "source_lesson_no": 63,
           "review_id": "TOAN3_OT65",
@@ -10277,7 +10277,7 @@
             "46 898"
           ],
           "a": "46 898",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B50_Q04",
           "source_lesson_no": 64,
           "review_id": "TOAN3_OT65",
@@ -10299,7 +10299,7 @@
             "68 329"
           ],
           "a": "89 917",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B49_Q27",
           "source_lesson_no": 63,
           "review_id": "TOAN3_OT65",
@@ -10321,7 +10321,7 @@
             "3 979"
           ],
           "a": "3 979",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B50_Q05",
           "source_lesson_no": 64,
           "review_id": "TOAN3_OT65",
@@ -10343,7 +10343,7 @@
             "38 820"
           ],
           "a": "38 820",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B49_Q21",
           "source_lesson_no": 63,
           "review_id": "TOAN3_OT65",
@@ -10365,7 +10365,7 @@
             "13 248"
           ],
           "a": "13 258",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B50_Q28",
           "source_lesson_no": 64,
           "review_id": "TOAN3_OT65",
@@ -10387,7 +10387,7 @@
             "68 068"
           ],
           "a": "68 078",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B49_Q26",
           "source_lesson_no": 63,
           "review_id": "TOAN3_OT65",
@@ -10409,7 +10409,7 @@
             "677"
           ],
           "a": "667",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B50_Q06",
           "source_lesson_no": 64,
           "review_id": "TOAN3_OT65",
@@ -10431,7 +10431,7 @@
             "13 876"
           ],
           "a": "63 752",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B49_Q29",
           "source_lesson_no": 63,
           "review_id": "TOAN3_OT65",
@@ -10453,7 +10453,7 @@
             "50 706"
           ],
           "a": "7 552",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B50_Q24",
           "source_lesson_no": 64,
           "review_id": "TOAN3_OT65",
@@ -10475,7 +10475,7 @@
             "14 073"
           ],
           "a": "51 757",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B49_Q08",
           "source_lesson_no": 63,
           "review_id": "TOAN3_OT65",
@@ -10497,7 +10497,7 @@
             "37 880"
           ],
           "a": "37 870",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B50_Q30",
           "source_lesson_no": 64,
           "review_id": "TOAN3_OT65",
@@ -10519,7 +10519,7 @@
             "100 009"
           ],
           "a": "99 999",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B49_Q10",
           "source_lesson_no": 63,
           "review_id": "TOAN3_OT65",
@@ -10541,7 +10541,7 @@
             "78 219"
           ],
           "a": "3 289",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B50_Q18",
           "source_lesson_no": 64,
           "review_id": "TOAN3_OT65",
@@ -10563,7 +10563,7 @@
             "91 948"
           ],
           "a": "91 958",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B49_Q02",
           "source_lesson_no": 63,
           "review_id": "TOAN3_OT65",
@@ -10585,7 +10585,7 @@
             "22 518"
           ],
           "a": "22 528",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B50_Q29",
           "source_lesson_no": 64,
           "review_id": "TOAN3_OT65",
@@ -10607,7 +10607,7 @@
             "68 993"
           ],
           "a": "69 003",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B49_Q11",
           "source_lesson_no": 63,
           "review_id": "TOAN3_OT65",
@@ -10629,7 +10629,7 @@
             "16 951"
           ],
           "a": "16 941",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B50_Q10",
           "source_lesson_no": 64,
           "review_id": "TOAN3_OT65",
@@ -10893,16 +10893,16 @@
           "lesson_refs": [
             "TOAN3_B52"
           ],
-          "q": "Trong một năm không nhuận, tháng 7 có bao nhiêu ngày?",
+          "q": "Đồng hồ điện tử hiển thị 07:14. Cách đọc phù hợp là:",
           "o": [
-            "28 ngày",
-            "31 ngày",
-            "30 ngày",
-            "29 ngày"
+            "8 giờ 14 phút",
+            "7 giờ 19 phút",
+            "7 giờ 24 phút",
+            "7 giờ 14 phút"
           ],
-          "a": "31 ngày",
-          "h": "Tra số ngày của tháng trên lịch năm thường.",
-          "source_question_id": "TOAN3_B52_Q30",
+          "a": "7 giờ 14 phút",
+          "h": "Giờ đứng trước dấu hai chấm; phút đứng sau.",
+          "source_question_id": "TOAN3_B52_Q02",
           "source_lesson_no": 67,
           "review_id": "TOAN3_OT69",
           "source_bank": "bai_tap_toan_3"
@@ -11091,16 +11091,16 @@
           "lesson_refs": [
             "TOAN3_B52"
           ],
-          "q": "Đồng hồ điện tử hiển thị 04:07. Cách đọc phù hợp là:",
+          "q": "Đồng hồ điện tử hiển thị 04:35. Cách đọc phù hợp là:",
           "o": [
-            "4 giờ 7 phút",
-            "4 giờ 12 phút",
-            "4 giờ 17 phút",
-            "5 giờ 7 phút"
+            "4 giờ 40 phút",
+            "4 giờ 35 phút",
+            "4 giờ 45 phút",
+            "5 giờ 35 phút"
           ],
-          "a": "4 giờ 7 phút",
+          "a": "4 giờ 35 phút",
           "h": "Giờ đứng trước dấu hai chấm; phút đứng sau.",
-          "source_question_id": "TOAN3_B52_Q01",
+          "source_question_id": "TOAN3_B52_Q05",
           "source_lesson_no": 67,
           "review_id": "TOAN3_OT69",
           "source_bank": "bai_tap_toan_3"
@@ -11157,16 +11157,16 @@
           "lesson_refs": [
             "TOAN3_B52"
           ],
-          "q": "Đồng hồ điện tử hiển thị 10:17. Cách đọc phù hợp là:",
+          "q": "Đồng hồ điện tử hiển thị 10:49. Cách đọc phù hợp là:",
           "o": [
-            "10 giờ 17 phút",
-            "11 giờ 17 phút",
-            "10 giờ 27 phút",
-            "10 giờ 22 phút"
+            "10 giờ 59 phút",
+            "11 giờ 49 phút",
+            "10 giờ 49 phút",
+            "10 giờ 54 phút"
           ],
-          "a": "10 giờ 17 phút",
+          "a": "10 giờ 49 phút",
           "h": "Giờ đứng trước dấu hai chấm; phút đứng sau.",
-          "source_question_id": "TOAN3_B52_Q11",
+          "source_question_id": "TOAN3_B52_Q07",
           "source_lesson_no": 67,
           "review_id": "TOAN3_OT69",
           "source_bank": "bai_tap_toan_3"
@@ -11223,16 +11223,16 @@
           "lesson_refs": [
             "TOAN3_B52"
           ],
-          "q": "Trò chơi bắt đầu lúc 8:24, kết thúc lúc 8:59. Trò chơi kéo dài bao nhiêu phút?",
+          "q": "Đồng hồ điện tử hiển thị 01:56. Cách đọc phù hợp là:",
           "o": [
-            "35 phút",
-            "37 phút",
-            "36 phút",
-            "34 phút"
+            "1 giờ 1 phút",
+            "1 giờ 56 phút",
+            "1 giờ 6 phút",
+            "2 giờ 56 phút"
           ],
-          "a": "35 phút",
-          "h": "Đếm số phút từ lúc bắt đầu đến lúc kết thúc.",
-          "source_question_id": "TOAN3_B52_Q22",
+          "a": "1 giờ 56 phút",
+          "h": "Giờ đứng trước dấu hai chấm; phút đứng sau.",
+          "source_question_id": "TOAN3_B52_Q08",
           "source_lesson_no": 67,
           "review_id": "TOAN3_OT69",
           "source_bank": "bai_tap_toan_3"
@@ -11377,7 +11377,7 @@
             "61 105"
           ],
           "a": "61 110",
-          "h": "",
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả.",
           "source_question_id": "TOAN3_B54_Q29",
           "source_lesson_no": 70,
           "review_id": "TOAN3_OT72",
@@ -11399,7 +11399,7 @@
             "5"
           ],
           "a": "9 514",
-          "h": "",
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có.",
           "source_question_id": "TOAN3_B55_Q08",
           "source_lesson_no": 71,
           "review_id": "TOAN3_OT72",
@@ -11421,7 +11421,7 @@
             "63 768"
           ],
           "a": "63 774",
-          "h": "",
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả.",
           "source_question_id": "TOAN3_B54_Q10",
           "source_lesson_no": 70,
           "review_id": "TOAN3_OT72",
@@ -11443,7 +11443,7 @@
             "6"
           ],
           "a": "3 087",
-          "h": "",
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có.",
           "source_question_id": "TOAN3_B55_Q27",
           "source_lesson_no": 71,
           "review_id": "TOAN3_OT72",
@@ -11465,7 +11465,7 @@
             "83 733"
           ],
           "a": "83 733",
-          "h": "",
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả.",
           "source_question_id": "TOAN3_B54_Q20",
           "source_lesson_no": 70,
           "review_id": "TOAN3_OT72",
@@ -11487,7 +11487,7 @@
             "1 447"
           ],
           "a": "1 447",
-          "h": "",
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có.",
           "source_question_id": "TOAN3_B55_Q01",
           "source_lesson_no": 71,
           "review_id": "TOAN3_OT72",
@@ -11509,7 +11509,7 @@
             "69 895"
           ],
           "a": "69 900",
-          "h": "",
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả.",
           "source_question_id": "TOAN3_B54_Q24",
           "source_lesson_no": 70,
           "review_id": "TOAN3_OT72",
@@ -11531,7 +11531,7 @@
             "29 682"
           ],
           "a": "29 682",
-          "h": "",
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có.",
           "source_question_id": "TOAN3_B55_Q07",
           "source_lesson_no": 71,
           "review_id": "TOAN3_OT72",
@@ -11553,7 +11553,7 @@
             "29 274"
           ],
           "a": "58 544",
-          "h": "",
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả.",
           "source_question_id": "TOAN3_B54_Q23",
           "source_lesson_no": 70,
           "review_id": "TOAN3_OT72",
@@ -11575,7 +11575,7 @@
             "2"
           ],
           "a": "38 836",
-          "h": "",
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có.",
           "source_question_id": "TOAN3_B55_Q06",
           "source_lesson_no": 71,
           "review_id": "TOAN3_OT72",
@@ -11597,7 +11597,7 @@
             "14 910"
           ],
           "a": "29 816",
-          "h": "",
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả.",
           "source_question_id": "TOAN3_B54_Q12",
           "source_lesson_no": 70,
           "review_id": "TOAN3_OT72",
@@ -11619,7 +11619,7 @@
             "9"
           ],
           "a": "1 680",
-          "h": "",
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có.",
           "source_question_id": "TOAN3_B55_Q14",
           "source_lesson_no": 71,
           "review_id": "TOAN3_OT72",
@@ -11641,7 +11641,7 @@
             "28 656"
           ],
           "a": "85 959",
-          "h": "",
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả.",
           "source_question_id": "TOAN3_B54_Q22",
           "source_lesson_no": 70,
           "review_id": "TOAN3_OT72",
@@ -11663,7 +11663,7 @@
             "32 214"
           ],
           "a": "32 215",
-          "h": "",
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có.",
           "source_question_id": "TOAN3_B55_Q04",
           "source_lesson_no": 71,
           "review_id": "TOAN3_OT72",
@@ -11685,7 +11685,7 @@
             "98 052"
           ],
           "a": "98 052",
-          "h": "",
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả.",
           "source_question_id": "TOAN3_B54_Q06",
           "source_lesson_no": 70,
           "review_id": "TOAN3_OT72",
@@ -11707,7 +11707,7 @@
             "47 679"
           ],
           "a": "47 679",
-          "h": "",
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có.",
           "source_question_id": "TOAN3_B55_Q29",
           "source_lesson_no": 71,
           "review_id": "TOAN3_OT72",
@@ -11729,7 +11729,7 @@
             "96 245"
           ],
           "a": "96 245",
-          "h": "",
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả.",
           "source_question_id": "TOAN3_B54_Q14",
           "source_lesson_no": 70,
           "review_id": "TOAN3_OT72",
@@ -11751,7 +11751,7 @@
             "5"
           ],
           "a": "4 848",
-          "h": "",
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có.",
           "source_question_id": "TOAN3_B55_Q15",
           "source_lesson_no": 71,
           "review_id": "TOAN3_OT72",
@@ -11773,7 +11773,7 @@
             "51 561"
           ],
           "a": "51 564",
-          "h": "",
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả.",
           "source_question_id": "TOAN3_B54_Q07",
           "source_lesson_no": 70,
           "review_id": "TOAN3_OT72",
@@ -11795,7 +11795,7 @@
             "5"
           ],
           "a": "13 402",
-          "h": "",
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có.",
           "source_question_id": "TOAN3_B55_Q02",
           "source_lesson_no": 71,
           "review_id": "TOAN3_OT72",
@@ -11817,7 +11817,7 @@
             "14 092"
           ],
           "a": "98 595",
-          "h": "",
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả.",
           "source_question_id": "TOAN3_B54_Q27",
           "source_lesson_no": 70,
           "review_id": "TOAN3_OT72",
@@ -11839,7 +11839,7 @@
             "9 045"
           ],
           "a": "9 046",
-          "h": "",
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có.",
           "source_question_id": "TOAN3_B55_Q26",
           "source_lesson_no": 71,
           "review_id": "TOAN3_OT72",
@@ -11861,7 +11861,7 @@
             "16 051"
           ],
           "a": "64 188",
-          "h": "",
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả.",
           "source_question_id": "TOAN3_B54_Q25",
           "source_lesson_no": 70,
           "review_id": "TOAN3_OT72",
@@ -11883,7 +11883,7 @@
             "8 254"
           ],
           "a": "8 253",
-          "h": "",
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có.",
           "source_question_id": "TOAN3_B55_Q24",
           "source_lesson_no": 71,
           "review_id": "TOAN3_OT72",
@@ -11905,7 +11905,7 @@
             "65 880"
           ],
           "a": "65 880",
-          "h": "",
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả.",
           "source_question_id": "TOAN3_B54_Q01",
           "source_lesson_no": 70,
           "review_id": "TOAN3_OT72",
@@ -11927,7 +11927,7 @@
             "6 892"
           ],
           "a": "6 893",
-          "h": "",
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có.",
           "source_question_id": "TOAN3_B55_Q23",
           "source_lesson_no": 71,
           "review_id": "TOAN3_OT72",
@@ -11949,7 +11949,7 @@
             "96 264"
           ],
           "a": "96 258",
-          "h": "",
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả.",
           "source_question_id": "TOAN3_B54_Q21",
           "source_lesson_no": 70,
           "review_id": "TOAN3_OT72",
@@ -11971,7 +11971,7 @@
             "12 484"
           ],
           "a": "12 484",
-          "h": "",
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có.",
           "source_question_id": "TOAN3_B55_Q30",
           "source_lesson_no": 71,
           "review_id": "TOAN3_OT72",
@@ -11993,7 +11993,7 @@
             "86 214"
           ],
           "a": "86 220",
-          "h": "",
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả.",
           "source_question_id": "TOAN3_B54_Q19",
           "source_lesson_no": 70,
           "review_id": "TOAN3_OT72",
@@ -12015,7 +12015,7 @@
             "23 661"
           ],
           "a": "23 660",
-          "h": "",
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có.",
           "source_question_id": "TOAN3_B55_Q21",
           "source_lesson_no": 71,
           "review_id": "TOAN3_OT72",
@@ -12075,7 +12075,7 @@
             "9 902"
           ],
           "a": "9 803",
-          "h": "",
+          "h": "Số liền sau = số đã cho + 1. Chú ý trường hợp qua chục, trăm hoặc nghìn.",
           "source_question_id": "TOAN3_B35_Q12",
           "source_lesson_no": 45,
           "review_id": "TOAN3_OT76",
@@ -12097,7 +12097,7 @@
             "2 677"
           ],
           "a": "2 677",
-          "h": "",
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án.",
           "source_question_id": "TOAN3_B36_Q12",
           "source_lesson_no": 46,
           "review_id": "TOAN3_OT76",
@@ -12163,7 +12163,7 @@
             "50000 - 7000 + 500 + 70 + 8"
           ],
           "a": "50000 + 7000 + 500 + 70 + 8",
-          "h": "",
+          "h": "Tách chữ số theo đúng hàng nghìn, trăm, chục, đơn vị; viết thành tổng các giá trị hàng.",
           "source_question_id": "TOAN3_B46_Q26",
           "source_lesson_no": 59,
           "review_id": "TOAN3_OT76",
@@ -12185,7 +12185,7 @@
             "<"
           ],
           "a": ">",
-          "h": "",
+          "h": "So sánh các hàng từ trái sang phải.",
           "source_question_id": "TOAN3_B47_Q19",
           "source_lesson_no": 60,
           "review_id": "TOAN3_OT76",
@@ -12207,7 +12207,7 @@
             "80 000"
           ],
           "a": "80 000",
-          "h": "",
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án.",
           "source_question_id": "TOAN3_B48_Q03",
           "source_lesson_no": 61,
           "review_id": "TOAN3_OT76",
@@ -12229,7 +12229,7 @@
             "5"
           ],
           "a": "4",
-          "h": "",
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án.",
           "source_question_id": "TOAN3_B35_Q13",
           "source_lesson_no": 45,
           "review_id": "TOAN3_OT76",
@@ -12251,7 +12251,7 @@
             "="
           ],
           "a": "<",
-          "h": "",
+          "h": "So sánh hàng nghìn.",
           "source_question_id": "TOAN3_B36_Q15",
           "source_lesson_no": 46,
           "review_id": "TOAN3_OT76",
@@ -12317,7 +12317,7 @@
             "72804"
           ],
           "a": "70000 + 2000 + 800 + 5",
-          "h": "",
+          "h": "Tách chữ số theo đúng hàng nghìn, trăm, chục, đơn vị; viết thành tổng các giá trị hàng.",
           "source_question_id": "TOAN3_B46_Q14",
           "source_lesson_no": 59,
           "review_id": "TOAN3_OT76",
@@ -12339,7 +12339,7 @@
             "50 202"
           ],
           "a": "86 968",
-          "h": "",
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án.",
           "source_question_id": "TOAN3_B47_Q18",
           "source_lesson_no": 60,
           "review_id": "TOAN3_OT76",
@@ -12361,7 +12361,7 @@
             "90 000"
           ],
           "a": "80 000",
-          "h": "",
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án.",
           "source_question_id": "TOAN3_B48_Q15",
           "source_lesson_no": 61,
           "review_id": "TOAN3_OT76",
@@ -12383,7 +12383,7 @@
             "4"
           ],
           "a": "5",
-          "h": "",
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án.",
           "source_question_id": "TOAN3_B35_Q19",
           "source_lesson_no": 45,
           "review_id": "TOAN3_OT76",
@@ -12405,7 +12405,7 @@
             "<"
           ],
           "a": "<",
-          "h": "",
+          "h": "So sánh hàng nghìn.",
           "source_question_id": "TOAN3_B36_Q17",
           "source_lesson_no": 46,
           "review_id": "TOAN3_OT76",
@@ -12471,7 +12471,7 @@
             "3"
           ],
           "a": "3",
-          "h": "",
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án.",
           "source_question_id": "TOAN3_B46_Q13",
           "source_lesson_no": 59,
           "review_id": "TOAN3_OT76",
@@ -12493,7 +12493,7 @@
             "43 070"
           ],
           "a": "92 645",
-          "h": "",
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án.",
           "source_question_id": "TOAN3_B47_Q06",
           "source_lesson_no": 60,
           "review_id": "TOAN3_OT76",
@@ -12515,7 +12515,7 @@
             "94 000 (3)"
           ],
           "a": "94 000",
-          "h": "",
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án.",
           "source_question_id": "TOAN3_B48_Q19",
           "source_lesson_no": 61,
           "review_id": "TOAN3_OT76",
@@ -12537,7 +12537,7 @@
             "9000 + 100"
           ],
           "a": "9000 + 100",
-          "h": "",
+          "h": "Tách chữ số theo đúng hàng nghìn, trăm, chục, đơn vị; viết thành tổng các giá trị hàng.",
           "source_question_id": "TOAN3_B35_Q20",
           "source_lesson_no": 45,
           "review_id": "TOAN3_OT76",
@@ -12559,7 +12559,7 @@
             ">"
           ],
           "a": ">",
-          "h": "",
+          "h": "So sánh hàng nghìn.",
           "source_question_id": "TOAN3_B36_Q23",
           "source_lesson_no": 46,
           "review_id": "TOAN3_OT76",
@@ -12625,7 +12625,7 @@
             "76 999"
           ],
           "a": "76 999",
-          "h": "",
+          "h": "Số liền sau = số đã cho + 1. Chú ý trường hợp qua chục, trăm hoặc nghìn.",
           "source_question_id": "TOAN3_B46_Q12",
           "source_lesson_no": 59,
           "review_id": "TOAN3_OT76",
@@ -12647,7 +12647,7 @@
             "88 878"
           ],
           "a": "30 722",
-          "h": "",
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án.",
           "source_question_id": "TOAN3_B47_Q20",
           "source_lesson_no": 60,
           "review_id": "TOAN3_OT76",
@@ -12669,7 +12669,7 @@
             "50 000"
           ],
           "a": "50 000",
-          "h": "",
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án.",
           "source_question_id": "TOAN3_B48_Q06",
           "source_lesson_no": 61,
           "review_id": "TOAN3_OT76",
@@ -12691,7 +12691,7 @@
             "3"
           ],
           "a": "4",
-          "h": "",
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án.",
           "source_question_id": "TOAN3_B35_Q01",
           "source_lesson_no": 45,
           "review_id": "TOAN3_OT76",
@@ -12713,7 +12713,7 @@
             "="
           ],
           "a": "<",
-          "h": "",
+          "h": "So sánh hàng nghìn.",
           "source_question_id": "TOAN3_B36_Q27",
           "source_lesson_no": 46,
           "review_id": "TOAN3_OT76",
@@ -12767,7 +12767,7 @@
             "7 913"
           ],
           "a": "9 999",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B42_Q26",
           "source_lesson_no": 54,
           "review_id": "TOAN3_OT77",
@@ -12789,7 +12789,7 @@
             "7 923"
           ],
           "a": "7 853",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B43_Q01",
           "source_lesson_no": 55,
           "review_id": "TOAN3_OT77",
@@ -12811,7 +12811,7 @@
             "59 350"
           ],
           "a": "59 360",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B49_Q15",
           "source_lesson_no": 63,
           "review_id": "TOAN3_OT77",
@@ -12833,7 +12833,7 @@
             "1 789"
           ],
           "a": "1 789",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B50_Q11",
           "source_lesson_no": 64,
           "review_id": "TOAN3_OT77",
@@ -12855,7 +12855,7 @@
             "5 089"
           ],
           "a": "5 079",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B42_Q12",
           "source_lesson_no": 54,
           "review_id": "TOAN3_OT77",
@@ -12877,7 +12877,7 @@
             "3 499"
           ],
           "a": "3 509",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B43_Q16",
           "source_lesson_no": 55,
           "review_id": "TOAN3_OT77",
@@ -12899,7 +12899,7 @@
             "99 989"
           ],
           "a": "99 999",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B49_Q22",
           "source_lesson_no": 63,
           "review_id": "TOAN3_OT77",
@@ -12921,7 +12921,7 @@
             "55 732"
           ],
           "a": "55 742",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B50_Q26",
           "source_lesson_no": 64,
           "review_id": "TOAN3_OT77",
@@ -12943,7 +12943,7 @@
             "4 980"
           ],
           "a": "4 980",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B42_Q18",
           "source_lesson_no": 54,
           "review_id": "TOAN3_OT77",
@@ -12965,7 +12965,7 @@
             "3 291"
           ],
           "a": "3 291",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B43_Q15",
           "source_lesson_no": 55,
           "review_id": "TOAN3_OT77",
@@ -12987,7 +12987,7 @@
             "75 196"
           ],
           "a": "75 206",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B49_Q05",
           "source_lesson_no": 63,
           "review_id": "TOAN3_OT77",
@@ -13009,7 +13009,7 @@
             "12 453"
           ],
           "a": "12 443",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B50_Q15",
           "source_lesson_no": 64,
           "review_id": "TOAN3_OT77",
@@ -13031,7 +13031,7 @@
             "8 102"
           ],
           "a": "8 112",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B42_Q28",
           "source_lesson_no": 54,
           "review_id": "TOAN3_OT77",
@@ -13053,7 +13053,7 @@
             "9 371"
           ],
           "a": "4 247",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B43_Q12",
           "source_lesson_no": 55,
           "review_id": "TOAN3_OT77",
@@ -13075,7 +13075,7 @@
             "46 330"
           ],
           "a": "46 330",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B49_Q16",
           "source_lesson_no": 63,
           "review_id": "TOAN3_OT77",
@@ -13097,7 +13097,7 @@
             "96 840"
           ],
           "a": "80 580",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B50_Q03",
           "source_lesson_no": 64,
           "review_id": "TOAN3_OT77",
@@ -13119,7 +13119,7 @@
             "9 275"
           ],
           "a": "9 265",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B42_Q25",
           "source_lesson_no": 54,
           "review_id": "TOAN3_OT77",
@@ -13141,7 +13141,7 @@
             "895"
           ],
           "a": "905",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B43_Q08",
           "source_lesson_no": 55,
           "review_id": "TOAN3_OT77",
@@ -13163,7 +13163,7 @@
             "78 897"
           ],
           "a": "78 907",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B49_Q03",
           "source_lesson_no": 63,
           "review_id": "TOAN3_OT77",
@@ -13185,7 +13185,7 @@
             "9 437"
           ],
           "a": "9 437",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B50_Q21",
           "source_lesson_no": 64,
           "review_id": "TOAN3_OT77",
@@ -13207,7 +13207,7 @@
             "236"
           ],
           "a": "4 572",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B42_Q02",
           "source_lesson_no": 54,
           "review_id": "TOAN3_OT77",
@@ -13229,7 +13229,7 @@
             "9 538"
           ],
           "a": "4 532",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B43_Q26",
           "source_lesson_no": 55,
           "review_id": "TOAN3_OT77",
@@ -13251,7 +13251,7 @@
             "98 317"
           ],
           "a": "99 999",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B49_Q17",
           "source_lesson_no": 63,
           "review_id": "TOAN3_OT77",
@@ -13273,7 +13273,7 @@
             "15 381"
           ],
           "a": "5 813",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B50_Q14",
           "source_lesson_no": 64,
           "review_id": "TOAN3_OT77",
@@ -13295,7 +13295,7 @@
             "4 358"
           ],
           "a": "9 434",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B42_Q11",
           "source_lesson_no": 54,
           "review_id": "TOAN3_OT77",
@@ -13317,7 +13317,7 @@
             "10 413"
           ],
           "a": "7 363",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B43_Q11",
           "source_lesson_no": 55,
           "review_id": "TOAN3_OT77",
@@ -13339,7 +13339,7 @@
             "26 250"
           ],
           "a": "26 250",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B49_Q07",
           "source_lesson_no": 63,
           "review_id": "TOAN3_OT77",
@@ -13361,7 +13361,7 @@
             "89 605"
           ],
           "a": "8 537",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B50_Q23",
           "source_lesson_no": 64,
           "review_id": "TOAN3_OT77",
@@ -13383,7 +13383,7 @@
             "9 999"
           ],
           "a": "9 999",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B42_Q04",
           "source_lesson_no": 54,
           "review_id": "TOAN3_OT77",
@@ -13405,7 +13405,7 @@
             "1 945"
           ],
           "a": "1 935",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B43_Q04",
           "source_lesson_no": 55,
           "review_id": "TOAN3_OT77",
@@ -13459,7 +13459,7 @@
             "9 268"
           ],
           "a": "27 795",
-          "h": "",
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả.",
           "source_question_id": "TOAN3_B44_Q15",
           "source_lesson_no": 56,
           "review_id": "TOAN3_OT78",
@@ -13481,7 +13481,7 @@
             "1 937"
           ],
           "a": "1 938",
-          "h": "",
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có.",
           "source_question_id": "TOAN3_B45_Q01",
           "source_lesson_no": 57,
           "review_id": "TOAN3_OT78",
@@ -13503,7 +13503,7 @@
             "77 973"
           ],
           "a": "77 970",
-          "h": "",
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả.",
           "source_question_id": "TOAN3_B54_Q09",
           "source_lesson_no": 70,
           "review_id": "TOAN3_OT78",
@@ -13525,7 +13525,7 @@
             "5"
           ],
           "a": "10 246",
-          "h": "",
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có.",
           "source_question_id": "TOAN3_B55_Q19",
           "source_lesson_no": 71,
           "review_id": "TOAN3_OT78",
@@ -13547,7 +13547,7 @@
             "13 134"
           ],
           "a": "13 136",
-          "h": "",
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả.",
           "source_question_id": "TOAN3_B44_Q25",
           "source_lesson_no": 56,
           "review_id": "TOAN3_OT78",
@@ -13569,7 +13569,7 @@
             "2 863"
           ],
           "a": "2 864",
-          "h": "",
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có.",
           "source_question_id": "TOAN3_B45_Q04",
           "source_lesson_no": 57,
           "review_id": "TOAN3_OT78",
@@ -13591,7 +13591,7 @@
             "83 144"
           ],
           "a": "83 152",
-          "h": "",
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả.",
           "source_question_id": "TOAN3_B54_Q13",
           "source_lesson_no": 70,
           "review_id": "TOAN3_OT78",
@@ -13613,7 +13613,7 @@
             "18 055"
           ],
           "a": "18 054",
-          "h": "",
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có.",
           "source_question_id": "TOAN3_B55_Q10",
           "source_lesson_no": 71,
           "review_id": "TOAN3_OT78",
@@ -13635,7 +13635,7 @@
             "51 600"
           ],
           "a": "51 594",
-          "h": "",
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả.",
           "source_question_id": "TOAN3_B44_Q23",
           "source_lesson_no": 56,
           "review_id": "TOAN3_OT78",
@@ -13657,7 +13657,7 @@
             "801"
           ],
           "a": "801",
-          "h": "",
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có.",
           "source_question_id": "TOAN3_B45_Q08",
           "source_lesson_no": 57,
           "review_id": "TOAN3_OT78",
@@ -13679,7 +13679,7 @@
             "14 859"
           ],
           "a": "74 270",
-          "h": "",
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả.",
           "source_question_id": "TOAN3_B54_Q30",
           "source_lesson_no": 70,
           "review_id": "TOAN3_OT78",
@@ -13701,7 +13701,7 @@
             "13 333"
           ],
           "a": "13 332",
-          "h": "",
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có.",
           "source_question_id": "TOAN3_B55_Q03",
           "source_lesson_no": 71,
           "review_id": "TOAN3_OT78",
@@ -13723,7 +13723,7 @@
             "11 025"
           ],
           "a": "11 025",
-          "h": "",
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả.",
           "source_question_id": "TOAN3_B44_Q14",
           "source_lesson_no": 56,
           "review_id": "TOAN3_OT78",
@@ -13745,7 +13745,7 @@
             "1 425"
           ],
           "a": "1 426",
-          "h": "",
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có.",
           "source_question_id": "TOAN3_B45_Q17",
           "source_lesson_no": 57,
           "review_id": "TOAN3_OT78",
@@ -13767,7 +13767,7 @@
             "79 855"
           ],
           "a": "79 850",
-          "h": "",
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả.",
           "source_question_id": "TOAN3_B54_Q17",
           "source_lesson_no": 70,
           "review_id": "TOAN3_OT78",
@@ -13789,7 +13789,7 @@
             "21 263"
           ],
           "a": "21 263",
-          "h": "",
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có.",
           "source_question_id": "TOAN3_B55_Q09",
           "source_lesson_no": 71,
           "review_id": "TOAN3_OT78",
@@ -13811,7 +13811,7 @@
             "10 941"
           ],
           "a": "10 941",
-          "h": "",
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả.",
           "source_question_id": "TOAN3_B44_Q29",
           "source_lesson_no": 56,
           "review_id": "TOAN3_OT78",
@@ -13833,7 +13833,7 @@
             "4"
           ],
           "a": "1 958",
-          "h": "",
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có.",
           "source_question_id": "TOAN3_B45_Q25",
           "source_lesson_no": 57,
           "review_id": "TOAN3_OT78",
@@ -13855,7 +13855,7 @@
             "75 960"
           ],
           "a": "75 960",
-          "h": "",
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả.",
           "source_question_id": "TOAN3_B54_Q03",
           "source_lesson_no": 70,
           "review_id": "TOAN3_OT78",
@@ -13877,7 +13877,7 @@
             "5 581"
           ],
           "a": "5 581",
-          "h": "",
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có.",
           "source_question_id": "TOAN3_B55_Q12",
           "source_lesson_no": 71,
           "review_id": "TOAN3_OT78",
@@ -13899,7 +13899,7 @@
             "25 480"
           ],
           "a": "25 485",
-          "h": "",
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả.",
           "source_question_id": "TOAN3_B44_Q20",
           "source_lesson_no": 56,
           "review_id": "TOAN3_OT78",
@@ -13921,7 +13921,7 @@
             "5"
           ],
           "a": "1 843",
-          "h": "",
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có.",
           "source_question_id": "TOAN3_B45_Q07",
           "source_lesson_no": 57,
           "review_id": "TOAN3_OT78",
@@ -13943,7 +13943,7 @@
             "48 898"
           ],
           "a": "48 898",
-          "h": "",
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả.",
           "source_question_id": "TOAN3_B54_Q08",
           "source_lesson_no": 70,
           "review_id": "TOAN3_OT78",
@@ -13965,7 +13965,7 @@
             "16 516"
           ],
           "a": "16 516",
-          "h": "",
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có.",
           "source_question_id": "TOAN3_B55_Q13",
           "source_lesson_no": 71,
           "review_id": "TOAN3_OT78",
@@ -13987,7 +13987,7 @@
             "2 113"
           ],
           "a": "16 840",
-          "h": "",
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả.",
           "source_question_id": "TOAN3_B44_Q30",
           "source_lesson_no": 56,
           "review_id": "TOAN3_OT78",
@@ -14009,7 +14009,7 @@
             "1 440"
           ],
           "a": "1 440",
-          "h": "",
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có.",
           "source_question_id": "TOAN3_B45_Q26",
           "source_lesson_no": 57,
           "review_id": "TOAN3_OT78",
@@ -14031,7 +14031,7 @@
             "61 092"
           ],
           "a": "61 096",
-          "h": "",
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả.",
           "source_question_id": "TOAN3_B54_Q16",
           "source_lesson_no": 70,
           "review_id": "TOAN3_OT78",
@@ -14053,7 +14053,7 @@
             "4"
           ],
           "a": "15 838",
-          "h": "",
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có.",
           "source_question_id": "TOAN3_B55_Q17",
           "source_lesson_no": 71,
           "review_id": "TOAN3_OT78",
@@ -14075,7 +14075,7 @@
             "12 152"
           ],
           "a": "12 145",
-          "h": "",
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả.",
           "source_question_id": "TOAN3_B44_Q10",
           "source_lesson_no": 56,
           "review_id": "TOAN3_OT78",
@@ -14097,7 +14097,7 @@
             "539"
           ],
           "a": "538",
-          "h": "",
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có.",
           "source_question_id": "TOAN3_B45_Q09",
           "source_lesson_no": 57,
           "review_id": "TOAN3_OT78",
@@ -14846,7 +14846,7 @@
             "10"
           ],
           "a": "10",
-          "h": "",
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước.",
           "source_question_id": "TOAN3_B56_Q02",
           "source_lesson_no": 73,
           "review_id": "TOAN3_OT80",
@@ -14890,7 +14890,7 @@
             "5"
           ],
           "a": "13",
-          "h": "",
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước.",
           "source_question_id": "TOAN3_B58_Q22",
           "source_lesson_no": 75,
           "review_id": "TOAN3_OT80",
@@ -14912,7 +14912,7 @@
             "15"
           ],
           "a": "33",
-          "h": "",
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước.",
           "source_question_id": "TOAN3_B56_Q20",
           "source_lesson_no": 73,
           "review_id": "TOAN3_OT80",
@@ -14956,7 +14956,7 @@
             "23"
           ],
           "a": "23",
-          "h": "",
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước.",
           "source_question_id": "TOAN3_B58_Q07",
           "source_lesson_no": 75,
           "review_id": "TOAN3_OT80",
@@ -14978,7 +14978,7 @@
             "28"
           ],
           "a": "29",
-          "h": "",
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước.",
           "source_question_id": "TOAN3_B56_Q28",
           "source_lesson_no": 73,
           "review_id": "TOAN3_OT80",
@@ -15022,7 +15022,7 @@
             "30"
           ],
           "a": "30",
-          "h": "",
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước.",
           "source_question_id": "TOAN3_B58_Q21",
           "source_lesson_no": 75,
           "review_id": "TOAN3_OT80",
@@ -15044,7 +15044,7 @@
             "28"
           ],
           "a": "28",
-          "h": "",
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước.",
           "source_question_id": "TOAN3_B56_Q23",
           "source_lesson_no": 73,
           "review_id": "TOAN3_OT80",
@@ -15066,7 +15066,7 @@
             "14"
           ],
           "a": "30",
-          "h": "",
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước.",
           "source_question_id": "TOAN3_B58_Q26",
           "source_lesson_no": 75,
           "review_id": "TOAN3_OT80",
@@ -15088,7 +15088,7 @@
             "19"
           ],
           "a": "20",
-          "h": "",
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước.",
           "source_question_id": "TOAN3_B56_Q15",
           "source_lesson_no": 73,
           "review_id": "TOAN3_OT80",
@@ -15110,7 +15110,7 @@
             "16"
           ],
           "a": "16",
-          "h": "",
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước.",
           "source_question_id": "TOAN3_B58_Q24",
           "source_lesson_no": 75,
           "review_id": "TOAN3_OT80",
@@ -15132,7 +15132,7 @@
             "15"
           ],
           "a": "30",
-          "h": "",
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước.",
           "source_question_id": "TOAN3_B56_Q30",
           "source_lesson_no": 73,
           "review_id": "TOAN3_OT80",
@@ -15154,7 +15154,7 @@
             "32"
           ],
           "a": "33",
-          "h": "",
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước.",
           "source_question_id": "TOAN3_B58_Q15",
           "source_lesson_no": 75,
           "review_id": "TOAN3_OT80",
@@ -15176,7 +15176,7 @@
             "26"
           ],
           "a": "25",
-          "h": "",
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước.",
           "source_question_id": "TOAN3_B56_Q03",
           "source_lesson_no": 73,
           "review_id": "TOAN3_OT80",
@@ -15198,7 +15198,7 @@
             "15"
           ],
           "a": "33",
-          "h": "",
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước.",
           "source_question_id": "TOAN3_B58_Q01",
           "source_lesson_no": 75,
           "review_id": "TOAN3_OT80",
@@ -15220,7 +15220,7 @@
             "15"
           ],
           "a": "37",
-          "h": "",
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước.",
           "source_question_id": "TOAN3_B56_Q13",
           "source_lesson_no": 73,
           "review_id": "TOAN3_OT80",
@@ -15242,7 +15242,7 @@
             "8"
           ],
           "a": "16",
-          "h": "",
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước.",
           "source_question_id": "TOAN3_B58_Q06",
           "source_lesson_no": 75,
           "review_id": "TOAN3_OT80",
@@ -15672,7 +15672,7 @@
             "9641"
           ],
           "a": "9000 + 600 + 40 + 2",
-          "h": "",
+          "h": "Tách chữ số theo đúng hàng nghìn, trăm, chục, đơn vị; viết thành tổng các giá trị hàng.",
           "source_question_id": "TOAN3_B35_Q11",
           "source_lesson_no": 45,
           "review_id": "TOAN3_OT81",
@@ -15694,7 +15694,7 @@
             "="
           ],
           "a": ">",
-          "h": "",
+          "h": "So sánh hàng nghìn.",
           "source_question_id": "TOAN3_B36_Q25",
           "source_lesson_no": 46,
           "review_id": "TOAN3_OT81",
@@ -15826,7 +15826,7 @@
             "1 680"
           ],
           "a": "6 580",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B42_Q10",
           "source_lesson_no": 54,
           "review_id": "TOAN3_OT81",
@@ -15848,7 +15848,7 @@
             "457"
           ],
           "a": "447",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B43_Q05",
           "source_lesson_no": 55,
           "review_id": "TOAN3_OT81",
@@ -15870,7 +15870,7 @@
             "31 998"
           ],
           "a": "32 004",
-          "h": "",
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả.",
           "source_question_id": "TOAN3_B44_Q21",
           "source_lesson_no": 56,
           "review_id": "TOAN3_OT81",
@@ -15892,7 +15892,7 @@
             "782"
           ],
           "a": "783",
-          "h": "",
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có.",
           "source_question_id": "TOAN3_B45_Q21",
           "source_lesson_no": 57,
           "review_id": "TOAN3_OT81",
@@ -15914,7 +15914,7 @@
             "47244"
           ],
           "a": "40000 + 7000 + 200 + 40 + 5",
-          "h": "",
+          "h": "Tách chữ số theo đúng hàng nghìn, trăm, chục, đơn vị; viết thành tổng các giá trị hàng.",
           "source_question_id": "TOAN3_B46_Q02",
           "source_lesson_no": 59,
           "review_id": "TOAN3_OT81",
@@ -15936,7 +15936,7 @@
             "> (3)"
           ],
           "a": ">",
-          "h": "",
+          "h": "So sánh các hàng từ trái sang phải.",
           "source_question_id": "TOAN3_B47_Q01",
           "source_lesson_no": 60,
           "review_id": "TOAN3_OT81",
@@ -15958,7 +15958,7 @@
             "60 000 (3)"
           ],
           "a": "60 000",
-          "h": "",
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án.",
           "source_question_id": "TOAN3_B48_Q25",
           "source_lesson_no": 61,
           "review_id": "TOAN3_OT81",
@@ -15980,7 +15980,7 @@
             "69 693"
           ],
           "a": "99 999",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B49_Q09",
           "source_lesson_no": 63,
           "review_id": "TOAN3_OT81",
@@ -16002,7 +16002,7 @@
             "73 309"
           ],
           "a": "73 319",
-          "h": "",
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần.",
           "source_question_id": "TOAN3_B50_Q20",
           "source_lesson_no": 64,
           "review_id": "TOAN3_OT81",
@@ -16090,7 +16090,7 @@
             "39 732"
           ],
           "a": "39 735",
-          "h": "",
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả.",
           "source_question_id": "TOAN3_B54_Q11",
           "source_lesson_no": 70,
           "review_id": "TOAN3_OT81",
@@ -16112,7 +16112,7 @@
             "24 187"
           ],
           "a": "24 186",
-          "h": "",
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có.",
           "source_question_id": "TOAN3_B55_Q28",
           "source_lesson_no": 71,
           "review_id": "TOAN3_OT81",
@@ -16134,7 +16134,7 @@
             "26"
           ],
           "a": "26",
-          "h": "",
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước.",
           "source_question_id": "TOAN3_B56_Q16",
           "source_lesson_no": 73,
           "review_id": "TOAN3_OT81",
@@ -16178,7 +16178,7 @@
             "11"
           ],
           "a": "21",
-          "h": "",
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước.",
           "source_question_id": "TOAN3_B58_Q30",
           "source_lesson_no": 75,
           "review_id": "TOAN3_OT81",
@@ -16244,7 +16244,7 @@
             "5"
           ],
           "a": "3",
-          "h": "",
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án.",
           "source_question_id": "TOAN3_B35_Q10",
           "source_lesson_no": 45,
           "review_id": "TOAN3_OT81",
@@ -16266,7 +16266,7 @@
             "4 647"
           ],
           "a": "4 647",
-          "h": "",
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án.",
           "source_question_id": "TOAN3_B36_Q16",
           "source_lesson_no": 46,
           "review_id": "TOAN3_OT81",

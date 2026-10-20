@@ -1,7 +1,7 @@
 {
   "schema_version": "TOAN3_BT_HK2_V1",
   "source_schema_version": "TOAN3_BH_BT_V1",
-  "data_version": "2026-09-20-sgk-sbt-v1",
+  "data_version": "2026-10-20-edu-content-v2",
   "subject": "Toán",
   "grade": 3,
   "curriculum": "Kết nối tri thức với cuộc sống",
@@ -85,7 +85,7 @@
             "3"
           ],
           "a": "4",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B35_Q02",
@@ -103,7 +103,7 @@
             "1443"
           ],
           "a": "1000 + 400 + 40 + 4",
-          "h": ""
+          "h": "Tách chữ số theo đúng hàng nghìn, trăm, chục, đơn vị; viết thành tổng các giá trị hàng."
         },
         {
           "id": "TOAN3_B35_Q03",
@@ -121,7 +121,7 @@
             "2 016"
           ],
           "a": "2 018",
-          "h": ""
+          "h": "Số liền sau = số đã cho + 1. Chú ý trường hợp qua chục, trăm hoặc nghìn."
         },
         {
           "id": "TOAN3_B35_Q04",
@@ -139,7 +139,7 @@
             "1"
           ],
           "a": "2",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B35_Q05",
@@ -157,7 +157,7 @@
             "4000 + 500 + 40 + 8"
           ],
           "a": "4000 + 500 + 40 + 8",
-          "h": ""
+          "h": "Tách chữ số theo đúng hàng nghìn, trăm, chục, đơn vị; viết thành tổng các giá trị hàng."
         },
         {
           "id": "TOAN3_B35_Q06",
@@ -175,7 +175,7 @@
             "2 561"
           ],
           "a": "2 462",
-          "h": ""
+          "h": "Số liền sau = số đã cho + 1. Chú ý trường hợp qua chục, trăm hoặc nghìn."
         },
         {
           "id": "TOAN3_B35_Q07",
@@ -193,7 +193,7 @@
             "4"
           ],
           "a": "4",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B35_Q08",
@@ -211,7 +211,7 @@
             "3416"
           ],
           "a": "3000 + 400 + 10 + 7",
-          "h": ""
+          "h": "Tách chữ số theo đúng hàng nghìn, trăm, chục, đơn vị; viết thành tổng các giá trị hàng."
         },
         {
           "id": "TOAN3_B35_Q09",
@@ -229,7 +229,7 @@
             "6 480"
           ],
           "a": "6 471",
-          "h": ""
+          "h": "Số liền sau = số đã cho + 1. Chú ý trường hợp qua chục, trăm hoặc nghìn."
         },
         {
           "id": "TOAN3_B35_Q10",
@@ -247,7 +247,7 @@
             "5"
           ],
           "a": "3",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B35_Q11",
@@ -265,7 +265,7 @@
             "9641"
           ],
           "a": "9000 + 600 + 40 + 2",
-          "h": ""
+          "h": "Tách chữ số theo đúng hàng nghìn, trăm, chục, đơn vị; viết thành tổng các giá trị hàng."
         },
         {
           "id": "TOAN3_B35_Q12",
@@ -283,7 +283,7 @@
             "9 902"
           ],
           "a": "9 803",
-          "h": ""
+          "h": "Số liền sau = số đã cho + 1. Chú ý trường hợp qua chục, trăm hoặc nghìn."
         },
         {
           "id": "TOAN3_B35_Q13",
@@ -301,7 +301,7 @@
             "5"
           ],
           "a": "4",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B35_Q14",
@@ -319,7 +319,7 @@
             "4000 - 900 + 20 + 4"
           ],
           "a": "4000 + 900 + 20 + 4",
-          "h": ""
+          "h": "Tách chữ số theo đúng hàng nghìn, trăm, chục, đơn vị; viết thành tổng các giá trị hàng."
         },
         {
           "id": "TOAN3_B35_Q15",
@@ -337,7 +337,7 @@
             "5 308"
           ],
           "a": "5 209",
-          "h": ""
+          "h": "Số liền sau = số đã cho + 1. Chú ý trường hợp qua chục, trăm hoặc nghìn."
         },
         {
           "id": "TOAN3_B35_Q16",
@@ -355,7 +355,7 @@
             "0"
           ],
           "a": "0",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B35_Q17",
@@ -373,7 +373,7 @@
             "7809"
           ],
           "a": "7000 + 700 + 90 + 9",
-          "h": ""
+          "h": "Tách chữ số theo đúng hàng nghìn, trăm, chục, đơn vị; viết thành tổng các giá trị hàng."
         },
         {
           "id": "TOAN3_B35_Q18",
@@ -391,7 +391,7 @@
             "4 136"
           ],
           "a": "4 037",
-          "h": ""
+          "h": "Số liền sau = số đã cho + 1. Chú ý trường hợp qua chục, trăm hoặc nghìn."
         },
         {
           "id": "TOAN3_B35_Q19",
@@ -409,7 +409,7 @@
             "4"
           ],
           "a": "5",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B35_Q20",
@@ -427,7 +427,7 @@
             "9000 + 100"
           ],
           "a": "9000 + 100",
-          "h": ""
+          "h": "Tách chữ số theo đúng hàng nghìn, trăm, chục, đơn vị; viết thành tổng các giá trị hàng."
         },
         {
           "id": "TOAN3_B35_Q21",
@@ -445,7 +445,7 @@
             "3 504"
           ],
           "a": "3 405",
-          "h": ""
+          "h": "Số liền sau = số đã cho + 1. Chú ý trường hợp qua chục, trăm hoặc nghìn."
         },
         {
           "id": "TOAN3_B35_Q22",
@@ -463,7 +463,7 @@
             "6"
           ],
           "a": "7",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B35_Q23",
@@ -481,7 +481,7 @@
             "7390"
           ],
           "a": "7000 + 300 + 90 + 1",
-          "h": ""
+          "h": "Tách chữ số theo đúng hàng nghìn, trăm, chục, đơn vị; viết thành tổng các giá trị hàng."
         },
         {
           "id": "TOAN3_B35_Q24",
@@ -499,7 +499,7 @@
             "5 693"
           ],
           "a": "5 695",
-          "h": ""
+          "h": "Số liền sau = số đã cho + 1. Chú ý trường hợp qua chục, trăm hoặc nghìn."
         },
         {
           "id": "TOAN3_B35_Q25",
@@ -517,7 +517,7 @@
             "5"
           ],
           "a": "5",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B35_Q26",
@@ -535,7 +535,7 @@
             "3657"
           ],
           "a": "3000 + 600 + 50 + 8",
-          "h": ""
+          "h": "Tách chữ số theo đúng hàng nghìn, trăm, chục, đơn vị; viết thành tổng các giá trị hàng."
         },
         {
           "id": "TOAN3_B35_Q27",
@@ -553,7 +553,7 @@
             "8 943"
           ],
           "a": "8 934",
-          "h": ""
+          "h": "Số liền sau = số đã cho + 1. Chú ý trường hợp qua chục, trăm hoặc nghìn."
         },
         {
           "id": "TOAN3_B35_Q28",
@@ -571,7 +571,7 @@
             "0"
           ],
           "a": "1",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B35_Q29",
@@ -589,7 +589,7 @@
             "8426"
           ],
           "a": "8000 + 400 + 20 + 7",
-          "h": ""
+          "h": "Tách chữ số theo đúng hàng nghìn, trăm, chục, đơn vị; viết thành tổng các giá trị hàng."
         },
         {
           "id": "TOAN3_B35_Q30",
@@ -607,7 +607,7 @@
             "4 189"
           ],
           "a": "4 189",
-          "h": ""
+          "h": "Số liền sau = số đã cho + 1. Chú ý trường hợp qua chục, trăm hoặc nghìn."
         }
       ]
     },
@@ -671,7 +671,7 @@
             ">"
           ],
           "a": "<",
-          "h": ""
+          "h": "So sánh hàng nghìn."
         },
         {
           "id": "TOAN3_B36_Q02",
@@ -689,7 +689,7 @@
             "9 893"
           ],
           "a": "9 893",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B36_Q03",
@@ -707,7 +707,7 @@
             ">"
           ],
           "a": "<",
-          "h": ""
+          "h": "So sánh hàng nghìn."
         },
         {
           "id": "TOAN3_B36_Q04",
@@ -725,7 +725,7 @@
             "1 966"
           ],
           "a": "1 966",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B36_Q05",
@@ -743,7 +743,7 @@
             "="
           ],
           "a": ">",
-          "h": ""
+          "h": "So sánh hàng nghìn."
         },
         {
           "id": "TOAN3_B36_Q06",
@@ -761,7 +761,7 @@
             "9 395"
           ],
           "a": "9 395",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B36_Q07",
@@ -779,7 +779,7 @@
             "="
           ],
           "a": "<",
-          "h": ""
+          "h": "So sánh hàng nghìn."
         },
         {
           "id": "TOAN3_B36_Q08",
@@ -797,7 +797,7 @@
             "7 121"
           ],
           "a": "1 967",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B36_Q09",
@@ -815,7 +815,7 @@
             ">"
           ],
           "a": "<",
-          "h": ""
+          "h": "So sánh hàng nghìn."
         },
         {
           "id": "TOAN3_B36_Q10",
@@ -833,7 +833,7 @@
             "1 222"
           ],
           "a": "5 279",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B36_Q11",
@@ -851,7 +851,7 @@
             "="
           ],
           "a": ">",
-          "h": ""
+          "h": "So sánh hàng nghìn."
         },
         {
           "id": "TOAN3_B36_Q12",
@@ -869,7 +869,7 @@
             "2 677"
           ],
           "a": "2 677",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B36_Q13",
@@ -887,7 +887,7 @@
             "<"
           ],
           "a": "<",
-          "h": ""
+          "h": "So sánh hàng nghìn."
         },
         {
           "id": "TOAN3_B36_Q14",
@@ -905,7 +905,7 @@
             "8 169"
           ],
           "a": "8 169",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B36_Q15",
@@ -923,7 +923,7 @@
             "="
           ],
           "a": "<",
-          "h": ""
+          "h": "So sánh hàng nghìn."
         },
         {
           "id": "TOAN3_B36_Q16",
@@ -941,7 +941,7 @@
             "4 647"
           ],
           "a": "4 647",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B36_Q17",
@@ -959,7 +959,7 @@
             "<"
           ],
           "a": "<",
-          "h": ""
+          "h": "So sánh hàng nghìn."
         },
         {
           "id": "TOAN3_B36_Q18",
@@ -977,7 +977,7 @@
             "6 452"
           ],
           "a": "8 801",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B36_Q19",
@@ -995,7 +995,7 @@
             "="
           ],
           "a": ">",
-          "h": ""
+          "h": "So sánh hàng nghìn."
         },
         {
           "id": "TOAN3_B36_Q20",
@@ -1013,7 +1013,7 @@
             "9 644"
           ],
           "a": "7 160",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B36_Q21",
@@ -1031,7 +1031,7 @@
             "="
           ],
           "a": "<",
-          "h": ""
+          "h": "So sánh hàng nghìn."
         },
         {
           "id": "TOAN3_B36_Q22",
@@ -1049,7 +1049,7 @@
             "6 602"
           ],
           "a": "7 057",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B36_Q23",
@@ -1067,7 +1067,7 @@
             ">"
           ],
           "a": ">",
-          "h": ""
+          "h": "So sánh hàng nghìn."
         },
         {
           "id": "TOAN3_B36_Q24",
@@ -1085,7 +1085,7 @@
             "1 627"
           ],
           "a": "1 627",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B36_Q25",
@@ -1103,7 +1103,7 @@
             "="
           ],
           "a": ">",
-          "h": ""
+          "h": "So sánh hàng nghìn."
         },
         {
           "id": "TOAN3_B36_Q26",
@@ -1121,7 +1121,7 @@
             "4 400"
           ],
           "a": "5 990",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B36_Q27",
@@ -1139,7 +1139,7 @@
             "="
           ],
           "a": "<",
-          "h": ""
+          "h": "So sánh hàng nghìn."
         },
         {
           "id": "TOAN3_B36_Q28",
@@ -1157,7 +1157,7 @@
             "1 056"
           ],
           "a": "1 056",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B36_Q29",
@@ -1175,7 +1175,7 @@
             "< (3)"
           ],
           "a": "<",
-          "h": ""
+          "h": "So sánh hàng nghìn."
         },
         {
           "id": "TOAN3_B36_Q30",
@@ -1193,7 +1193,7 @@
             "4 555"
           ],
           "a": "5 075",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         }
       ]
     },
@@ -4211,7 +4211,7 @@
             "9 999"
           ],
           "a": "9 999",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B42_Q02",
@@ -4229,7 +4229,7 @@
             "236"
           ],
           "a": "4 572",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B42_Q03",
@@ -4247,7 +4247,7 @@
             "2 736"
           ],
           "a": "2 736",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B42_Q04",
@@ -4265,7 +4265,7 @@
             "9 999"
           ],
           "a": "9 999",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B42_Q05",
@@ -4283,7 +4283,7 @@
             "7 441"
           ],
           "a": "7 451",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B42_Q06",
@@ -4301,7 +4301,7 @@
             "5 284"
           ],
           "a": "5 284",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B42_Q07",
@@ -4319,7 +4319,7 @@
             "9 999"
           ],
           "a": "9 999",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B42_Q08",
@@ -4337,7 +4337,7 @@
             "2 034"
           ],
           "a": "2 034",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B42_Q09",
@@ -4355,7 +4355,7 @@
             "9 778"
           ],
           "a": "9 768",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B42_Q10",
@@ -4373,7 +4373,7 @@
             "1 680"
           ],
           "a": "6 580",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B42_Q11",
@@ -4391,7 +4391,7 @@
             "4 358"
           ],
           "a": "9 434",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B42_Q12",
@@ -4409,7 +4409,7 @@
             "5 089"
           ],
           "a": "5 079",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B42_Q13",
@@ -4427,7 +4427,7 @@
             "6 211"
           ],
           "a": "9 999",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B42_Q14",
@@ -4445,7 +4445,7 @@
             "3 412"
           ],
           "a": "3 422",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B42_Q15",
@@ -4463,7 +4463,7 @@
             "5 301"
           ],
           "a": "5 291",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B42_Q16",
@@ -4481,7 +4481,7 @@
             "3 564"
           ],
           "a": "3 574",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B42_Q17",
@@ -4499,7 +4499,7 @@
             "9 989"
           ],
           "a": "9 999",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B42_Q18",
@@ -4517,7 +4517,7 @@
             "4 980"
           ],
           "a": "4 980",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B42_Q19",
@@ -4535,7 +4535,7 @@
             "5 492"
           ],
           "a": "8 472",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B42_Q20",
@@ -4553,7 +4553,7 @@
             "1 526"
           ],
           "a": "7 532",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B42_Q21",
@@ -4571,7 +4571,7 @@
             "7 465"
           ],
           "a": "7 465",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B42_Q22",
@@ -4589,7 +4589,7 @@
             "3 504"
           ],
           "a": "3 514",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B42_Q23",
@@ -4607,7 +4607,7 @@
             "7 517"
           ],
           "a": "7 507",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B42_Q24",
@@ -4625,7 +4625,7 @@
             "10 009"
           ],
           "a": "9 999",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B42_Q25",
@@ -4643,7 +4643,7 @@
             "9 275"
           ],
           "a": "9 265",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B42_Q26",
@@ -4661,7 +4661,7 @@
             "7 913"
           ],
           "a": "9 999",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B42_Q27",
@@ -4679,7 +4679,7 @@
             "657"
           ],
           "a": "2 807",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B42_Q28",
@@ -4697,7 +4697,7 @@
             "8 102"
           ],
           "a": "8 112",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B42_Q29",
@@ -4715,7 +4715,7 @@
             "7 748"
           ],
           "a": "7 758",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B42_Q30",
@@ -4733,7 +4733,7 @@
             "6 040"
           ],
           "a": "6 050",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         }
       ]
     },
@@ -4797,7 +4797,7 @@
             "7 923"
           ],
           "a": "7 853",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B43_Q02",
@@ -4815,7 +4815,7 @@
             "943"
           ],
           "a": "943",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B43_Q03",
@@ -4833,7 +4833,7 @@
             "4 198"
           ],
           "a": "4 188",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B43_Q04",
@@ -4851,7 +4851,7 @@
             "1 945"
           ],
           "a": "1 935",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B43_Q05",
@@ -4869,7 +4869,7 @@
             "457"
           ],
           "a": "447",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B43_Q06",
@@ -4887,7 +4887,7 @@
             "7 423"
           ],
           "a": "3 069",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B43_Q07",
@@ -4905,7 +4905,7 @@
             "4 376"
           ],
           "a": "1 074",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B43_Q08",
@@ -4923,7 +4923,7 @@
             "895"
           ],
           "a": "905",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B43_Q09",
@@ -4941,7 +4941,7 @@
             "7 649"
           ],
           "a": "7 639",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B43_Q10",
@@ -4959,7 +4959,7 @@
             "4 395"
           ],
           "a": "4 405",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B43_Q11",
@@ -4977,7 +4977,7 @@
             "10 413"
           ],
           "a": "7 363",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B43_Q12",
@@ -4995,7 +4995,7 @@
             "9 371"
           ],
           "a": "4 247",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B43_Q13",
@@ -5013,7 +5013,7 @@
             "554"
           ],
           "a": "544",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B43_Q14",
@@ -5031,7 +5031,7 @@
             "9 415"
           ],
           "a": "827",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B43_Q15",
@@ -5049,7 +5049,7 @@
             "3 291"
           ],
           "a": "3 291",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B43_Q16",
@@ -5067,7 +5067,7 @@
             "3 499"
           ],
           "a": "3 509",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B43_Q17",
@@ -5085,7 +5085,7 @@
             "1 683"
           ],
           "a": "1 605",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B43_Q18",
@@ -5103,7 +5103,7 @@
             "1 662"
           ],
           "a": "1 652",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B43_Q19",
@@ -5121,7 +5121,7 @@
             "249"
           ],
           "a": "249",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B43_Q20",
@@ -5139,7 +5139,7 @@
             "5 979"
           ],
           "a": "5 989",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B43_Q21",
@@ -5157,7 +5157,7 @@
             "9 409"
           ],
           "a": "6 583",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B43_Q22",
@@ -5175,7 +5175,7 @@
             "10 482"
           ],
           "a": "4 058",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B43_Q23",
@@ -5193,7 +5193,7 @@
             "6 438"
           ],
           "a": "6 428",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B43_Q24",
@@ -5211,7 +5211,7 @@
             "914"
           ],
           "a": "914",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B43_Q25",
@@ -5229,7 +5229,7 @@
             "1 577"
           ],
           "a": "553",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B43_Q26",
@@ -5247,7 +5247,7 @@
             "9 538"
           ],
           "a": "4 532",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B43_Q27",
@@ -5265,7 +5265,7 @@
             "57"
           ],
           "a": "57",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B43_Q28",
@@ -5283,7 +5283,7 @@
             "1 538"
           ],
           "a": "1 528",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B43_Q29",
@@ -5301,7 +5301,7 @@
             "5 578"
           ],
           "a": "1 608",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B43_Q30",
@@ -5319,7 +5319,7 @@
             "11 119"
           ],
           "a": "8 507",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         }
       ]
     },
@@ -5383,7 +5383,7 @@
             "4 857"
           ],
           "a": "4 854",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         },
         {
           "id": "TOAN3_B44_Q02",
@@ -5401,7 +5401,7 @@
             "55 952"
           ],
           "a": "55 960",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         },
         {
           "id": "TOAN3_B44_Q03",
@@ -5419,7 +5419,7 @@
             "1 861"
           ],
           "a": "5 574",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         },
         {
           "id": "TOAN3_B44_Q04",
@@ -5437,7 +5437,7 @@
             "1 607"
           ],
           "a": "3 210",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         },
         {
           "id": "TOAN3_B44_Q05",
@@ -5455,7 +5455,7 @@
             "10 168"
           ],
           "a": "10 170",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         },
         {
           "id": "TOAN3_B44_Q06",
@@ -5473,7 +5473,7 @@
             "55 104"
           ],
           "a": "55 112",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         },
         {
           "id": "TOAN3_B44_Q07",
@@ -5491,7 +5491,7 @@
             "23 034"
           ],
           "a": "23 034",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         },
         {
           "id": "TOAN3_B44_Q08",
@@ -5509,7 +5509,7 @@
             "19 546"
           ],
           "a": "19 546",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         },
         {
           "id": "TOAN3_B44_Q09",
@@ -5527,7 +5527,7 @@
             "8 424"
           ],
           "a": "8 426",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         },
         {
           "id": "TOAN3_B44_Q10",
@@ -5545,7 +5545,7 @@
             "12 152"
           ],
           "a": "12 145",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         },
         {
           "id": "TOAN3_B44_Q11",
@@ -5563,7 +5563,7 @@
             "11 836"
           ],
           "a": "11 836",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         },
         {
           "id": "TOAN3_B44_Q12",
@@ -5581,7 +5581,7 @@
             "26 165"
           ],
           "a": "26 170",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         },
         {
           "id": "TOAN3_B44_Q13",
@@ -5599,7 +5599,7 @@
             "8 814"
           ],
           "a": "8 816",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         },
         {
           "id": "TOAN3_B44_Q14",
@@ -5617,7 +5617,7 @@
             "11 025"
           ],
           "a": "11 025",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         },
         {
           "id": "TOAN3_B44_Q15",
@@ -5635,7 +5635,7 @@
             "9 268"
           ],
           "a": "27 795",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         },
         {
           "id": "TOAN3_B44_Q16",
@@ -5653,7 +5653,7 @@
             "51 324"
           ],
           "a": "51 318",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         },
         {
           "id": "TOAN3_B44_Q17",
@@ -5671,7 +5671,7 @@
             "5 972"
           ],
           "a": "5 972",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         },
         {
           "id": "TOAN3_B44_Q18",
@@ -5689,7 +5689,7 @@
             "44 748"
           ],
           "a": "44 754",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         },
         {
           "id": "TOAN3_B44_Q19",
@@ -5707,7 +5707,7 @@
             "24 432"
           ],
           "a": "24 429",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         },
         {
           "id": "TOAN3_B44_Q20",
@@ -5725,7 +5725,7 @@
             "25 480"
           ],
           "a": "25 485",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         },
         {
           "id": "TOAN3_B44_Q21",
@@ -5743,7 +5743,7 @@
             "31 998"
           ],
           "a": "32 004",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         },
         {
           "id": "TOAN3_B44_Q22",
@@ -5761,7 +5761,7 @@
             "42 810"
           ],
           "a": "42 805",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         },
         {
           "id": "TOAN3_B44_Q23",
@@ -5779,7 +5779,7 @@
             "51 600"
           ],
           "a": "51 594",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         },
         {
           "id": "TOAN3_B44_Q24",
@@ -5797,7 +5797,7 @@
             "4 210"
           ],
           "a": "4 208",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         },
         {
           "id": "TOAN3_B44_Q25",
@@ -5815,7 +5815,7 @@
             "13 134"
           ],
           "a": "13 136",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         },
         {
           "id": "TOAN3_B44_Q26",
@@ -5833,7 +5833,7 @@
             "7 975"
           ],
           "a": "63 736",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         },
         {
           "id": "TOAN3_B44_Q27",
@@ -5851,7 +5851,7 @@
             "1 417"
           ],
           "a": "5 652",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         },
         {
           "id": "TOAN3_B44_Q28",
@@ -5869,7 +5869,7 @@
             "5 346"
           ],
           "a": "5 346",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         },
         {
           "id": "TOAN3_B44_Q29",
@@ -5887,7 +5887,7 @@
             "10 941"
           ],
           "a": "10 941",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         },
         {
           "id": "TOAN3_B44_Q30",
@@ -5905,7 +5905,7 @@
             "2 113"
           ],
           "a": "16 840",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         }
       ]
     },
@@ -5969,7 +5969,7 @@
             "1 937"
           ],
           "a": "1 938",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         },
         {
           "id": "TOAN3_B45_Q02",
@@ -5987,7 +5987,7 @@
             "197"
           ],
           "a": "197",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         },
         {
           "id": "TOAN3_B45_Q03",
@@ -6005,7 +6005,7 @@
             "340"
           ],
           "a": "340",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         },
         {
           "id": "TOAN3_B45_Q04",
@@ -6023,7 +6023,7 @@
             "2 863"
           ],
           "a": "2 864",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         },
         {
           "id": "TOAN3_B45_Q05",
@@ -6041,7 +6041,7 @@
             "337"
           ],
           "a": "336",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         },
         {
           "id": "TOAN3_B45_Q06",
@@ -6059,7 +6059,7 @@
             "4"
           ],
           "a": "1 504",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         },
         {
           "id": "TOAN3_B45_Q07",
@@ -6077,7 +6077,7 @@
             "5"
           ],
           "a": "1 843",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         },
         {
           "id": "TOAN3_B45_Q08",
@@ -6095,7 +6095,7 @@
             "801"
           ],
           "a": "801",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         },
         {
           "id": "TOAN3_B45_Q09",
@@ -6113,7 +6113,7 @@
             "539"
           ],
           "a": "538",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         },
         {
           "id": "TOAN3_B45_Q10",
@@ -6131,7 +6131,7 @@
             "1 577"
           ],
           "a": "1 577",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         },
         {
           "id": "TOAN3_B45_Q11",
@@ -6149,7 +6149,7 @@
             "175"
           ],
           "a": "175",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         },
         {
           "id": "TOAN3_B45_Q12",
@@ -6167,7 +6167,7 @@
             "598"
           ],
           "a": "597",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         },
         {
           "id": "TOAN3_B45_Q13",
@@ -6185,7 +6185,7 @@
             "793"
           ],
           "a": "794",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         },
         {
           "id": "TOAN3_B45_Q14",
@@ -6203,7 +6203,7 @@
             "5"
           ],
           "a": "1 937",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         },
         {
           "id": "TOAN3_B45_Q15",
@@ -6221,7 +6221,7 @@
             "160"
           ],
           "a": "160",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         },
         {
           "id": "TOAN3_B45_Q16",
@@ -6239,7 +6239,7 @@
             "933"
           ],
           "a": "932",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         },
         {
           "id": "TOAN3_B45_Q17",
@@ -6257,7 +6257,7 @@
             "1 425"
           ],
           "a": "1 426",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         },
         {
           "id": "TOAN3_B45_Q18",
@@ -6275,7 +6275,7 @@
             "184"
           ],
           "a": "184",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         },
         {
           "id": "TOAN3_B45_Q19",
@@ -6293,7 +6293,7 @@
             "5"
           ],
           "a": "1 062",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         },
         {
           "id": "TOAN3_B45_Q20",
@@ -6311,7 +6311,7 @@
             "3 194"
           ],
           "a": "3 193",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         },
         {
           "id": "TOAN3_B45_Q21",
@@ -6329,7 +6329,7 @@
             "782"
           ],
           "a": "783",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         },
         {
           "id": "TOAN3_B45_Q22",
@@ -6347,7 +6347,7 @@
             "2 474"
           ],
           "a": "2 474",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         },
         {
           "id": "TOAN3_B45_Q23",
@@ -6365,7 +6365,7 @@
             "4"
           ],
           "a": "624",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         },
         {
           "id": "TOAN3_B45_Q24",
@@ -6383,7 +6383,7 @@
             "2 920"
           ],
           "a": "2 921",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         },
         {
           "id": "TOAN3_B45_Q25",
@@ -6401,7 +6401,7 @@
             "4"
           ],
           "a": "1 958",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         },
         {
           "id": "TOAN3_B45_Q26",
@@ -6419,7 +6419,7 @@
             "1 440"
           ],
           "a": "1 440",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         },
         {
           "id": "TOAN3_B45_Q27",
@@ -6437,7 +6437,7 @@
             "389"
           ],
           "a": "389",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         },
         {
           "id": "TOAN3_B45_Q28",
@@ -6455,7 +6455,7 @@
             "2 146"
           ],
           "a": "2 145",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         },
         {
           "id": "TOAN3_B45_Q29",
@@ -6473,7 +6473,7 @@
             "370"
           ],
           "a": "371",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         },
         {
           "id": "TOAN3_B45_Q30",
@@ -6491,7 +6491,7 @@
             "444"
           ],
           "a": "443",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         }
       ]
     },
@@ -6555,7 +6555,7 @@
             "3"
           ],
           "a": "4",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B46_Q02",
@@ -6573,7 +6573,7 @@
             "47244"
           ],
           "a": "40000 + 7000 + 200 + 40 + 5",
-          "h": ""
+          "h": "Tách chữ số theo đúng hàng nghìn, trăm, chục, đơn vị; viết thành tổng các giá trị hàng."
         },
         {
           "id": "TOAN3_B46_Q03",
@@ -6591,7 +6591,7 @@
             "62 047"
           ],
           "a": "62 049",
-          "h": ""
+          "h": "Số liền sau = số đã cho + 1. Chú ý trường hợp qua chục, trăm hoặc nghìn."
         },
         {
           "id": "TOAN3_B46_Q04",
@@ -6609,7 +6609,7 @@
             "6"
           ],
           "a": "5",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B46_Q05",
@@ -6627,7 +6627,7 @@
             "49628"
           ],
           "a": "40000 + 9000 + 600 + 10 + 8",
-          "h": ""
+          "h": "Tách chữ số theo đúng hàng nghìn, trăm, chục, đơn vị; viết thành tổng các giá trị hàng."
         },
         {
           "id": "TOAN3_B46_Q06",
@@ -6645,7 +6645,7 @@
             "39 782"
           ],
           "a": "39 784",
-          "h": ""
+          "h": "Số liền sau = số đã cho + 1. Chú ý trường hợp qua chục, trăm hoặc nghìn."
         },
         {
           "id": "TOAN3_B46_Q07",
@@ -6663,7 +6663,7 @@
             "2"
           ],
           "a": "2",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B46_Q08",
@@ -6681,7 +6681,7 @@
             "81086"
           ],
           "a": "80000 + 1000 + 80 + 7",
-          "h": ""
+          "h": "Tách chữ số theo đúng hàng nghìn, trăm, chục, đơn vị; viết thành tổng các giá trị hàng."
         },
         {
           "id": "TOAN3_B46_Q09",
@@ -6699,7 +6699,7 @@
             "30 001"
           ],
           "a": "30 003",
-          "h": ""
+          "h": "Số liền sau = số đã cho + 1. Chú ý trường hợp qua chục, trăm hoặc nghìn."
         },
         {
           "id": "TOAN3_B46_Q10",
@@ -6717,7 +6717,7 @@
             "0"
           ],
           "a": "1",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B46_Q11",
@@ -6735,7 +6735,7 @@
             "84246"
           ],
           "a": "80000 + 4000 + 200 + 40 + 7",
-          "h": ""
+          "h": "Tách chữ số theo đúng hàng nghìn, trăm, chục, đơn vị; viết thành tổng các giá trị hàng."
         },
         {
           "id": "TOAN3_B46_Q12",
@@ -6753,7 +6753,7 @@
             "76 999"
           ],
           "a": "76 999",
-          "h": ""
+          "h": "Số liền sau = số đã cho + 1. Chú ý trường hợp qua chục, trăm hoặc nghìn."
         },
         {
           "id": "TOAN3_B46_Q13",
@@ -6771,7 +6771,7 @@
             "3"
           ],
           "a": "3",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B46_Q14",
@@ -6789,7 +6789,7 @@
             "72804"
           ],
           "a": "70000 + 2000 + 800 + 5",
-          "h": ""
+          "h": "Tách chữ số theo đúng hàng nghìn, trăm, chục, đơn vị; viết thành tổng các giá trị hàng."
         },
         {
           "id": "TOAN3_B46_Q15",
@@ -6807,7 +6807,7 @@
             "71 748"
           ],
           "a": "71 750",
-          "h": ""
+          "h": "Số liền sau = số đã cho + 1. Chú ý trường hợp qua chục, trăm hoặc nghìn."
         },
         {
           "id": "TOAN3_B46_Q16",
@@ -6825,7 +6825,7 @@
             "5"
           ],
           "a": "3",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B46_Q17",
@@ -6843,7 +6843,7 @@
             "44919"
           ],
           "a": "40000 + 4000 + 900 + 9",
-          "h": ""
+          "h": "Tách chữ số theo đúng hàng nghìn, trăm, chục, đơn vị; viết thành tổng các giá trị hàng."
         },
         {
           "id": "TOAN3_B46_Q18",
@@ -6861,7 +6861,7 @@
             "33 460"
           ],
           "a": "33 462",
-          "h": ""
+          "h": "Số liền sau = số đã cho + 1. Chú ý trường hợp qua chục, trăm hoặc nghìn."
         },
         {
           "id": "TOAN3_B46_Q19",
@@ -6879,7 +6879,7 @@
             "4"
           ],
           "a": "3",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B46_Q20",
@@ -6897,7 +6897,7 @@
             "20000 + 90 + 3"
           ],
           "a": "20000 + 90 + 3",
-          "h": ""
+          "h": "Tách chữ số theo đúng hàng nghìn, trăm, chục, đơn vị; viết thành tổng các giá trị hàng."
         },
         {
           "id": "TOAN3_B46_Q21",
@@ -6915,7 +6915,7 @@
             "69 124"
           ],
           "a": "69 115",
-          "h": ""
+          "h": "Số liền sau = số đã cho + 1. Chú ý trường hợp qua chục, trăm hoặc nghìn."
         },
         {
           "id": "TOAN3_B46_Q22",
@@ -6933,7 +6933,7 @@
             "1"
           ],
           "a": "2",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B46_Q23",
@@ -6951,7 +6951,7 @@
             "74685"
           ],
           "a": "70000 + 4000 + 600 + 70 + 5",
-          "h": ""
+          "h": "Tách chữ số theo đúng hàng nghìn, trăm, chục, đơn vị; viết thành tổng các giá trị hàng."
         },
         {
           "id": "TOAN3_B46_Q24",
@@ -6969,7 +6969,7 @@
             "14 367"
           ],
           "a": "14 369",
-          "h": ""
+          "h": "Số liền sau = số đã cho + 1. Chú ý trường hợp qua chục, trăm hoặc nghìn."
         },
         {
           "id": "TOAN3_B46_Q25",
@@ -6987,7 +6987,7 @@
             "2"
           ],
           "a": "3",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B46_Q26",
@@ -7005,7 +7005,7 @@
             "50000 - 7000 + 500 + 70 + 8"
           ],
           "a": "50000 + 7000 + 500 + 70 + 8",
-          "h": ""
+          "h": "Tách chữ số theo đúng hàng nghìn, trăm, chục, đơn vị; viết thành tổng các giá trị hàng."
         },
         {
           "id": "TOAN3_B46_Q27",
@@ -7023,7 +7023,7 @@
             "69 073"
           ],
           "a": "69 073",
-          "h": ""
+          "h": "Số liền sau = số đã cho + 1. Chú ý trường hợp qua chục, trăm hoặc nghìn."
         },
         {
           "id": "TOAN3_B46_Q28",
@@ -7041,7 +7041,7 @@
             "6"
           ],
           "a": "4",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B46_Q29",
@@ -7059,7 +7059,7 @@
             "70217"
           ],
           "a": "70000 + 200 + 7",
-          "h": ""
+          "h": "Tách chữ số theo đúng hàng nghìn, trăm, chục, đơn vị; viết thành tổng các giá trị hàng."
         },
         {
           "id": "TOAN3_B46_Q30",
@@ -7077,7 +7077,7 @@
             "54 393"
           ],
           "a": "54 395",
-          "h": ""
+          "h": "Số liền sau = số đã cho + 1. Chú ý trường hợp qua chục, trăm hoặc nghìn."
         }
       ]
     },
@@ -7141,7 +7141,7 @@
             "> (3)"
           ],
           "a": ">",
-          "h": ""
+          "h": "So sánh các hàng từ trái sang phải."
         },
         {
           "id": "TOAN3_B47_Q02",
@@ -7159,7 +7159,7 @@
             "43 275"
           ],
           "a": "63 711",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B47_Q03",
@@ -7177,7 +7177,7 @@
             "="
           ],
           "a": ">",
-          "h": ""
+          "h": "So sánh các hàng từ trái sang phải."
         },
         {
           "id": "TOAN3_B47_Q04",
@@ -7195,7 +7195,7 @@
             "16 343"
           ],
           "a": "16 343",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B47_Q05",
@@ -7213,7 +7213,7 @@
             "< (3)"
           ],
           "a": "<",
-          "h": ""
+          "h": "So sánh các hàng từ trái sang phải."
         },
         {
           "id": "TOAN3_B47_Q06",
@@ -7231,7 +7231,7 @@
             "43 070"
           ],
           "a": "92 645",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B47_Q07",
@@ -7249,7 +7249,7 @@
             "> (3)"
           ],
           "a": ">",
-          "h": ""
+          "h": "So sánh các hàng từ trái sang phải."
         },
         {
           "id": "TOAN3_B47_Q08",
@@ -7267,7 +7267,7 @@
             "72 648"
           ],
           "a": "61 592",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B47_Q09",
@@ -7285,7 +7285,7 @@
             "="
           ],
           "a": "<",
-          "h": ""
+          "h": "So sánh các hàng từ trái sang phải."
         },
         {
           "id": "TOAN3_B47_Q10",
@@ -7303,7 +7303,7 @@
             "24 781"
           ],
           "a": "60 473",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B47_Q11",
@@ -7321,7 +7321,7 @@
             "="
           ],
           "a": "<",
-          "h": ""
+          "h": "So sánh các hàng từ trái sang phải."
         },
         {
           "id": "TOAN3_B47_Q12",
@@ -7339,7 +7339,7 @@
             "95 910"
           ],
           "a": "35 290",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B47_Q13",
@@ -7357,7 +7357,7 @@
             "> (3)"
           ],
           "a": ">",
-          "h": ""
+          "h": "So sánh các hàng từ trái sang phải."
         },
         {
           "id": "TOAN3_B47_Q14",
@@ -7375,7 +7375,7 @@
             "61 497"
           ],
           "a": "65 266",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B47_Q15",
@@ -7393,7 +7393,7 @@
             "> (3)"
           ],
           "a": ">",
-          "h": ""
+          "h": "So sánh các hàng từ trái sang phải."
         },
         {
           "id": "TOAN3_B47_Q16",
@@ -7411,7 +7411,7 @@
             "36 136"
           ],
           "a": "36 136",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B47_Q17",
@@ -7429,7 +7429,7 @@
             ">"
           ],
           "a": "<",
-          "h": ""
+          "h": "So sánh các hàng từ trái sang phải."
         },
         {
           "id": "TOAN3_B47_Q18",
@@ -7447,7 +7447,7 @@
             "50 202"
           ],
           "a": "86 968",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B47_Q19",
@@ -7465,7 +7465,7 @@
             "<"
           ],
           "a": ">",
-          "h": ""
+          "h": "So sánh các hàng từ trái sang phải."
         },
         {
           "id": "TOAN3_B47_Q20",
@@ -7483,7 +7483,7 @@
             "88 878"
           ],
           "a": "30 722",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B47_Q21",
@@ -7501,7 +7501,7 @@
             ">"
           ],
           "a": "<",
-          "h": ""
+          "h": "So sánh các hàng từ trái sang phải."
         },
         {
           "id": "TOAN3_B47_Q22",
@@ -7519,7 +7519,7 @@
             "41 031"
           ],
           "a": "94 274",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B47_Q23",
@@ -7537,7 +7537,7 @@
             "="
           ],
           "a": ">",
-          "h": ""
+          "h": "So sánh các hàng từ trái sang phải."
         },
         {
           "id": "TOAN3_B47_Q24",
@@ -7555,7 +7555,7 @@
             "64 601"
           ],
           "a": "43 778",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B47_Q25",
@@ -7573,7 +7573,7 @@
             ">"
           ],
           "a": ">",
-          "h": ""
+          "h": "So sánh các hàng từ trái sang phải."
         },
         {
           "id": "TOAN3_B47_Q26",
@@ -7591,7 +7591,7 @@
             "28 873"
           ],
           "a": "90 674",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B47_Q27",
@@ -7609,7 +7609,7 @@
             "> (3)"
           ],
           "a": ">",
-          "h": ""
+          "h": "So sánh các hàng từ trái sang phải."
         },
         {
           "id": "TOAN3_B47_Q28",
@@ -7627,7 +7627,7 @@
             "65 821"
           ],
           "a": "30 094",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B47_Q29",
@@ -7645,7 +7645,7 @@
             "="
           ],
           "a": "<",
-          "h": ""
+          "h": "So sánh các hàng từ trái sang phải."
         },
         {
           "id": "TOAN3_B47_Q30",
@@ -7663,7 +7663,7 @@
             "12 490"
           ],
           "a": "76 312",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         }
       ]
     },
@@ -7727,7 +7727,7 @@
             "88 000 (3)"
           ],
           "a": "88 000",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B48_Q02",
@@ -7745,7 +7745,7 @@
             "90 000"
           ],
           "a": "90 000",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B48_Q03",
@@ -7763,7 +7763,7 @@
             "80 000"
           ],
           "a": "80 000",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B48_Q04",
@@ -7781,7 +7781,7 @@
             "53 000 (3)"
           ],
           "a": "53 000",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B48_Q05",
@@ -7799,7 +7799,7 @@
             "70 000"
           ],
           "a": "60 000",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B48_Q06",
@@ -7817,7 +7817,7 @@
             "50 000"
           ],
           "a": "50 000",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B48_Q07",
@@ -7835,7 +7835,7 @@
             "74 000"
           ],
           "a": "75 000",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B48_Q08",
@@ -7853,7 +7853,7 @@
             "70 000"
           ],
           "a": "60 000",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B48_Q09",
@@ -7871,7 +7871,7 @@
             "95 000"
           ],
           "a": "96 000",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B48_Q10",
@@ -7889,7 +7889,7 @@
             "20 000 (3)"
           ],
           "a": "20 000",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B48_Q11",
@@ -7907,7 +7907,7 @@
             "19 000"
           ],
           "a": "18 000",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B48_Q12",
@@ -7925,7 +7925,7 @@
             "66 000"
           ],
           "a": "67 000",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B48_Q13",
@@ -7943,7 +7943,7 @@
             "30 000"
           ],
           "a": "30 000",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B48_Q14",
@@ -7961,7 +7961,7 @@
             "53 000"
           ],
           "a": "52 000",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B48_Q15",
@@ -7979,7 +7979,7 @@
             "90 000"
           ],
           "a": "80 000",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B48_Q16",
@@ -7997,7 +7997,7 @@
             "20 000"
           ],
           "a": "30 000",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B48_Q17",
@@ -8015,7 +8015,7 @@
             "40 000 (3)"
           ],
           "a": "40 000",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B48_Q18",
@@ -8033,7 +8033,7 @@
             "55 000"
           ],
           "a": "54 000",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B48_Q19",
@@ -8051,7 +8051,7 @@
             "94 000 (3)"
           ],
           "a": "94 000",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B48_Q20",
@@ -8069,7 +8069,7 @@
             "33 000"
           ],
           "a": "32 000",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B48_Q21",
@@ -8087,7 +8087,7 @@
             "80 000"
           ],
           "a": "80 000",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B48_Q22",
@@ -8105,7 +8105,7 @@
             "50 000 (3)"
           ],
           "a": "50 000",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B48_Q23",
@@ -8123,7 +8123,7 @@
             "110 000"
           ],
           "a": "100 000",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B48_Q24",
@@ -8141,7 +8141,7 @@
             "41 000"
           ],
           "a": "41 000",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B48_Q25",
@@ -8159,7 +8159,7 @@
             "60 000 (3)"
           ],
           "a": "60 000",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B48_Q26",
@@ -8177,7 +8177,7 @@
             "30 000"
           ],
           "a": "20 000",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B48_Q27",
@@ -8195,7 +8195,7 @@
             "60 000"
           ],
           "a": "60 000",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B48_Q28",
@@ -8213,7 +8213,7 @@
             "80 000"
           ],
           "a": "80 000",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B48_Q29",
@@ -8231,7 +8231,7 @@
             "20 000"
           ],
           "a": "30 000",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         },
         {
           "id": "TOAN3_B48_Q30",
@@ -8249,7 +8249,7 @@
             "34 000"
           ],
           "a": "35 000",
-          "h": ""
+          "h": "Đọc kỹ từng chữ số và giá trị hàng, ước lượng kết quả trước khi chọn đáp án."
         }
       ]
     },
@@ -8313,7 +8313,7 @@
             "78 110"
           ],
           "a": "78 120",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B49_Q02",
@@ -8331,7 +8331,7 @@
             "91 948"
           ],
           "a": "91 958",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B49_Q03",
@@ -8349,7 +8349,7 @@
             "78 897"
           ],
           "a": "78 907",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B49_Q04",
@@ -8367,7 +8367,7 @@
             "53 871"
           ],
           "a": "53 871",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B49_Q05",
@@ -8385,7 +8385,7 @@
             "75 196"
           ],
           "a": "75 206",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B49_Q06",
@@ -8403,7 +8403,7 @@
             "73 929"
           ],
           "a": "89 545",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B49_Q07",
@@ -8421,7 +8421,7 @@
             "26 250"
           ],
           "a": "26 250",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B49_Q08",
@@ -8439,7 +8439,7 @@
             "14 073"
           ],
           "a": "51 757",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B49_Q09",
@@ -8457,7 +8457,7 @@
             "69 693"
           ],
           "a": "99 999",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B49_Q10",
@@ -8475,7 +8475,7 @@
             "100 009"
           ],
           "a": "99 999",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B49_Q11",
@@ -8493,7 +8493,7 @@
             "68 993"
           ],
           "a": "69 003",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B49_Q12",
@@ -8511,7 +8511,7 @@
             "85 711"
           ],
           "a": "85 721",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B49_Q13",
@@ -8529,7 +8529,7 @@
             "100 009"
           ],
           "a": "99 999",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B49_Q14",
@@ -8547,7 +8547,7 @@
             "74 631"
           ],
           "a": "74 621",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B49_Q15",
@@ -8565,7 +8565,7 @@
             "59 350"
           ],
           "a": "59 360",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B49_Q16",
@@ -8583,7 +8583,7 @@
             "46 330"
           ],
           "a": "46 330",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B49_Q17",
@@ -8601,7 +8601,7 @@
             "98 317"
           ],
           "a": "99 999",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B49_Q18",
@@ -8619,7 +8619,7 @@
             "87 288"
           ],
           "a": "87 298",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B49_Q19",
@@ -8637,7 +8637,7 @@
             "41 747"
           ],
           "a": "99 999",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B49_Q20",
@@ -8655,7 +8655,7 @@
             "95 409"
           ],
           "a": "95 399",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B49_Q21",
@@ -8673,7 +8673,7 @@
             "38 820"
           ],
           "a": "38 820",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B49_Q22",
@@ -8691,7 +8691,7 @@
             "99 989"
           ],
           "a": "99 999",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B49_Q23",
@@ -8709,7 +8709,7 @@
             "99 999"
           ],
           "a": "99 999",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B49_Q24",
@@ -8727,7 +8727,7 @@
             "97 895"
           ],
           "a": "99 999",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B49_Q25",
@@ -8745,7 +8745,7 @@
             "64 299"
           ],
           "a": "99 999",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B49_Q26",
@@ -8763,7 +8763,7 @@
             "68 068"
           ],
           "a": "68 078",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B49_Q27",
@@ -8781,7 +8781,7 @@
             "68 329"
           ],
           "a": "89 917",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B49_Q28",
@@ -8799,7 +8799,7 @@
             "44 359"
           ],
           "a": "44 349",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B49_Q29",
@@ -8817,7 +8817,7 @@
             "13 876"
           ],
           "a": "63 752",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B49_Q30",
@@ -8835,7 +8835,7 @@
             "99 659"
           ],
           "a": "99 669",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         }
       ]
     },
@@ -8899,7 +8899,7 @@
             "58 573"
           ],
           "a": "53 903",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B50_Q02",
@@ -8917,7 +8917,7 @@
             "10 575"
           ],
           "a": "10 585",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B50_Q03",
@@ -8935,7 +8935,7 @@
             "96 840"
           ],
           "a": "80 580",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B50_Q04",
@@ -8953,7 +8953,7 @@
             "46 898"
           ],
           "a": "46 898",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B50_Q05",
@@ -8971,7 +8971,7 @@
             "3 979"
           ],
           "a": "3 979",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B50_Q06",
@@ -8989,7 +8989,7 @@
             "677"
           ],
           "a": "667",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B50_Q07",
@@ -9007,7 +9007,7 @@
             "12 106"
           ],
           "a": "12 106",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B50_Q08",
@@ -9025,7 +9025,7 @@
             "10 188"
           ],
           "a": "10 188",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B50_Q09",
@@ -9043,7 +9043,7 @@
             "809"
           ],
           "a": "799",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B50_Q10",
@@ -9061,7 +9061,7 @@
             "16 951"
           ],
           "a": "16 941",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B50_Q11",
@@ -9079,7 +9079,7 @@
             "1 789"
           ],
           "a": "1 789",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B50_Q12",
@@ -9097,7 +9097,7 @@
             "19 798"
           ],
           "a": "19 788",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B50_Q13",
@@ -9115,7 +9115,7 @@
             "40 151"
           ],
           "a": "40 141",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B50_Q14",
@@ -9133,7 +9133,7 @@
             "15 381"
           ],
           "a": "5 813",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B50_Q15",
@@ -9151,7 +9151,7 @@
             "12 453"
           ],
           "a": "12 443",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B50_Q16",
@@ -9169,7 +9169,7 @@
             "15 535"
           ],
           "a": "15 545",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B50_Q17",
@@ -9187,7 +9187,7 @@
             "54 542"
           ],
           "a": "20 098",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B50_Q18",
@@ -9205,7 +9205,7 @@
             "78 219"
           ],
           "a": "3 289",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B50_Q19",
@@ -9223,7 +9223,7 @@
             "34 559"
           ],
           "a": "34 569",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B50_Q20",
@@ -9241,7 +9241,7 @@
             "73 309"
           ],
           "a": "73 319",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B50_Q21",
@@ -9259,7 +9259,7 @@
             "9 437"
           ],
           "a": "9 437",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B50_Q22",
@@ -9277,7 +9277,7 @@
             "12 662"
           ],
           "a": "12 672",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B50_Q23",
@@ -9295,7 +9295,7 @@
             "89 605"
           ],
           "a": "8 537",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B50_Q24",
@@ -9313,7 +9313,7 @@
             "50 706"
           ],
           "a": "7 552",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B50_Q25",
@@ -9331,7 +9331,7 @@
             "78 099"
           ],
           "a": "78 099",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B50_Q26",
@@ -9349,7 +9349,7 @@
             "55 732"
           ],
           "a": "55 742",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B50_Q27",
@@ -9367,7 +9367,7 @@
             "5 017"
           ],
           "a": "5 017",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B50_Q28",
@@ -9385,7 +9385,7 @@
             "13 248"
           ],
           "a": "13 258",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B50_Q29",
@@ -9403,7 +9403,7 @@
             "22 518"
           ],
           "a": "22 528",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         },
         {
           "id": "TOAN3_B50_Q30",
@@ -9421,7 +9421,7 @@
             "37 880"
           ],
           "a": "37 870",
-          "h": ""
+          "h": "Đặt các chữ số cùng hàng thẳng cột, tính từ hàng đơn vị trước; nhớ hoặc mượn khi cần."
         }
       ]
     },
@@ -11270,7 +11270,7 @@
             "65 880"
           ],
           "a": "65 880",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         },
         {
           "id": "TOAN3_B54_Q02",
@@ -11288,7 +11288,7 @@
             "13 055"
           ],
           "a": "78 294",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         },
         {
           "id": "TOAN3_B54_Q03",
@@ -11306,7 +11306,7 @@
             "75 960"
           ],
           "a": "75 960",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         },
         {
           "id": "TOAN3_B54_Q04",
@@ -11324,7 +11324,7 @@
             "10 964"
           ],
           "a": "87 648",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         },
         {
           "id": "TOAN3_B54_Q05",
@@ -11342,7 +11342,7 @@
             "81 488"
           ],
           "a": "81 496",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         },
         {
           "id": "TOAN3_B54_Q06",
@@ -11360,7 +11360,7 @@
             "98 052"
           ],
           "a": "98 052",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         },
         {
           "id": "TOAN3_B54_Q07",
@@ -11378,7 +11378,7 @@
             "51 561"
           ],
           "a": "51 564",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         },
         {
           "id": "TOAN3_B54_Q08",
@@ -11396,7 +11396,7 @@
             "48 898"
           ],
           "a": "48 898",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         },
         {
           "id": "TOAN3_B54_Q09",
@@ -11414,7 +11414,7 @@
             "77 973"
           ],
           "a": "77 970",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         },
         {
           "id": "TOAN3_B54_Q10",
@@ -11432,7 +11432,7 @@
             "63 768"
           ],
           "a": "63 774",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         },
         {
           "id": "TOAN3_B54_Q11",
@@ -11450,7 +11450,7 @@
             "39 732"
           ],
           "a": "39 735",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         },
         {
           "id": "TOAN3_B54_Q12",
@@ -11468,7 +11468,7 @@
             "14 910"
           ],
           "a": "29 816",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         },
         {
           "id": "TOAN3_B54_Q13",
@@ -11486,7 +11486,7 @@
             "83 144"
           ],
           "a": "83 152",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         },
         {
           "id": "TOAN3_B54_Q14",
@@ -11504,7 +11504,7 @@
             "96 245"
           ],
           "a": "96 245",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         },
         {
           "id": "TOAN3_B54_Q15",
@@ -11522,7 +11522,7 @@
             "24 201"
           ],
           "a": "48 398",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         },
         {
           "id": "TOAN3_B54_Q16",
@@ -11540,7 +11540,7 @@
             "61 092"
           ],
           "a": "61 096",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         },
         {
           "id": "TOAN3_B54_Q17",
@@ -11558,7 +11558,7 @@
             "79 855"
           ],
           "a": "79 850",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         },
         {
           "id": "TOAN3_B54_Q18",
@@ -11576,7 +11576,7 @@
             "13 324"
           ],
           "a": "53 280",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         },
         {
           "id": "TOAN3_B54_Q19",
@@ -11594,7 +11594,7 @@
             "86 214"
           ],
           "a": "86 220",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         },
         {
           "id": "TOAN3_B54_Q20",
@@ -11612,7 +11612,7 @@
             "83 733"
           ],
           "a": "83 733",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         },
         {
           "id": "TOAN3_B54_Q21",
@@ -11630,7 +11630,7 @@
             "96 264"
           ],
           "a": "96 258",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         },
         {
           "id": "TOAN3_B54_Q22",
@@ -11648,7 +11648,7 @@
             "28 656"
           ],
           "a": "85 959",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         },
         {
           "id": "TOAN3_B54_Q23",
@@ -11666,7 +11666,7 @@
             "29 274"
           ],
           "a": "58 544",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         },
         {
           "id": "TOAN3_B54_Q24",
@@ -11684,7 +11684,7 @@
             "69 895"
           ],
           "a": "69 900",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         },
         {
           "id": "TOAN3_B54_Q25",
@@ -11702,7 +11702,7 @@
             "16 051"
           ],
           "a": "64 188",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         },
         {
           "id": "TOAN3_B54_Q26",
@@ -11720,7 +11720,7 @@
             "98 924"
           ],
           "a": "98 931",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         },
         {
           "id": "TOAN3_B54_Q27",
@@ -11738,7 +11738,7 @@
             "14 092"
           ],
           "a": "98 595",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         },
         {
           "id": "TOAN3_B54_Q28",
@@ -11756,7 +11756,7 @@
             "11 018"
           ],
           "a": "77 077",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         },
         {
           "id": "TOAN3_B54_Q29",
@@ -11774,7 +11774,7 @@
             "61 105"
           ],
           "a": "61 110",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         },
         {
           "id": "TOAN3_B54_Q30",
@@ -11792,7 +11792,7 @@
             "14 859"
           ],
           "a": "74 270",
-          "h": ""
+          "h": "Tính từng hàng từ phải sang trái, nhớ khi cần; dùng phép chia ngược để kiểm tra kết quả."
         }
       ]
     },
@@ -11856,7 +11856,7 @@
             "1 447"
           ],
           "a": "1 447",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         },
         {
           "id": "TOAN3_B55_Q02",
@@ -11874,7 +11874,7 @@
             "5"
           ],
           "a": "13 402",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         },
         {
           "id": "TOAN3_B55_Q03",
@@ -11892,7 +11892,7 @@
             "13 333"
           ],
           "a": "13 332",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         },
         {
           "id": "TOAN3_B55_Q04",
@@ -11910,7 +11910,7 @@
             "32 214"
           ],
           "a": "32 215",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         },
         {
           "id": "TOAN3_B55_Q05",
@@ -11928,7 +11928,7 @@
             "14 586"
           ],
           "a": "14 586",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         },
         {
           "id": "TOAN3_B55_Q06",
@@ -11946,7 +11946,7 @@
             "2"
           ],
           "a": "38 836",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         },
         {
           "id": "TOAN3_B55_Q07",
@@ -11964,7 +11964,7 @@
             "29 682"
           ],
           "a": "29 682",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         },
         {
           "id": "TOAN3_B55_Q08",
@@ -11982,7 +11982,7 @@
             "5"
           ],
           "a": "9 514",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         },
         {
           "id": "TOAN3_B55_Q09",
@@ -12000,7 +12000,7 @@
             "21 263"
           ],
           "a": "21 263",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         },
         {
           "id": "TOAN3_B55_Q10",
@@ -12018,7 +12018,7 @@
             "18 055"
           ],
           "a": "18 054",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         },
         {
           "id": "TOAN3_B55_Q11",
@@ -12036,7 +12036,7 @@
             "8"
           ],
           "a": "4 590",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         },
         {
           "id": "TOAN3_B55_Q12",
@@ -12054,7 +12054,7 @@
             "5 581"
           ],
           "a": "5 581",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         },
         {
           "id": "TOAN3_B55_Q13",
@@ -12072,7 +12072,7 @@
             "16 516"
           ],
           "a": "16 516",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         },
         {
           "id": "TOAN3_B55_Q14",
@@ -12090,7 +12090,7 @@
             "9"
           ],
           "a": "1 680",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         },
         {
           "id": "TOAN3_B55_Q15",
@@ -12108,7 +12108,7 @@
             "5"
           ],
           "a": "4 848",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         },
         {
           "id": "TOAN3_B55_Q16",
@@ -12126,7 +12126,7 @@
             "7 311"
           ],
           "a": "7 312",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         },
         {
           "id": "TOAN3_B55_Q17",
@@ -12144,7 +12144,7 @@
             "4"
           ],
           "a": "15 838",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         },
         {
           "id": "TOAN3_B55_Q18",
@@ -12162,7 +12162,7 @@
             "6 426"
           ],
           "a": "6 427",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         },
         {
           "id": "TOAN3_B55_Q19",
@@ -12180,7 +12180,7 @@
             "5"
           ],
           "a": "10 246",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         },
         {
           "id": "TOAN3_B55_Q20",
@@ -12198,7 +12198,7 @@
             "3"
           ],
           "a": "19 774",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         },
         {
           "id": "TOAN3_B55_Q21",
@@ -12216,7 +12216,7 @@
             "23 661"
           ],
           "a": "23 660",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         },
         {
           "id": "TOAN3_B55_Q22",
@@ -12234,7 +12234,7 @@
             "5"
           ],
           "a": "3 176",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         },
         {
           "id": "TOAN3_B55_Q23",
@@ -12252,7 +12252,7 @@
             "6 892"
           ],
           "a": "6 893",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         },
         {
           "id": "TOAN3_B55_Q24",
@@ -12270,7 +12270,7 @@
             "8 254"
           ],
           "a": "8 253",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         },
         {
           "id": "TOAN3_B55_Q25",
@@ -12288,7 +12288,7 @@
             "8"
           ],
           "a": "4 943",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         },
         {
           "id": "TOAN3_B55_Q26",
@@ -12306,7 +12306,7 @@
             "9 045"
           ],
           "a": "9 046",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         },
         {
           "id": "TOAN3_B55_Q27",
@@ -12324,7 +12324,7 @@
             "6"
           ],
           "a": "3 087",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         },
         {
           "id": "TOAN3_B55_Q28",
@@ -12342,7 +12342,7 @@
             "24 187"
           ],
           "a": "24 186",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         },
         {
           "id": "TOAN3_B55_Q29",
@@ -12360,7 +12360,7 @@
             "47 679"
           ],
           "a": "47 679",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         },
         {
           "id": "TOAN3_B55_Q30",
@@ -12378,7 +12378,7 @@
             "12 484"
           ],
           "a": "12 484",
-          "h": ""
+          "h": "Dùng phép nhân ngược hoặc đặt tính chia; kiểm tra bằng thương × số chia cộng số dư nếu có."
         }
       ]
     },
@@ -12442,7 +12442,7 @@
             "15"
           ],
           "a": "39",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         },
         {
           "id": "TOAN3_B56_Q02",
@@ -12460,7 +12460,7 @@
             "10"
           ],
           "a": "10",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         },
         {
           "id": "TOAN3_B56_Q03",
@@ -12478,7 +12478,7 @@
             "26"
           ],
           "a": "25",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         },
         {
           "id": "TOAN3_B56_Q04",
@@ -12496,7 +12496,7 @@
             "34"
           ],
           "a": "34",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         },
         {
           "id": "TOAN3_B56_Q05",
@@ -12514,7 +12514,7 @@
             "13"
           ],
           "a": "25",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         },
         {
           "id": "TOAN3_B56_Q06",
@@ -12532,7 +12532,7 @@
             "7"
           ],
           "a": "16",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         },
         {
           "id": "TOAN3_B56_Q07",
@@ -12550,7 +12550,7 @@
             "22"
           ],
           "a": "21",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         },
         {
           "id": "TOAN3_B56_Q08",
@@ -12568,7 +12568,7 @@
             "32"
           ],
           "a": "32",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         },
         {
           "id": "TOAN3_B56_Q09",
@@ -12586,7 +12586,7 @@
             "29"
           ],
           "a": "30",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         },
         {
           "id": "TOAN3_B56_Q10",
@@ -12604,7 +12604,7 @@
             "38"
           ],
           "a": "38",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         },
         {
           "id": "TOAN3_B56_Q11",
@@ -12622,7 +12622,7 @@
             "11"
           ],
           "a": "23",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         },
         {
           "id": "TOAN3_B56_Q12",
@@ -12640,7 +12640,7 @@
             "29"
           ],
           "a": "28",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         },
         {
           "id": "TOAN3_B56_Q13",
@@ -12658,7 +12658,7 @@
             "15"
           ],
           "a": "37",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         },
         {
           "id": "TOAN3_B56_Q14",
@@ -12676,7 +12676,7 @@
             "19"
           ],
           "a": "20",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         },
         {
           "id": "TOAN3_B56_Q15",
@@ -12694,7 +12694,7 @@
             "19"
           ],
           "a": "20",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         },
         {
           "id": "TOAN3_B56_Q16",
@@ -12712,7 +12712,7 @@
             "26"
           ],
           "a": "26",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         },
         {
           "id": "TOAN3_B56_Q17",
@@ -12730,7 +12730,7 @@
             "28"
           ],
           "a": "29",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         },
         {
           "id": "TOAN3_B56_Q18",
@@ -12748,7 +12748,7 @@
             "38"
           ],
           "a": "38",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         },
         {
           "id": "TOAN3_B56_Q19",
@@ -12766,7 +12766,7 @@
             "16"
           ],
           "a": "17",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         },
         {
           "id": "TOAN3_B56_Q20",
@@ -12784,7 +12784,7 @@
             "15"
           ],
           "a": "33",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         },
         {
           "id": "TOAN3_B56_Q21",
@@ -12802,7 +12802,7 @@
             "29"
           ],
           "a": "28",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         },
         {
           "id": "TOAN3_B56_Q22",
@@ -12820,7 +12820,7 @@
             "29"
           ],
           "a": "29",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         },
         {
           "id": "TOAN3_B56_Q23",
@@ -12838,7 +12838,7 @@
             "28"
           ],
           "a": "28",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         },
         {
           "id": "TOAN3_B56_Q24",
@@ -12856,7 +12856,7 @@
             "37"
           ],
           "a": "38",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         },
         {
           "id": "TOAN3_B56_Q25",
@@ -12874,7 +12874,7 @@
             "28"
           ],
           "a": "27",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         },
         {
           "id": "TOAN3_B56_Q26",
@@ -12892,7 +12892,7 @@
             "33"
           ],
           "a": "32",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         },
         {
           "id": "TOAN3_B56_Q27",
@@ -12910,7 +12910,7 @@
             "24"
           ],
           "a": "25",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         },
         {
           "id": "TOAN3_B56_Q28",
@@ -12928,7 +12928,7 @@
             "28"
           ],
           "a": "29",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         },
         {
           "id": "TOAN3_B56_Q29",
@@ -12946,7 +12946,7 @@
             "15"
           ],
           "a": "27",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         },
         {
           "id": "TOAN3_B56_Q30",
@@ -12964,7 +12964,7 @@
             "15"
           ],
           "a": "30",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         }
       ],
       "illustration": {
@@ -13628,7 +13628,7 @@
             "15"
           ],
           "a": "33",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         },
         {
           "id": "TOAN3_B58_Q02",
@@ -13646,7 +13646,7 @@
             "31"
           ],
           "a": "32",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         },
         {
           "id": "TOAN3_B58_Q03",
@@ -13664,7 +13664,7 @@
             "16"
           ],
           "a": "16",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         },
         {
           "id": "TOAN3_B58_Q04",
@@ -13682,7 +13682,7 @@
             "9"
           ],
           "a": "20",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         },
         {
           "id": "TOAN3_B58_Q05",
@@ -13700,7 +13700,7 @@
             "34"
           ],
           "a": "33",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         },
         {
           "id": "TOAN3_B58_Q06",
@@ -13718,7 +13718,7 @@
             "8"
           ],
           "a": "16",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         },
         {
           "id": "TOAN3_B58_Q07",
@@ -13736,7 +13736,7 @@
             "23"
           ],
           "a": "23",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         },
         {
           "id": "TOAN3_B58_Q08",
@@ -13754,7 +13754,7 @@
             "22"
           ],
           "a": "22",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         },
         {
           "id": "TOAN3_B58_Q09",
@@ -13772,7 +13772,7 @@
             "27"
           ],
           "a": "26",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         },
         {
           "id": "TOAN3_B58_Q10",
@@ -13790,7 +13790,7 @@
             "39"
           ],
           "a": "39",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         },
         {
           "id": "TOAN3_B58_Q11",
@@ -13808,7 +13808,7 @@
             "11"
           ],
           "a": "24",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         },
         {
           "id": "TOAN3_B58_Q12",
@@ -13826,7 +13826,7 @@
             "32"
           ],
           "a": "32",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         },
         {
           "id": "TOAN3_B58_Q13",
@@ -13844,7 +13844,7 @@
             "19"
           ],
           "a": "18",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         },
         {
           "id": "TOAN3_B58_Q14",
@@ -13862,7 +13862,7 @@
             "10"
           ],
           "a": "10",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         },
         {
           "id": "TOAN3_B58_Q15",
@@ -13880,7 +13880,7 @@
             "32"
           ],
           "a": "33",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         },
         {
           "id": "TOAN3_B58_Q16",
@@ -13898,7 +13898,7 @@
             "15"
           ],
           "a": "27",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         },
         {
           "id": "TOAN3_B58_Q17",
@@ -13916,7 +13916,7 @@
             "28"
           ],
           "a": "29",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         },
         {
           "id": "TOAN3_B58_Q18",
@@ -13934,7 +13934,7 @@
             "34"
           ],
           "a": "33",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         },
         {
           "id": "TOAN3_B58_Q19",
@@ -13952,7 +13952,7 @@
             "20"
           ],
           "a": "20",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         },
         {
           "id": "TOAN3_B58_Q20",
@@ -13970,7 +13970,7 @@
             "15"
           ],
           "a": "16",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         },
         {
           "id": "TOAN3_B58_Q21",
@@ -13988,7 +13988,7 @@
             "30"
           ],
           "a": "30",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         },
         {
           "id": "TOAN3_B58_Q22",
@@ -14006,7 +14006,7 @@
             "5"
           ],
           "a": "13",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         },
         {
           "id": "TOAN3_B58_Q23",
@@ -14024,7 +14024,7 @@
             "22"
           ],
           "a": "23",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         },
         {
           "id": "TOAN3_B58_Q24",
@@ -14042,7 +14042,7 @@
             "16"
           ],
           "a": "16",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         },
         {
           "id": "TOAN3_B58_Q25",
@@ -14060,7 +14060,7 @@
             "14"
           ],
           "a": "32",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         },
         {
           "id": "TOAN3_B58_Q26",
@@ -14078,7 +14078,7 @@
             "14"
           ],
           "a": "30",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         },
         {
           "id": "TOAN3_B58_Q27",
@@ -14096,7 +14096,7 @@
             "25"
           ],
           "a": "26",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         },
         {
           "id": "TOAN3_B58_Q28",
@@ -14114,7 +14114,7 @@
             "18"
           ],
           "a": "19",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         },
         {
           "id": "TOAN3_B58_Q29",
@@ -14132,7 +14132,7 @@
             "33"
           ],
           "a": "32",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         },
         {
           "id": "TOAN3_B58_Q30",
@@ -14150,7 +14150,7 @@
             "11"
           ],
           "a": "21",
-          "h": ""
+          "h": "Tìm các nhóm cần gộp, cộng đủ từng nhóm; nếu có số nhóm bằng nhau thì tính nhân trước."
         }
       ],
       "illustration": {
