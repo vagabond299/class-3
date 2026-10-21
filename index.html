@@ -2103,6 +2103,134 @@
       .home-btn img{object-fit:contain}
       .contact-grade-links{justify-content:flex-start}
     }
+
+    /* Mobile L3: Admin action belongs to the sticky top row, before Cài APP.
+       Other users retain the original six-tab non-sticky menu. */
+    .header-tools #mobile-admin-button{display:none}
+    @media(max-width:767px){
+      .app-header .header-tools #mobile-admin-button:not(.hidden){
+        position:relative;
+        display:inline-flex;
+        flex:0 0 70px;
+        width:70px;
+        min-width:70px;
+        max-width:70px;
+        height:74px;
+        min-height:74px;
+        max-height:74px;
+        padding:3px 2px;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+        gap:1px;
+        border:1px solid #D8B4FE;
+        border-radius:16px;
+        background:#F3E8FF;
+        color:#6D28D9;
+        line-height:1.05;
+        text-align:center;
+        white-space:normal;
+      }
+      .app-header .header-tools #mobile-admin-button.is-active{
+        color:#fff;
+        background:linear-gradient(90deg,#A855F7,#7C3AED);
+        border-color:#DDD6FE;
+      }
+      #mobile-admin-button .mobile-admin-icon{
+        font-size:22px;
+        line-height:1;
+      }
+      #mobile-admin-button .mobile-admin-label{
+        font-size:20px;
+        font-weight:950;
+        line-height:1.03;
+        max-width:100%;
+        text-wrap:balance;
+      }
+      #mobile-admin-button .mobile-admin-count:not(.hidden){
+        position:absolute;
+        top:1px;
+        right:1px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        min-width:23px;
+        min-height:23px;
+        padding:0 3px;
+        border-radius:99px;
+        border:1px solid #fff;
+        background:#EF4444;
+        color:#fff;
+        font-size:20px;
+        font-weight:950;
+        line-height:1;
+        pointer-events:none;
+      }
+      /* Preserve long learner names instead of cutting them at 74px when
+         the extra Admin control shares the mobile toolbar. */
+      .app-header .header-tools:has(#mobile-admin-button:not(.hidden)){
+        height:auto;
+        min-height:74px;
+      }
+      .app-header .header-tools:has(#mobile-admin-button:not(.hidden)) #account-button.user-btn{
+        height:auto;
+        min-height:74px;
+        max-height:none;
+        overflow:visible;
+      }
+      .app-header .header-tools:has(#mobile-admin-button:not(.hidden)) #account-button .user-btn-name{
+        overflow-wrap:anywhere;
+      }
+      /* The management tab is shown only in the sticky row on mobile.
+         Keep the existing desktop/tablet navigation unchanged. */
+      .app-header .primary-nav .nav-tab[data-id="admin"]{display:none}
+    }
+    @media(max-width:360px){
+      .app-header .header-tools #mobile-admin-button:not(.hidden){
+        flex-basis:64px;
+        width:64px;
+        min-width:64px;
+        max-width:64px;
+        padding-left:1px;
+        padding-right:1px;
+      }
+    }
+    @media(max-width:340px){
+      .app-header .header-tools:has(#mobile-admin-button:not(.hidden)){
+        gap:2px;
+      }
+      .app-header .header-mobile-row:has(#mobile-admin-button:not(.hidden)){
+        grid-template-columns:50px minmax(0,1fr);
+        gap:3px;
+      }
+      .app-header .header-tools #mobile-admin-button:not(.hidden){
+        flex-basis:62px;
+        width:62px;
+        min-width:62px;
+        max-width:62px;
+      }
+      .app-header .header-tools:has(#mobile-admin-button:not(.hidden)) #install-button.install-btn{
+        flex-basis:52px;
+        width:52px;
+        min-width:52px;
+        max-width:52px;
+      }
+      .app-header .header-tools:has(#mobile-admin-button:not(.hidden)) #account-button.user-btn{
+        flex-shrink:1;
+        min-width:68px;
+        height:auto;
+        min-height:74px;
+        max-height:none;
+        overflow:visible;
+      }
+      .app-header .header-tools:has(#mobile-admin-button:not(.hidden)) #account-button .user-btn-name{
+        overflow-wrap:anywhere;
+      }
+      .app-header .header-tools:has(#mobile-admin-button:not(.hidden)){
+        height:auto;
+        min-height:74px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -2113,6 +2241,11 @@
           <img src="logo-home.jpg" alt="Lớp 3 - Trang chủ">
         </button>
         <div class="header-tools">
+          <button id="mobile-admin-button" class="tool-btn mobile-admin-button hidden" type="button" aria-label="Quản lý Lớp 3" title="Quản lý Lớp 3">
+            <span class="mobile-admin-icon" aria-hidden="true">🛠️</span>
+            <span class="mobile-admin-label">Quản lý</span>
+            <span id="mobile-admin-count" class="mobile-admin-count hidden" aria-label="Yêu cầu đang chờ"></span>
+          </button>
           <button id="install-button" class="tool-btn install-btn hidden" type="button" aria-label="Cài APP"><span class="install-btn-line">Cài</span><span class="install-btn-line">APP</span></button>
           <div id="score-box" class="score-box hidden" aria-label="Thống kê đúng sai">
             <span class="good" aria-label="Câu đúng"><span aria-hidden="true">★</span><span class="score-label"> Đúng</span></span><strong class="good">0</strong>
@@ -2217,6 +2350,6 @@
   <div id="toast" class="toast" aria-live="polite" aria-atomic="true"></div>
 
   <script src="assets/js/core/class3-data.js?v=class3-system-20261013-1"></script>
-  <script src="assets/js/app.js?v=class3-ui-20261021"></script>
+  <script src="assets/js/app.js?v=class3-mobile-admin-20261021-1"></script>
 </body>
 </html>
