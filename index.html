@@ -1851,12 +1851,11 @@
     }
     #install-button .install-btn-line{display:block;width:100%;font-size:20px;line-height:1.1;white-space:nowrap}
 
-    /* Header L3 - desktop cung hang Home; mobile giu du tai khoan va diem. */
+    /* Header L3 cuon tu nhien cung trang tren desktop va mobile. */
     .app-header{
       --ee-header-height:74px;
-      position:sticky;
-      top:0;
-      z-index:70;
+      position:relative;
+      z-index:20;
       isolation:isolate;
       grid-template-columns:112px minmax(0,1fr) auto;
       grid-template-rows:var(--ee-header-height);
@@ -2050,9 +2049,7 @@
       }
     }
 
-    /* L3: mobile chi giu hang Home/tai khoan/diem khi cuon.
-       Thanh 6 tab van hien o dau trang, nhung cuon theo noi dung.
-       Desktop giu nguyen toan bo header sticky. */
+    /* L3: giu bo cuc header responsive, khong ghim khi cuon. */
     .app-header .header-mobile-row{display:contents}
     @media(min-width:1176px){
       .app-header .home-btn{grid-column:1;grid-row:1}
@@ -2065,8 +2062,7 @@
       .app-header .primary-nav{grid-column:1/-1;grid-row:2}
     }
     @media(max-width:767px){
-      /* display:contents removes the header layout box so the sticky
-         mobile toolbar is constrained by app-shell, not the 2-row header. */
+      /* Tren mobile, thanh Home/tai khoan va 6 tab deu cuon theo trang. */
       .app-header{display:contents;position:static}
       .app-header .header-mobile-row{
         display:grid;
@@ -2074,9 +2070,8 @@
         grid-template-rows:minmax(74px,auto);
         gap:6px;
         align-items:stretch;
-        position:sticky;
-        top:0;
-        z-index:70;
+        position:relative;
+        z-index:20;
         isolation:isolate;
         padding:5px 0;
         background:var(--page);
@@ -2104,8 +2099,8 @@
       .contact-grade-links{justify-content:flex-start}
     }
 
-    /* Mobile L3: management remains in the sticky toolbar, not the 6-tab row.
-       Preserve the natural Home logo proportions and the minimum 20px labels. */
+    /* Mobile L3: Admin nam o hang Home/tai khoan, khong nam trong 6 tab.
+       Giu ty le logo va nhan nut toi thieu 20px. */
     .header-tools #mobile-admin-button{display:none}
     @media(max-width:767px){
       /* Match the clean Home button of the Class 2 reference (no double frame). */
@@ -2209,8 +2204,8 @@
         max-width:84px;
       }
     }
-    /* The extra Admin control and score can exceed the physical width at 320px.
-       Wrap inside the sticky toolbar instead of shrinking the Home logo or fonts. */
+    /* Admin va diem so co the tran ngang o 320px.
+       Cho phep xuong dong thay vi thu nho logo va chu. */
     @media(max-width:360px){
       .app-header .header-tools:has(#mobile-admin-button:not(.hidden)){
         flex-wrap:wrap;
