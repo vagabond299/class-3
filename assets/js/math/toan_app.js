@@ -259,9 +259,9 @@
     }else if(kind==='tally_chart'){
       body='<div class="m3-tally-chart"><div class="m3-tally-heading"><strong>Nhóm</strong><strong>Vạch kiểm đếm</strong></div>'+arr(vm.rows).map(x=>`<div class="m3-tally-row"><strong>${e(x.label)}</strong>${tallySvg(x.count)}</div>`).join('')+'</div><p class="m3-caption">Mỗi cụm bốn vạch dọc và một vạch chéo là 5.</p>';
     }else if(kind==='segment_midpoint'){
-      body=`<svg class="m3-math-svg" viewBox="0 0 280 120" role="img" aria-label="Đoạn AB có M ở chính giữa"><path d="M 28 58 H 252" stroke="#7041b2" stroke-width="4"/><g fill="#ec4899"><circle cx="28" cy="58" r="6"/><circle cx="140" cy="58" r="6"/><circle cx="252" cy="58" r="6"/></g><g font-size="17" font-weight="800" fill="#6d28d9"><text x="23" y="92">A</text><text x="135" y="92">M</text><text x="246" y="92">B</text><text x="96" y="23">${safeInt(vm.length,1,9999)} cm</text></g></svg>`;
+      body=`<svg class="m3-math-svg" viewBox="0 0 280 120" role="img" aria-label="Đoạn AB có M ở chính giữa"><path d="M 28 58 H 252" stroke="#7041b2" stroke-width="4"/><g fill="#ec4899"><circle cx="28" cy="58" r="6"/><circle cx="140" cy="58" r="6"/><circle cx="252" cy="58" r="6"/></g><g font-size="20" font-weight="800" fill="#6d28d9"><text x="23" y="92">A</text><text x="135" y="92">M</text><text x="246" y="92">B</text><text x="96" y="23">${safeInt(vm.length,1,9999)} cm</text></g></svg>`;
     }else if(kind==='circle_parts'){
-      body=`<svg class="m3-math-svg" viewBox="0 0 250 190" role="img" aria-label="Hình tròn tâm O, bán kính OM và đường kính AB"><circle cx="125" cy="92" r="69" fill="#f1eaff" stroke="#7c3aed" stroke-width="3"/><line x1="56" y1="92" x2="194" y2="92" stroke="#ec4899" stroke-width="3"/><line x1="125" y1="92" x2="125" y2="23" stroke="#0d9488" stroke-width="3"/><circle cx="125" cy="92" r="4" fill="#7c3aed"/><g font-size="16" fill="#5b216e"><text x="107" y="110">O</text><text x="46" y="87">A</text><text x="200" y="87">B</text><text x="132" y="24">M</text></g></svg>`;
+      body=`<svg class="m3-math-svg" viewBox="0 0 250 190" role="img" aria-label="Hình tròn tâm O, bán kính OM và đường kính AB"><circle cx="125" cy="92" r="69" fill="#f1eaff" stroke="#7c3aed" stroke-width="3"/><line x1="56" y1="92" x2="194" y2="92" stroke="#ec4899" stroke-width="3"/><line x1="125" y1="92" x2="125" y2="23" stroke="#0d9488" stroke-width="3"/><circle cx="125" cy="92" r="4" fill="#7c3aed"/><g font-size="20" fill="#5b216e"><text x="107" y="110">O</text><text x="46" y="87">A</text><text x="200" y="87">B</text><text x="132" y="24">M</text></g></svg>`;
     }else if(kind==='clock_concept'){
       body=clockSvg(vm.hour,vm.minute);
     }else if(kind==='solid_faces'){
@@ -310,16 +310,16 @@
       }
     }else if(kind==='joined_squares'){
       const side=safeInt(vm.side,1,99);
-      body=`<svg class="m3-math-svg" viewBox="0 0 300 190" role="img" aria-label="Hai hình vuông cạnh ${side} cm ghép cạnh nhau"><rect x="34" y="47" width="112" height="112" fill="#ede9fe" stroke="#6d28d9" stroke-width="3"/><rect x="146" y="47" width="112" height="112" fill="#bfdbfe" stroke="#6d28d9" stroke-width="3"/><g fill="#5b216e" font-size="16" font-weight="800"><text x="146" y="31" text-anchor="middle">Hai hình vuông bằng nhau</text><text x="90" y="175" text-anchor="middle">${side} cm</text><text x="203" y="175" text-anchor="middle">${side} cm</text></g></svg>`;
+      body=`<svg class="m3-math-svg" viewBox="0 0 300 190" role="img" aria-label="Hai hình vuông cạnh ${side} cm ghép cạnh nhau"><rect x="34" y="47" width="112" height="112" fill="#ede9fe" stroke="#6d28d9" stroke-width="3"/><rect x="146" y="47" width="112" height="112" fill="#bfdbfe" stroke="#6d28d9" stroke-width="3"/><g fill="#5b216e" font-size="20" font-weight="800"><text x="146" y="31" text-anchor="middle">Hai hình vuông bằng nhau</text><text x="90" y="175" text-anchor="middle">${side} cm</text><text x="203" y="175" text-anchor="middle">${side} cm</text></g></svg>`;
     }else if(kind==='cutout_square'){
       const side=safeInt(vm.side,3,99),cut=safeInt(vm.cut,1,side-1),gap=Math.max(12,Math.min(130,Math.round(150*cut/side))),x=198-gap,y=22+gap;
-      body=`<svg class="m3-math-svg" viewBox="0 0 280 224" role="img" aria-label="Hình vuông cạnh ${side} cm bỏ đi hình vuông nhỏ cạnh ${cut} cm ở góc"><path d="M 48 22 H ${x} V ${y} H 198 V 172 H 48 Z" fill="#c4b5fd" stroke="#6d28d9" stroke-width="3" stroke-linejoin="round"/><path d="M ${x} 22 H 198 V ${y}" stroke="#94a3b8" stroke-dasharray="4 4" fill="none" stroke-width="2"/><g fill="#5b216e" font-size="16" font-weight="800"><text x="36" y="100" transform="rotate(-90,36,100)">${side} cm</text><text x="212" y="31">Bỏ</text><text x="212" y="48">${cut} cm</text></g></svg>`;
+      body=`<svg class="m3-math-svg" viewBox="0 0 280 224" role="img" aria-label="Hình vuông cạnh ${side} cm bỏ đi hình vuông nhỏ cạnh ${cut} cm ở góc"><path d="M 48 22 H ${x} V ${y} H 198 V 172 H 48 Z" fill="#c4b5fd" stroke="#6d28d9" stroke-width="3" stroke-linejoin="round"/><path d="M ${x} 22 H 198 V ${y}" stroke="#94a3b8" stroke-dasharray="4 4" fill="none" stroke-width="2"/><g fill="#5b216e" font-size="20" font-weight="800"><text x="36" y="100" transform="rotate(-90,36,100)">${side} cm</text><text x="212" y="31">Bỏ</text><text x="212" y="48">${cut} cm</text></g></svg>`;
     }else if(kind==='segment_quarters'){
       const length=safeInt(vm.length,4,9999);
-      body=`<svg class="m3-math-svg" viewBox="0 0 310 125" role="img" aria-label="A, N, M, B thẳng hàng; N là trung điểm AM và M là trung điểm AB"><path d="M 30 57 H 280" stroke="#7041b2" stroke-width="4"/><g fill="#db2777"><circle cx="30" cy="57" r="6"/><circle cx="92.5" cy="57" r="6"/><circle cx="155" cy="57" r="6"/><circle cx="280" cy="57" r="6"/></g><g fill="#5b216e" font-size="18" font-weight="800"><text x="24" y="88">A</text><text x="85" y="88">N</text><text x="149" y="88">M</text><text x="274" y="88">B</text><text x="150" y="22" text-anchor="middle">AB = ${length} cm</text></g></svg>`;
+      body=`<svg class="m3-math-svg" viewBox="0 0 310 125" role="img" aria-label="A, N, M, B thẳng hàng; N là trung điểm AM và M là trung điểm AB"><path d="M 30 57 H 280" stroke="#7041b2" stroke-width="4"/><g fill="#db2777"><circle cx="30" cy="57" r="6"/><circle cx="92.5" cy="57" r="6"/><circle cx="155" cy="57" r="6"/><circle cx="280" cy="57" r="6"/></g><g fill="#5b216e" font-size="20" font-weight="800"><text x="24" y="88">A</text><text x="85" y="88">N</text><text x="149" y="88">M</text><text x="274" y="88">B</text><text x="150" y="22" text-anchor="middle">AB = ${length} cm</text></g></svg>`;
     }else if(kind==='rectangle_area'){
       const w=safeInt(vm.width,1,9999),h=safeInt(vm.height,1,9999),width=180,height=Math.max(68,180*h/w);
-      body=`<svg class="m3-math-svg" viewBox="0 0 280 215" role="img" aria-label="Hình chữ nhật dài ${w} và rộng ${h} xăng-ti-mét"><rect x="55" y="38" width="${width}" height="${Math.min(130,height)}" fill="#e9d5ff" stroke="#7c3aed" stroke-width="3"/><g fill="#5b216e" font-size="17" font-weight="800"><text x="135" y="25" text-anchor="middle">${w} cm</text><text x="50" y="114" text-anchor="end">${h} cm</text></g></svg>`;
+      body=`<svg class="m3-math-svg" viewBox="0 0 280 215" role="img" aria-label="Hình chữ nhật dài ${w} và rộng ${h} xăng-ti-mét"><rect x="55" y="38" width="${width}" height="${Math.min(130,height)}" fill="#e9d5ff" stroke="#7c3aed" stroke-width="3"/><g fill="#5b216e" font-size="20" font-weight="800"><text x="135" y="25" text-anchor="middle">${w} cm</text><text x="50" y="114" text-anchor="end">${h} cm</text></g></svg>`;
     }
     return body?`<figure class="m3-math-visual">${body}</figure>`:'';
   }
@@ -794,7 +794,7 @@
     hour=safeInt(hour,1,12);minute=safeInt(minute,0,59);
     const angle=(degrees,length)=>{const r=degrees*Math.PI/180;return [125+length*Math.sin(r),125-length*Math.cos(r)];};
     const H=angle(((hour%12)+minute/60)*30,58),M=angle(minute*6,88);
-    const ticks=Array.from({length:12},(_,i)=>{const pos=angle((i+1)*30,103);return `<text x="${pos[0]}" y="${pos[1]+5}" text-anchor="middle" font-weight="800" font-size="16" fill="#5b216e">${i+1}</text>`;}).join('');
+    const ticks=Array.from({length:12},(_,i)=>{const pos=angle((i+1)*30,103);return `<text x="${pos[0]}" y="${pos[1]+5}" text-anchor="middle" font-weight="800" font-size="20" fill="#5b216e">${i+1}</text>`;}).join('');
     return `<svg class="m3-practical-svg" viewBox="0 0 250 250" role="img" aria-label="Đồng hồ kim chỉ ${hour} giờ ${minute} phút"><circle cx="125" cy="125" r="118" fill="#fff" stroke="#8b5cf6" stroke-width="5"/>${ticks}<line x1="125" y1="125" x2="${H[0]}" y2="${H[1]}" stroke="#ec4899" stroke-width="7" stroke-linecap="round"/><line x1="125" y1="125" x2="${M[0]}" y2="${M[1]}" stroke="#2563eb" stroke-width="4" stroke-linecap="round"/><circle cx="125" cy="125" r="6" fill="#7c3aed"/></svg>`;
   }
   function drawingSvg(state){
@@ -1209,17 +1209,17 @@
   window.CLASS3_SUBJECT_MODULES.math=Object.freeze({render,destroy});
 
   const STYLES = `
-#class3-math-runtime{--m3-purple:#7c3aed;--m3-pink:#ec4899;--m3-line:#ddd6fe;color:#344054;font-family:"Nunito","Segoe UI",Arial,sans-serif;font-size:16px;max-width:82rem;margin:0 auto}
+#class3-math-runtime{--m3-purple:#7c3aed;--m3-pink:#ec4899;--m3-line:#ddd6fe;color:#344054;font-family:"Nunito","Segoe UI",Arial,sans-serif;font-size:20px;max-width:82rem;margin:0 auto}
 #class3-math-runtime *{box-sizing:border-box}
 #class3-math-runtime button{font:inherit;cursor:pointer}
-#class3-math-runtime input,#class3-math-runtime select,#class3-math-runtime textarea{font-family:inherit;font-size:16px}
+#class3-math-runtime input,#class3-math-runtime select,#class3-math-runtime textarea{font-family:inherit;font-size:20px}
 #class3-math-runtime button:disabled{opacity:.42;cursor:not-allowed}
 #class3-math-runtime h2,#class3-math-runtime h3,#class3-math-runtime h4{color:#5b216e;margin:0 0 .55rem;line-height:1.3}
 #class3-math-runtime p{line-height:1.6}
 #class3-math-runtime .m3-section-header{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin:2px 0 14px}
 #class3-math-runtime .m3-section-header h2{font-size:clamp(22px,2.4vw,29px);font-weight:950;margin:0}
 #class3-math-runtime .m3-section-header p{margin:.25rem 0 0;color:#667085;font-weight:750}
-#class3-math-runtime .m3-back,#class3-math-runtime .m3-small{min-height:40px;padding:9px 15px;border:1px solid #c4b5fd;border-radius:13px;color:#6d28d9;background:#faf5ff;font-size:16px;font-weight:900;flex-shrink:0}
+#class3-math-runtime .m3-back,#class3-math-runtime .m3-small{min-height:40px;padding:9px 15px;border:1px solid #c4b5fd;border-radius:13px;color:#6d28d9;background:#faf5ff;font-size:20px;font-weight:900;flex-shrink:0}
 #class3-math-runtime .m3-back:hover,#class3-math-runtime .m3-small:hover{background:#f3e8ff;border-color:#8b5cf6}
 #class3-math-runtime .m3-folder-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(235px,1fr));gap:12px}
 #class3-math-runtime .m3-folder-grid.m3-discover-home-grid{grid-template-columns:repeat(4,minmax(0,1fr));width:100%}
@@ -1248,22 +1248,22 @@
 #class3-math-runtime .m3-folder-icon{display:flex;align-items:center;justify-content:center;flex:0 0 60px;width:60px;height:60px;border:2px solid var(--m3-br);border-radius:17px;background:var(--m3-icon-bg);font-family:'Apple Color Emoji','Segoe UI Emoji','Noto Color Emoji',sans-serif;font-size:36px;font-weight:400;line-height:1;box-shadow:0 3px 9px rgba(109,40,217,.13),inset 0 1px 2px #fff;transition:transform .18s ease,box-shadow .18s ease}
 #class3-math-runtime .m3-folder:is(:hover,:focus-visible) .m3-folder-icon{transform:scale(1.07);box-shadow:0 5px 12px rgba(109,40,217,.22),inset 0 1px 2px #fff}
 #class3-math-runtime .m3-folder-copy{min-width:0;flex:1}
-#class3-math-runtime .m3-folder-copy strong{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;color:#5b216e;font-size:19px;font-weight:950;line-height:1.28}
-#class3-math-runtime .m3-folder-copy small{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;color:#475467;font-size:16px;font-weight:750;margin-top:6px;line-height:1.4}
+#class3-math-runtime .m3-folder-copy strong{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;color:#5b216e;font-size:20px;font-weight:950;line-height:1.28}
+#class3-math-runtime .m3-folder-copy small{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;color:#475467;font-size:20px;font-weight:750;margin-top:6px;line-height:1.4}
 #class3-math-runtime .m3-folder-grid.m3-discover-home-grid .m3-folder{min-height:168px;padding:12px;gap:8px}
 #class3-math-runtime .m3-folder-grid.m3-discover-home-grid .m3-folder-head{flex-direction:row;align-items:center;gap:10px;min-width:0}
 #class3-math-runtime .m3-folder-grid.m3-discover-home-grid .m3-folder-icon{width:56px;height:56px;flex:0 0 56px;font-size:34px}
-#class3-math-runtime .m3-folder-grid.m3-discover-home-grid .m3-folder-copy strong{font-size:18px;line-height:1.24;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;line-clamp:2;overflow:hidden;overflow-wrap:break-word}
-#class3-math-runtime .m3-folder-grid.m3-discover-home-grid .m3-topic-description{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;line-clamp:2;overflow:hidden;min-height:36px;color:#475467;font-size:16px;font-weight:750;line-height:1.3}
+#class3-math-runtime .m3-folder-grid.m3-discover-home-grid .m3-folder-copy strong{font-size:20px;line-height:1.24;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;line-clamp:2;overflow:hidden;overflow-wrap:break-word}
+#class3-math-runtime .m3-folder-grid.m3-discover-home-grid .m3-topic-description{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;line-clamp:2;overflow:hidden;min-height:36px;color:#475467;font-size:20px;font-weight:750;line-height:1.3}
 #class3-math-runtime .m3-folder-grid.m3-discover-sub-grid .m3-folder{min-height:148px;padding:12px;gap:8px}
 #class3-math-runtime .m3-folder-grid.m3-discover-sub-grid .m3-folder-head{align-items:flex-start;gap:10px}
 #class3-math-runtime .m3-folder-grid.m3-discover-sub-grid .m3-folder-icon{width:53px;height:53px;flex:0 0 53px;font-size:32px}
-#class3-math-runtime .m3-folder-grid.m3-discover-sub-grid .m3-folder-copy strong{font-size:18px;line-height:1.26;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;line-clamp:2;overflow:hidden;overflow-wrap:break-word}
-#class3-math-runtime .m3-folder-grid.m3-discover-sub-grid .m3-folder-copy small{font-size:16px;line-height:1.35;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;line-clamp:2;overflow:hidden;overflow-wrap:break-word;margin-top:7px}
+#class3-math-runtime .m3-folder-grid.m3-discover-sub-grid .m3-folder-copy strong{font-size:20px;line-height:1.26;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;line-clamp:2;overflow:hidden;overflow-wrap:break-word}
+#class3-math-runtime .m3-folder-grid.m3-discover-sub-grid .m3-folder-copy small{font-size:20px;line-height:1.35;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;line-clamp:2;overflow:hidden;overflow-wrap:break-word;margin-top:7px}
 #class3-math-runtime .m3-folder-grid.m3-lab-home-grid .m3-folder{min-height:202px}
 #class3-math-runtime .m3-folder-grid.m3-lab-home-grid .m3-folder-copy strong{display:block;-webkit-line-clamp:unset;line-clamp:unset;overflow:visible;white-space:normal;overflow-wrap:break-word}
 #class3-math-runtime .m3-folder-grid.m3-lab-home-grid .m3-folder-copy small{display:block;-webkit-line-clamp:unset;line-clamp:unset;overflow:visible;white-space:normal;overflow-wrap:break-word}
-#class3-math-runtime .m3-folder-foot{display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(124,58,237,.12);padding-top:7px;font-size:16px;font-weight:900;color:#7c3aed}
+#class3-math-runtime .m3-folder-foot{display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(124,58,237,.12);padding-top:7px;font-size:20px;font-weight:900;color:#7c3aed}
 #class3-math-runtime .m3-folder.is-locked{background:#f8fafc;border-color:#cbd5e1}
 #class3-math-runtime .m3-question-card,#class3-math-runtime .m3-paper,#class3-math-runtime .m3-result{border:1px solid #e9d5ff;border-radius:20px;padding:clamp(12px,2vw,24px);background:#fff;box-shadow:0 4px 15px rgba(76,29,149,.055)}
 #class3-math-runtime .m3-question-text{font-size:clamp(20px,2vw,25px);font-weight:950;color:#5b216e;text-align:center;line-height:1.45;margin:20px 0}
@@ -1272,7 +1272,7 @@
 #class3-math-runtime .m3-options.m3-options--three{grid-template-columns:repeat(3,minmax(0,1fr))}
 #class3-math-runtime .m3-options.m3-options--two{grid-template-columns:repeat(2,minmax(0,1fr))}
 #class3-math-runtime .m3-options.m3-options--readable{grid-template-columns:repeat(2,minmax(0,1fr))}
-#class3-math-runtime .m3-choice{min-height:54px;min-width:0;padding:10px 12px;overflow-wrap:break-word;line-height:1.35;border:1px solid #c4b5fd;border-radius:16px;background:#faf5ff;color:#344054;font-size:18px;font-weight:850;text-align:left;display:flex;align-items:center;gap:12px;transition:background .18s,border-color .18s,box-shadow .18s}
+#class3-math-runtime .m3-choice{min-height:54px;min-width:0;padding:10px 12px;overflow-wrap:break-word;line-height:1.35;border:1px solid #c4b5fd;border-radius:16px;background:#faf5ff;color:#344054;font-size:20px;font-weight:850;text-align:left;display:flex;align-items:center;gap:12px;transition:background .18s,border-color .18s,box-shadow .18s}
 #class3-math-runtime .m3-choice:nth-child(4n+1){background:#fff1f7;border-color:#f9a8d4}
 #class3-math-runtime .m3-choice:nth-child(4n+2){background:#ecfdf5;border-color:#86efac}
 #class3-math-runtime .m3-choice:nth-child(4n+3){background:#f5f3ff;border-color:#c4b5fd}
@@ -1284,11 +1284,11 @@
 #class3-math-runtime .m3-quiz-top,#class3-math-runtime .m3-quiz-footer{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;font-weight:900;color:#7c3aed}
 #class3-math-runtime .m3-quiz-footer{border-top:1px solid #f3e8ff;padding-top:15px}
 #class3-math-runtime .m3-quiz-nav{display:grid;grid-template-columns:minmax(0,1fr) 104px minmax(0,1fr);gap:9px;align-items:center;margin:17px 0}
-#class3-math-runtime .m3-nav,#class3-math-runtime .m3-count{min-height:45px;border-radius:13px;padding:8px 10px;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:950;text-align:center}
+#class3-math-runtime .m3-nav,#class3-math-runtime .m3-count{min-height:45px;border-radius:13px;padding:8px 10px;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:950;text-align:center}
 #class3-math-runtime .m3-nav{border:1px solid #ddd6fe;background:#faf5ff;color:#6d28d9}
 #class3-math-runtime .m3-nav.primary,#class3-math-runtime .m3-submit{border:0;background:linear-gradient(100deg,#ec4899,#8b5cf6);color:#fff;box-shadow:0 5px 12px rgba(139,92,246,.16)}
 #class3-math-runtime .m3-count{border:1px solid #e9d5ff;background:#fff;color:#6d28d9}
-#class3-math-runtime .m3-submit{min-height:46px;padding:9px 19px;border-radius:14px;font-size:16px;font-weight:950}
+#class3-math-runtime .m3-submit{min-height:46px;padding:9px 19px;border-radius:14px;font-size:20px;font-weight:950}
 #class3-math-runtime .m3-explain,#class3-math-runtime .m3-note{padding:12px 14px;border:1px solid #fcd34d;border-radius:13px;background:#fffbeb;color:#92400e;line-height:1.5;font-weight:750;margin:12px 0}
 #class3-math-runtime .m3-good{background:#ecfdf5;border:1px solid #86efac;color:#047857;padding:10px;border-radius:12px;font-weight:900}
 #class3-math-runtime .m3-bad{background:#fff1f2;border:1px solid #fda4af;color:#be123c;padding:10px;border-radius:12px;font-weight:900}
@@ -1297,7 +1297,7 @@
 #class3-math-runtime .m3-knowledge strong{color:#6d28d9}
 #class3-math-runtime .m3-example{padding:12px;border-left:3px solid #a855f7;background:#fdf4ff;font-weight:800;white-space:pre-wrap}
 #class3-math-runtime .m3-self-check{border:1px solid #bae6fd;border-radius:13px;padding:12px;background:#eff6ff;color:#0369a1;font-weight:850}
-#class3-math-runtime .m3-lead{font-size:19px;font-weight:850;color:#475467}
+#class3-math-runtime .m3-lead{font-size:20px;font-weight:850;color:#475467}
 #class3-math-runtime .m3-lesson-body{padding:13px 4px;line-height:1.65}
 #class3-math-runtime .m3-lesson-body li{margin:8px 0}
 #class3-math-runtime .m3-page-tabs,#class3-math-runtime .m3-semesters{display:flex;flex-wrap:wrap;gap:9px;margin:10px 0 16px}
@@ -1305,15 +1305,15 @@
 #class3-math-runtime .m3-sem.active{color:#fff;border-color:#8b5cf6;background:linear-gradient(100deg,#ec4899,#8b5cf6)}
 #class3-math-runtime .m3-illustration{max-width:560px;margin:12px auto;text-align:center}
 #class3-math-runtime .m3-illustration img{width:100%;max-height:360px;object-fit:contain;border-radius:17px;border:1px solid #e9d5ff}
-#class3-math-runtime .m3-caption,#class3-math-runtime .m3-illustration figcaption{text-align:center;color:#667085;font-size:16px}
+#class3-math-runtime .m3-caption,#class3-math-runtime .m3-illustration figcaption{text-align:center;color:#667085;font-size:20px}
 #class3-math-runtime .m3-scene-emoji{text-align:center;font-size:65px;line-height:1.4}
 #class3-math-runtime .m3-result{text-align:center;max-width:850px;margin:0 auto}
 #class3-math-runtime .m3-result ul{text-align:left;line-height:1.8}
 #class3-math-runtime .m3-result h3{font-size:23px}
 #class3-math-runtime .m3-medal{font-size:65px}
-#class3-math-runtime .m3-loading,#class3-math-runtime .m3-empty{min-height:220px;display:flex;align-items:center;justify-content:center;gap:12px;background:#fff;border:1px dashed #c4b5fd;border-radius:20px;text-align:center;padding:24px;color:#6d28d9;font-size:18px;font-weight:850}
+#class3-math-runtime .m3-loading,#class3-math-runtime .m3-empty{min-height:220px;display:flex;align-items:center;justify-content:center;gap:12px;background:#fff;border:1px dashed #c4b5fd;border-radius:20px;text-align:center;padding:24px;color:#6d28d9;font-size:20px;font-weight:850}
 #class3-math-runtime .m3-spinner{width:24px;height:24px;border:3px solid #ddd6fe;border-top-color:#8b5cf6;border-radius:50%;animation:m3spin .8s linear infinite}
-#class3-math-runtime .m3-lab-number{display:flex;flex-direction:column;gap:6px;font-size:16px;font-weight:900;color:#6d28d9;min-width:105px}
+#class3-math-runtime .m3-lab-number{display:flex;flex-direction:column;gap:6px;font-size:20px;font-weight:900;color:#6d28d9;min-width:105px}
 #class3-math-runtime .m3-lab-number input{height:45px;border:1px solid #c4b5fd;border-radius:12px;background:#fff;padding:9px;font-size:20px;font-weight:850;color:#344054;width:100%}
 #class3-math-runtime .m3-lab-fields{display:flex;flex-wrap:wrap;gap:12px;margin:18px 0}
 #class3-math-runtime .m3-lab-actions{display:flex;align-items:center;justify-content:flex-end;gap:12px;flex-wrap:wrap;margin:13px 0}
@@ -1335,21 +1335,21 @@
 @media(min-width:768px) and (max-width:899px){#class3-math-runtime .m3-folder-grid.m3-discover-home-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(min-width:768px) and (max-width:899px){#class3-math-runtime .m3-folder-grid.m3-discover-sub-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(min-width:768px) and (max-width:899px){#class3-math-runtime .m3-folder-grid.m3-lab-home-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:767px){#class3-math-runtime .m3-folder-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}#class3-math-runtime .m3-folder-grid.m3-discover-home-grid{grid-template-columns:repeat(2,minmax(0,1fr))}#class3-math-runtime .m3-folder{padding:10px;min-height:132px;border-radius:16px}#class3-math-runtime .m3-folder-head{flex-direction:column;gap:7px}#class3-math-runtime .m3-folder-icon{width:52px;height:52px;flex:0 0 52px;font-size:31px}#class3-math-runtime .m3-folder-copy strong{font-size:17px}#class3-math-runtime .m3-folder-copy small{font-size:16px}#class3-math-runtime .m3-folder-grid.m3-discover-sub-grid{grid-template-columns:1fr}#class3-math-runtime .m3-folder-grid.m3-discover-sub-grid .m3-folder{min-height:116px}#class3-math-runtime .m3-folder-grid.m3-lab-home-grid{grid-template-columns:1fr}#class3-math-runtime .m3-folder-grid.m3-lab-home-grid .m3-folder{min-height:auto}#class3-math-runtime .m3-section-header{flex-direction:column}#class3-math-runtime .m3-options{grid-template-columns:repeat(2,minmax(0,1fr))}#class3-math-runtime .m3-choice{font-size:17px;min-height:58px}#class3-math-runtime .m3-quiz-nav{grid-template-columns:minmax(0,1fr) 76px minmax(0,1fr);gap:5px}#class3-math-runtime .m3-nav,#class3-math-runtime .m3-count{font-size:16px;padding:7px 5px}}
+@media(max-width:767px){#class3-math-runtime .m3-folder-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}#class3-math-runtime .m3-folder-grid.m3-discover-home-grid{grid-template-columns:repeat(2,minmax(0,1fr))}#class3-math-runtime .m3-folder{padding:10px;min-height:132px;border-radius:16px}#class3-math-runtime .m3-folder-head{flex-direction:column;gap:7px}#class3-math-runtime .m3-folder-icon{width:52px;height:52px;flex:0 0 52px;font-size:31px}#class3-math-runtime .m3-folder-copy strong{font-size:20px}#class3-math-runtime .m3-folder-copy small{font-size:20px}#class3-math-runtime .m3-folder-grid.m3-discover-sub-grid{grid-template-columns:1fr}#class3-math-runtime .m3-folder-grid.m3-discover-sub-grid .m3-folder{min-height:116px}#class3-math-runtime .m3-folder-grid.m3-lab-home-grid{grid-template-columns:1fr}#class3-math-runtime .m3-folder-grid.m3-lab-home-grid .m3-folder{min-height:auto}#class3-math-runtime .m3-section-header{flex-direction:column}#class3-math-runtime .m3-options{grid-template-columns:repeat(2,minmax(0,1fr))}#class3-math-runtime .m3-choice{font-size:20px;min-height:58px}#class3-math-runtime .m3-quiz-nav{grid-template-columns:minmax(0,1fr) 76px minmax(0,1fr);gap:5px}#class3-math-runtime .m3-nav,#class3-math-runtime .m3-count{font-size:20px;padding:7px 5px}}
 @media(max-width:767px){
 #class3-math-runtime .m3-folder-grid.m3-discover-home-grid .m3-folder{min-height:168px;padding:10px}
 #class3-math-runtime .m3-folder-grid.m3-discover-home-grid .m3-folder-head{flex-direction:row;align-items:center;gap:8px}
 #class3-math-runtime .m3-folder-grid.m3-discover-home-grid .m3-folder-icon{width:48px;height:48px;flex:0 0 48px;font-size:29px}
-#class3-math-runtime .m3-folder-grid.m3-discover-home-grid .m3-folder-copy strong{font-size:16px}
-#class3-math-runtime .m3-folder-grid.m3-discover-home-grid .m3-topic-description{font-size:16px}
+#class3-math-runtime .m3-folder-grid.m3-discover-home-grid .m3-folder-copy strong{font-size:20px}
+#class3-math-runtime .m3-folder-grid.m3-discover-home-grid .m3-topic-description{font-size:20px}
 #class3-math-runtime .m3-folder-grid.m3-discover-sub-grid .m3-folder-head{flex-direction:row;align-items:flex-start}
 #class3-math-runtime .m3-folder-grid.m3-discover-sub-grid .m3-folder-icon{width:50px;height:50px;flex:0 0 50px;font-size:30px}
-#class3-math-runtime .m3-folder-grid.m3-discover-sub-grid .m3-folder-copy strong{font-size:17px}
+#class3-math-runtime .m3-folder-grid.m3-discover-sub-grid .m3-folder-copy strong{font-size:20px}
 }
 @media(max-width:479px){
 #class3-math-runtime .m3-folder-grid.m3-discover-home-grid .m3-folder-head{flex-direction:column;align-items:flex-start;gap:7px}
 #class3-math-runtime .m3-folder-grid.m3-discover-home-grid .m3-folder{min-height:189px}
-#class3-math-runtime .m3-folder-grid.m3-discover-home-grid .m3-folder-copy strong{font-size:17px}
+#class3-math-runtime .m3-folder-grid.m3-discover-home-grid .m3-folder-copy strong{font-size:20px}
 }
 
 /* Responsive answer choices respect the actual question card width. */
@@ -1370,25 +1370,25 @@
 
 #class3-math-runtime .m3-folder.m3-discover-guide-card{--m3-br:#f9a8d4;--m3-icon-bg:#fce7f3;background:linear-gradient(135deg,#fff0f7,#faf5ff)}
 #class3-math-runtime .m3-guide-sections{display:flex;flex-wrap:wrap;gap:9px;margin:8px 0 16px}
-#class3-math-runtime .m3-guide-section-tab{border:1px solid #ddd6fe;border-radius:12px;background:#faf5ff;color:#6d28d9;font-size:16px;font-weight:850;padding:10px 13px;min-height:44px;text-align:left;cursor:pointer}
+#class3-math-runtime .m3-guide-section-tab{border:1px solid #ddd6fe;border-radius:12px;background:#faf5ff;color:#6d28d9;font-size:20px;font-weight:850;padding:10px 13px;min-height:44px;text-align:left;cursor:pointer}
 #class3-math-runtime .m3-guide-section-tab.active{background:linear-gradient(105deg,#ec4899,#8b5cf6);color:#fff;border-color:#8b5cf6}
 #class3-math-runtime .m3-guide-section-tab:focus-visible{outline:3px solid #a78bfa;outline-offset:2px}
 #class3-math-runtime .m3-guide-section-heading{font-size:20px;color:#5b216e;margin:8px 0 0}
 @media(max-width:479px){#class3-math-runtime .m3-guide-section-tab{width:100%}}
 #class3-math-runtime .m3-guide{display:grid;gap:16px}
-#class3-math-runtime .m3-guide-meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;color:#64748b;font-size:16px;font-weight:750}
+#class3-math-runtime .m3-guide-meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;color:#64748b;font-size:20px;font-weight:750}
 #class3-math-runtime .m3-scope{background:#dbeafe;color:#1e40af;border:1px solid #93c5fd;padding:5px 12px;border-radius:99px;font-weight:900}
 #class3-math-runtime .m3-scope.m3-advanced{color:#92400e;background:#fffbeb;border-color:#fcd34d}
 #class3-math-runtime .m3-guide-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
 #class3-math-runtime .m3-guide-grid article{border:1px solid #ddd6fe;border-radius:18px;background:#fff;padding:16px;box-shadow:0 5px 15px rgba(80,40,130,.05)}
-#class3-math-runtime .m3-guide-grid article>span{font-size:16px;font-weight:950;display:inline-flex;align-items:center;justify-content:center;width:29px;height:29px;background:#f3e8ff;color:#7c3aed;border-radius:50%;margin-bottom:9px}
+#class3-math-runtime .m3-guide-grid article>span{font-size:20px;font-weight:950;display:inline-flex;align-items:center;justify-content:center;width:29px;height:29px;background:#f3e8ff;color:#7c3aed;border-radius:50%;margin-bottom:9px}
 #class3-math-runtime .m3-guide-grid article:nth-child(2){background:#f0fdf4;border-color:#bbf7d0}
 #class3-math-runtime .m3-guide-grid article:nth-child(3){background:#eff6ff;border-color:#bfdbfe}
-#class3-math-runtime .m3-guide-grid h3{font-size:19px;margin:0 0 8px}
-#class3-math-runtime .m3-guide-grid p{font-size:17px;margin:0}
+#class3-math-runtime .m3-guide-grid h3{font-size:20px;margin:0 0 8px}
+#class3-math-runtime .m3-guide-grid p{font-size:20px;margin:0}
 #class3-math-runtime .m3-guide-lower{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 #class3-math-runtime .m3-guide-lower section{background:#faf5ff;border:1px solid #ddd6fe;border-radius:16px;padding:15px}
-#class3-math-runtime .m3-guide-lower h3{font-size:17px}
+#class3-math-runtime .m3-guide-lower h3{font-size:20px}
 #class3-math-runtime .m3-guide-lower ol{padding-left:22px;line-height:1.85}
 #class3-math-runtime .m3-caution{color:#b45309}
 #class3-math-runtime .m3-guide-ctas{display:flex;justify-content:flex-end;gap:12px;align-items:center;flex-wrap:wrap}
@@ -1425,12 +1425,12 @@
 #class3-math-runtime .m3-practical-calendar{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px;width:min(100%,410px);margin:12px auto}
 #class3-math-runtime .m3-practical-calendar span,#class3-math-runtime .m3-practical-calendar button{display:flex;justify-content:center;align-items:center;min-height:35px;border:1px solid #ddd6fe;background:#fff;border-radius:7px}
 #class3-math-runtime .m3-practical-calendar button.selected{background:#d8b4fe;border-color:#8b5cf6}
-@media(max-width:767px){#class3-math-runtime .m3-guide-grid{grid-template-columns:1fr}#class3-math-runtime .m3-guide-lower{grid-template-columns:1fr}#class3-math-runtime .m3-guide-grid p{font-size:16px}#class3-math-runtime .m3-guide-ctas button{flex:1}#class3-math-runtime .m3-math-grid span{width:21px;height:21px}#class3-math-runtime .m3-practical-grid button{width:30px;height:30px}}
+@media(max-width:767px){#class3-math-runtime .m3-guide-grid{grid-template-columns:1fr}#class3-math-runtime .m3-guide-lower{grid-template-columns:1fr}#class3-math-runtime .m3-guide-grid p{font-size:20px}#class3-math-runtime .m3-guide-ctas button{flex:1}#class3-math-runtime .m3-math-grid span{width:21px;height:21px}#class3-math-runtime .m3-practical-grid button{width:30px;height:30px}}
 
 
 #class3-math-runtime .m3-place-value{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:5px;max-width:540px;margin:0 auto}
 #class3-math-runtime .m3-place-value>div{display:flex;flex-direction:column;border:1px solid #c4b5fd;border-radius:10px;overflow:hidden;background:#fff}
-#class3-math-runtime .m3-place-value strong{background:#ede9fe;font-size:16px;min-height:35px;display:flex;align-items:center;justify-content:center;color:#6d28d9;padding:3px}
+#class3-math-runtime .m3-place-value strong{background:#ede9fe;font-size:20px;min-height:35px;display:flex;align-items:center;justify-content:center;color:#6d28d9;padding:3px}
 #class3-math-runtime .m3-place-value span{font-size:30px;font-weight:950;color:#b91c70}
 #class3-math-runtime .m3-column-calc{margin:0 auto;font-size:26px;line-height:1.45;max-width:200px;text-align:right;font-family:ui-monospace,Consolas,monospace;font-variant-numeric:tabular-nums}
 #class3-math-runtime .m3-column-calc hr{border:0;border-top:3px solid #7c3aed;margin:2px 0}
@@ -1444,23 +1444,47 @@
 @media(max-width:520px){#class3-math-runtime .m3-vertical-arithmetic{grid-template-columns:27px repeat(var(--m3-vertical-columns),minmax(0,34px));column-gap:5px;row-gap:6px;font-size:32px}#class3-math-runtime .m3-vertical-digit,#class3-math-runtime .m3-vertical-result,#class3-math-runtime .m3-vertical-sign{height:38px}}
 
 /* Multiplication: distinguish direct products, two-step expressions and hidden factors. */
-#class3-math-runtime .m3-mul-steps>p:first-child,#class3-math-runtime .m3-mul-unknown>p:first-child{font-size:17px;color:#5b216e;margin:3px 0 10px}
+#class3-math-runtime .m3-mul-steps>p:first-child,#class3-math-runtime .m3-mul-unknown>p:first-child{font-size:20px;color:#5b216e;margin:3px 0 10px}
 #class3-math-runtime .m3-mul-next{font-size:22px;font-weight:850;color:#344054;margin:14px auto 4px}
 #class3-math-runtime .m3-mul-unknown{display:grid;gap:7px;justify-items:center}
 #class3-math-runtime .m3-mul-equation{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:11px;color:#344054;font-size:30px;font-weight:950;font-variant-numeric:tabular-nums}
 #class3-math-runtime .m3-mul-equation>strong{color:#dc2626;min-width:24px;text-align:center}
 #class3-math-runtime .m3-mul-answer{color:#dc2626!important}
-#class3-math-runtime .m3-mul-worked{display:grid;gap:3px;padding:7px 12px;margin-top:5px;border-radius:12px;background:#f0fdf4;border:1px solid #86efac;color:#065f46;font-weight:800;font-size:17px}
+#class3-math-runtime .m3-mul-worked{display:grid;gap:3px;padding:7px 12px;margin-top:5px;border-radius:12px;background:#f0fdf4;border:1px solid #86efac;color:#065f46;font-weight:800;font-size:20px}
 #class3-math-runtime .m3-mul-worked p{margin:1px}
-@media(max-width:520px){#class3-math-runtime .m3-mul-next{font-size:19px}#class3-math-runtime .m3-mul-equation{font-size:25px;gap:7px}}
+@media(max-width:520px){#class3-math-runtime .m3-mul-next{font-size:20px}#class3-math-runtime .m3-mul-equation{font-size:25px;gap:7px}}
 
 #class3-math-runtime .m3-concept-icons{display:flex;justify-content:center;flex-wrap:wrap;gap:12px}
 #class3-math-runtime .m3-concept-icons span{display:flex;flex-direction:column;min-width:86px;align-items:center;justify-content:center;background:#fff;border:1px solid #c4b5fd;border-radius:14px;padding:12px;font-size:28px;font-weight:900;color:#6d28d9}
 #class3-math-runtime .m3-concept-icons strong{font-size:20px}
-#class3-math-runtime .m3-concept-icons small{font-size:16px;color:#64748b}
+#class3-math-runtime .m3-concept-icons small{font-size:20px;color:#64748b}
 #class3-math-runtime .m3-money-concept span{font-size:20px;background:#ecfdf5;border-color:#86efac}
 #class3-math-runtime .m3-concept-steps{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;font-size:25px;font-weight:900;color:#6d28d9}
 
 @media(prefers-reduced-motion:reduce){#class3-math-runtime *,#class3-math-runtime *:before{animation:none!important;transition:none!important}#class3-math-runtime .m3-folder:hover .m3-folder-icon{transform:none!important}}
+
+/* 21/10/2026 - readably sized discovery navigation, preserved problem logic. */
+#class3-math-runtime .m3-folder-grid:is(.m3-discover-home-grid,.m3-discover-sub-grid,.m3-discover-topic-grid) .m3-folder-copy strong{font-size:24px;line-height:1.27}
+#class3-math-runtime .m3-folder-grid:is(.m3-discover-home-grid,.m3-discover-sub-grid,.m3-discover-topic-grid) .m3-folder-copy small,
+#class3-math-runtime .m3-folder-grid.m3-discover-home-grid .m3-topic-description{font-size:20px;line-height:1.38;min-height:0}
+#class3-math-runtime .m3-folder-grid:is(.m3-discover-home-grid,.m3-discover-sub-grid,.m3-discover-topic-grid) .m3-folder{height:auto}
+#class3-math-runtime .m3-quiz-nav{grid-template-columns:minmax(0,1fr) minmax(74px,max-content) minmax(0,1fr);align-items:stretch}
+#class3-math-runtime .m3-quiz-nav .m3-nav,#class3-math-runtime .m3-quiz-nav .m3-count{height:auto;min-height:56px;padding:10px 8px;line-height:1.22;font-size:20px;white-space:normal}
+#class3-math-runtime :is(.m3-back,.m3-small,.m3-submit,.m3-guide-section-tab){min-height:54px;height:auto;line-height:1.27;white-space:normal}
+#class3-math-runtime .m3-choice{min-height:56px;font-size:max(20px,1em)}
+@media(max-width:767px){
+ #class3-math-runtime .m3-folder-grid:is(.m3-discover-home-grid,.m3-discover-sub-grid,.m3-discover-topic-grid) .m3-folder-copy strong{font-size:22px}
+ #class3-math-runtime .m3-quiz-top button[data-action="speak"]{flex:0 0 auto;min-width:min(100%,190px);margin:8px auto 0}
+ #class3-math-runtime .m3-quiz-top{align-items:center}
+ #class3-math-runtime .m3-quiz-top button[data-action="speak"]{order:3}
+ #class3-math-runtime .m3-quiz-top::after{content:"";flex-basis:100%;height:0;order:2}
+ #class3-math-runtime .m3-guide-ctas{flex-wrap:wrap;justify-content:center}
+ #class3-math-runtime .m3-guide-ctas button[data-action="guide-speak"]{flex:0 0 auto;max-width:100%}
+}
+@media(max-width:359px){#class3-math-runtime .m3-quiz-nav{gap:5px}#class3-math-runtime .m3-quiz-nav .m3-nav{padding:9px 3px}}
+
+@media(max-width:767px){
+ #class3-math-runtime .m3-guide-ctas button[data-action="guide-speak"]{flex:1 1 100%;width:100%;max-width:100%;margin:0 auto}
+}
 `;
 })();
