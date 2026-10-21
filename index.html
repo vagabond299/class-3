@@ -2249,6 +2249,66 @@
         max-height:none;
       }
     }
+    /* Mobile: Home logo has a wide native aspect ratio.
+       Give it enough width to reach the same visible 74px height as the
+       neighboring buttons, rather than letterboxing it inside a 76-96px slot. */
+    @media (max-width:767px){
+      .app-header .header-mobile-row,
+      .app-header .header-mobile-row:has(#mobile-admin-button:not(.hidden)){
+        grid-template-columns:112px minmax(0,1fr);
+      }
+      .app-header .home-btn{
+        width:112px;
+        height:74px;
+        min-height:74px;
+        max-height:74px;
+        align-self:start;
+      }
+      .app-header .home-btn img{
+        width:100%;
+        height:100%;
+        object-fit:contain;
+      }
+    }
+    /* With Admin + scores and long names, the toolbar needs a second line
+       below 420px; otherwise flex items can overlap the Home grid cell. */
+    @media (max-width:420px){
+      .app-header .header-tools:has(#mobile-admin-button:not(.hidden)){
+        flex-wrap:wrap;
+        justify-content:flex-end;
+        align-content:center;
+        height:auto;
+        min-height:74px;
+      }
+    }
+    /* Keep the normal Admin+Install+score+name case on one 74px line at 390px.
+       Labels remain 20px; larger scores or longer names can still wrap. */
+    @media (min-width:385px) and (max-width:420px){
+      .app-header .header-tools:has(#mobile-admin-button:not(.hidden)){
+        gap:2px;
+      }
+      .app-header .header-tools #mobile-admin-button:not(.hidden){
+        flex-basis:81px;
+        width:81px;
+        min-width:81px;
+        max-width:81px;
+        padding-left:1px;
+        padding-right:1px;
+      }
+      .app-header .header-tools:has(#mobile-admin-button:not(.hidden)) #install-button.install-btn{
+        flex-basis:52px;
+        width:52px;
+        min-width:52px;
+        max-width:52px;
+        padding-left:1px;
+        padding-right:1px;
+      }
+      .app-header .header-tools:has(#mobile-admin-button:not(.hidden)) #account-button.user-btn{
+        min-width:68px;
+        padding-left:4px;
+        padding-right:4px;
+      }
+    }
   </style>
 </head>
 <body>
