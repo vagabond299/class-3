@@ -307,8 +307,7 @@
       if(!topic)throw new Error('Không tìm thấy chuyên đề.');
       setCurrent('discover','topic',{topicId:Number(topic.id),title:topic.name});
       const groups=[...new Map(arr(topic.qs).map(q=>[text(q.sub),true])).keys()];
-      const illustration=await picture(topic.illustration,'Chợ Tết truyền thống');if(!still(request))return;
-      root.innerHTML=heading(topic.name,topic.desc)+`<section class="tv3-note tv3-topic-note"><strong>💡 Cùng tìm hiểu</strong><p>${x(topic.l_content||topic.desc)}</p><button class="tv3-mini" data-action="read-topic">🔊 Nghe hướng dẫn</button></section>${illustration}`+
+      root.innerHTML=heading(topic.name)+
         grid(groups.map((g,i)=>{
           const size=topic.qs.filter(q=>text(q.sub)===g).length;
           return folder(`${i+1}. ${g}`,subDescription(topic.id,g),SUB_ICONS[(i+Number(topic.id)*3)%SUB_ICONS.length],'topic-sub',`data-topic="${Number(topic.id)}" data-sub="${x(g)}"`,`${size} câu luyện tập`,i);
@@ -693,11 +692,6 @@
       case 'back':back();break;
       case 'topic':await showTopic(Number(button.dataset.topic));break;
       case 'topic-sub':await openSubtopic(Number(button.dataset.topic),text(button.dataset.sub));break;
-      case 'read-topic':{
-        const requestNonce=nonce, topicId=current.topicId;
-        const t=(await getTopics()).find(v=>Number(v.id)===Number(topicId));
-        if(still(requestNonce)&&current.view==='topic'&&t)void say(t.l_audio||t.l_content);break;
-      }
       case 'lesson-sem':selectedSemester=sem;await hub('lessons');break;
       case 'exercise-sem':selectedExerciseSemester=sem;progress=null;await hub('exercises');break;
       case 'lesson-open':await showLesson(text(button.dataset.id),0);break;
@@ -782,7 +776,7 @@
 #class3-vietnamese-runtime p,#class3-vietnamese-runtime li{line-height:1.6}
 #class3-vietnamese-runtime .tv3-heading{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;margin:4px 0 15px}
 #class3-vietnamese-runtime .tv3-heading h2{font-size:clamp(22px,2.4vw,29px);font-weight:950;margin:0}
-#class3-vietnamese-runtime .tv3-heading p{font-size:16px;color:#667085;margin:5px 0 0;font-weight:750}
+#class3-vietnamese-runtime .tv3-heading p{font-size:20px;color:#667085;margin:5px 0 0;font-weight:750}
 #class3-vietnamese-runtime .tv3-back,#class3-vietnamese-runtime .tv3-submit{border:0;border-radius:14px;background:linear-gradient(105deg,#ec4899,#8b5cf6);color:#fff;font-weight:950;padding:10px 16px;min-height:44px;box-shadow:0 5px 12px rgba(139,92,246,.15)}
 #class3-vietnamese-runtime .tv3-back{white-space:nowrap}
 #class3-vietnamese-runtime .tv3-folder-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(275px,1fr));gap:11px}
@@ -798,65 +792,65 @@
 #class3-vietnamese-runtime .tv3-icon{width:60px;height:60px;flex:0 0 60px;display:flex;align-items:center;justify-content:center;border-radius:17px;background:var(--icon-bg);border:2px solid var(--br);font-size:36px;line-height:1;box-shadow:0 3px 9px rgba(109,40,217,.1),inset 0 1px 2px #fff;transition:transform .17s ease,box-shadow .17s ease}
 #class3-vietnamese-runtime .tv3-folder:is(:hover,:focus-visible) .tv3-icon{transform:scale(1.1);box-shadow:0 5px 12px rgba(109,40,217,.18),inset 0 1px 2px #fff}
 #class3-vietnamese-runtime .tv3-folder-copy{flex:1;min-width:0}
-#class3-vietnamese-runtime .tv3-folder-copy strong{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;color:var(--color);font-size:18px;font-weight:950;line-height:1.25}
-#class3-vietnamese-runtime .tv3-folder-copy small{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;color:#475467;font-size:15px;line-height:1.38;margin-top:6px;font-weight:750}
-#class3-vietnamese-runtime .tv3-folder-foot{display:flex;justify-content:space-between;align-items:center;gap:5px;border-top:1px solid rgba(124,58,237,.11);padding-top:7px;font-size:14px;font-weight:900;color:var(--color)}
+#class3-vietnamese-runtime .tv3-folder-copy strong{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;color:var(--color);font-size:20px;font-weight:950;line-height:1.25}
+#class3-vietnamese-runtime .tv3-folder-copy small{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;color:#475467;font-size:20px;line-height:1.38;margin-top:6px;font-weight:750}
+#class3-vietnamese-runtime .tv3-folder-foot{display:flex;justify-content:space-between;align-items:center;gap:5px;border-top:1px solid rgba(124,58,237,.11);padding-top:7px;font-size:20px;font-weight:900;color:var(--color)}
 /* Explore: 12 topic cards in four columns; inner groups in three. */
 #class3-vietnamese-runtime .tv3-folder-grid.tv3-discover-home{grid-template-columns:repeat(4,minmax(0,1fr))}
 #class3-vietnamese-runtime .tv3-folder-grid.tv3-discover-sub{grid-template-columns:repeat(3,minmax(0,1fr))}
 #class3-vietnamese-runtime .tv3-folder-grid:is(.tv3-discover-home,.tv3-discover-sub) .tv3-folder{min-height:174px;gap:10px}
 #class3-vietnamese-runtime .tv3-folder-grid:is(.tv3-discover-home,.tv3-discover-sub) .tv3-folder-head{display:flex;flex-direction:row;align-items:flex-start;gap:10px}
-#class3-vietnamese-runtime .tv3-folder-grid:is(.tv3-discover-home,.tv3-discover-sub) .tv3-folder-copy strong{display:block;overflow:visible;line-height:1.27;font-size:17px;overflow-wrap:break-word}
-#class3-vietnamese-runtime .tv3-folder-grid:is(.tv3-discover-home,.tv3-discover-sub) .tv3-folder-copy small{display:block;overflow:visible;font-size:14px;line-height:1.4;margin-top:7px}
+#class3-vietnamese-runtime .tv3-folder-grid:is(.tv3-discover-home,.tv3-discover-sub) .tv3-folder-copy strong{display:block;overflow:visible;line-height:1.27;font-size:20px;overflow-wrap:break-word}
+#class3-vietnamese-runtime .tv3-folder-grid:is(.tv3-discover-home,.tv3-discover-sub) .tv3-folder-copy small{display:block;overflow:visible;font-size:20px;line-height:1.4;margin-top:7px}
 #class3-vietnamese-runtime .tv3-folder-grid:is(.tv3-discover-home,.tv3-discover-sub) .tv3-icon{width:53px;height:53px;flex:0 0 53px;font-size:31px}
 @media(min-width:768px) and (max-width:1080px){#class3-vietnamese-runtime .tv3-folder-grid.tv3-discover-home{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(min-width:768px) and (max-width:820px){#class3-vietnamese-runtime .tv3-folder-grid.tv3-discover-sub{grid-template-columns:repeat(2,minmax(0,1fr))}}
 #class3-vietnamese-runtime .tv3-locked{background:#f8fafc!important;border-color:#cbd5e1!important;opacity:.82}
 #class3-vietnamese-runtime .tv3-locked .tv3-icon{filter:grayscale(.35)}
 #class3-vietnamese-runtime .tv3-switch,#class3-vietnamese-runtime .tv3-page-tabs,#class3-vietnamese-runtime .tv3-story-tools{display:flex;flex-wrap:wrap;gap:12px;margin:12px 0 16px}
-#class3-vietnamese-runtime .tv3-switch button,#class3-vietnamese-runtime .tv3-mini{min-height:39px;padding:8px 14px;border-radius:12px;border:1.5px solid #c4b5fd;background:#faf5ff;color:#6d28d9;font-size:17px;font-weight:950}
+#class3-vietnamese-runtime .tv3-switch button,#class3-vietnamese-runtime .tv3-mini{min-height:39px;padding:8px 14px;border-radius:12px;border:1.5px solid #c4b5fd;background:#faf5ff;color:#6d28d9;font-size:20px;font-weight:950}
 #class3-vietnamese-runtime .tv3-switch button.on,#class3-vietnamese-runtime .tv3-mini.selected{background:linear-gradient(105deg,#ec4899,#8b5cf6);color:#fff;border-color:#8b5cf6;box-shadow:0 4px 10px rgba(139,92,246,.15)}
 #class3-vietnamese-runtime .tv3-paper,#class3-vietnamese-runtime .tv3-result{padding:clamp(14px,2vw,24px);border:1px solid #e9d5ff;border-radius:21px;background:#fff;box-shadow:0 4px 15px rgba(76,29,149,.055)}
-#class3-vietnamese-runtime .tv3-note,#class3-vietnamese-runtime .tv3-words{background:#fffbeb;color:#92400e;padding:12px 15px;border:1px solid #fcd34d;border-radius:14px;margin:12px 0;font-size:16px;font-weight:800}
+#class3-vietnamese-runtime .tv3-note,#class3-vietnamese-runtime .tv3-words{background:#fffbeb;color:#92400e;padding:12px 15px;border:1px solid #fcd34d;border-radius:14px;margin:12px 0;font-size:20px;font-weight:800}
 #class3-vietnamese-runtime .tv3-topic-note p{margin:5px 0 9px}
-#class3-vietnamese-runtime .tv3-lead{font-size:19px;font-weight:850;color:#475467}
+#class3-vietnamese-runtime .tv3-lead{font-size:20px;font-weight:850;color:#475467}
 #class3-vietnamese-runtime .tv3-reading-title{text-align:center;font-size:25px;margin:20px 0}
-#class3-vietnamese-runtime .tv3-reading p,#class3-vietnamese-runtime .tv3-story-text p{font-size:19px;line-height:1.95;margin:0 0 16px;text-align:justify}
-#class3-vietnamese-runtime .tv3-poem{margin:15px auto;max-width:580px;white-space:pre-wrap;font-size:19px;line-height:1.9;font-weight:750;color:#475467}
+#class3-vietnamese-runtime .tv3-reading p,#class3-vietnamese-runtime .tv3-story-text p{font-size:20px;line-height:1.95;margin:0 0 16px;text-align:justify}
+#class3-vietnamese-runtime .tv3-poem{margin:15px auto;max-width:580px;white-space:pre-wrap;font-size:20px;line-height:1.9;font-weight:750;color:#475467}
 #class3-vietnamese-runtime .tv3-poem-gap{height:17px}
 #class3-vietnamese-runtime .tv3-lesson-text{line-height:1.8}
-#class3-vietnamese-runtime .tv3-lesson-text li{margin:9px 0;font-size:18px}
+#class3-vietnamese-runtime .tv3-lesson-text li{margin:9px 0;font-size:20px}
 #class3-vietnamese-runtime .tv3-lesson-toolbar{display:flex;justify-content:flex-end;flex-wrap:wrap;gap:9px}
 #class3-vietnamese-runtime .tv3-lesson-question,#class3-vietnamese-runtime .tv3-story-questions article{padding:17px;margin:12px 0;border:1px solid #ddd6fe;background:#faf5ff;border-radius:16px}
-#class3-vietnamese-runtime .tv3-lesson-question strong,#class3-vietnamese-runtime .tv3-story-questions strong{font-size:18px}
-#class3-vietnamese-runtime .tv3-answer-note{color:#7c3aed;font-size:16px;font-weight:750}
-#class3-vietnamese-runtime .tv3-quiz-top,#class3-vietnamese-runtime .tv3-quiz-footer{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;color:#7c3aed;font-size:16px;font-weight:950}
+#class3-vietnamese-runtime .tv3-lesson-question strong,#class3-vietnamese-runtime .tv3-story-questions strong{font-size:20px}
+#class3-vietnamese-runtime .tv3-answer-note{color:#7c3aed;font-size:20px;font-weight:750}
+#class3-vietnamese-runtime .tv3-quiz-top,#class3-vietnamese-runtime .tv3-quiz-footer{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;color:#7c3aed;font-size:20px;font-weight:950}
 #class3-vietnamese-runtime .tv3-quiz-footer{border-top:1px solid #f3e8ff;padding-top:13px}
 #class3-vietnamese-runtime .tv3-question-layout.has-picture{display:grid;grid-template-columns:minmax(220px,.88fr) minmax(0,1.12fr);gap:18px;align-items:start}
 #class3-vietnamese-runtime .tv3-question-layout .tv3-passage{max-height:420px;overflow-y:auto;padding:15px;border:1px solid #e9d5ff;border-radius:15px;background:#faf5ff}
-#class3-vietnamese-runtime .tv3-passage p{font-size:16px}
+#class3-vietnamese-runtime .tv3-passage p{font-size:20px}
 #class3-vietnamese-runtime .tv3-question-text{font-size:clamp(20px,2.2vw,26px);font-weight:950;text-align:center;line-height:1.45;margin:18px 0;color:#5b216e}
 #class3-vietnamese-runtime .tv3-options{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:15px 0}
-#class3-vietnamese-runtime .tv3-choice{min-height:61px;text-align:left;display:flex;gap:12px;align-items:center;padding:12px 13px;border:1.5px solid #c4b5fd;border-radius:15px;background:#f5f3ff;color:#344054;font-size:17px;font-weight:850;transition:border-color .17s ease,box-shadow .17s ease,filter .17s ease}
+#class3-vietnamese-runtime .tv3-choice{min-height:61px;text-align:left;display:flex;gap:12px;align-items:center;padding:12px 13px;border:1.5px solid #c4b5fd;border-radius:15px;background:#f5f3ff;color:#344054;font-size:20px;font-weight:850;transition:border-color .17s ease,box-shadow .17s ease,filter .17s ease}
 #class3-vietnamese-runtime .tv3-choice:nth-child(4n+1){background:#fff1f7;border-color:#f9a8d4}
 #class3-vietnamese-runtime .tv3-choice:nth-child(4n+2){background:#ecfdf5;border-color:#86efac}
 #class3-vietnamese-runtime .tv3-choice:nth-child(4n+3){background:#f5f3ff;border-color:#c4b5fd}
 #class3-vietnamese-runtime .tv3-choice:nth-child(4n+4){background:#eff8ff;border-color:#93c5fd}
-#class3-vietnamese-runtime .tv3-choice span{width:30px;height:30px;flex:0 0 30px;display:flex;align-items:center;justify-content:center;border-radius:9px;background:#fff;color:#7c3aed;font-size:16px;font-weight:950}
+#class3-vietnamese-runtime .tv3-choice span{width:30px;height:30px;flex:0 0 30px;display:flex;align-items:center;justify-content:center;border-radius:9px;background:#fff;color:#7c3aed;font-size:20px;font-weight:950}
 #class3-vietnamese-runtime .tv3-choice:hover,#class3-vietnamese-runtime .tv3-choice.chosen{border-color:#8b5cf6;box-shadow:0 0 0 2px rgba(139,92,246,.13);filter:brightness(1.01)}
 #class3-vietnamese-runtime .tv3-choice.right{border-color:#10b981!important;background:#dcfce7!important;color:#047857}
 #class3-vietnamese-runtime .tv3-choice.wrong{border-color:#fb7185!important;background:#fff1f2!important;color:#be123c}
 #class3-vietnamese-runtime .tv3-nav{display:grid;grid-template-columns:minmax(0,1fr) 90px minmax(0,1fr);gap:10px;margin:20px 0}
-#class3-vietnamese-runtime .tv3-nav button,#class3-vietnamese-runtime .tv3-nav span{min-height:46px;padding:9px 12px;display:flex;align-items:center;justify-content:center;border:1.5px solid #ddd6fe;border-radius:13px;background:#faf5ff;color:#6d28d9;font-size:16px;font-weight:950;text-align:center}
+#class3-vietnamese-runtime .tv3-nav button,#class3-vietnamese-runtime .tv3-nav span{min-height:46px;padding:9px 12px;display:flex;align-items:center;justify-content:center;border:1.5px solid #ddd6fe;border-radius:13px;background:#faf5ff;color:#6d28d9;font-size:20px;font-weight:950;text-align:center}
 #class3-vietnamese-runtime .tv3-nav button.primary{background:linear-gradient(105deg,#ec4899,#8b5cf6);border-color:transparent;color:#fff}
 #class3-vietnamese-runtime .tv3-nav span{background:#fff}
-#class3-vietnamese-runtime .tv3-good,#class3-vietnamese-runtime .tv3-warning{padding:10px 13px;border-radius:13px;font-size:16px;line-height:1.5;font-weight:850}
+#class3-vietnamese-runtime .tv3-good,#class3-vietnamese-runtime .tv3-warning{padding:10px 13px;border-radius:13px;font-size:20px;line-height:1.5;font-weight:850}
 #class3-vietnamese-runtime .tv3-good{background:#ecfdf5;color:#047857;border:1px solid #86efac}
 #class3-vietnamese-runtime .tv3-warning{background:#fff1f2;color:#be123c;border:1px solid #fda4af}
 #class3-vietnamese-runtime .tv3-mini-actions{margin-top:10px}
 #class3-vietnamese-runtime .tv3-picture{margin:12px auto;max-width:580px;text-align:center}
 #class3-vietnamese-runtime .tv3-picture img{display:block;max-width:100%;width:100%;max-height:380px;object-fit:contain;margin:0 auto;border:1px solid #e9d5ff;border-radius:17px}
-#class3-vietnamese-runtime .tv3-picture figcaption{font-size:14px;color:#667085;margin:5px 0}
+#class3-vietnamese-runtime .tv3-picture figcaption{font-size:20px;color:#667085;margin:5px 0}
 #class3-vietnamese-runtime .tv3-story-emoji{text-align:center;font-size:64px;margin:10px 0}
 #class3-vietnamese-runtime .tv3-emoji-picture{text-align:center;font-size:65px}
 #class3-vietnamese-runtime .tv3-result{text-align:center;max-width:860px;margin:0 auto}
@@ -868,7 +862,7 @@
 #class3-vietnamese-runtime .tv3-history article small{margin-left:10px;color:#667085}
 #class3-vietnamese-runtime .tv3-history article p{margin:5px 0 0}
 #class3-vietnamese-runtime .tv3-clock{color:#be185d}
-#class3-vietnamese-runtime .tv3-loading,#class3-vietnamese-runtime .tv3-empty{min-height:220px;padding:25px;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px;background:#fff;border:1px dashed #c4b5fd;border-radius:20px;color:#7c3aed;font-size:18px;font-weight:850;text-align:center}
+#class3-vietnamese-runtime .tv3-loading,#class3-vietnamese-runtime .tv3-empty{min-height:220px;padding:25px;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px;background:#fff;border:1px dashed #c4b5fd;border-radius:20px;color:#7c3aed;font-size:20px;font-weight:850;text-align:center}
 #class3-vietnamese-runtime .tv3-empty{flex-direction:column}
 #class3-vietnamese-runtime .tv3-spinner{width:24px;height:24px;border-radius:50%;border:3px solid #ddd6fe;border-top-color:#8b5cf6;animation:tv3spin .8s linear infinite}
 @keyframes tv3spin{to{transform:rotate(360deg)}}
@@ -879,21 +873,44 @@
  #class3-vietnamese-runtime .tv3-folder-grid:is(.tv3-discover-home,.tv3-discover-sub) .tv3-folder{min-height:155px}
  #class3-vietnamese-runtime .tv3-folder-grid:is(.tv3-discover-home,.tv3-discover-sub) .tv3-folder-head{flex-direction:row;gap:8px}
  #class3-vietnamese-runtime .tv3-folder-grid:is(.tv3-discover-home,.tv3-discover-sub) .tv3-icon{width:44px;height:44px;flex:0 0 44px;font-size:25px}
- #class3-vietnamese-runtime .tv3-folder-grid:is(.tv3-discover-home,.tv3-discover-sub) .tv3-folder-copy strong{font-size:16px}
- #class3-vietnamese-runtime .tv3-folder-grid:is(.tv3-discover-home,.tv3-discover-sub) .tv3-folder-copy small{font-size:13px}
+ #class3-vietnamese-runtime .tv3-folder-grid:is(.tv3-discover-home,.tv3-discover-sub) .tv3-folder-copy strong{font-size:20px}
+ #class3-vietnamese-runtime .tv3-folder-grid:is(.tv3-discover-home,.tv3-discover-sub) .tv3-folder-copy small{font-size:20px}
  #class3-vietnamese-runtime .tv3-folder{padding:10px;min-height:148px;border-radius:16px}
  #class3-vietnamese-runtime .tv3-folder-head{flex-direction:column;gap:7px}
  #class3-vietnamese-runtime .tv3-icon{width:52px;height:52px;flex:0 0 52px;font-size:31px}
- #class3-vietnamese-runtime .tv3-folder-copy strong{font-size:16px}
- #class3-vietnamese-runtime .tv3-folder-copy small{font-size:13px}
+ #class3-vietnamese-runtime .tv3-folder-copy strong{font-size:20px}
+ #class3-vietnamese-runtime .tv3-folder-copy small{font-size:20px}
  #class3-vietnamese-runtime .tv3-heading{flex-direction:column}
  #class3-vietnamese-runtime .tv3-question-layout.has-picture{grid-template-columns:1fr;gap:8px}
  #class3-vietnamese-runtime .tv3-options{grid-template-columns:1fr}
- #class3-vietnamese-runtime .tv3-choice{min-height:56px;font-size:16px}
+ #class3-vietnamese-runtime .tv3-choice{min-height:56px;font-size:20px}
  #class3-vietnamese-runtime .tv3-nav{grid-template-columns:minmax(0,1fr) 68px minmax(0,1fr);gap:5px}
- #class3-vietnamese-runtime .tv3-nav button,#class3-vietnamese-runtime .tv3-nav span{font-size:13px;padding:7px 5px}
- #class3-vietnamese-runtime .tv3-reading p,#class3-vietnamese-runtime .tv3-story-text p{font-size:17px}
+ #class3-vietnamese-runtime .tv3-nav button,#class3-vietnamese-runtime .tv3-nav span{font-size:20px;padding:7px 5px}
+ #class3-vietnamese-runtime .tv3-reading p,#class3-vietnamese-runtime .tv3-story-text p{font-size:20px}
 }
 @media(prefers-reduced-motion:reduce){#class3-vietnamese-runtime *{transition:none!important;animation:none!important}#class3-vietnamese-runtime .tv3-folder:hover .tv3-icon{transform:none!important}}
+
+/* 21/10/2026 - L2-aligned readable cards and controls; the old topic introduction is removed in JS. */
+#class3-vietnamese-runtime .tv3-folder-grid:is(.tv3-discover-home,.tv3-discover-sub) .tv3-folder-copy strong{font-size:24px;line-height:1.27}
+#class3-vietnamese-runtime .tv3-folder-grid:is(.tv3-discover-home,.tv3-discover-sub) .tv3-folder-copy small{font-size:20px;line-height:1.38}
+#class3-vietnamese-runtime .tv3-folder-grid:is(.tv3-discover-home,.tv3-discover-sub) .tv3-folder{height:auto}
+#class3-vietnamese-runtime .tv3-paper:has(.tv3-story-text){width:100%;max-width:82rem;min-width:0;overflow:visible}
+#class3-vietnamese-runtime .tv3-story-text{max-width:100%;overflow:visible}
+#class3-vietnamese-runtime :is(.tv3-back,.tv3-submit,.tv3-mini,.tv3-switch button,.tv3-page-tabs button){height:auto;min-height:54px;line-height:1.25;white-space:normal}
+#class3-vietnamese-runtime .tv3-nav{grid-template-columns:minmax(0,1fr) minmax(76px,max-content) minmax(0,1fr)}
+#class3-vietnamese-runtime .tv3-nav button,#class3-vietnamese-runtime .tv3-nav span{height:auto;min-height:56px;font-size:20px;line-height:1.2;padding:9px 7px}
+#class3-vietnamese-runtime .tv3-mini-actions{display:flex;justify-content:center;flex-wrap:wrap}
+@media(max-width:767px){
+ #class3-vietnamese-runtime .tv3-folder-grid:is(.tv3-discover-home,.tv3-discover-sub) .tv3-folder-copy strong{font-size:22px}
+ #class3-vietnamese-runtime .tv3-folder-grid:is(.tv3-discover-home,.tv3-discover-sub) .tv3-folder-copy small{font-size:20px}
+ #class3-vietnamese-runtime .tv3-mini-actions button[data-action="speak-question"]{margin:8px auto 0}
+ #class3-vietnamese-runtime .tv3-story-tools{justify-content:center}
+}
+@media(max-width:359px){#class3-vietnamese-runtime .tv3-nav{gap:5px}#class3-vietnamese-runtime .tv3-nav button{padding:8px 4px}}
+
+@media(max-width:767px){
+ #class3-vietnamese-runtime .tv3-story-tools{flex-direction:column;align-items:center}
+ #class3-vietnamese-runtime .tv3-story-tools button{width:min(100%,280px);min-height:54px}
+}
 `;
 })();
