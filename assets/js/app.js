@@ -510,6 +510,8 @@
     featureVipMessage: document.getElementById("feature-vip-notice-message"),
     featureVipButton: document.getElementById("feature-vip-notice-button"),
     scoreBox: document.getElementById("score-box"),
+    mobileAdminButton: document.getElementById("mobile-admin-button"),
+    mobileAdminCount: document.getElementById("mobile-admin-count"),
     installButton: document.getElementById("install-button"),
     accountButton: document.getElementById("account-button"),
     authModal: document.getElementById("auth-modal"),
@@ -1715,6 +1717,17 @@
 
   function renderNav() {
     const tabs = state.screen === "subject" ? SUBJECT_TABS : homeTabsForCurrentUser();
+    // Mobile-only management button uses the same authenticated role, screen
+    // state and pending count as the desktop Admin tab.
+    const isAdmin = !!(state.auth.user && state.auth.user.role === "admin");
+    if (el.mobileAdminButton && el.mobileAdminCount) {
+      el.mobileAdminButton.classList.toggle("hidden", !isAdmin);
+      el.mobileAdminButton.classList.toggle("is-active", isAdmin && state.screen === "admin");
+      const pending = isAdmin ? Math.max(0, Number(state.admin.pendingCount) || 0) : 0;
+      el.mobileAdminCount.classList.toggle("hidden", pending === 0);
+      el.mobileAdminCount.textContent = pending ? String(Math.min(99, pending)) : "";
+      el.mobileAdminCount.setAttribute("aria-label", `${pending} yêu cầu đang chờ`);
+    }
     el.nav.replaceChildren();
 
     tabs.forEach((tab, index) => {
@@ -4356,6 +4369,7 @@
 
   el.featureVipButton.addEventListener("click", onVipRegisterAction);
   el.homeButton.addEventListener("click", goHome);
+  el.mobileAdminButton?.addEventListener("click", openAdmin);
   el.accountButton.addEventListener("click", () => state.auth.user ? openAccountPage() : openAuth("login"));
   el.authClose.addEventListener("click", closeAuth);
   el.authLater.addEventListener("click", closeAuth);
