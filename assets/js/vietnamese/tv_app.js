@@ -867,8 +867,8 @@
 #class3-vietnamese-runtime .tv3-spinner{width:24px;height:24px;border-radius:50%;border:3px solid #ddd6fe;border-top-color:#8b5cf6;animation:tv3spin .8s linear infinite}
 @keyframes tv3spin{to{transform:rotate(360deg)}}
 @media(max-width:767px){
- #class3-vietnamese-runtime .tv3-folder-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
- #class3-vietnamese-runtime .tv3-folder-grid.tv3-discover-home{grid-template-columns:repeat(2,minmax(0,1fr))}
+ #class3-vietnamese-runtime .tv3-folder-grid{grid-template-columns:1fr;gap:8px}
+ #class3-vietnamese-runtime .tv3-folder-grid.tv3-discover-home{grid-template-columns:1fr}
  #class3-vietnamese-runtime .tv3-folder-grid.tv3-discover-sub{grid-template-columns:1fr}
  #class3-vietnamese-runtime .tv3-folder-grid:is(.tv3-discover-home,.tv3-discover-sub) .tv3-folder{min-height:155px}
  #class3-vietnamese-runtime .tv3-folder-grid:is(.tv3-discover-home,.tv3-discover-sub) .tv3-folder-head{flex-direction:row;gap:8px}
@@ -876,7 +876,7 @@
  #class3-vietnamese-runtime .tv3-folder-grid:is(.tv3-discover-home,.tv3-discover-sub) .tv3-folder-copy strong{font-size:20px}
  #class3-vietnamese-runtime .tv3-folder-grid:is(.tv3-discover-home,.tv3-discover-sub) .tv3-folder-copy small{font-size:20px}
  #class3-vietnamese-runtime .tv3-folder{padding:10px;min-height:148px;border-radius:16px}
- #class3-vietnamese-runtime .tv3-folder-head{flex-direction:column;gap:7px}
+ #class3-vietnamese-runtime .tv3-folder-head{flex-direction:row;align-items:flex-start;gap:10px}
  #class3-vietnamese-runtime .tv3-icon{width:52px;height:52px;flex:0 0 52px;font-size:31px}
  #class3-vietnamese-runtime .tv3-folder-copy strong{font-size:20px}
  #class3-vietnamese-runtime .tv3-folder-copy small{font-size:20px}
