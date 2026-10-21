@@ -935,7 +935,7 @@
     const examples=list(q.examples).filter(Boolean).slice(0,3), translations=list(q.examples_vi);
     return `<div class="ta3-vocab-examples"><h3>⭐ EXAMPLE SENTENCES</h3>
       ${examples.length?examples.map((example,i)=>`<div class="ta3-vocab-example"><div class="ta3-vocab-example-text"><p>${vocabHighlight(example,q.word)}</p>
-      ${translations[i]?`<small>${esc(translations[i])}</small>`:''}</div><button data-action="vocab-example" data-index="${i}" aria-label="Nghe câu ví dụ ${i+1}">🔊</button></div>`).join(''):'<p>Chưa có câu ví dụ trong học liệu.</p>'}</div>`;
+      ${translations[i]?`<small>${esc(translations[i])}</small>`:''}</div><button data-action="vocab-example" data-index="${i}" aria-label="Nghe câu ví dụ ${i+1}" class="ta3-listen-btn ta3-vocab-example-listen">Listen</button></div>`).join(''):'<p>Chưa có câu ví dụ trong học liệu.</p>'}</div>`;
   }
   function vocabChoicesMarkup(q){
     const options=vocabOptionPool(q),success=vocabResolved(q);
@@ -943,10 +943,12 @@
     return `<div class="ta3-vocab-choices">${options.map((opt,i)=>{
       const chosen=tries.includes(i),correct=normalize(opt.word)===normalize(q.word);
       const cls=success&&correct?' correct':chosen&&!correct?' wrong':'';
-      return `<button data-action="vocab-option" data-index="${i}" class="ta3-vocab-choice${cls}" ${success?'disabled':''}>
+      // Always keep solved choices actionable: after grading, a tap replays
+      // the English pronunciation without changing correctness/attempts.
+      return `<button type="button" data-action="vocab-option" data-index="${i}" class="ta3-vocab-choice${cls}" ${success?`aria-label="Nghe lại từ ${esc(opt.word)}" title="Chạm để nghe lại tiếng Anh"`:''}>
         <b>${String.fromCharCode(65+i)}.</b><span class="ta3-vocab-answer-copy"><strong>${esc(opt.word)}</strong>
         ${opt.ipa?`<small>/${esc(txt(opt.ipa).replace(/^\/+|\/+$/g,''))}/</small>`:''}
-        ${success?`<em>(${esc(opt.vietnamese)})</em>`:''}</span></button>`;
+        ${success?`<em>(${esc(opt.vietnamese)})</em>`:''}</span>${success||chosen?'<span class="ta3-vocab-choice-replay" aria-hidden="true">🔊</span>':''}</button>`;
     }).join('')}</div>`;
   }
   function renderVocabStudy(){
@@ -954,49 +956,67 @@
     const q=vocabPool[vocabIndex],success=vocabResolved(q);
     const tabs=[['flashcard','🃏','Flashcards'],['picture','🖼️','Word-picture Puzzle'],['listen','🎧','Listen and Choose'],['speak','🎤','Speak & Check']];
     const nav=`<nav class="ta3-vocab-nav"><button data-action="vocab-prev" ${vocabIndex===0?'disabled':''}>← Previous</button><span>${vocabIndex+1} / ${vocabPool.length}</span><button data-action="vocab-next" ${vocabIndex>=vocabPool.length-1?'disabled':''}>Next →</button></nav>`;
-    const picture=`<div class="ta3-vocab-image">${vocabImage(q,vocabMode==='picture')}</div>`;
+    // Word-picture Puzzle: always show the Vietnamese clue below a concrete picture.
+    // Abstract words already display their meaning inside vocabMeaningPicture().
+    const hasPictureMeaning=vocabMode==='picture'&&!!q.has_concrete_picture;
+    const picture=`<div class="ta3-vocab-image${hasPictureMeaning?' ta3-vocab-puzzle-image':''}">${vocabImage(q,vocabMode==='picture')}${hasPictureMeaning?`<p class="ta3-vocab-puzzle-meaning" lang="vi">Nghĩa: ${esc(q.vietnamese)}</p>`:''}</div>`;
     const speakButton=`<button class="ta3-vocab-listen" data-action="vocab-listen">🔊 Listen · Nghe mẫu</button>`;
-    const wordPanel=`<section class="ta3-vocab-card">${picture}<div class="ta3-vocab-word-row"><h2>${esc(q.word)}</h2><button data-action="vocab-listen" class="ta3-vocab-word-sound" aria-label="Nghe từ tiếng Anh">🔊</button></div>
+    const wordPanel=`<section class="ta3-vocab-card">${picture}<div class="ta3-vocab-word-row"><h2>${esc(q.word)}</h2><button data-action="vocab-listen" class="ta3-listen-btn ta3-vocab-word-sound" aria-label="Nghe từ tiếng Anh">Listen</button></div>
       <p class="ta3-vocab-ipa">${q.ipa?'/'+esc(txt(q.ipa).replace(/^\/+|\/+$/g,''))+'/':''}</p>
       <p class="ta3-vocab-vi">${esc(q.vietnamese)}</p></section>`;
     let body='';
     if(vocabMode==='flashcard')body=`<div class="ta3-vocab-columns">${wordPanel}${vocabExamples(q)}</div>`;
-    if(vocabMode==='picture')body=`<div class="ta3-vocab-prompt"><span class="ta3-vocab-current-topic">🖼️ ${vocabContext==='super'?'Super Vocabulary':`Level ${vocabLevel}`}</span><h2>Choose the correct English word:</h2><button data-action="vocab-prompt" aria-label="Nghe câu hỏi">🔊</button></div>
+    if(vocabMode==='picture')body=`<div class="ta3-vocab-prompt"><span class="ta3-vocab-current-topic">🖼️ ${vocabContext==='super'?'Super Vocabulary':`Level ${vocabLevel}`}</span><h2>Choose the correct English word:</h2><button data-action="vocab-prompt" aria-label="Nghe câu hỏi" class="ta3-listen-btn ta3-vocab-prompt-listen">Listen</button></div>
       <div class="ta3-vocab-columns"><section class="ta3-vocab-picture-panel">${picture}
-      ${success?`<p class="ta3-vocab-vi">Nghĩa: ${esc(q.vietnamese)}</p>`:''}</section>
+      </section>
       <section class="ta3-vocab-examples-panel">${success?vocabExamples(q):'<h3 class="ta3-vocab-examples-wait">⭐ EXAMPLE SENTENCES</h3>'}</section></div>${vocabChoicesMarkup(q)}`;
     if(vocabMode==='listen')body=`<div class="ta3-vocab-listening"><h2>Listen and choose.</h2><p>Nghe và chọn từ đúng</p>
-      <button class="ta3-vocab-sound" data-action="vocab-listen" aria-label="Nghe từ vựng">🔊</button>${vocabChoicesMarkup(q)}</div>`;
+      <button class="ta3-listen-btn ta3-vocab-sound" data-action="vocab-listen" aria-label="Nghe từ vựng">Listen</button>${vocabChoicesMarkup(q)}</div>`;
     if(vocabMode==='speak')body=`<div class="ta3-vocab-columns">${wordPanel}<section class="ta3-vocab-speak-panel">
       <h2>🎤 Speak & Check</h2><p>Chạm micro, nói từ tiếng Anh trong tranh</p>
       <button id="ta3-vocab-microphone" class="ta3-vocab-mic" data-action="vocab-mic" aria-label="Bắt đầu luyện nói">🎤</button>
       <div class="ta3-vocab-speech-status" id="ta3-vocab-speech-status" role="status" aria-live="polite" data-status="${success?'good':'idle'}">${success?'✅ Con đã phát âm đúng!':'Chạm micro và nói thật rõ nhé!'}</div>
       ${vocabExamples(q)}</section></div>`;
     const isSuper=vocabContext==='super';
-    const grade3Units=list(q.sgk3_units);const sgkUnitsText=grade3Units.length?`SGK 3 · Unit ${grade3Units.join(', ')}`:'Từ vựng nền tảng Lớp 2';
-    const superTopicLine=m12State?.selectedGroups?.map(g=>g.name).join(' · ')||'';
-    const levelLabel=isSuper?`📚 Super Vocabulary · ${m12State?.selectedGroups?.length||1} chủ đề`:`📚 Level ${vocabLevel} · ${esc(VOCAB_LEVELS[vocabLevel-1].name)}`;
-    const sourceLine=isSuper?`${esc(q.topic_name||superTopicLine)} · ${esc(sgkUnitsText)}`:`HK${vocabLevel<=2?1:2} · Unit ${q.unit} — ${esc(q.unit_title)}`;
-    root.innerHTML=`<section class="ta3-vocab-study${isSuper?' ta3-super-study':''}"><div class="ta3-vocab-level-label">${levelLabel}
-      <small>${sourceLine}</small></div>
+    // Breadcrumb/sub-banner already shows Level (M2) or selected topics (M12).
+    root.innerHTML=`<section class="ta3-vocab-study${isSuper?' ta3-super-study':''}">
       <div class="ta3-vocab-tabs" role="group" aria-label="Chọn cách học từ vựng">${tabs.map(t=>`<button data-action="vocab-mode" data-mode="${t[0]}" class="${vocabMode===t[0]?'active':''}" aria-pressed="${vocabMode===t[0]}">${t[1]} ${t[2]}</button>`).join('')}</div>
-      ${body}${vocabMode==='picture'||vocabMode==='listen'?`<p class="ta3-vocab-feedback" role="status" aria-live="polite">${success?'✅ Chính xác! Giỏi lắm!':(vocabTries[q.vocab_id]?.[vocabMode]?.length?'🌷 Con thử lại nhé!':'Chọn đáp án đúng nhé!')}</p>`:''}
+      ${body}${vocabMode==='listen'&&(success||(vocabTries[q.vocab_id]?.[vocabMode]?.length||0)>0)?`<p class="ta3-vocab-feedback" role="status" aria-live="polite">${success?'✅ Chính xác! Giỏi lắm!':'🌷 Con thử lại nhé!'}</p>`:''}
       ${nav}<button class="ta3-vocab-return" data-action="back">${isSuper?'← Chọn chủ đề':'← 4 Levels'}</button></section>`;
     if(vocabMode==='listen'&&!success){const version=speechNonce;
       const timer=setTimeout(()=>{mediaTimers.delete(timer);if(active&&view.page==='vocab-study'&&vocabMode==='listen'&&vocabPool[vocabIndex]===q&&speechNonce===version)void speak(q.word,'en-US');},200);mediaTimers.add(timer);
     }
   }
+  function vocabReplayChoice(word,q,mode,delay=0){
+    if(!word)return;
+    if(!delay){void speak(word,'en-US');return;}
+    // Delay the first pronunciation until the correctness beep has finished;
+    // never let an old word play after a tab/question/module change.
+    const version=speechNonce;
+    const timer=setTimeout(()=>{
+      mediaTimers.delete(timer);
+      if(active&&view.page==='vocab-study'&&vocabPool[vocabIndex]===q&&vocabMode===mode&&speechNonce===version)
+        void speak(word,'en-US');
+    },delay);
+    mediaTimers.add(timer);
+  }
   function vocabPick(optionIndex){
     if(!['picture','listen'].includes(vocabMode)||view.page!=='vocab-study')return;
-    const q=vocabPool[vocabIndex],opts=vocabOptionPool(q);
-    if(!q||!Number.isInteger(optionIndex)||optionIndex<0||optionIndex>=opts.length||vocabResolved(q))return;
-    const tries=vocabTries[q.vocab_id]||{};const seq=tries[vocabMode]||[];
-    if(!seq.includes(optionIndex))seq.push(optionIndex);
-    tries[vocabMode]=seq;vocabTries[q.vocab_id]=tries;
-    const correct=normalize(opts[optionIndex].word)===normalize(q.word);
-    if(correct){vocabBeep(true);vocabCorrect[q.vocab_id]={...(vocabCorrect[q.vocab_id]||{}),[vocabMode]:true};}
+    const q=vocabPool[vocabIndex];if(!q)return;
+    const opts=vocabOptionPool(q);
+    if(!Number.isInteger(optionIndex)||optionIndex<0||optionIndex>=opts.length)return;
+    const mode=vocabMode,choice=opts[optionIndex],tries=vocabTries[q.vocab_id]||{},seq=tries[mode]||[];
+    // Solved answers and previously tried wrong answers are listening-only.
+    // They must never increment attempts or replay correctness beeps.
+    if(vocabResolved(q)||seq.includes(optionIndex)){
+      vocabReplayChoice(choice.word,q,mode);return;
+    }
+    seq.push(optionIndex);tries[mode]=seq;vocabTries[q.vocab_id]=tries;
+    const correct=normalize(choice.word)===normalize(q.word);
+    if(correct){vocabBeep(true);vocabCorrect[q.vocab_id]={...(vocabCorrect[q.vocab_id]||{}),[mode]:true};}
     else vocabBeep(false);
     renderVocabStudy();
+    vocabReplayChoice(choice.word,q,mode,correct?240:360);
   }
   async function showFlash(items,request=nonce){
     if(!living(request))return;
@@ -1839,14 +1859,15 @@
       Number(g.word_count)!==g.words.length||g.words.some(w=>!m12ValidItem(w)))||
       new Set(groups.map(g=>Number(g.id))).size!==groups.length)
       throw new Error('Kho Siêu từ vựng chưa đầy đủ hoặc chưa khớp phiên bản.');
-    if(!m12State)m12State={data,selected:new Set(),selectedGroups:[]};
-    else m12State.data=data;
+    if(!m12State)m12State={data,selected:new Set(),selectedGroups:[],starting:false};
+    else {m12State.data=data;m12State.starting=false;}
     const valid=new Set(groups.map(g=>Number(g.id)));
     for(const id of m12State.selected)if(!valid.has(id))m12State.selected.delete(id);
     setView('discover','m12-hub',{group:12});
     root.innerHTML=`<section class="ta3-super-hub">
       <div class="ta3-super-intro">
         <div class="ta3-super-guide"><strong>Choose 1–3 topics to practise vocabulary.</strong><span>Bé chọn từ 1 đến 3 chủ đề để luyện từ vựng nhé!</span></div>
+        <button class="ta3-super-start ta3-super-start-top" type="button" data-action="m12-start" disabled>✨ Start learning</button>
       </div>
       <div class="ta3-super-topic-grid">${groups.map((g,i)=>{
         const on=m12State.selected.has(Number(g.id));
@@ -1871,14 +1892,18 @@
       card.classList.toggle('is-selected',on);card.setAttribute('aria-pressed',on?'true':'false');
     });
     const count=m12UniqueWords(chosen).length;
-    const status=$('.ta3-super-status'),button=$('.ta3-super-start');
+    const status=$('.ta3-super-status'),buttons=root.querySelectorAll('.ta3-super-start');
     if(status)status.textContent=chosen.length?`${chosen.length} / ${M12_MAX_SELECTION} topics selected · ${count} words / Đã chọn ${chosen.length} chủ đề · ${count} từ`:
       `Choose up to 3 topics · Hãy chọn chủ đề để bắt đầu`;
-    if(button){button.disabled=!chosen.length;button.textContent=chosen.length?
-      `✨ Start learning · Bắt đầu học (${count} từ)`:'✨ Choose topics to start · Chọn chủ đề để học';}
+    buttons.forEach(button=>{
+      button.disabled=!!m12State.starting||!chosen.length;
+      if(m12State.starting)button.innerHTML='<span class="ta3-spinner" aria-hidden="true"></span> Đang tải...';
+      else button.textContent=button.classList.contains('ta3-super-start-top')?'✨ Start learning':
+        chosen.length?`✨ Start learning · Bắt đầu học (${count} từ)`:'✨ Choose topics to start · Chọn chủ đề để học';
+    });
   }
   function toggleM12(id){
-    if(!m12State||view.page!=='m12-hub')return;
+    if(!m12State||view.page!=='m12-hub'||m12State.starting)return;
     const gs=list(m12State.data?.advanced_vocabulary_review?.groups);
     if(!Number.isInteger(id)||!gs.some(g=>Number(g.id)===id))return;
     if(m12State.selected.has(id))m12State.selected.delete(id);
@@ -1887,9 +1912,10 @@
     updateM12Ui();
   }
   async function startM12Selection(button){
-    if(view.page!=='m12-hub'||!m12State||button.disabled||m12State.selected.size<1||m12State.selected.size>M12_MAX_SELECTION)return;
+    if(view.page!=='m12-hub'||!m12State||m12State.starting||button.disabled||m12State.selected.size<1||m12State.selected.size>M12_MAX_SELECTION)return;
     if(!needPremium('Super Vocabulary · Siêu từ vựng'))return;
-    button.disabled=true;button.innerHTML='<span class="ta3-spinner" aria-hidden="true"></span> Đang tải...';
+    m12State.starting=true;
+    updateM12Ui();
     const request=++nonce;
     try{
       const selected=list(m12State.data.advanced_vocabulary_review?.groups).filter(g=>m12State.selected.has(Number(g.id)));
@@ -1915,8 +1941,9 @@
       stopVocabRecognition();stopSpeech();
       setView('discover','vocab-study',{group:12,title:'Super Vocabulary · '+selected.map(g=>g.name).join(' + ')});
       renderVocabStudy();
-    }catch(err){if(living(request)){toast('Chưa thể mở bộ từ vựng. Bé thử lại nhé!');updateM12Ui();}}
-    finally{if(living(request)&&view.page==='m12-hub')updateM12Ui();}
+    }catch(err){if(living(request)){toast('Chưa thể mở bộ từ vựng. Bé thử lại nhé!');}}
+    finally{if(living(request)&&m12State){m12State.starting=false;
+      if(view.page==='m12-hub')updateM12Ui();}}
   }
 
   // M11 — Discover / Picture & Situation Challenge.
@@ -2084,7 +2111,7 @@
     const meta=M11_LEVELS[level],number=m11State.index+1,count=m11State.items.length;
     const img=safeImageEntry(item.image_id,item.image_url);
     const figure=m11State.failedImages.has(item.image_id)?'<p class="ta3-m11-photo-warning">⚠️ Hình minh họa chưa tải được. Con hãy quay lại sau nhé.</p>':img?`<img class="ta3-m11-photo" src="${esc(img.src)}" alt="${esc(item.image_alt_vi||'Tranh minh họa')}" loading="eager" decoding="async">`:'<p>Chưa tìm thấy hình trong catalog Lớp 3.</p>';
-    const left=branch==='reading'?`<section class="ta3-m11-panel"><div class="ta3-m11-panel-head"><div><h3>${esc(item.title)}</h3><p>${esc(item.title_vi)} · Unit ${esc(item.unit_anchor)}</p></div><button class="ta3-m11-speak" data-action="m11-speak" aria-label="Nghe bài đọc tiếng Anh">🔊 Listen</button></div>
+    const left=branch==='reading'?`<section class="ta3-m11-panel"><div class="ta3-m11-panel-head"><div><h3>${esc(item.title)}</h3><p>${esc(item.title_vi)} · Unit ${esc(item.unit_anchor)}</p></div><button class="ta3-listen-btn ta3-m11-speak" data-action="m11-speak" aria-label="Nghe bài đọc tiếng Anh">Listen</button></div>
       <div class="ta3-m11-reading-image">${figure}</div><div class="ta3-m11-passage" lang="en-US">${txt(item.passage).split('\n').map(line=>`<p>${esc(line)}</p>`).join('')}</div>
       ${done?`<div class="ta3-m11-translation"><strong>🇻🇳 Nghĩa tiếng Việt</strong>${txt(item.passage_vi).split('\n').map(line=>`<p>${esc(line)}</p>`).join('')}</div>`:'<p class="ta3-m11-note">Đọc kỹ rồi trả lời từng câu. Hoàn thành tất cả sẽ hiện bản dịch tiếng Việt.</p>'}</section>`
     :`<section class="ta3-m11-panel ta3-m11-picture-panel"><div class="ta3-m11-picture-frame">${figure}</div>
@@ -2092,7 +2119,7 @@
        '<p class="ta3-m11-note">👀 Look carefully! Con hãy quan sát thật kỹ từng chi tiết trong tranh nhé.</p>'}</section>`;
     const questions=item.questions.map((q,qi)=>{
       const ok=st.correct[qi],chosen=st.chosen[qi],wrong=st.wrong[qi].size>0;
-      return `<article class="ta3-m11-question"><div class="ta3-m11-question-top"><span class="ta3-m11-no">${qi+1}</span><div class="ta3-m11-question-text"><h4>${esc(q.question)}</h4><p lang="vi">${esc(q.question_vi)}</p></div><button data-action="m11-question-tts" data-question="${qi}" aria-label="Nghe câu hỏi ${qi+1}" class="ta3-m11-q-sound">🔊</button></div>
+      return `<article class="ta3-m11-question"><div class="ta3-m11-question-top"><span class="ta3-m11-no">${qi+1}</span><div class="ta3-m11-question-text"><h4>${esc(q.question)}</h4><p lang="vi">${esc(q.question_vi)}</p></div><button data-action="m11-question-tts" data-question="${qi}" aria-label="Nghe câu hỏi ${qi+1}" class="ta3-listen-btn ta3-m11-q-sound">Listen</button></div>
        <div class="ta3-m11-options">${q.options.map((option,oi)=>{
         const right=ok&&option===q.answer,bad=oi===chosen&&!ok;
         return `<button class="ta3-m11-option${right?' correct':bad?' wrong':''}" data-action="m11-choice" data-question="${qi}" data-option="${oi}" ${ok||st.wrong[qi].has(oi)||(branch==='picture'&&m11State.failedImages.has(item.image_id))?'disabled':''}><b>${String.fromCharCode(65+oi)}.</b><span>${esc(option)}</span>${right?'<span class="ta3-m11-check">✓</span>':''}</button>`;
@@ -2406,7 +2433,7 @@
 @media(max-width:640px){#class3-english-runtime .ta3-shared-study{padding:5px 3px 11px}#class3-english-runtime .ta3-shared-rl-line{gap:7px 10px;margin:18px auto 9px}#class3-english-runtime .ta3-shared-rl-group{gap:4px}#class3-english-runtime .ta3-shared-space{width:8px}#class3-english-runtime .ta3-shared-tile{min-width:43px;height:55px;padding:0 4px;font-size:31px;border-radius:12px}#class3-english-runtime .ta3-shared-removed-line{min-height:46px}#class3-english-runtime .ta3-shared-fm-word{margin:15px auto 17px;letter-spacing:.025em}#class3-english-runtime .ta3-shared-fill-option{min-height:57px;padding:9px 12px}#class3-english-runtime .ta3-shared-odd-options{gap:8px}#class3-english-runtime .ta3-shared-odd-option{min-height:90px;padding:8px 4px}#class3-english-runtime .ta3-shared-nav{grid-template-columns:minmax(0,1fr) 60px minmax(0,1fr);gap:6px}#class3-english-runtime .ta3-shared-nav button{font-size:20px;padding:7px 5px}}
 @media(prefers-reduced-motion:reduce){#class3-english-runtime .ta3-shared-flyer{animation:none!important}}
 
-#class3-english-runtime .ta3-vocab-hub,#class3-english-runtime .ta3-vocab-study{max-width:80rem;margin:0 auto;padding:12px 10px 20px}
+#class3-english-runtime .ta3-vocab-hub,#class3-english-runtime .ta3-vocab-study{width:100%;max-width:82rem;margin:0 auto;padding:12px 10px 20px}
 #class3-english-runtime .ta3-vocab-hub-heading{text-align:center;margin:8px auto 22px}
 #class3-english-runtime .ta3-vocab-hub-heading h2{color:#6d28d9;font-size:22px;margin:0 0 7px;font-weight:950}
 #class3-english-runtime .ta3-vocab-hub-heading p{font-size:20px;font-weight:850;color:#475467;margin:4px 0}
@@ -2431,7 +2458,6 @@
 #class3-english-runtime .ta3-vocab-level small{font-size:20px;color:#64748b;font-weight:850}
 #class3-english-runtime .ta3-vocab-level>b{white-space:nowrap;font-size:20px;color:var(--c);background:white;padding:7px 10px;border-radius:99px;border:1px solid var(--border)}
 #class3-english-runtime .ta3-vocab-hub-note{text-align:center;color:#64748b;font-weight:800;margin:24px auto}
-#class3-english-runtime .ta3-vocab-level-label{font-size:20px;font-weight:950;text-align:center;color:#6d28d9;margin:0 0 12px}
 #class3-english-runtime .ta3-vocab-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:0 0 14px}
 #class3-english-runtime .ta3-vocab-tabs button{min-height:49px;border:1.5px solid #fbcfe8;border-radius:14px;background:#fff;color:#475569;padding:8px 5px;font-size:20px;font-weight:900}
 #class3-english-runtime .ta3-vocab-tabs button.active{background:linear-gradient(105deg,#ec4899,#8b5cf6);color:#fff;border-color:#c084fc;box-shadow:0 4px 10px rgba(139,92,246,.16)}
@@ -2449,24 +2475,30 @@
 #class3-english-runtime .ta3-vocab-svg-object{display:block;width:min(88%,260px);height:min(85%,180px);margin:auto}
 #class3-english-runtime .ta3-vocab-number-visual{display:flex;align-items:center;justify-content:center;width:min(78%,185px);height:170px;border-radius:34px;background:linear-gradient(150deg,#fef3c7,#fce7f3 75%,#ede9fe);border:3px solid #fbcfe8;box-shadow:0 8px 24px rgba(192,132,252,.12);font-size:92px;font-weight:950;line-height:1;color:#7c3aed;font-variant-numeric:lining-nums tabular-nums}
 #class3-english-runtime .ta3-vocab-card h2{color:#1e293b;font-weight:950;font-size:31px;margin:5px 0}
-#class3-english-runtime .ta3-vocab-ipa{font-weight:850;font-size:20px;color:#0369a1;margin:5px 0}
-#class3-english-runtime .ta3-vocab-vi{font-weight:900;font-size:24px;line-height:1.35;color:#6d28d9;margin:7px 0}
+#class3-english-runtime .ta3-vocab-ipa{font-weight:400;font-size:20px;color:#111827;margin:5px 0}
+#class3-english-runtime .ta3-vocab-vi{font-weight:800;font-size:24px;line-height:1.35;color:#64748b;margin:7px 0}
 #class3-english-runtime .ta3-vocab-listen{min-height:43px;padding:9px 15px;border:1.5px solid #bae6fd;background:#e0f2fe;color:#0369a1;border-radius:12px;font-size:20px;font-weight:900;margin:8px 0}
 #class3-english-runtime .ta3-vocab-prompt{display:flex;align-items:center;justify-content:center;gap:10px;margin:7px 0 12px}
 #class3-english-runtime .ta3-vocab-prompt h2{font-size:23px;color:#1e293b;font-weight:950;margin:0}
 #class3-english-runtime .ta3-vocab-prompt button{border-radius:50%;background:#e0f2fe;min-width:38px;min-height:38px}
+/* Keep the hint visible before and after solving, inside the picture frame. */
+#class3-english-runtime .ta3-vocab-puzzle-image{position:relative;padding-bottom:72px}
+#class3-english-runtime .ta3-vocab-puzzle-meaning{position:absolute;bottom:7px;left:10px;right:10px;margin:0;padding:6px 8px;background:#fff;border-radius:9px;color:#111827;font-size:24px;font-weight:900;line-height:1.25;text-align:center;overflow-wrap:anywhere}
 #class3-english-runtime .ta3-vocab-picture-panel{border-style:dashed}
 #class3-english-runtime .ta3-vocab-safe-placeholder{font-weight:850;color:#94a3b8;font-size:20px;display:block;text-align:center;padding:9px}
-#class3-english-runtime .ta3-vocab-choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;margin:16px auto 0;max-width:1060px}
+#class3-english-runtime .ta3-vocab-choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px;margin:16px auto 0;width:100%;max-width:100%}
 #class3-english-runtime .ta3-vocab-choice{display:flex;align-items:center;gap:12px;text-align:left;min-height:70px;border:2px solid #fbcfe8;border-radius:16px;padding:11px 14px;background:white;color:#334155}
 #class3-english-runtime .ta3-vocab-choice>b{font-size:20px;color:#db2777}
 #class3-english-runtime .ta3-vocab-answer-copy{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 #class3-english-runtime .ta3-vocab-answer-copy strong{font-size:20px;font-weight:900}
-#class3-english-runtime .ta3-vocab-answer-copy small{font-size:20px;font-weight:850;color:#64748b}
-#class3-english-runtime .ta3-vocab-answer-copy em{font-size:20px;font-weight:850;color:#6d28d9;font-style:normal}
+#class3-english-runtime .ta3-vocab-answer-copy small{font-size:20px;font-weight:400;color:#111827}
+#class3-english-runtime .ta3-vocab-answer-copy em{font-size:20px;font-weight:750;color:#64748b;font-style:normal}
 #class3-english-runtime .ta3-vocab-choice.wrong{background:#fff1f2;border-color:#fb7185}
 #class3-english-runtime .ta3-vocab-choice.correct{background:#ecfdf5;border-color:#34d399}
-#class3-english-runtime .ta3-vocab-listening{text-align:center;max-width:1060px;margin:0 auto}
+#class3-english-runtime .ta3-vocab-choice-replay{margin-left:auto;flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border:1px solid #bae6fd;border-radius:10px;background:#eff8ff;font-size:18px}
+#class3-english-runtime .ta3-vocab-choice:hover{border-color:#c084fc;box-shadow:0 2px 10px rgba(139,92,246,.09)}
+#class3-english-runtime .ta3-vocab-choice:focus-visible{outline:3px solid #a78bfa;outline-offset:2px}
+#class3-english-runtime .ta3-vocab-listening{text-align:center;width:100%;max-width:100%;margin:0 auto}
 #class3-english-runtime .ta3-vocab-listening h2{font-weight:950;font-size:25px;color:#1e293b;margin:10px 0 3px}
 #class3-english-runtime .ta3-vocab-listening p{font-size:20px;color:#64748b;font-weight:850}
 #class3-english-runtime .ta3-vocab-sound,#class3-english-runtime .ta3-vocab-mic{width:82px;height:82px;border:0;border-radius:50%;background:linear-gradient(135deg,#ec4899,#8b5cf6);color:#fff;font-size:31px;box-shadow:0 7px 17px rgba(139,92,246,.2);margin:12px auto}
@@ -2494,9 +2526,6 @@
 @media(prefers-reduced-motion:reduce){#class3-english-runtime .ta3-vocab-level,#class3-english-runtime .ta3-vocab-tabs button{transition:none!important}}
 
 /* Vocabulary 2: Class 2 visual/interaction parity, Class 3 SGK data only */
-#class3-english-runtime .ta3-vocab-study{max-width:1070px}
-#class3-english-runtime .ta3-vocab-level-label{font-size:20px;margin:0 0 8px}
-#class3-english-runtime .ta3-vocab-level-label small{display:block;color:#64748b;font-size:20px;margin:3px auto 0}
 #class3-english-runtime .ta3-vocab-tabs{gap:9px;margin-bottom:11px}
 #class3-english-runtime .ta3-vocab-tabs button{font-size:20px;min-height:48px}
 #class3-english-runtime .ta3-vocab-columns{gap:12px}
@@ -2511,15 +2540,15 @@
 #class3-english-runtime .ta3-vocab-example{padding:10px 12px;gap:8px;min-height:57px}
 #class3-english-runtime .ta3-vocab-example-text{flex:1;min-width:0}
 #class3-english-runtime .ta3-vocab-example p{font-size:20px;line-height:1.45}
-#class3-english-runtime .ta3-vocab-example small{display:block;margin:6px 0 0;color:#334155;font-size:20px;line-height:1.5;font-weight:850}
+#class3-english-runtime .ta3-vocab-example small{display:block;margin:6px 0 0;color:#64748b;font-size:20px;line-height:1.5;font-weight:750}
 #class3-english-runtime .ta3-vocab-example button{min-height:42px;min-width:42px}
 #class3-english-runtime .ta3-vocab-choices{gap:10px;margin-top:10px}
 #class3-english-runtime .ta3-vocab-choice{min-height:57px;padding:8px 12px;border-width:1.5px}
 #class3-english-runtime .ta3-vocab-choice strong{font-size:20px}
 #class3-english-runtime .ta3-vocab-choice small{font-size:20px}
-#class3-english-runtime .ta3-vocab-meaning-clue{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:13px;color:#7c3aed;padding:15px;text-align:center}
-#class3-english-runtime .ta3-vocab-meaning-clue span{font-size:20px;font-weight:850;color:#64748b}
-#class3-english-runtime .ta3-vocab-meaning-clue strong{font-size:clamp(20px,2vw,27px);color:#6d28d9}
+#class3-english-runtime .ta3-vocab-meaning-clue{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:13px;color:#111827;padding:15px;text-align:center}
+#class3-english-runtime .ta3-vocab-meaning-clue span{font-size:20px;font-weight:700;color:#111827}
+#class3-english-runtime .ta3-vocab-meaning-clue strong{font-size:clamp(20px,2vw,27px);color:#1f2937;font-weight:700}
 #class3-english-runtime .ta3-vocab-current-topic{padding:4px 8px;border-radius:999px;background:#fdf2f8;color:#be185d;border:1px solid #fbcfe8;font-size:20px;font-weight:850}
 #class3-english-runtime .ta3-vocab-speak-panel{background:linear-gradient(125deg,#fff,#f5f3ff)}
 #class3-english-runtime .ta3-vocab-speak-panel>.ta3-vocab-examples{width:100%;margin-top:6px;background:transparent;border:0;padding:8px 0 0;border-top:1px solid #f5d0fe}
@@ -2528,13 +2557,12 @@
 #class3-english-runtime .ta3-vocab-tabs{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}
 #class3-english-runtime .ta3-vocab-tabs button{font-size:20px;padding:5px 2px;min-height:46px}
 #class3-english-runtime .ta3-vocab-choices{grid-template-columns:1fr}
-#class3-english-runtime .ta3-vocab-level-label{font-size:20px}
 #class3-english-runtime .ta3-vocab-image{height:205px}
 #class3-english-runtime .ta3-vocab-card h2{font-size:23px}
 #class3-english-runtime .ta3-vocab-vi{font-size:22px}
 #class3-english-runtime .ta3-vocab-example p{font-size:20px;line-height:1.42}
 #class3-english-runtime .ta3-vocab-example small{font-size:20px;line-height:1.48}
-#class3-english-runtime .ta3-vocab-level-label small{font-size:20px}}
+}
 
 #class3-english-runtime{max-width:82rem;margin:0 auto;color:#344054;font-family:"Nunito","Segoe UI",Arial,sans-serif}
 #class3-english-runtime *{box-sizing:border-box}
@@ -3037,8 +3065,8 @@
 /* Class3 English M12 — Super Vocabulary: multi-topic selection from Class2 form,
    but local Class3 state, JSON, navigation and TTS. */
 #class3-english-runtime .ta3-super-hub{width:100%;max-width:82rem;padding:10px 8px 22px;margin:0 auto;color:#334155}
-#class3-english-runtime .ta3-super-intro{text-align:center;margin:0 auto 15px}
-#class3-english-runtime .ta3-super-guide{display:flex;flex-direction:column;gap:4px;align-items:center;padding:4px 8px}
+#class3-english-runtime .ta3-super-intro{display:flex;align-items:center;justify-content:space-between;gap:16px;text-align:left;margin:0 0 15px}
+#class3-english-runtime .ta3-super-guide{flex:1 1 auto;min-width:0;display:flex;flex-direction:column;gap:4px;align-items:flex-start;text-align:left;padding:4px 8px}
 #class3-english-runtime .ta3-super-guide strong{font-size:21px;color:#6d28d9;font-weight:950;line-height:1.32}
 #class3-english-runtime .ta3-super-guide span{font-size:20px;color:#475569;font-weight:850;line-height:1.4}
 #class3-english-runtime .ta3-super-topic-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:11px}
@@ -3063,7 +3091,9 @@
 #class3-english-runtime .ta3-super-status{font-size:20px;font-weight:950;color:#6d28d9;line-height:1.4;text-align:center}
 #class3-english-runtime .ta3-super-start{display:flex;align-items:center;justify-content:center;gap:7px;min-height:47px;padding:10px 17px;border:1.5px solid #8b5cf6;border-radius:13px;background:linear-gradient(125deg,#ec4899,#7c3aed);color:white;font-size:20px;font-weight:950;box-shadow:0 4px 12px rgba(124,58,237,.14)}
 #class3-english-runtime .ta3-super-start:disabled{background:#f3f0f7;color:#8f87a1;border-color:#ddd6fe;box-shadow:none;cursor:not-allowed}
-#class3-english-runtime .ta3-super-study .ta3-vocab-level-label{font-size:20px}
+#class3-english-runtime .ta3-super-start-top{flex:0 0 auto;min-width:187px;white-space:nowrap}
+#class3-english-runtime .ta3-super-start:not(:disabled):hover{filter:brightness(1.05);box-shadow:0 7px 16px rgba(124,58,237,.22)}
+#class3-english-runtime .ta3-super-start:focus-visible{outline:3px solid #a5b4fc;outline-offset:3px}
 /* 12 topics: 4 x 3 on desktop; preserve readable labels and clear badges. */
 @media(min-width:1261px){
  #class3-english-runtime .ta3-super-topic{gap:9px;padding:11px 51px 29px 10px;min-height:120px}
@@ -3097,6 +3127,9 @@
  #class3-english-runtime .ta3-super-guide span{font-size:20px}
  #class3-english-runtime .ta3-super-actions{gap:7px}
  #class3-english-runtime .ta3-super-start{width:100%;font-size:20px}
+ #class3-english-runtime .ta3-super-intro{flex-wrap:wrap;gap:8px;margin-bottom:12px}
+ #class3-english-runtime .ta3-super-guide{flex:1 1 100%;padding:3px 0}
+ #class3-english-runtime .ta3-super-start-top{width:auto;min-width:165px;margin-left:auto;min-height:44px;padding:8px 13px}
  #class3-english-runtime .ta3-super-status{font-size:20px}
 }
 @media(prefers-reduced-motion:reduce){#class3-english-runtime .ta3-super-topic .ta3-super-icon{transform:none!important;transition:none}}
@@ -3235,6 +3268,42 @@
  #class3-english-runtime .ta3-vocab-prompt button{min-width:54px;min-height:54px;height:auto}
  #class3-english-runtime .ta3-vocab-listen{display:block;min-height:54px;margin:8px auto}
  #class3-english-runtime .ta3-vocab-word-row{flex-wrap:wrap}
+}
+
+/* 21/10/2026 - blue-green rectangular Listen buttons across English app. */
+#class3-english-runtime :is(.ta3-listen-btn,.ta3-shared-prompt-listen,.ta3-vocab-listen,.ta3-ta2-menu-listen,.ta3-ta2-alphabet-listen,.ta3-ta2-practice-listen,.ta3-ta2-ipa-guide-listen,.ta3-m11-speak,.ta3-m11-q-sound,button[data-action="grammar-instruction"],button[data-action="grammar-listen"],button[data-action="sgk-listen-passage"],button[data-action="sgk-listen-question"],button[data-action="sgk-listen-complete"],button[data-action="sgk-instruction"],button[data-action="shared-replay"],button[data-action="shared-instruction"],button[data-action="flash-listen"],button[data-action="lesson-listen"],button[data-action="word-speak"],button[data-action="ta2-alpha-intro-listen"],button[data-action="ta2-ipa-guide"],button[data-action="listen-audio"]){display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:40px;padding:8px 14px;border:1.5px solid #0f766e;border-radius:12px;background:linear-gradient(135deg,#0ea5e9 0%,#14b8a6 55%,#22c55e 100%);color:#fff;font-size:20px;font-weight:400;line-height:1.2;text-align:center;box-shadow:0 6px 14px rgba(20,184,166,.18);cursor:pointer}
+#class3-english-runtime :is(.ta3-listen-btn,.ta3-shared-prompt-listen,.ta3-vocab-listen,.ta3-ta2-menu-listen,.ta3-ta2-alphabet-listen,.ta3-ta2-practice-listen,.ta3-ta2-ipa-guide-listen,.ta3-m11-speak,.ta3-m11-q-sound,button[data-action="grammar-instruction"],button[data-action="grammar-listen"],button[data-action="sgk-listen-passage"],button[data-action="sgk-listen-question"],button[data-action="sgk-listen-complete"],button[data-action="sgk-instruction"],button[data-action="shared-replay"],button[data-action="shared-instruction"],button[data-action="flash-listen"],button[data-action="lesson-listen"],button[data-action="word-speak"],button[data-action="ta2-alpha-intro-listen"],button[data-action="ta2-ipa-guide"],button[data-action="listen-audio"]):hover{filter:brightness(1.03);box-shadow:0 8px 18px rgba(20,184,166,.25)}
+#class3-english-runtime :is(.ta3-listen-btn,.ta3-shared-prompt-listen,.ta3-vocab-listen,.ta3-ta2-menu-listen,.ta3-ta2-alphabet-listen,.ta3-ta2-practice-listen,.ta3-ta2-ipa-guide-listen,.ta3-m11-speak,.ta3-m11-q-sound,button[data-action="grammar-instruction"],button[data-action="grammar-listen"],button[data-action="sgk-listen-passage"],button[data-action="sgk-listen-question"],button[data-action="sgk-listen-complete"],button[data-action="sgk-instruction"],button[data-action="shared-replay"],button[data-action="shared-instruction"],button[data-action="flash-listen"],button[data-action="lesson-listen"],button[data-action="word-speak"],button[data-action="ta2-alpha-intro-listen"],button[data-action="ta2-ipa-guide"],button[data-action="listen-audio"]):focus-visible{outline:3px solid #99f6e4;outline-offset:2px}
+#class3-english-runtime .ta3-listen-btn::before{content:"🔊";display:inline-block;font-size:14px;line-height:1;transform:translateY(-.5px)}
+#class3-english-runtime .ta3-listen-btn{letter-spacing:0}
+#class3-english-runtime .ta3-vocab-example button,#class3-english-runtime .ta3-vocab-word-sound,#class3-english-runtime .ta3-vocab-prompt button,#class3-english-runtime .ta3-m11-q-sound{min-width:88px}
+#class3-english-runtime .ta3-vocab-listen,#class3-english-runtime .ta3-vocab-sound,#class3-english-runtime .ta3-m11-speak{min-width:112px}
+#class3-english-runtime .ta3-vocab-sound{width:auto;height:auto;margin:12px auto}
+#class3-english-runtime .ta3-vocab-word-sound{width:auto;height:auto;flex:0 0 auto}
+#class3-english-runtime .ta3-vocab-prompt button{min-width:96px;min-height:40px;height:auto;border-radius:12px;background:linear-gradient(135deg,#0ea5e9 0%,#14b8a6 55%,#22c55e 100%)}
+#class3-english-runtime .ta3-vocab-example button{min-height:40px}
+#class3-english-runtime .ta3-vocab-word-row{gap:12px}
+@media(max-width:767px){
+ #class3-english-runtime .ta3-vocab-example button,#class3-english-runtime .ta3-vocab-word-sound,#class3-english-runtime .ta3-vocab-prompt button,#class3-english-runtime .ta3-m11-q-sound{min-width:82px;padding:8px 12px;font-size:20px}
+ #class3-english-runtime .ta3-vocab-listen,#class3-english-runtime .ta3-vocab-sound,#class3-english-runtime .ta3-m11-speak{min-width:104px}
+}
+
+/* Keep long Vietnamese puzzle clues clear of the picture on narrow phones. */
+@media(max-width:420px){
+  #class3-english-runtime .ta3-vocab-puzzle-image{height:260px;max-height:none;padding-bottom:108px}
+}
+
+
+/* 21/10/2026 - 20px minimum for readable text in the English 3 module. */
+#class3-english-runtime{font-size:20px}
+#class3-english-runtime :is(button,input,select,textarea,small,summary){font-size:inherit}
+/* Long example words must wrap inside the left text column at >=20px. */
+#class3-english-runtime .ta3-vocab-example-text{overflow-wrap:anywhere}
+/* Puzzle M2/M12: answer row to navigation is 28px = half of Next 56px. */
+#class3-english-runtime .ta3-vocab-choices + .ta3-vocab-nav{margin-top:28px}
+/* On narrow phones the three-item navigation is 68px high after text wraps. */
+@media(max-width:399px){
+  #class3-english-runtime .ta3-vocab-choices + .ta3-vocab-nav{margin-top:34px}
 }
   `;
 })();
