@@ -987,6 +987,15 @@
       object-fit:contain;
       filter:drop-shadow(0 1px 1px rgba(255,255,255,.9));
     }
+    /* Lớp 3: logo footer mobile lớn hơn khoảng 25% và nâng nhẹ lên 8px. */
+    @media (max-width:767px){
+      .footer-brand-logo{
+        width:clamp(175px,30vw,320px);
+        max-width:72%;
+        max-height:90%;
+        transform:translateY(-8px);
+      }
+    }
 
     .modal-backdrop{
       position:fixed;inset:0;z-index:100;
